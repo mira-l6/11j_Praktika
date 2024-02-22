@@ -6,5 +6,6 @@
     src: url(./fonts/Lumios\ Marker.otf);
   } */
 
-
-
+.bg-image {
+  background-image: url("./img/scenery.jpg");
+}
