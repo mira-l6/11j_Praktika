@@ -52,17 +52,14 @@ a {
   color: black;
 }
 
-/* .align {  
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  
-  
-}*/
 
 .beige-background {
   background: rgba(166, 166, 166, 0.7);
 }
 .primary-color{
   color: white;
+}
+
+.header {
+  font-family: title-font;
 }
