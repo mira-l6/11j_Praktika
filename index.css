@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+.ext {
+  width: 10rem;
+ 
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +32,7 @@ body {
 .centered {
   align-items: center;
   justify-content: center;
+
 }
 
 .logo {
