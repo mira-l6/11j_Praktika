@@ -42,8 +42,16 @@ body {
 }
 
 .logo {
-  width: 150px;
-  height: 100%;
+  display: inline-block;
+  width: 200px;
+  height: 80%;
+
+}
+
+.brand-div {
+  border: none;
+  height: 12rem;
+
 
 }
 
