@@ -24,7 +24,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.centered {
+  align-items: center;
+  justify-content: center;
+  
 
+}
 .logo {
   width: 150px;
   height: 100%;
