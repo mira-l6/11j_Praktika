@@ -60,6 +60,23 @@ a {
   color: black;
 }
 
+.blc:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+
+}
+
+
+
+
+.btn-marked {
+  background-color: #e5cb82e1;
+  
+}
+
+.btn-marked:hover {
+  background-color: #e5cb82f6;
+  color: black;
+}
 
 .beige-background {
   background: rgba(166, 166, 166, 0.7);
