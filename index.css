@@ -24,8 +24,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 150px;
+  height: 100%;
+
+}
 
 a{
   text-decoration: none;
   color: black;
 }
+
+/* .align {  
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+  
+/* }
