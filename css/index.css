@@ -65,9 +65,9 @@ a {
 
 }
 
-
-
-
+.title-font{
+  font-family: title-font;
+}
 .btn-marked {
   background-color: #e5cb82e1;
   
@@ -90,13 +90,10 @@ a {
   color: white;
 }
 
-<<<<<<< HEAD
 /* .nav-link {
   font-family: normal-font;
   font-size: 1.75rem;
 } */
-=======
 .header {
   font-family: title-font;
 }
->>>>>>> 0443e2a262df7a5233206e2a67bdce982f725331
