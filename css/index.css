@@ -18,7 +18,7 @@
 
 .ext {
   width: 10rem;
- 
+
 }
 
 body {
@@ -63,6 +63,16 @@ a {
 .beige-background {
   background: rgba(166, 166, 166, 0.7);
 }
-.primary-color{
+
+.heading-style {
+  font-family: title-font;
+}
+
+.primary-color {
   color: white;
 }
+
+/* .nav-link {
+  font-family: normal-font;
+  font-size: 1.75rem;
+} */
