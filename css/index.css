@@ -33,6 +33,9 @@ body {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  
+  
+
 }
 
 .centered {
@@ -43,14 +46,23 @@ body {
 
 .logo {
   display: inline-block;
-  width: 200px;
+  width: 100px;
   height: 80%;
 
 }
 
+/* .short{
+  height: 20%;
+  
+}
+.long {
+  height: 80%;
+  
+} */
+
 .brand-div {
   border: none;
-  height: 12rem;
+  height: 6rem;
 
 
 }
@@ -97,3 +109,5 @@ a {
 .header {
   font-family: title-font;
 }
+
+ 
