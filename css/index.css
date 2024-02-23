@@ -42,8 +42,16 @@ body {
 }
 
 .logo {
-  width: 150px;
-  height: 100%;
+  display: inline-block;
+  width: 200px;
+  height: 80%;
+
+}
+
+.brand-div {
+  border: none;
+  height: 12rem;
+
 
 }
 
@@ -52,13 +60,23 @@ a {
   color: black;
 }
 
-/* .align {  
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.blc:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+
+}
+
+
+
+
+.btn-marked {
+  background-color: #e5cb82e1;
   
-  
-}*/
+}
+
+.btn-marked:hover {
+  background-color: #e5cb82f6;
+  color: black;
+}
 
 .beige-background {
   background: rgba(166, 166, 166, 0.7);
@@ -72,7 +90,13 @@ a {
   color: white;
 }
 
+<<<<<<< HEAD
 /* .nav-link {
   font-family: normal-font;
   font-size: 1.75rem;
 } */
+=======
+.header {
+  font-family: title-font;
+}
+>>>>>>> 0443e2a262df7a5233206e2a67bdce982f725331
