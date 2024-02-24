@@ -34,8 +34,8 @@ h1{
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
+  height: 84.1vh;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -94,9 +94,15 @@ a {
   color: white;
 }
 
+/*heading media changes START*/
+@media(max-width: 1140px){
+  h1{
+    font-size: 3rem;
+  }
+}
+/*heading media changes START*/
 
-
-
+/*nav-bar media changes START*/
 @media(max-width: 900px) {
   .btn {
     font-size: 1.1rem;
@@ -116,6 +122,9 @@ a {
     width: 100%;
     justify-content: center;
   }
+  h1{
+    font-size: 2.5rem;
+  }
 }
 @media(max-width: 600px){
   .btn {
@@ -128,3 +137,4 @@ a {
     height: 90%;
   }
 }
+/*nav-bar media changes END*/
