@@ -29,8 +29,9 @@ body {
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -46,23 +47,15 @@ body {
 
 .logo {
   display: inline-block;
-  width: 100px;
-  height: 80%;
+  width: 150px;
+  height: 90%;
 
 }
 
-/* .short{
-  height: 20%;
-  
-}
-.long {
-  height: 80%;
-  
-} */
 
 .brand-div {
   border: none;
-  height: 6rem;
+  height: 7rem;
 
 
 }
@@ -91,7 +84,7 @@ a {
 }
 
 .beige-background {
-  background: rgba(166, 166, 166, 0.7);
+  background: rgba(166, 166, 166, 0.3);
 }
 
 .heading-style {
@@ -102,12 +95,39 @@ a {
   color: white;
 }
 
-/* .nav-link {
-  font-family: normal-font;
-  font-size: 1.75rem;
-} */
+
 .header {
   font-family: title-font;
 }
 
- 
+@media(max-width: 900px) {
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media(max-width:766.5px) {
+  .navbar .navbar-nav {
+    width: 100%;
+    flex-direction: row;
+  }
+  .search-button{
+    margin-bottom: 1rem;
+  }
+  form{
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media(max-width: 600px){
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .logo {
+    display: inline-block;
+    width: 120px;
+    height: 90%;
+  }
+}
