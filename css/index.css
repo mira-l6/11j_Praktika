@@ -30,8 +30,8 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
   width: 100vw;
-  overflow-x: hidden;
   height: 100vh;
+  overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -47,15 +47,15 @@ body {
 
 .logo {
   display: inline-block;
-  width: 100px;
-  height: 80%;
+  width: 150px;
+  height: 90%;
 
 }
 
 
 .brand-div {
   border: none;
-  height: 6rem;
+  height: 7rem;
 
 
 }
