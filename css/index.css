@@ -26,17 +26,18 @@ body {
   padding: 0;
 }
 
+h1{
+  font-size: 4em;
+}
+
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow-x: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  
-  
-
 }
 
 .centered {
@@ -56,8 +57,6 @@ body {
 .brand-div {
   border: none;
   height: 7rem;
-
-
 }
 
 a {
@@ -96,9 +95,7 @@ a {
 }
 
 
-.header {
-  font-family: title-font;
-}
+
 
 @media(max-width: 900px) {
   .btn {
