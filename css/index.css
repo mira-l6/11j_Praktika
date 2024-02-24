@@ -99,4 +99,34 @@ a {
   font-family: title-font;
 }
 
- 
+@media(max-width: 900px) {
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media(max-width:766.5px) {
+  .navbar .navbar-nav {
+    width: 100%;
+    flex-direction: row;
+  }
+  .search-button{
+    margin-bottom: 1rem;
+  }
+  form{
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media(max-width: 600px){
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .logo {
+    display: inline-block;
+    width: 120px;
+    height: 90%;
+  }
+}
