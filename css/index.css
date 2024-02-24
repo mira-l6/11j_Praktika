@@ -26,6 +26,9 @@ body {
   padding: 0;
 }
 
+h1{
+  font-size: 4em;
+}
 
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
@@ -54,8 +57,6 @@ body {
 .brand-div {
   border: none;
   height: 7rem;
-
-
 }
 
 a {
@@ -94,9 +95,7 @@ a {
 }
 
 
-.header {
-  font-family: title-font;
-}
+
 
 @media(max-width: 900px) {
   .btn {
