@@ -51,14 +51,6 @@ body {
 
 }
 
-/* .short{
-  height: 20%;
-  
-}
-.long {
-  height: 80%;
-  
-} */
 
 .brand-div {
   border: none;
@@ -102,10 +94,7 @@ a {
   color: white;
 }
 
-/* .nav-link {
-  font-family: normal-font;
-  font-size: 1.75rem;
-} */
+
 .header {
   font-family: title-font;
 }
