@@ -91,6 +91,20 @@
     color: white;
   }
   
+  .secondary-color{
+    background-color: #e5cb82;
+  }
+
+  .contact-img{
+    height: 50%;
+    width: 50%;
+
+  }
+
+  .contact{
+    
+
+  }
   /*heading media changes START*/
   @media(max-width: 1140px){
     h1{
