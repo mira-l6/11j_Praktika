@@ -21,6 +21,7 @@
   body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
   
   h1{
@@ -30,9 +31,8 @@
   .main-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
-    width: 100%;
+    width: 100vw;
     height: 84.1vh;
-    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -94,17 +94,119 @@
   .secondary-color{
     background-color: #e5cb82;
   }
-
-  .contact-img{
-    height: 50%;
-    width: 50%;
-
+  .dark-blue-color{
+    color: #263159;
+    font-weight: 0;
   }
 
-  .contact{
-    
+.contact-info{
+  width: 100vw;
+}
+.main-contacts{
+  flex-direction: row;
+}
+.main-card{
+  width: 25rem;
+  background-color: rgba(166, 166, 166);
+}
+.card-button{
+  padding: 0.8rem;
+}
+.card-button a{
+  border: none;
+  background-color: #e5cb82;
+  color: #263159
+}
+.card-button a:hover{
+  background-color: rgba(229, 203, 130, 0.8);
+  color: #263159;
+}
 
+.contact{
+  width: 28rem;
+  background-color: rgba(256,256,256,0.8);
+}
+.contact a{
+  background-color: #263159;
+}
+.contact a:hover{
+  background-color: rgba(38, 49, 89, 0.9);
+}
+
+.image-icon-circle img{
+  width: 6.5rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 1px solid #263159;
+  padding: 0.2rem;
+}
+.image-icon-circle{
+  padding-left: 0.7em;
+  padding-top: 0.8em;
+  padding-bottom: 0.4em;
+}
+/* contacts media START */
+@media(max-width: 1251.2px) {
+  .main-card{
+    width: 20rem;
+    height: 20rem;
   }
+  .main-card h4{
+    font-size: 1.2rem;
+  }
+  .main-card p{
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 1032.8px) {
+  .main-card{
+    width: 18rem;
+    height: 20rem;
+  }
+  .main-card h4{
+    font-size: 1.1rem;
+  }
+  .main-card p{
+    font-size: 0.95rem;;
+  }
+}
+@media(max-width: 915.2px) {
+  .main-card{
+    width: 16rem;
+    height: 18rem;
+  }
+  .main-card h4{
+    font-size: 1rem;
+  }
+  .main-card p{
+    display: none;
+  }
+  .main-card a{
+    font-size: 0.85rem;;
+  }
+}
+@media(max-width: 800px){
+  .main-card .image-icon-circle img{
+    width: 5.5rem;
+  height: 5rem;
+  }
+  .main-card{
+    width :14rem;
+    height: 16rem;
+  }
+}
+
+@media(max-height: 600px){
+  .main-card .main-card-body p, .card-button{
+    display: none;
+  }
+  .main-card{
+    height: 11rem;
+  }
+}
+/* contacts media END */
+
   /*heading media changes START*/
   @media(max-width: 1140px){
     h1{
