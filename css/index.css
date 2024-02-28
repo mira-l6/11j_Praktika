@@ -29,9 +29,9 @@ body {
 h1{
   font-size: 4em;
 }
-.short{
+/* .short{
   height: 15.9vh;
-}
+} */
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
