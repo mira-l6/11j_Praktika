@@ -95,6 +95,10 @@ a {
 .primary-color {
   color: white;
 }
+.dark-blue-color {
+  color: #263159;
+  font-weight: 0;
+}
 
 /*heading media changes START*/
 @media(max-width: 1140px){
