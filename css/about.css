@@ -1,0 +1,22 @@
+body {
+    overflow-x: hidden;
+}
+
+.secondary-color {
+    background-color: #e5cb82;
+}
+
+.dark-blue-color {
+    color: #263159;
+    font-weight: 0;
+}
+
+.location-info {
+    background-color: rgba(166, 166, 166);
+    width: 100vw;
+    position: absolute;
+    left: 0;
+}
+
+.about-info {
+}
