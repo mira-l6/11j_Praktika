@@ -16,6 +16,26 @@
   src: url(/fonts/30-font.ttf);
 }
 
+.navbar-toggler{
+  border: 1px solid black;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 6rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.navbar-toggler:hover{
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+
+
+
+
 * *::before,
 *::after {
   box-sizing: border-box;

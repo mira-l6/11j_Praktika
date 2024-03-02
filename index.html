@@ -15,15 +15,22 @@
     <div>
         <nav class="navbar short navbar-expand-md p-0">
             <div class="container-fluid beige-background">
-                <ul class="navbar-nav centered">
+                <ul class="navbar-nav justify-content-around">
                     <a href="index.html"><div class="brand-div">
                         <img class="navbar-brand logo" src="./img/logo.png" alt="logo">
-                    </div></a>                
+                    </div></a>
+
+                    <button	class="navbar-toggler" height="50%;" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    
+                    
+                    <div class="collapse navbar-collapse">
                         <li class="nav-item ">
                             <button class="btn btn-lg btn-pill blc" ><a href="home.html" class="nav-link">Начало</a></button>
-                        
                         </li>
-                             
+                          
                         <li class="nav-item ">
                             <button class="btn btn-lg btn-pill blc" ><a href="" class="nav-link">Услуги</a></button>
                         </li>
@@ -38,26 +45,66 @@
                              
                         <li class="nav-item ">
                                 <button class="btn btn-lg btn-pill blc" ><a href="help.html" class="nav-link">Помощ</a></button>
-                        </li>   
-                                  
+                        </li>
+                    </div>
                 </ul>
-                    
-                
-                    <form class="d-flex justify-content-space-between">   
-                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="" class="nav-link">Търсене</a></button>
-                        <button class="btn btn-lg btn-pill blc search-button ms-1"><a href="" class="nav-link">  <i class="large material-icons">account_circle</i>Log in</a></button>       
+                   
+                    <form class="d-flex justify-content-space-between">
+                        <div class="collapse navbar-collapse">
+                            <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="" class="nav-link">Търсене</a></button>
+                            <button class="btn btn-lg btn-pill blc search-button ms-1"><a href="" class="nav-link">  <i class="large material-icons">account_circle</i>Log in</a></button>
+                        </div>  
                     </form>
-                
-                
-                
-                    
-              
-                
                     
                 
-              
+                
             </div>
         </nav>
+        
+        <div class="offcanvas offcanvas-end" id="navbarNav" aria-labelledby="sidebar">
+            <div class="offcanvas-header beige-background">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body beige-background">
+                <ul class="navbar-nav g-3">
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc" ><a href="home.html" class="nav-link">Начало</a></button>
+                    </li>
+                      
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc" ><a href="" class="nav-link">Услуги</a></button>
+                    </li>
+                         
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc" ><a href="contacts.html" class="nav-link">Контакти</a></button>
+                    </li>
+                         
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc" ><a href="about.html" class="nav-link">За нас</a></button>
+                    </li>
+                         
+                    <li class="nav-item mb-3">
+                            <button class="btn btn-lg btn-pill blc" ><a href="help.html" class="nav-link">Помощ</a></button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="" class="nav-link">Търсене</a></button>
+                    </li>
+
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc search-button"><a href="" class="nav-link">
+                            <i class="large material-icons">account_circle</i>Log in</a></button>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+
+                    
+                          
+                                  
+                
         
         <!-- <nav class="navbar short navbar-expand-md p-0">
             <div class="container-fluid beige-background">
