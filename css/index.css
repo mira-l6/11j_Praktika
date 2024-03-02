@@ -1,6 +1,11 @@
 /* :root{
   
 }*/
+
+.bordered{
+  border: 1px solid black;
+
+}
 @font-face {
   font-family: title-font;
   src: url(/fonts/5-font.otf);
