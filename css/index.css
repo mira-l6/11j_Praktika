@@ -134,38 +134,29 @@ a {
 /*heading media changes END*/
 
 /*nav-bar media changes START*/
-@media(max-width: 900px) {
+@media(max-width: 1020px) {
   .btn {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 0.5rem;
   }
 }
 
-@media(max-width:766.5px) {
+@media(max-width:900px) {
   .navbar .navbar-nav {
     width: 100%;
     flex-direction: row;
   }
-  .search-button{
-    margin-bottom: 1rem;
-  }
-  form{
-    width: 100%;
-    justify-content: center;
-  }
   h1{
     font-size: 2.5rem;
   }
-}
-@media(max-width: 600px){
-  .btn {
-    font-size: 1rem;
-    padding: 0.5rem;
+  ul .btn {
+    font-size: 1.12rem;
+    padding: 0.2rem;
   }
-  .logo {
-    display: inline-block;
-    width: 120px;
-    height: 90%;
+  form .btn{
+    font-size: 1.14rem;
+    padding: 0.3rem;
   }
 }
+
 /*nav-bar media changes END*/
