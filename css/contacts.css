@@ -14,6 +14,9 @@ body {
 .contact-info {
   width: 100vw;
 }
+/* .contact-subheading{
+  background-color: white;
+} */
 
 .main-contacts {
   flex-direction: row;

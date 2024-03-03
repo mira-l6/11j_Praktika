@@ -12,11 +12,31 @@ body {
 }
 
 .location-info {
-    background-color: rgba(166, 166, 166);
+    background-color: #e4e4e4;
     width: 100vw;
     position: absolute;
     left: 0;
 }
-
-.about-info {
+.office-image, .googlemaps-image{
+    width: 25rem;
+    
+}
+.office-image img, .googlemaps-image{
+    max-width: 100%;
+}
+hr{
+    padding: 0;
+    margin: 0;   
+    border: 7px solid #263159;
+}
+.location-row{
+    margin: 0.5rem;
+    border: 3px dotted #e5cb82;
+}
+.location-text{
+    border-right: 2px solid #b5b7c1;
+   
+}
+.location-text address{
+    font-size: 1em;
 }
