@@ -22,12 +22,20 @@
                             <img class="navbar-brand logo" src="./img/logo.png" alt="logo">
                         </div>
                     </a>
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="home.html" class="nav-link">Начало</a></button>
 
-                    </li>
+                    <button class="navbar-toggler" height="50%;" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                    <!-- <li class="nav-item ">
+                    <div class="collapse navbar-collapse">
+                        <li class="nav-item ">
+                            <button class="btn btn-lg btn-pill blc"><a href="home.html"
+                                    class="nav-link">Начало</a></button>
+
+                        </li>
+
+                        <!-- <li class="nav-item ">
                         <div class="dropdown">
                             <button type="button" class="btn btn-lg btn-pill blc dropdown-toggle" data-bs-toggle="dropdown">
                            Услуги
@@ -38,30 +46,81 @@
                             </ul>
                         </div> -->
                         <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
-                    </li>
+                        </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="contacts.html" class="nav-link disabled">Контакти</a></button>
-                    </li>
+                        <li class="nav-item ">
+                            <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
+                                    class="nav-link disabled">Контакти</a></button>
+                        </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За нас</a></button>
-                    </li>
+                        <li class="nav-item ">
+                            <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За
+                                    нас</a></button>
+                        </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="help.html" class="nav-link">Помощ</a></button>
-                    </li>
+                        <li class="nav-item ">
+                            <button class="btn btn-lg btn-pill blc"><a href="help.html"
+                                    class="nav-link">Помощ</a></button>
+                        </li>
 
-
+                    </div>
                 </ul>
-                <form class="d-flex">
-                    <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="" class="nav-link">Търсене</a></button>
-                    <button class="btn btn-lg btn-pill blc ms-1"><a href="" class="nav-link"><span>Профил</span></a></button>
+                <form class="d-flex justify-content-space-between">
+                    <div class="collapse navbar-collapse">
+                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href=""
+                                class="nav-link">Търсене</a></button>
+                        <button class="btn btn-lg btn-pill blc ms-1"><a href=""
+                                class="nav-link"><span>Профил</span></a></button>
+                    </div>
                 </form>
 
             </div>
         </nav>
 
+        <div class="offcanvas offcanvas-end" id="navbarNav" aria-labelledby="sidebar">
+            <div class="offcanvas-header beige-background">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body beige-background">
+                <ul class="navbar-nav g-3">
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc"><a href="home.html" class="nav-link">Начало</a></button>
+                    </li>
+
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
+                    </li>
+
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
+                                class="nav-link">Контакти</a></button>
+                    </li>
+
+                    <li class="nav-item ">
+                        <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За
+                                нас</a></button>
+                    </li>
+
+                    <li class="nav-item mb-3">
+                        <button class="btn btn-lg btn-pill blc"><a href="help.html" class="nav-link">Помощ</a></button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href=""
+                                class="nav-link">Търсене</a></button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill blc search-button">
+                            <a href="" class="nav-link">Профил</a>
+                        </button>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
 
         <div class="container-fluid main-image">
             <h1 class="primary-color title-font text-center pt-5 pb-5">Контакти</h1>
@@ -71,7 +130,8 @@
                     <div class="image-icon-circle"><img src="" alt=""></div>
                     <div class="main-card-body card-body">
                         <h4 class="card-title">Шефа</h4>
-                        <p class="card-text">More info Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ducimus?
+                        <p class="card-text">More info Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                            ducimus?
                         </p>
                     </div>
                     <div class="card-button"><a href="#" class="btn btn-primary">See Profile</a></div>
@@ -101,7 +161,8 @@
         </div>
 
         <div class="container-fluid secondary-color contact-info d-flex-column gap-3">
-            <h2 class="text-center dark-blue-color beige-background pb-3 pt-3"><i>Запознайте се с нашите брокери.</i></h2>
+            <h2 class="text-center dark-blue-color beige-background pb-3 pt-3"><i>Запознайте се с нашите брокери.</i>
+            </h2>
 
             <div class="d-flex flex-row pt-5 justify-content-around">
                 <div class="card contact">
