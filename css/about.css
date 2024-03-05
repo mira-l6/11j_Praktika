@@ -3,7 +3,7 @@ body {
 }
 
 .secondary-color {
-    background-color: #e5cb82;
+    background-color: var(--color-primary);
 }
 
 .dark-blue-color {
@@ -27,11 +27,17 @@ body {
 hr{
     padding: 0;
     margin: 0;   
-    border: 7px solid #263159;
+    border: 5px solid var(--color-primary);
+    opacity: 1;
 }
 .location-row{
-    margin: 0.5rem;
-    border: 3px dotted #e5cb82;
+    /* margin: 0.5rem; */
+    border-top: 10px solid var(--color-primary);
+    border-bottom: 10px solid var(--color-primary);
+    opacity: 1;
+    margin: 0 0.5px;
+    
+    /* border: 3px dotted #e5cb82; */
 }
 .location-text{
     border-right: 2px solid #b5b7c1;

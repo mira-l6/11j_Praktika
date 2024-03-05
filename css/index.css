@@ -1,8 +1,10 @@
-/* :root{
+ :root{
+  --color-primary: #e5cb82e1;
   
-}*/
+}
 
 /*scrollbar*/
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -114,12 +116,12 @@ a {
   font-family: title-font;
 }
 .btn-marked {
-  background-color: #e5cb82e1;
+  background-color: var(--color-primary);
   
 }
 
 .btn-marked:hover {
-  background-color: #e5cb82f6;
+  background-color: var(--color-primary);
   color: black;
 }
 
