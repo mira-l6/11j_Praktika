@@ -1,5 +1,5 @@
 .secondary-color {
-  background-color: #e5cb82;
+  background-color: var(--color-primary);
 }
 
 .dark-blue-color {
