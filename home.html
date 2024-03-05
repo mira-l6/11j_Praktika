@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- nav start -->
     <div>
         <nav class="navbar short navbar-expand-md p-0">
             <div class="container-fluid beige-background">
@@ -36,17 +37,27 @@
                         </li>
 
                         <li class="nav-item ">
-                            <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-lg btn-pill blc dropdown-toggle" data-bs-toggle="dropdown">
+                           Услуги
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="dropdown-item nav-link" href="#">Покупка</a></li>
+                                <li class="nav-item"><a class="dropdown-item nav-link" href="#">Продажба</a></li>
+                            </ul>
+                        </div>
                         </li>
+                        <!-- <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
+                        </li> -->
 
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
                                     class="nav-link">Контакти</a></button>
                         </li>
 
-                        <li class="nav-item ">
-                            <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За
-                                    нас</a></button>
+                        <li class="nav-item">
+                            <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За нас</a>
+                                </button>
                         </li>
 
                         <li class="nav-item ">
@@ -56,16 +67,14 @@
 
                     </div>
                 </ul>
-                <form class="d-flex">
+                <form class="d-flex justify-content-space-between">
                     <div class="collapse navbar-collapse">
                         <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href=""
                                 class="nav-link">Търсене</a></button>
                         <button class="btn btn-lg btn-pill blc ms-1"><a href=""
                                 class="nav-link"><span>Профил</span></a></button>
                     </div>
-
                 </form>
-
 
             </div>
         </nav>
@@ -75,38 +84,59 @@
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body beige-background">
-                <ul class="navbar-nav g-3">
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="home.html" class="nav-link">Начало</a></button>
+            <div class="offcanvas-body beige-background ps-0 pe-0">
+                <ul class="navbar-nav g-3 ms-0 ps-0">
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="home.html" class="nav-link ps-3">Начало</a></button>
                     </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-lg btn-pill blc w-100 text-start" data-bs-toggle="collapse" data-bs-target="#service">
+                           <a class="ps-3">Услуги</a>
+                        </button>
+                        <div id="service" class="collapse container-fluid p-0">
+                                <ul class="navbar-nav w-100">
+                                    <li class="nav-item w-100">
+                                        <button class="btn w-100">
+                                            <a class="nav-link text-start ps-4" href="#">Покупка</a>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item w-100">
+                                        <button class="btn w-100">
+                                            <a class="nav-link text-start ps-4" href="#">Продажба</a>
+                                        </button>
+                                    </li>
+                                </ul>
+                        </div>
+                            
+                        
+                        <!-- <button class="btn btn-lg btn-pill blc" ><a href="" class="nav-link">Услуги</a></button> -->
                     </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
-                                class="nav-link">Контакти</a></button>
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill blc w-100 text-start">
+                            <a href="contacts.html" class="nav-link ps-3">Контакти</a>
+                                
+                        </button>
                     </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="about.html" class="nav-link ps-3">За
                                 нас</a></button>
                     </li>
 
-                    <li class="nav-item mb-3">
-                        <button class="btn btn-lg btn-pill blc"><a href="help.html" class="nav-link">Помощ</a></button>
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="help.html" class="nav-link ps-3">Помощ</a></button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href=""
-                                class="nav-link">Търсене</a></button>
+                        <button class="btn btn-lg btn-pill btn-marked blc search-button w-100 text-start"><a href=""
+                                class="nav-link ps-3">Търсене</a></button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc search-button">
-                            <a href="" class="nav-link">Профил</a>
+                        <button class="btn btn-lg btn-pill blc search-button w-100 text-start">
+                            <a href="" class="nav-link ps-3">Профил</a>
                         </button>
                     </li>
 
@@ -114,6 +144,7 @@
 
             </div>
         </div>
+        <!-- nav end -->
 
 </body>
 
