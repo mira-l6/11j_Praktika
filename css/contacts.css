@@ -133,7 +133,7 @@ body {
   }
 }
 
-@media(max-height: 690px) {
+@media(max-height: 600px) {
 
   .main-card .main-card-body p,
   .card-button {
