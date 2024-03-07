@@ -32,8 +32,8 @@ hr{
 }
 .location-row{
     /* margin: 0.5rem; */
-    border-top: 10px solid var(--color-primary);
-    border-bottom: 10px solid var(--color-primary);
+    /* border-top: 10px solid var(--color-primary);
+    border-bottom: 10px solid var(--color-primary); */
     opacity: 1;
     margin: 0 0.5px;
     
@@ -48,4 +48,7 @@ hr{
 }
 .office-images{
     border-right: 2px solid #b5b7c1;
+}
+.office-image{
+    width: 95%;
 }
