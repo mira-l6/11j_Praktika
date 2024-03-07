@@ -131,7 +131,9 @@ a {
   background-color: rgba(0, 0, 0, 0.075);
 
 }
-
+.search-button{
+  height: 2.9em;
+}
 .title-font{
   font-family: title-font;
 }
