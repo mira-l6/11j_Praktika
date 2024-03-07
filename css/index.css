@@ -97,6 +97,25 @@ h1{
 
 }
 
+.removed:hover {
+  background-color:  rgba(166, 166, 166, 0.01) !important;
+  
+
+}
+
+.removed{
+  color: rgba(166, 166, 166, 0.8) !important;
+  
+}
+
+.removed:active{
+  background-color: rgba(166, 166, 166, 0.01);
+
+}
+
+.removed:focus{
+  border: none;
+}
 
 .brand-div {
   border: none;
