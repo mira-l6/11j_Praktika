@@ -20,10 +20,12 @@ label{
     background-color: var(--color-primary);
 }
 
+.extra-pad{
+    padding-top: 1.5rem;
 
-.remember-label{
-    padding-left: 0.79rem;
 }
+
+
 
 
 
