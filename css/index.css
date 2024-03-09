@@ -121,10 +121,12 @@ h1{
   border: none;
   height: 7rem;
 }
+
 .dropdown-style{
   padding: 0.8em;
   color: #505050;
 }
+
 a {
   text-decoration: none;
   color: #263159;
@@ -134,15 +136,17 @@ a {
   background-color: rgba(0, 0, 0, 0.075);
 
 }
+
 .search-button{
   height: 2.9em;
 }
+
 .title-font{
   font-family: title-font;
 }
+
 .btn-marked {
-  background-color: var(--color-primary);
-  
+  background-color: var(--color-primary);  
 }
 
 .btn-marked:hover {
@@ -161,10 +165,12 @@ a {
 .primary-color {
   color: white;
 }
+
 .dark-blue-color {
   color: #263159;
   font-weight: 0;
 }
+
 .profile-icon{
   width: 2em;
   height: 2em;
@@ -172,6 +178,7 @@ a {
   border-radius: 50%;
   color: rgba(72,73,81,255);
 }
+
 .fa-user{
   font-size: 1.5em;
 }
