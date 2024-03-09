@@ -37,7 +37,16 @@
                         </li>
 
                         <li class="nav-item ">
-                            <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-lg btn-pill blc dropdown-toggle dropdown-style"
+                                    data-bs-toggle="dropdown">
+                                    Услуги
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="dropdown-item nav-link" href="#">Покупка</a></li>
+                                    <li class="nav-item"><a class="dropdown-item nav-link" href="#">Продажба</a></li>
+                                </ul>
+                            </div>
                         </li>
 
                         <li class="nav-item ">
@@ -81,8 +90,28 @@
                         <button class="btn btn-lg btn-pill blc"><a href="home.html" class="nav-link">Начало</a></button>
                     </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-lg btn-pill blc w-100 text-start" data-bs-toggle="collapse"
+                            data-bs-target="#service">
+                            <a class="ps-3">Услуги</a>
+                        </button>
+                        <div id="service" class="collapse container-fluid p-0">
+                            <ul class="navbar-nav w-100">
+                                <li class="nav-item w-100">
+                                    <button class="btn w-100">
+                                        <a class="nav-link text-start ps-4" href="#">Покупка</a>
+                                    </button>
+                                </li>
+                                <li class="nav-item w-100">
+                                    <button class="btn w-100">
+                                        <a class="nav-link text-start ps-4" href="#">Продажба</a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <!-- <button class="btn btn-lg btn-pill blc" ><a href="" class="nav-link">Услуги</a></button> -->
                     </li>
 
                     <li class="nav-item ">
