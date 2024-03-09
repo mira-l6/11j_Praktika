@@ -1,12 +1,11 @@
 .reg{
-    width: 40rem;
-    height: 50rem;
+    /* width: 40rem; */
+    height: 30rem; 
+    width: 50%;
     background-color: rgba(38, 49, 89, 0.3);
     box-shadow: 0 0 10px 5px rgba(38, 49, 89, 0.2);
     
 }
-
-
 
 label{
     font-size: 1.5rem;
