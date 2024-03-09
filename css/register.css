@@ -9,6 +9,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 label{
@@ -18,9 +19,6 @@ label{
 .submit{
     cursor: pointer;
     background-color: var(--color-primary);
-   
-    
-    
 }
 
 
