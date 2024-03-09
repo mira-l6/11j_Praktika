@@ -179,6 +179,16 @@ a {
   color: rgba(72,73,81,255);
 }
 
+.fa-search{
+  color: rgba(72,73,81,255);
+  font-size: 1.05em;
+}
+
+.collapse-user-icon{
+  color: rgba(72,73,81,255);
+  padding-right: 0.35em;
+}
+
 .fa-user{
   font-size: 1.5em;
 }
