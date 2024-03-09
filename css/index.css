@@ -189,6 +189,10 @@ a {
   padding-right: 0.35em;
 }
 
+.profile-button{
+  background: #d3d3d3;
+}
+
 .fa-user{
   font-size: 1.5em;
 }
