@@ -1,6 +1,6 @@
 .reg{
     /* width: 40rem; */
-    height: 30rem; 
+    height: 100%; 
     width: 50%;
     background-color: rgba(38, 49, 89, 0.3);
     box-shadow: 0 0 10px 5px rgba(38, 49, 89, 0.2);
