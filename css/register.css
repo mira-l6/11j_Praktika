@@ -1,0 +1,35 @@
+.reg{
+    width: 40rem;
+    height: 50rem;
+    background-color: rgba(38, 49, 89, 0.3);
+    box-shadow: 0 0 10px 5px rgba(38, 49, 89, 0.2);
+    
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+label{
+    font-size: 1.5rem;
+    
+}
+.submit{
+    cursor: pointer;
+    background-color: var(--color-primary);
+   
+    
+    
+}
+
+
+.remember-label{
+    padding-left: 0.79rem;
+}
+
+.log-in-link{
+    text-decoration: underline solid black;
+    cursor: pointer;
+}
+
