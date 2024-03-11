@@ -1,6 +1,7 @@
 .reg{
     /* width: 40rem; */
-    width: 40%;
+    width: 40em;
+    height: 27em;
     background-color: #e4e4e4;
     box-shadow: 0 0 10px 5px rgba(38, 49, 89, 0.2);
     padding-left: 3rem;
@@ -19,14 +20,34 @@ label{
 h2{
     font-size: 2.1rem;
 }
+input[type="text"], input[type="password"]{
+    background-color: transparent;
+    width: 90%;
+    display: inline;
+}
+
+.password-area{
+    border-bottom: 1px solid black;
+}
+.label-area{
+    border-bottom: 1px solid black;
+}
+input:active{
+    background: transparent;
+}
+.password-area button{
+    position: relative;
+    display: inline;
+    width: 9%;
+    font-size: 1.7em;
+    color: #8f9ba7;
+    border: none;
+    background: transparent;
+}
 
 .submit{    
     cursor: pointer;
     background-color: var(--color-primary);
-}
-
-.extra-pad{
-    padding-top: 1.5rem;
 }
 
 @media(max-width: 900px){
