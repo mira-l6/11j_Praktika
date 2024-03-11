@@ -234,4 +234,10 @@ a {
   }
 }
 
+@media(max-width: 767px){
+  .fa-search{
+    display: inline;
+  }
+}
+
 /*nav-bar media changes END*/
