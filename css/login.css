@@ -1,15 +1,21 @@
 .reg{
     /* width: 40rem; */
-    height: 100%; 
-    width: 50%;
-    background-color: rgba(38, 49, 89, 0.3);
+    width: 45%;
+    background-color: #e4e4e4;
     box-shadow: 0 0 10px 5px rgba(38, 49, 89, 0.2);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
     
 }
 
 label{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     
+}
+h2{
+    font-size: 2.3rem;
 }
 
 .submit{
@@ -19,7 +25,10 @@ label{
 
 .extra-pad{
     padding-top: 1.5rem;
+}
 
+.fa-lock{
+   
 }
 
 
