@@ -55,6 +55,7 @@ input:active{
     background-color: var(--color-primary) !important;
 
 }
+
 @media(max-width: 900px){
     h2{
         font-size: 2rem;
