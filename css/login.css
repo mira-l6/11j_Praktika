@@ -26,6 +26,16 @@ input[type="text"], input[type="password"]{
     display: inline;
 }
 
+input:focus{
+    outline: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+
+}
+
+
+
 .password-area{
     border-bottom: 1px solid black;
 }
