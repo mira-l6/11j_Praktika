@@ -48,8 +48,13 @@ input:active{
 .submit{    
     cursor: pointer;
     background-color: var(--color-primary);
+    
 }
 
+.submit:hover{
+    background-color: var(--color-primary) !important;
+
+}
 @media(max-width: 900px){
     h2{
         font-size: 2rem;
