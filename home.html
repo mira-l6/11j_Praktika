@@ -154,31 +154,31 @@
         </div>
         <!-- nav end -->
 
-
+        <!-- filter start -->
         <div class="container-fluid d-flex filter">
             <form action="/php/" method="post" class="container-fluid p-3">
                 <div class="row mb-3">
                     <div class="col-4">
                         <label class="form-label" for="name">Име на офертата:</label>
-                        <input class="form-control" name="name" type="text" aria-label="Име на офертата">
+                        <input class="form-control" name="name" type="text" aria-label="Име на офертата" id="name">
                         
                     </div>
                     <div class="col-4">
                         <label class="form-label" for="type">Тип имот:</label>
-                        <input class="form-control" name="type" type="text" aria-label="Тип имот">
+                        <input class="form-control" name="type" type="text" aria-label="Тип имот" id="type">
                         
                     </div>
                     <div class="col-4">
                         <label class="form-label" for="price">Цена(от-до):</label>
                         <div class="row">
                             <div class="col-5">
-                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)">
+                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)" id="price-start">
                             </div>
                             <div class="col-2">
                                 <p class="text-center price-paragraph">-</p>
                             </div>
                             <div class="col-5">
-                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)">
+                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)" id="price-end">
                             </div>                               
                         </div>   
                     </div>
@@ -200,19 +200,9 @@
                             <option value="3">Пулпудева</option>
                         </select>
                     </div>
-                
-                
-
-
-
-
             </form>
-
-
-
-
-
         </div>
+        <!-- filter end -->
 
 </body>
 
