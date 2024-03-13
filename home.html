@@ -181,7 +181,13 @@
                 <div class="row">
                     <div class="col-4">
                         <label class="form-label" for="location" type="text" aria-label="Населено място">Населено място:</label>
-                        <input class="form-control" name="location" type="text" aria-label="Населено място" id="location">
+                        <input class="form-control" name="location" type="text" aria-label="Населено място" id="location" list="locations">
+                        <datalist id="locations">
+                            <option value="Пловдив"></option>
+                            <option value="Филипополис"></option>
+                            <option value="Пулпудева"></option>
+                        </datalist>
+
                     </div>
                     <div class="col-4">
                         <label class="form-label" for="size">Квадратура(от-до):</label>
