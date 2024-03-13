@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Начало</title>
 </head>
@@ -153,6 +153,66 @@
             </div>
         </div>
         <!-- nav end -->
+
+
+        <div class="container-fluid d-flex beige-background filter">
+            <form action="/php/" method="post" class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="name">Име на офертата:</label>
+                        <input class="form-control" name="name" type="text" aria-label="Име на офертата">
+                        
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="type">Тип имот:</label>
+                        <input class="form-control" name="type" type="text" aria-label="Тип имот">
+                        
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="price">Цена(от-до)</label>
+                        <div class="row">
+                            <div class="col-5">
+                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)">
+                            </div>
+                            <div class="col-2">
+                                <p class="text-center">-</p>
+                            </div>
+                            <div class="col-5">
+                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)">
+                            </div>                               
+                        </div>   
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="location" type="text" aria-label="Населено място">Населено място:</label>
+                        <select class="form-select">
+                            <option value="1">Пловдив</option>
+                            <option value="2">Филипополис</option>
+                            <option value="3">Пулпудева</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="location" type="text" aria-label="Населено място">Населено място:</label>
+                        <select class="form-select">
+                            <option value="1">Пловдив</option>
+                            <option value="2">Филипополис</option>
+                            <option value="3">Пулпудева</option>
+                        </select>
+                    </div>
+                
+                
+
+
+
+
+            </form>
+
+
+
+
+
+        </div>
 
 </body>
 
