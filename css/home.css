@@ -2,3 +2,6 @@
 .filter{
     background-color: var(--color-primary);
 }
+.price-paragraph{
+    font-size: 1.5rem;
+}
