@@ -1,27 +1,5 @@
 .reg{
     /* width: 40rem; */
-<<<<<<< HEAD
-    height: 100%; 
-    width: 50%;
-    background-color: rgba(38, 49, 89, 0.3);
-    box-shadow: 0 0 10px 5px rgba(38, 49, 89, 0.2);
-    
-}
-
-label{
-    font-size: 1.5rem;
-    
-}
-
-.submit{
-    cursor: pointer;
-    background-color: var(--color-primary);
-}
-
-.extra-pad{
-    padding-top: 1.5rem;
-
-=======
     width: 35em;
     height: 27em;
     background-color: #e4e4e4;
@@ -100,7 +78,6 @@ input:active{
     .reg{
         width: 60%;
     }
->>>>>>> 99b09c89281c997ed24d7256acae3b46beaebeda
 }
 
 
