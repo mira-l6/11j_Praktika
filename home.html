@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Начало</title>
 </head>
@@ -153,6 +153,62 @@
             </div>
         </div>
         <!-- nav end -->
+
+        <!-- filter start -->
+        <div class="container-fluid d-flex filter">
+            <form action="/php/" method="post" class="container-fluid p-3">
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <label class="form-label" for="type">Тип имот:</label>
+                        <input class="form-control" name="type" type="text" aria-label="Тип имот" id="type">
+                        
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="price">Цена(от-до):</label>
+                        <div class="row">
+                            <div class="col-5">
+                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)" id="price-start">
+                            </div>
+                            <div class="col-2">
+                                <p class="text-center price-paragraph">-</p>
+                            </div>
+                            <div class="col-5">
+                                <input class="form-control" name="price" type="text" aria-label="Цена(от-до)" id="price-end">
+                            </div>                               
+                        </div>   
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="location" type="text" aria-label="Населено място">Населено място:</label>
+                        <input class="form-control" name="location" type="text" aria-label="Населено място" id="location" list="locations">
+                        <datalist id="locations">
+                            <option value="Пловдив"></option>
+                            <option value="Филипополис"></option>
+                            <option value="Пулпудева"></option>
+                        </datalist>
+
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label" for="size">Квадратура(от-до):</label>
+                        <div class="row">
+                            <div class="col-5">
+                                <input class="form-control" name="size" type="text" aria-label="Квадратура(от-до)" id="size-start">
+                            </div>
+                            <div class="col-2">
+                                <p class="text-center price-paragraph">-</p>
+                            </div>
+                            <div class="col-5">
+                                <input class="form-control" name="size" type="text" aria-label="Квадратура(от-до)" id="size-end">
+                            </div>                               
+                        </div>   
+                    </div>
+                    <div class="col-4">
+                        
+                    </div>
+            </form>
+        </div>
+        <!-- filter end -->
 
 </body>
 
