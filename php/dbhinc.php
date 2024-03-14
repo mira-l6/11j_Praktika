@@ -17,8 +17,18 @@
     //preobrazuvane na redovete v asociativen masiv
     $masiv = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+
     //osvobojdavane na rezultata ot pametta
     mysqli_free_result($result);
     //zatvarqne na vruzkata
     mysqli_close($conn);
+
+
+
+    //<form action='connect.php' method="POST">
+
+
+
+
+//$con->close();
 
