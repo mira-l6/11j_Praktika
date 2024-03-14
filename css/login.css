@@ -1,5 +1,6 @@
 .reg{
     /* width: 40rem; */
+<<<<<<< HEAD
     height: 100%; 
     width: 50%;
     background-color: rgba(38, 49, 89, 0.3);
@@ -20,6 +21,86 @@ label{
 .extra-pad{
     padding-top: 1.5rem;
 
+=======
+    width: 35em;
+    height: 27em;
+    background-color: #e4e4e4;
+    box-shadow: 0 0 10px 5px rgba(38, 49, 89, 0.2);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    /* position: fixed;
+    right: 30%;
+    left: 30%; */
+}
+
+label{
+    font-size: 1.25rem;
+    
+}
+h2{
+    font-size: 2.1rem;
+}
+input[type="text"], input[type="password"]{
+    background-color: transparent;
+    width: 90%;
+    display: inline;
+}
+
+input:focus{
+    outline: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+input::selection {
+    border: none !important;
+}
+
+
+.password-area{
+    border-bottom: 1px solid black;
+}
+.label-area{
+    border-bottom: 1px solid black;
+}
+input:active{
+    background: transparent;
+}
+.password-area button{
+    position: relative;
+    display: inline;
+    width: 9%;
+    font-size: 1.7em;
+    color: #8f9ba7;
+    border: none;
+    background: transparent;
+}
+
+.submit{    
+    cursor: pointer;
+    background-color: var(--color-primary);
+    
+}
+
+.submit:hover{
+    background-color: var(--color-primary) !important;
+
+}
+
+@media(max-width: 900px){
+    h2{
+        font-size: 2rem;
+    }
+    label{
+        font-size: 1.1rem;
+    }
+    .reg{
+        width: 60%;
+    }
+>>>>>>> 99b09c89281c997ed24d7256acae3b46beaebeda
 }
 
 
