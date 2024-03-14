@@ -1,6 +1,11 @@
 <?php
-    //polucheni promenlivi ot nqkoi form
-    //$promenliva = $_POST["promenliva"];
+    //proevrka dali ima podadeni danni, prosta validaciq na poluchenite danni
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $username = test_input($_POST["username"]);
+        $password = test_input($_POST["password"]);
+    }
+
 
     //vruzka s bd
     $conn = new mysqli('localhost', 'root', 'test', 'ime na bd');
@@ -12,17 +17,14 @@
     }
     else
     {
-        $stmt = $conn->prepare("insert into registration(promenliva) values(?)");
-        //s - string
-        //d - float
-        //i - int
-        //b - blob
-        $stmt->bind_param("s", $promenliva);
-        $stmt->execute();
-        echo "registration succesfully...";
-        $stmt->close();
-        $conn->close();
+        
     }
 
-    
-?>
+    //funkciq za prosta validaciq na polucheni danni
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }

@@ -46,9 +46,10 @@ hr{
 .location-text address{
     font-size: 1em;
 }
-.office-images{
-    border-right: 2px solid #b5b7c1;
+.c-image{
+    width: 100%;
+    height: 29em;
 }
-.office-image{
-    width: 95%;
+.carousel{
+    width: 100%;
 }

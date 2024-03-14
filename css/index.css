@@ -122,6 +122,11 @@ h1{
   height: 7rem;
 }
 
+.dropdown-style{
+  padding: 0.8em;
+  color: #505050;
+}
+
 a {
   text-decoration: none;
   color: #263159;
@@ -131,15 +136,17 @@ a {
   background-color: rgba(0, 0, 0, 0.075);
 
 }
+
 .search-button{
   height: 2.9em;
 }
+
 .title-font{
   font-family: title-font;
 }
+
 .btn-marked {
-  background-color: var(--color-primary);
-  
+  background-color: var(--color-primary);  
 }
 
 .btn-marked:hover {
@@ -158,10 +165,12 @@ a {
 .primary-color {
   color: white;
 }
+
 .dark-blue-color {
   color: #263159;
   font-weight: 0;
 }
+
 .profile-icon{
   width: 2em;
   height: 2em;
@@ -169,6 +178,21 @@ a {
   border-radius: 50%;
   color: rgba(72,73,81,255);
 }
+
+.fa-search{
+  color: rgba(72,73,81,255);
+  font-size: 1.05em;
+}
+
+.collapse-user-icon{
+  color: rgba(72,73,81,255);
+  padding-right: 0.35em;
+}
+
+.profile-button{
+  background: #d3d3d3;
+}
+
 .fa-user{
   font-size: 1.5em;
 }
