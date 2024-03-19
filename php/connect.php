@@ -8,7 +8,7 @@
 
 
     //vruzka s bd
-    $conn = new mysqli('localhost', 'root', 'test', 'ime na bd');
+    $conn = new mysqli('localhost', 'root', 'test', 'ForumDB');
 
     //proverka na vruzkata
     if($conn->connect_error || !$conn)
