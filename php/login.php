@@ -48,6 +48,7 @@
                 }
                 else
                 {
+                    echo "Ups";
                     header("Location: login.html?error=Грешно потребителско име или парола");
                     exit();
                 }
