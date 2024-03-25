@@ -23,4 +23,11 @@ input:focus{
 .offer-div{
     width: 100%;
     height: 25rem;
+    
+}
+
+.offer-text{
+    border: 3px solid black;
+    width: 100%;
+
 }
