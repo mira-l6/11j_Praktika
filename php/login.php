@@ -43,7 +43,7 @@
                     $_SESSION['login_Pass'] = $row['login_Pass'];
                     $_SESSION['login_RealtorID'] = $row['login_RealtorID'];
                     //?
-                    header("Location: index.html");
+                    header("Location: connect.php");
                     exit();
                 }
                 else
