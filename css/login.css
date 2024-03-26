@@ -41,12 +41,15 @@ input::selection {
 .password-area{
     border-bottom: 1px solid black;
 }
+
 .label-area{
     border-bottom: 1px solid black;
 }
+
 input:active{
     background: transparent;
 }
+
 .password-area button{
     position: relative;
     display: inline;
