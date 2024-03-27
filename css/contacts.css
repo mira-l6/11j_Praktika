@@ -11,9 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-.contact-info {
-  width: 100vw;
-}
 /* .contact-subheading{
   background-color: white;
 } */
@@ -43,19 +40,6 @@ body {
   color: #263159;
 }
 
-.contact {
-  width: 25rem;
-  background-color: #e4e4e4;
-}
-
-.contact a {
-  background-color: #263159;
-}
-
-.contact a:hover {
-  background-color: rgba(38, 49, 89, 0.9);
-}
-
 .image-icon-circle img {
   width: 6.5rem;
   height: 6.7rem;
@@ -68,11 +52,6 @@ body {
   padding-top: 0.8em;
   padding-bottom: 0.4em;
 }
-.icon-contact-body{
-  width: 100%;
-  height: 7em;
-  
-}
 
 .title-space{
   height: 15%;
@@ -83,6 +62,41 @@ body {
   justify-content: center;
   align-items: center;
   height: 85%;
+}
+
+.contact-info {
+  width: 100vw;
+}
+
+.subheading-1{
+  background-color: var(--color-primary);
+  box-shadow: -2px 0px 27px 7px rgba(209, 202, 209, 0.4);
+}
+.subheading-1 h2{
+  color: rgb(58, 76, 83);
+}
+
+.agent{
+  box-shadow: -2px 0px 27px 7px rgba(209, 202, 209, 0.4);
+  border-radius: 20px;
+  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.agent-photo{
+  width: 12em;
+  height: 12em;
+}
+.agent-photo img{
+  max-width: 100%;
+  width: 12em;
+  height: 12em;
+  padding: 1em;
+}
+
+.estate-agents{
+  grid-template-columns: repeat(3,1fr);
 }
 
 /* contacts media START */
