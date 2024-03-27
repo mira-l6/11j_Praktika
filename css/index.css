@@ -223,12 +223,6 @@ a {
 /*heading media changes END*/
 
 /*nav-bar media changes START*/
-@media(max-width: 1020px) {
-  .btn {
-    font-size: 1.2rem;
-    padding: 0.5rem;
-  }
-}
 
 @media(max-width:900px) {
   .navbar .navbar-nav {
