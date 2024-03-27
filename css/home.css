@@ -9,14 +9,18 @@ input{
     box-shadow: none !important;
     border: none !important;
 }
+.filter-area form{
+    width: 80%;
+}
 
 .filter-area{
+    width: 100%;
     background-color: var(--color-primary);
+    box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
 }
 
 .filter-box{
     background-color: white;
-    width: 80%;
     display: flex;
     justify-content: space-around;
     border-radius: 50px;
@@ -67,3 +71,18 @@ input{
     width: 19%;
 }
 
+.filter-search-button{
+    width: 15%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: white;
+    box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
+}
+.filter-search-button button{
+    text-align: right;
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    text-decoration:underline;
+    text-decoration-color: var(--color-primary);
+}
