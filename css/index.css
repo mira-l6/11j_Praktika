@@ -104,8 +104,11 @@ nav .beige-background{
 .logo {
   display: inline-block;
   width: 90px;
-  height: 90%;
+  height: 80%;
+}
 
+.search-button a{
+  font-size: 0.85em;
 }
 
 .removed:hover {
