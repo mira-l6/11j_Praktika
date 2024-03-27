@@ -74,6 +74,7 @@ body {
 }
 .subheading-1 h2{
   color: rgb(58, 76, 83);
+  font-family: light-font;
 }
 
 .agent{

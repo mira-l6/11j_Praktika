@@ -33,6 +33,11 @@
   src: url(/fonts/30-font.ttf);
 }
 
+@font-face {
+  font-family: light-font;
+  src: url(/fonts/CormorantInfant-Regular.ttf);
+}
+
 .navbar-toggler{
   border: 1px solid black;
   height: 5rem;
