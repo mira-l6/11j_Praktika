@@ -15,4 +15,5 @@ input:focus{
 .filter-box{
     border: 1px solid grey;
     border-radius: 50px;
+    box-shadow: -2px 0px 27px 7px rgba(201,193,201,0.40);
 }
