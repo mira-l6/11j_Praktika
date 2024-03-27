@@ -73,12 +73,23 @@ h1{
   font-size: 4em;
 }
 
+nav{
+  height: 80px;
+}
+
+nav .beige-background{
+  height: 80px;
+}
+
+.nav-item button{
+  font-size: 1.1em;
+}
 
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
   width: 100%;
-  height: calc(100vh - 112px);
+  height: calc(100vh - 80px);
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,7 +103,7 @@ h1{
 
 .logo {
   display: inline-block;
-  width: 150px;
+  width: 90px;
   height: 90%;
 
 }
@@ -119,7 +130,7 @@ h1{
 
 .brand-div {
   border: none;
-  height: 7rem;
+  height: 6rem;
 }
 
 .dropdown-style{
