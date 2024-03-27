@@ -152,7 +152,8 @@ a {
 }
 
 .search-button{
-  height: 2.9em;
+  height: 2.5em;
+  box-shadow: -2px 0px 27px 7px rgba(201,193,201,0.40);
 }
 
 .title-font{
@@ -186,8 +187,8 @@ a {
 }
 
 .profile-icon{
-  width: 2em;
-  height: 2em;
+  width: 1.6em;
+  height: 1.6em;
   border: 1.2px solid rgba(72,73,81,255);
   border-radius: 50%;
   color: rgba(72,73,81,255);
@@ -208,7 +209,7 @@ a {
 }
 
 .fa-user{
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 /*heading media changes START*/
