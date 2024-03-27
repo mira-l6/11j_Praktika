@@ -1,7 +1,6 @@
  :root{
   --color-primary: #e5cb82e1;
   --color-beige: rgba(166, 166, 166, 0.3);
-  
 }
 
 /*scrollbar*/
@@ -181,9 +180,12 @@ a {
   color: white;
 }
 
-.dark-blue-color {
-  color: #263159;
-  font-weight: 0;
+.dark-grey-color {
+  color: rgb(95, 87, 87);
+}
+
+.yellow-button{
+  box-shadow: -2px 0px 27px 7px rgba(59, 57, 59, 0.4);
 }
 
 .profile-icon{
