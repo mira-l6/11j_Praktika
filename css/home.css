@@ -5,10 +5,25 @@
 }
 
 input{
+    background-color: transparent;
     outline: none !important;
     box-shadow: none !important;
     border: none !important;
 }
+input:hover{
+    background-color: transparent;
+}
+select{
+    width: 60%;
+    border-top: 1px solid rgba(201,193,201,0.40) !important;
+    background-color: transparent !important;
+    border: none;
+}
+input[type="number"]{
+    width: 60%;
+    border-top: 1px solid rgba(201,193,201,0.40) !important;
+}
+
 .filter-area form{
     width: 80%;
 }
@@ -17,6 +32,7 @@ input{
     width: 100%;
     background-color: var(--color-primary);
     box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
+    border-bottom: 1px solid rgba(201,193,201,0.40);
 }
 
 .filter-box{
@@ -51,8 +67,8 @@ input{
 .filter-option:hover{
     background-color: rgba(201,193,201,0.40);
 }
-.filter-option p{
-    margin: 0;
+.filter-option label{
+    margin-bottom: 0.3em;
 }
 
 .filter-option:first-child{
@@ -83,6 +99,4 @@ input{
     font-size: 1.1em;
     background-color: transparent;
     border: none;
-    text-decoration:underline;
-    text-decoration-color: var(--color-primary);
 }
