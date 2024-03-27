@@ -87,7 +87,7 @@ nav .beige-background{
 
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
+      rgba(0, 0, 0, 0.5)), url("../img/scenery.jpg");
   width: 100%;
   height: calc(100vh - 80px);
   overflow: hidden;

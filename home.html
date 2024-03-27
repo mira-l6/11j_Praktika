@@ -165,58 +165,14 @@
 
         <!-- filter start -->
         <section>
-            <div class="container-fluid d-flex filter">
+            <div class="container-fluid d-flex">
                 <form action="/php/" method="post" class="container-fluid p-3">
-                    <div class="row mb-3">
-                        <div class="col-4">
-                            <label class="form-label" for="type">Тип имот:</label>
-                            <input class="form-control" name="type" type="text" aria-label="Тип имот" id="type">
-                            
-                        </div>
-                        <div class="col-4">
-                            <label class="form-label" for="price">Цена(от-до):</label>
-                            <div class="row">
-                                <div class="col-5">
-                                    <input class="form-control" name="price-start" type="text" aria-label="Цена(от-до)" id="price-start">
-                                </div>
-                                <div class="col-2">
-                                    <p class="text-center price-paragraph">-</p>
-                                </div>
-                                <div class="col-5">
-                                    <input class="form-control" name="price-end" type="text" aria-label="Цена(от-до)" id="price-end">
-                                </div>                               
-                            </div>   
-                        </div>
+                    <div class="filter-box">
+                        //
+                        <div>Населено място</div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <label class="form-label" for="location" type="text" aria-label="Населено място">Населено място:</label>
-                            <input class="form-control" name="location" type="text" aria-label="Населено място" id="location" list="locations">
-                            <datalist id="locations">
-                                <option value="Пловдив"></option>
-                                <option value="Филипополис"></option>
-                                <option value="Пулпудева"></option>
-                            </datalist>
-    
-                        </div>
-                        <div class="col-4">
-                            <label class="form-label" for="size">Квадратура(от-до):</label>
-                            <div class="row">
-                                <div class="col-5">
-                                    <input class="form-control" name="size-start" type="text" aria-label="Квадратура(от-до)" id="size-start">
-                                </div>
-                                <div class="col-2">
-                                    <p class="text-center price-paragraph">-</p>
-                                </div>
-                                <div class="col-5">
-                                    <input class="form-control" name="size-end" type="text" aria-label="Квадратура(от-до)" id="size-end">
-                                </div>                               
-                            </div>   
-                        </div>
-                        <div class="col-4">
-                            
-                            
-                        </div>
                 </form>
             </div>
 
@@ -225,30 +181,7 @@
         
         <!--Offers start-->
         <section>
-            <div class="container-fluid d-flex-column">
-                    <div class="d-flex offer-div gap-3 p-3">
-                        <img src="/img/personExample.jpg" class="offer-img"></img>
-                        <div class="offer-text">
-                            <h3 class="p-2">Име на обявата</h3>
-                            <h3 class="p-2">Друга информация</h3>
-                            <h3 class="p-2">Някакви неща</h3>
-                        </div>
-                    </div>
-                    <div class="d-flex offer-div gap-3 p-3">
-                        <img src="/img/personExample.jpg" class="offer-img"></img>
-                        <div class="offer-text">
-                            <h3 class="p-2">Име на обявата</h3>
-                            <h3 class="p-2">Друга информация</h3>
-                            <h3 class="p-2">Някакви неща</h3>
-                        </div>
-                    </div>
-
-                    
-
-
-                </div>
-                
-            </div>
+            
 
         </section>
     </body>
