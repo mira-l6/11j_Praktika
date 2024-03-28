@@ -15,14 +15,15 @@ body {
   background-color: white;
 } */
 
-.main-contacts {
-  flex-direction: row;
-  gap: 2em;
-}
-
 .main-card {
-  width: 25rem;
+  width: 60rem;
+  padding: 2em;
   background-color: #e4e4e4;
+  border-radius: 20px;
+}
+.main-card-image{
+  padding: 1em;
+  border-right: 1px solid rgba(201,193,201,0.40);;
 }
 
 .card-button {
@@ -102,7 +103,7 @@ body {
 }
 
 /* contacts media START */
-@media(max-width: 1251.2px) {
+/* @media(max-width: 1251.2px) {
   .main-card {
     width: 20rem;
     height: 20rem;
@@ -170,6 +171,6 @@ body {
   .card-button {
     display: none;
   }
-}
+} */
 
 /* contacts media END */
