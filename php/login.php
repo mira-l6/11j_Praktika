@@ -43,6 +43,7 @@
                     $_SESSION['login_Pass'] = $row['login_Pass'];
                     $_SESSION['login_RealtorID'] = $row['login_RealtorID'];
                     //?
+                    //if username == admin location: druga
                     header("Location: connect.php");
                     exit();
                 }
