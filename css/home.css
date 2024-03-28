@@ -1,33 +1,118 @@
 
-.filter{
-    background-color: var(--color-primary);
-    
-}
+
 .price-paragraph{
     font-size: 1.5rem;
 }
 
 input{
+    background-color: transparent;
     outline: none !important;
     box-shadow: none !important;
+    border: none !important;
 }
-input:focus{
-    border: 1px solid black !important;
+input:hover{
+    background-color: transparent;
+}
+select{
+    width: 60%;
+    border-top: 1px solid rgba(201,193,201,0.40) !important;
+    background-color: transparent !important;
+    border: none;
+}
+select:hover{
+    cursor: pointer;
+}
+select:focus{
+    outline: none !important;
+}
+input[type="number"]{
+    width: 60%;
+    border-top: 1px solid rgba(201,193,201,0.40) !important;
 }
 
-.offer-img{
-    max-width: 20%;
+.filter-area form{
+    width: 80%;
+}
+
+.filter-area{
+    width: 100%;
+    background-color: var(--color-primary);
+    box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
+    border-bottom: 1px solid rgba(201,193,201,0.40);
+}
+
+.filter-box{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50px;
+    border: 1px solid rgba(180, 161, 180, 0.4);
+    box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
+}
+
+.line-break{
+    width: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line-break div{
+    width: 1px;
+    height: 60%;
+    background-color: var(--color-primary);
+}
+
+.filter-option{
+    border-radius: 50px;
+    padding: 0.4em 0 0.4em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.filter-option:hover{
+    background-color: rgba(201,193,201,0.40);
+    cursor: pointer;
+}
+.filter-option label{
+    margin-bottom: 0.3em;
+}
+
+.filter-option:first-child{
+    width: 19%;
+}
+.filter-option:nth-child(3){
+    width: 20%;
+}
+.filter-option:nth-child(5){
+    width: 20%;
+}
+.filter-option:nth-child(7){
+    width: 20%;
+}
+.filter-option:nth-child(9){
+    width: 19%;
+}
+
+.filter-search-button{
+    width: 15%;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
+}
+.filter-search-button button{
+    width: 100%;
     height: 100%;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
 }
-
-.offer-div{
-    width: 100%;
-    height: 25rem;
-    
+.filter-search-button button:hover{
+    background-color: rgba(201,193,201,0.40);
 }
-
-.offer-text{
-    border: 3px solid black;
-    width: 100%;
-
+.filter-search-button i{
+   transform: translate(-6px, 4px);
 }

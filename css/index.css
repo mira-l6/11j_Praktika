@@ -1,7 +1,6 @@
  :root{
   --color-primary: #e5cb82e1;
   --color-beige: rgba(166, 166, 166, 0.3);
-  
 }
 
 /*scrollbar*/
@@ -34,13 +33,18 @@
   src: url(/fonts/30-font.ttf);
 }
 
+@font-face {
+  font-family: light-font;
+  src: url(/fonts/CormorantInfant-Regular.ttf);
+}
+
 .navbar-toggler{
   border: 1px solid black;
-  height: 5rem;
+  margin-top: 0.4em;
+  width: 5rem;
+  height: 4rem;
   display: flex;
   flex-direction: column;
-  align-self: center;
-  width: 6rem;
   justify-content: center;
   align-items: center;
   
@@ -87,7 +91,7 @@ nav .beige-background{
 
 .main-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.5)), url("../img/Начало 2.png");
+      rgba(0, 0, 0, 0.5)), url("../img/scenery.jpg");
   width: 100%;
   height: calc(100vh - 80px);
   overflow: hidden;
@@ -113,13 +117,10 @@ nav .beige-background{
 
 .removed:hover {
   background-color:  rgba(166, 166, 166, 0.01) !important;
-  
-
 }
 
 .removed{
   color: rgba(166, 166, 166, 0.8) !important;
-  
 }
 
 .removed:active{
@@ -148,11 +149,15 @@ a {
 
 .blc:hover {
   background-color: rgba(0, 0, 0, 0.075);
-
 }
 
+
 .search-button{
-  height: 2.9em;
+  height: 2.5em;
+  box-shadow: -2px 0px 27px 7px rgba(201,193,201,0.40);
+}
+.search-button:hover{
+  background-color: #ccb473e1 !important;
 }
 
 .title-font{
@@ -180,14 +185,17 @@ a {
   color: white;
 }
 
-.dark-blue-color {
-  color: #263159;
-  font-weight: 0;
+.dark-grey-color {
+  color: rgb(95, 87, 87);
+}
+
+.yellow-button{
+  box-shadow: -2px 0px 27px 7px rgba(59, 57, 59, 0.4);
 }
 
 .profile-icon{
-  width: 2em;
-  height: 2em;
+  width: 1.6em;
+  height: 1.6em;
   border: 1.2px solid rgba(72,73,81,255);
   border-radius: 50%;
   color: rgba(72,73,81,255);
@@ -208,7 +216,7 @@ a {
 }
 
 .fa-user{
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 /*heading media changes START*/
@@ -220,12 +228,6 @@ a {
 /*heading media changes END*/
 
 /*nav-bar media changes START*/
-@media(max-width: 1020px) {
-  .btn {
-    font-size: 1.2rem;
-    padding: 0.5rem;
-  }
-}
 
 @media(max-width:900px) {
   .navbar .navbar-nav {

@@ -11,20 +11,18 @@ body {
   overflow-x: hidden;
 }
 
-.contact-info {
-  width: 100vw;
-}
 /* .contact-subheading{
   background-color: white;
 } */
 
 .main-contacts {
   flex-direction: row;
+  gap: 4em;
 }
 
 .main-card {
   width: 25rem;
-  background-color: rgba(166, 166, 166);
+  background-color: #e4e4e4;
 }
 
 .card-button {
@@ -42,25 +40,11 @@ body {
   color: #263159;
 }
 
-.contact {
-  width: 25rem;
-  background-color: rgba(256, 256, 256, 0.7);
-}
-
-.contact a {
-  background-color: #263159;
-}
-
-.contact a:hover {
-  background-color: rgba(38, 49, 89, 0.9);
-}
-
 .image-icon-circle img {
   width: 6.5rem;
   height: 6.7rem;
   border-radius: 50%;
-  border: 2px dashed #263159;
-  padding: 0.2rem;
+  border: 2px solid #263159;
 }
 
 .image-icon-circle {
@@ -68,10 +52,53 @@ body {
   padding-top: 0.8em;
   padding-bottom: 0.4em;
 }
-.icon-contact-body{
-  width: 100%;
-  height: 7em;
-  
+
+.title-space{
+  height: 15%;
+}
+.main-contacts-space{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+}
+
+.contact-info {
+  width: 100vw;
+}
+
+.subheading-1{
+  background-color: var(--color-primary);
+  box-shadow: -2px 0px 27px 7px rgba(209, 202, 209, 0.4);
+}
+.subheading-1 h2{
+  color: rgb(58, 76, 83);
+  /* font-family: light-font; */
+}
+
+.agent{
+  box-shadow: -2px 0px 27px 7px rgba(108, 103, 108, 0.4);
+  /* background-color: var(--color-primary); */
+  border-radius: 20px;
+  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.agent-photo{
+  width: 12em;
+  height: 12em;
+}
+.agent-photo img{
+  max-width: 100%;
+  width: 12em;
+  height: 12em;
+  padding: 1em;
+}
+
+.estate-agents{
+  grid-template-columns: repeat(3,1fr);
 }
 
 /* contacts media START */
@@ -90,23 +117,16 @@ body {
   }
 }
 
-@media(max-width: 1032.8px) {
-  .main-card {
-    width: 18rem;
-    height: 20rem;
+@media(max-width: 1400.8px) {
+  .main-contacts{
+    gap: 0;
   }
-
-  .main-card h4 {
-    font-size: 1.1rem;
-  }
-
-  .main-card p {
-    font-size: 0.95rem;
-    ;
+  .main-profile-button{
+    font-size: 1rem !important;
   }
 }
 
-@media(max-width: 915.2px) {
+@media(max-width: 1005.2px) {
   .main-card {
     width: 16rem;
     height: 18rem;
@@ -126,7 +146,7 @@ body {
   }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 820px) {
   .main-card .image-icon-circle img {
     width: 5.5rem;
     height: 5rem;
@@ -138,15 +158,17 @@ body {
   }
 }
 
+@media(max-width: 722.4px) {
+  .main-card{
+    width: 100%;
+  }
+}
+
 @media(max-height: 400px) {
 
   .main-card .main-card-body p,
   .card-button {
     display: none;
-  }
-
-  .main-card {
-    height: 11rem;
   }
 }
 
