@@ -44,7 +44,7 @@
                     $_SESSION['login_RealtorID'] = $row['login_RealtorID'];
                     //?
                     //if username == admin location: druga
-                    if($username ==="admin")
+                    /*if($username ==="admin")
                     {
                         header("Location: adminprofile.html");
                         exit();
@@ -53,7 +53,9 @@
                     {
                         header("Location: profile.html");
                         exit();
-                    }
+                    }*/
+                    header("Location: profile.html");
+                    exit();
                    
                 }
                 else
