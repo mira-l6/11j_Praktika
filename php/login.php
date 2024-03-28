@@ -46,12 +46,12 @@
                     //if username == admin location: druga
                     if($username==='admin')
                     {
-                        header("Location: adminprofile.php");
+                        header("Location: adminprofile.html");
                         exit();
                     }
                     else
                     {
-                        header("Location: profile.php");
+                        header("Location: profile.html");
                         exit();
                     }
                    
