@@ -159,6 +159,9 @@ a {
   height: 2.5em;
   box-shadow: -2px 0px 27px 7px rgba(201,193,201,0.40);
 }
+.search-button:hover{
+  background-color: #ccb473e1 !important;
+}
 
 .title-font{
   font-family: title-font;
