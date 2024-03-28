@@ -17,7 +17,7 @@ body {
 
 .main-contacts {
   flex-direction: row;
-  gap: 4em;
+  gap: 2em;
 }
 
 .main-card {
