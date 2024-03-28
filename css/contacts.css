@@ -78,7 +78,8 @@ body {
 }
 
 .agent{
-  box-shadow: -2px 0px 27px 7px rgba(209, 202, 209, 0.4);
+  box-shadow: -2px 0px 27px 7px rgba(108, 103, 108, 0.4);
+  /* background-color: var(--color-primary); */
   border-radius: 20px;
   margin: 2em;
   display: flex;
