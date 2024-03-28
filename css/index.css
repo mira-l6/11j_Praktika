@@ -40,11 +40,11 @@
 
 .navbar-toggler{
   border: 1px solid black;
-  height: 5rem;
+  margin-top: 0.4em;
+  width: 5rem;
+  height: 4rem;
   display: flex;
   flex-direction: column;
-  align-self: center;
-  width: 6rem;
   justify-content: center;
   align-items: center;
   
@@ -117,13 +117,10 @@ nav .beige-background{
 
 .removed:hover {
   background-color:  rgba(166, 166, 166, 0.01) !important;
-  
-
 }
 
 .removed{
   color: rgba(166, 166, 166, 0.8) !important;
-  
 }
 
 .removed:active{
@@ -152,8 +149,8 @@ a {
 
 .blc:hover {
   background-color: rgba(0, 0, 0, 0.075);
-
 }
+
 
 .search-button{
   height: 2.5em;
