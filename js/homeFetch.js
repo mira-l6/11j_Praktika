@@ -62,8 +62,6 @@ const dummyOffer = [
         title: "TheLogo6",
         paragraph: "Sechs" 
     },
-
-    
 ]
 
 
