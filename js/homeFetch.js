@@ -46,21 +46,61 @@ const dummyOffer = [
         img: "./img/office.png",
         title: "TheLogo3",
         paragraph: "Drei" 
-    }
+    },
+    fourth = {
+        img: "./img/logo.png",
+        title: "TheLogo4",
+        paragraph: "Vier" 
+    },
+    fifth = {
+        img: "./img/JohnDoe.jpg",
+        title: "TheLogo5",
+        paragraph: "Fünf" 
+    },
+    sixth = {
+        img: "./img/office.png",
+        title: "TheLogo6",
+        paragraph: "Sechs" 
+    },
+
+    
 ]
 
 
 function DummyFill(){
-    
+    let newRow;
+    let currentRow;
 
     dummyOffer.forEach(({img, title, paragraph}, index) =>{
-        offerBox.innerHTML += `
-        <div class="offer-box d-flex-column">
-            <img class="offer-img" src="${img}">
-            <h5 class="text-center">${title}</h5>
-            <p class="text-center">${paragraph}</p> 
-        </div>
-        `
+        if(index % 4 === 0 || index === 0){
+            newRow = document.createElement('div');
+            newRow.classList.add("row");
+            newRow.id = `row-${index}`;
+            newRow.classList.add("gap-3");
+            newRow.classList.add("mb-5");
+            offerBox.appendChild(newRow);
+            currentRow = document.getElementById(`row-${index}`);
+
+            currentRow.innerHTML += `
+            <div class="offer-box d-flex-column col-md">
+                <img class="offer-img" src="${img}">
+                <h5 class="text-center">${title}</h5>
+                <p class="text-center">${paragraph}</p>                        
+            </div>
+            
+            `;
+        }
+        else{
+            currentRow.innerHTML += `
+            <div class="offer-box d-flex-column col-md">
+                <img class="offer-img" src="${img}">
+                <h5 class="text-center">${title}</h5>
+                <p class="text-center">${paragraph}</p>                        
+            </div>
+            `
+        }
+        index++;
+        
     });
 }
 
