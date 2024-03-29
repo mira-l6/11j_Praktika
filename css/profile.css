@@ -37,7 +37,7 @@ body{
     background-color: rgba(196, 193, 196, 0.4);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 0.7em;
 }
 .profile-subtitle p{
@@ -48,8 +48,8 @@ body{
     border-radius: 20px;
 }
 .profile-image div{
-    background-image: url(/img/profilePicture.jpg);
-    background-size: contain;
+    background-image: url(/img/personExample.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     width: 15em;
     height: 15em;
@@ -87,6 +87,13 @@ body{
 
 .profile-bio{
     background-color: #e4e4e4;
+}
+
+.profile-input{
+    background-color: rgba(196, 193, 196, 0.2);
+    padding: 0.6em;
+    border-radius: 20px;
+    border-bottom: 1px solid var(--color-primary);
 }
 
 
