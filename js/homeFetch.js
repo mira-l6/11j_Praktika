@@ -1,6 +1,6 @@
 //getting the document elements
 const offerBox = document.getElementById("offer-box");
-const buttonAdd = document.getElementById("add-button")
+const buttonAdd = document.getElementById("add-button");
 
 
 //variables for pagination control
@@ -31,7 +31,6 @@ const FillPage = (offer) =>{
         `;
     });
 }
-
 const dummyOffer = [
     first ={
         img: "./img/logo.png",
@@ -49,8 +48,12 @@ const dummyOffer = [
         paragraph: "Drei" 
     }
 ]
-const DummyFill = (dummyOffer) =>{
-    offer.forEach(({img, title, paragraph}, index) =>{
+
+
+function DummyFill(){
+    
+
+    dummyOffer.forEach(({img, title, paragraph}, index) =>{
         offerBox.innerHTML += `
         <div class="" id="${index}">
             <img src=${img}>
@@ -61,7 +64,10 @@ const DummyFill = (dummyOffer) =>{
         <br>
         <br>
         `
-    })
+    });
 }
 
-buttonAdd.addEventListener("click", DummyFill);
+
+    
+
+buttonAdd.addEventListener('click', DummyFill)
