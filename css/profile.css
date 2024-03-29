@@ -10,6 +10,7 @@ body{
 .profile-layout{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
+    height: 90%;
     gap: 0.5em;
 }
 .grid-item:first-child{
@@ -26,15 +27,6 @@ body{
     grid-column: 3 / 4;
     grid-row: 3 / 4;
 }
-/* .grid-item:nth-child(4){
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-}
-.grid-item:nth-child(5){
-    background-color: #e4e4e4;
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
-} */
 
 .profile-info{
     border-radius: 20px;
@@ -46,7 +38,7 @@ body{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     font-size: 1.3em;
-    height: 15%;
+    padding: 0.7em;
 }
 .profile-subtitle p{
     font-size: 1.1em;
@@ -59,8 +51,8 @@ body{
     background-image: url(/img/profilePicture.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 20em;
-    height: 20em;
+    width: 15em;
+    height: 15em;
     border: 2px solid rgba(196, 193, 196, 0.4);
 }
 
