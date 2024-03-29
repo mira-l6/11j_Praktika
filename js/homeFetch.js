@@ -1,5 +1,5 @@
 //getting the document elements
-const offerBox = document.getElementById("offer-box");
+const offerBox = document.getElementById("offer-flexbox");
 const buttonAdd = document.getElementById("add-button");
 
 
@@ -55,14 +55,11 @@ function DummyFill(){
 
     dummyOffer.forEach(({img, title, paragraph}, index) =>{
         offerBox.innerHTML += `
-        <div class="" id="${index}">
-            <img src=${img}>
-            <h2>${title}</h2>
-            <p>${paragraph}</p>
-        
+        <div class="offer-box d-flex-column">
+            <img class="offer-img" src="${img}">
+            <h5 class="text-center">${title}</h5>
+            <p class="text-center">${paragraph}</p> 
         </div>
-        <br>
-        <br>
         `
     });
 }
