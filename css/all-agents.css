@@ -1,0 +1,35 @@
+.agents-edit-box{
+    width: 100%;
+}
+
+.agents-edit-title{
+    width: inherit;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: var(--color-primary);
+    justify-content: space-between;
+    padding: 1.5em 1em 1em 3.3em;
+}
+
+.agents-edit-title h2{
+    color: rgb(58, 76, 83);
+}
+
+.agent-add-button{
+    border: none;
+    border-radius: 20px;
+    padding: 1em;   
+    /* box-shadow: -2px 0px 27px 7px rgba(171, 170, 171, 0.4); */
+}
+.agent-add-button:hover{
+    background-color: rgb(186, 186, 186); 
+}
+
+.agent-edit-button{
+    border: none;
+}
+
+.agent-edit-boxbutton{
+    position: relative;
+    top: -5em;
+}
