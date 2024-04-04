@@ -3,7 +3,7 @@
 } */
 
 .profile-box{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg");
     height: 100vh;
 }

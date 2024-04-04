@@ -3,16 +3,18 @@
 }
 
 .agents-edit-title{
-    width: inherit;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-    border-top: 2px solid rgba(0, 0, 0, 0.2);
-    background-color: var(--color-primary);
+    border-bottom: 5px solid var(--color-primary);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: space-between;
-    padding: 1.5em 1em 1em 3.3em;
+    padding: 2em 1em 1.5em 3.3em;
 }
 
 .agents-edit-title h2{
-    color: rgb(58, 76, 83);
+    color: white;
+    font-weight: 500;
 }
 
 .agent-add-button{
