@@ -3,15 +3,16 @@
 } */
 
 .profile-box{
-    background-color: var(--color-primary);
-    height: calc(100vh + 80px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5)), url("../img/scenery.jpg");
+    height: calc(100vh);
 }
 
 .profile-layout{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
     height: 90%;
-    gap: 0.5em;
+    gap: 1em;
 }
 .grid-item:first-child{
     background-color: white;
@@ -30,7 +31,7 @@
 
 .profile-info{
     border-radius: 20px;
-    box-shadow: -2px 0px 27px 7px rgba(196, 193, 196, 0.4);
+    /* box-shadow: -2px 0px 27px 7px rgba(196, 193, 196, 0.4); */
 }
 
 .profile-title{
@@ -92,7 +93,6 @@
 .profile-input{
     /* background-color: rgba(196, 193, 196, 0.2); */
     padding: 0.6em;
-    border-radius: 20px;
     border-bottom: 1px solid var(--color-primary);
 }
 
