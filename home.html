@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/index.css">
@@ -43,8 +44,12 @@
                                     Услуги
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="dropdown-item nav-link" href="#">Покупка</a></li>
-                                    <li class="nav-item"><a class="dropdown-item nav-link" href="#">Продажба</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Покупка</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Продажба</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Наемане</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Отдаване на наем</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Финансова консултация</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Юридическа консултация</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -165,98 +170,101 @@
         <!-- filter start -->
         <section>
             <div class="filter-area pt-5 pb-5 d-flex flex-row justify-content-around">
-                <form action="/php/" method="post" >
+                <form action="/php/filter.php/" method="post" >
                     <div class="filter-box">
                         <div class="filter-option"><label for="property-type">Тип имот</label>
                             <!--падащо меню-->
                             <select id="property-type" name="property-filter">
-                                <option value="">Едностаен</option>
-                                <option value="">Двустаен</option>
-                                <option value="">Тристаен</option>
-                                <option value="">Четиристаен</option>
-                                <option value="">Многостаен</option>
-                                <option value="">Мезонет</option>
-                                <option value="">Ателие/Таван</option>
-                                <option value="">Офис</option>
-                                <option value="">Магазин</option>
-                                <option value="">Заведение</option>
-                                <option value="">Склад</option>
-                                <option value="">Хотел</option>
-                                <option value="">Пром. помещение</option>
-                                <option value="">Бизнес имот</option>
-                                <option value="">Етаж от къща</option>
-                                <option value="">Къща</option>
-                                <option value="">Вила</option>
-                                <option value="">Парцел</option>
-                                <option value="">Гараж</option>
-                                <option value="">Земеделска земя</option>
+                                <option value="all">Всички</option>
+                                <option value="room1">Едностаен</option>
+                                <option value="room2">Двустаен</option>
+                                <option value="room3">Тристаен</option>
+                                <option value="room4">Четиристаен</option>
+                                <option value="roomn">Многостаен</option>
+                                <option value="maisonette">Мезонет</option>
+                                <option value="studio">Ателие/Таван</option>
+                                <option value="office">Офис</option>
+                                <option value="store">Магазин</option>
+                                <option value="restaurant">Заведение</option>
+                                <option value="storage">Склад</option>
+                                <option value="hotel">Хотел</option>
+                                <option value="industrial">Пром. помещение</option>
+                                <option value="business">Бизнес имот</option>
+                                <option value="housefloor">Етаж от къща</option>
+                                <option value="house">Къща</option>
+                                <option value="villa">Вила</option>
+                                <option value="plot">Парцел</option>
+                                <option value="garage">Гараж</option>
+                                <option value="land">Земеделска земя</option>
                               </select>
                         </div>
                         <div class="line-break"><div></div></div>
                         <div class="filter-option"><label for="populated-place">Населено място</label>
                             <!--падащо меню-->
                             <select id="populated-place" name="property-filter">
-                                <option value="">Извън България</option>
-                                <option value="">град Благоевград</option>
-                                <option value="">област Благоевград</option>
-                                <option value="">град Бургас</option>
-                                <option value="">област Бургас</option>
-                                <option value="">град Варна</option>
-                                <option value="">област Варна</option>
-                                <option value="">град Велико Търново</option>
-                                <option value="">област Велико Търново</option>
-                                <option value="">град Видин</option>
-                                <option value="">област Видин</option>
-                                <option value="">град Враца</option>
-                                <option value="">област Враца</option>
-                                <option value="">град Габрово</option>
-                                <option value="">област Габрово</option>
-                                <option value="">град Добрич</option>
-                                <option value="">област Добрич</option>
-                                <option value="">град Кърджали</option>
-                                <option value="">област Кърджали</option>
-                                <option value="">град Кюстендил</option>
-                                <option value="">област Кюстендил</option>
-                                <option value="">град Ловеч</option>
-                                <option value="">област Ловеч</option>
-                                <option value="">град Монтана</option>
-                                <option value="">област Монтана</option>
-                                <option value="">град Пазарджик</option>
-                                <option value="">област Пазарджик</option>
-                                <option value="">град Перник</option>
-                                <option value="">област Перник</option>
-                                <option value="">град Плевен</option>
-                                <option value="">област Плевен</option>
-                                <option value="">град Пловдив</option>
-                                <option value="">област Пловдив</option>
-                                <option value="">град Разград</option>
-                                <option value="">област Разград</option>
-                                <option value="">град Русе</option>
-                                <option value="">област Русе</option>
-                                <option value="">град Силистра</option>
-                                <option value="">област Силистра</option>
-                                <option value="">град Сливен</option>
-                                <option value="">област Сливен</option>
-                                <option value="">град Смолян</option>
-                                <option value="">област Смолян</option>
-                                <option value="">град София</option>
-                                <option value="">област София</option>
-                                <option value="">град Стара Загора</option>
-                                <option value="">област Стара Загора</option>
-                                <option value="">град Търговище</option>
-                                <option value="">област Търговище</option>
-                                <option value="">град Хасково</option>
-                                <option value="">област Хасково</option>
-                                <option value="">град Шумен</option>
-                                <option value="">област Шумен</option>
-                                <option value="">град Ямбол</option>
-                                <option value="">област Ямбол</option>
+                                <option value="all">Всички</option>
+                                <option value="outsidebg">Извън България</option>
+                                <!--t - grad town; p - oblast province-->
+                                <option value="tblagoevgrad">град Благоевград</option>
+                                <option value="pblagoevgrad">област Благоевград</option>
+                                <option value="tburgas">град Бургас</option>
+                                <option value="pburgas">област Бургас</option>
+                                <option value="tvarna">град Варна</option>
+                                <option value="pvarna">област Варна</option>
+                                <option value="tvt">град Велико Търново</option>
+                                <option value="pvt">област Велико Търново</option>
+                                <option value="tvidin">град Видин</option>
+                                <option value="pvidin">област Видин</option>
+                                <option value="tvraca">град Враца</option>
+                                <option value="pvraca">област Враца</option>
+                                <option value="tgabrovo">град Габрово</option>
+                                <option value="pgabrovo">област Габрово</option>
+                                <option value="tdobrich">град Добрич</option>
+                                <option value="pdobrich">област Добрич</option>
+                                <option value="tkardjali">град Кърджали</option>
+                                <option value="pkardjali">област Кърджали</option>
+                                <option value="tkustendil">град Кюстендил</option>
+                                <option value="pkustendil">област Кюстендил</option>
+                                <option value="tlovech">град Ловеч</option>
+                                <option value="plovech">област Ловеч</option>
+                                <option value="tmontana">град Монтана</option>
+                                <option value="pmontana">област Монтана</option>
+                                <option value="tpazardjik">град Пазарджик</option>
+                                <option value="ppazardjik">област Пазарджик</option>
+                                <option value="tpernik">град Перник</option>
+                                <option value="ppernik">област Перник</option>
+                                <option value="tpleven">град Плевен</option>
+                                <option value="ppleven">област Плевен</option>
+                                <option value="tplovdiv">град Пловдив</option>
+                                <option value="pplovdiv">област Пловдив</option>
+                                <option value="trazgrad">град Разград</option>
+                                <option value="prazgrad">област Разград</option>
+                                <option value="truse">град Русе</option>
+                                <option value="pruse">област Русе</option>
+                                <option value="tsilistra">град Силистра</option>
+                                <option value="psilistra">област Силистра</option>
+                                <option value="tsliven">град Сливен</option>
+                                <option value="psliven">област Сливен</option>
+                                <option value="tsmolyan">град Смолян</option>
+                                <option value="psmolyan">област Смолян</option>
+                                <option value="tsofia">град София</option>
+                                <option value="psofia">област София</option>
+                                <option value="tsz">град Стара Загора</option>
+                                <option value="psz">област Стара Загора</option>
+                                <option value="ttargovishte">град Търговище</option>
+                                <option value="ptargovishte">област Търговище</option>
+                                <option value="thaskovo">град Хасково</option>
+                                <option value="phaskovo">област Хасково</option>
+                                <option value="tshumen">град Шумен</option>
+                                <option value="pshumen">област Шумен</option>
+                                <option value="tyambol">град Ямбол</option>
+                                <option value="pyambol">област Ямбол</option>
                               </select>
                         </div>
                         <div class="line-break"><div></div></div>
                         <div class="filter-option"><label for="town-area">Район</label>
                             <select id="town-area" name="property-filter">
-                                <option value="">Опция</option>
+                                <option value="all">Всички</option>
                                 <option value="">Опция</option>
                                 <option value="">Опция</option>
                                 <option value="">Опция</option>
@@ -282,41 +290,13 @@
         <!-- filter end -->
         
         <!--Offers start-->
-        <section class="container-fluid">
-            <button class="test-button" id="add-button"> Бутончето добавя допълнителни редове и доказва, че джаваскрипт файлчето във финалния продукт ще работи.
-
-            </button>
-            <div class="container-fluid ps-3 mt-5" style="height: 100em;" id="offer-flexbox">
-                <div class="row gap-3 mb-5">
-                    <div class="offer-box d-flex-column col-md">
-                        <img class="offer-img"src="./img/JohnDoe.jpg">
-                        <h5 class="text-center">PriceYay</h5>
-                        <p class="text-center">Something or other</p>                        
-                    </div>
-                    <div class="offer-box d-flex-column col-md">
-                        <img class="offer-img" src="./img/JohnDoe.jpg">
-                        <h5 class="text-center">PriceYay</h5>
-                        <p class="text-center">Something or other</p> 
-                    </div>
-                    <div class="offer-box d-flex-column col-md">
-                        <img class="offer-img" src="./img/JohnDoe.jpg">
-                        <h5 class="text-center">PriceYay</h5>
-                        <p class="text-center">Something or other</p> 
-                    </div>
-                    <div class="offer-box d-flex-column col-md">
-                        <img class="offer-img" src="./img/JohnDoe.jpg">
-                        <h5 class="text-center">PriceYay</h5>
-                        <p class="text-center">Something or other</p> 
-                    </div>
-                </div>
-                
-                
-            </div>
+        <section>
+            <div style="height: 100em;"></div>
         </section>
-        
     </body>
         
-    
+        
+
 
 
         
@@ -324,7 +304,5 @@
     
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/homeFetch.js"></script>
 
 </html>
