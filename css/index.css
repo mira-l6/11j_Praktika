@@ -228,30 +228,14 @@ a {
 
 /*nav-bar media changes START*/
 
-@media(max-width:900px) {
-  .navbar .navbar-nav {
-    width: 100%;
-    flex-direction: row;
-  }
-  h1{
-    font-size: 2.5rem;
-  }
-  ul .btn {
-    font-size: 1.12rem;
-    padding: 0.2rem;
-  }
-  form .btn{
-    font-size: 1.14rem;
-    padding: 0.3rem;
-  }
-  .fa-search{
-    display: none;
-  }
-}
 
 @media(max-width: 767px){
-  .fa-search{
+  /* .fa-search{
     display: inline;
+  } */
+    .navbar .navbar-nav {
+    width: 100%;
+    flex-direction: row;
   }
 }
 
