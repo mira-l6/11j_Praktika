@@ -29,9 +29,14 @@
 
 .agent-edit-button{
     border: none;
+    display: flex;
+    justify-content: end;
+    width: 2.4em;
 }
 
 .agent-edit-boxbutton{
-    position: relative;
-    top: -5em;
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    width: 23%;
 }
