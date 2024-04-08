@@ -3,7 +3,7 @@
 }
 
 .agents-edit-title{
-    border-bottom: 5px solid var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg");
     background-repeat: no-repeat;
