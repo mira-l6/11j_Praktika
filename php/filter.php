@@ -1,5 +1,6 @@
 <?php
     //?
+    //tazi str se izpulnqva sled natiskane na buton filtrirai
     session_start();
 
 
