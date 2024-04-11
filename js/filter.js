@@ -6,9 +6,6 @@ town.addEventListener('change', AddProperRegion)
 
 function AddProperRegion(){
     // const townOption = townArea.getElementsByTagName('option');
-    
-    
-
     switch(town.value){
         case 'tblagoevgrad':
             townArea.innerHTML = `
@@ -20,7 +17,7 @@ function AddProperRegion(){
             <option value="">Грамада</option>`
         break;
 
-        case 'град Бургас':
+        case '':
             townArea.innerHTML = `
              <option value="">Акациите</option>
              <option value="">Банево</option>
