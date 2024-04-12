@@ -25,7 +25,7 @@
                 $img_ex_lc = strtolower($img_ex);
 
                 //koi razshireniq sa razresheni
-                $allowed_exs = array("jpg");
+                $allowed_exs = array("jpg", "png");
 
                 if(in_array($img_ex_lc, $allowed_exs))
                 {
