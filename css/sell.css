@@ -14,14 +14,15 @@
 .sell-advice-answer{
     background-color: var(--color-primary);
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.24em;
     padding-left: 6em;
     padding-right: 6em;
+    color: #263159;
 }
 
 .sell-advice-question{
     font-size: 1.3em;
-    background-color: rgba(172, 165, 172, 0.4);
+    background-color: rgba(213, 203, 213, 0.4);
     margin: 0;
 }
 
@@ -32,4 +33,8 @@
     border: none;
     border-radius: 20px;
     font-size: 1.2em;
+    width: 20em;
+}
+.sell-button>button>a{
+    width: 100%;
 }
