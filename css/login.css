@@ -83,6 +83,14 @@ input:active{
     }
 }
 
+.forgot-password{
+    /* background-color: var(--color-primary); */
+    position: relative;
+    top: 1.5em;
+    font-size: 1.1em;
+    text-decoration: underline;
+    text-decoration-color: #8f9ba7;
+}
 
 
 
