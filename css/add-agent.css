@@ -34,3 +34,57 @@
 .add-button{
     background-color: rgb(111, 208, 111);
 }
+
+.agent-photo-and-description{
+    width: 20%;
+}
+.add-agent-photo{
+    border: 1px solid rgb(136, 135, 135); 
+    flex-direction: column;
+    width: 15em;
+    height: 20em;
+    justify-content: center;
+    align-items: center;
+}
+.add-agent-photo form{
+    width: 100%;
+}
+
+.agent-info{
+    padding: 2em;
+    width: 43em;
+}
+
+.info-section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.info-subsection{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.info-section-one-row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+}
+
+.agent-more-info{
+    margin-left: 5em;
+}
+.divider{
+    background-color: var(--color-primary);
+    width: 0.05em;
+    height: 25em;
+}
+
+.info-section input, .info-subsection input{
+    border: none;
+    background-color: rgb(233, 227, 227);
+    border-radius: 5px;
+    padding: 0.4em;
+    margin-top: 0.3em;
+}
