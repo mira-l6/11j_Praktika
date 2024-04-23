@@ -1,5 +1,5 @@
 body{
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 .add-agents-box{
@@ -39,9 +39,15 @@ body{
     background-color: rgb(111, 208, 111);
 }
 
-/* .agent-photo-and-description{
-    width: 20%;
-} */
+
+
+.add-agent-body{
+    height: calc(100vh - 184.8px);
+    /* width: 100vw; */
+    align-items: center;
+    justify-content: center;
+}
+
 .add-agent-photo{
     border: 1px solid rgb(136, 135, 135); 
     flex-direction: column;
