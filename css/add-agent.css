@@ -44,6 +44,10 @@ body{
     border-right: 3px solid rgb(233, 227, 227);
 }
 
+/* ..agent-photo-and-description form{
+    width: 100%;
+} */
+
 .add-agent-body{
     height: calc(100vh - 184.8px);
     /* width: 100vw; */
@@ -61,6 +65,7 @@ body{
 }
 .add-agent-photo form{
     width: 100%;
+    height: 100%;
 }
 
 .agent-info{
@@ -100,4 +105,13 @@ body{
 
 .fa-lock{
     background-color: rgb(233, 227, 227);
+}
+
+#uploadPreview{
+    width: 100%;
+    height: 20em;
+}
+
+.photo-label{
+    
 }

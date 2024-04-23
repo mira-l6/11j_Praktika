@@ -33,7 +33,7 @@
                     <div class="collapse navbar-collapse">
                         <li class="nav-item ">
                             <button class="btn btn-lg btn-pill blc"><a href="home.html"
-                                    class="nav-link disabled">Начало</a></button>
+                                    class="nav-link">Начало</a></button>
 
                         </li>
 
@@ -90,7 +90,7 @@
             <div class="offcanvas-body beige-background ps-0 pe-0">
                 <ul class="navbar-nav g-3 ms-0 ps-0">
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc w-100 text-start removed"><a href="home.html"
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="home.html"
                                 class="nav-link ps-3">Начало</a></button>
                     </li>
 
@@ -180,9 +180,10 @@
                 <div class="agent-photo-and-description col-sm-3 d-flex justify-content-center align-items-center">
                     <div class="add-agent-photo d-flex">
                         <form action="upload.php" method="post" enctype="multipart/form-data">
-                            <label for="photo-input">Изберете снимка</label>
-                            <input type="file" name="" id="photo-input">
-                            <button type="submit">Качи</button>
+                            <label for="photo-input" class="photo-label">Изберете снимка</label>
+                            <img id="uploadPreview" />
+                            <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
+                            <script src="/js/add-agent.js"></script>
                         </form>
                     </div>
                 </div>
