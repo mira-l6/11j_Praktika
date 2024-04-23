@@ -1,3 +1,22 @@
 .filter-area{
     box-shadow: none !important;
 }
+
+.all-offers-title{
+    border-bottom: 3px solid var(--color-primary);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    padding: 2em 1em 1.5em 3.3em;
+    color: white;
+}
+
+.all-offers-dropdown{
+    width: 10em;
+    color: white;
+}
+.all-offers-dropdown option{
+    color: black;
+}
