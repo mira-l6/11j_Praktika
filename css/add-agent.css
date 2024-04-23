@@ -39,13 +39,16 @@ body{
     background-color: rgb(111, 208, 111);
 }
 
-
+.agent-photo-and-description, .agent-info{
+    height: 100%;
+    border-right: 3px solid rgb(233, 227, 227);
+}
 
 .add-agent-body{
     height: calc(100vh - 184.8px);
     /* width: 100vw; */
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .add-agent-photo{
@@ -61,7 +64,6 @@ body{
 }
 
 .agent-info{
-    padding: 2em 5em 0 5em;
     width: 43em;
 }
 
@@ -83,9 +85,10 @@ body{
     gap: 0.5em;
 }
 
-/* .agent-more-info{
-    margin-left: 5em;
-} */
+.agent-more-info{
+    height: 100%;
+    margin: auto;
+}
 
 .info-section input, .info-subsection input{
     border: none;
