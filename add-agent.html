@@ -176,24 +176,48 @@
                     </div>
             </div>
             
-            <div class="add-agent-body">
-                <div>
-                    <img src="img/personExample.jpg" alt="" width="150" height="200">
-                        <p>Име: </p>
-                        <p>Фамилия: </p>
-                        <p>Потребителско име: </p>
-                        <p>Парола: </p>
-                        <p>Имейл: </p>
-                        <p>Телефон: </p>
-                        <p>Длъжност: </p>
-                    <form action="">
-                        <input type="text"></input>
-                        <input type="text"></input>
-                        <input type="text"></input>
-                        <input type="password"></input>
-                        <input type="email"></input>
-                        <input type="text"></input>
-                        <input type="text"></input>
+            <div class="add-agent-body d-flex flex-row align-items-center ms-5 pt-5">
+                <div class="agent-photo-and-description">
+                    <div class="add-agent-photo d-flex">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <label for="photo-input">Изберете снимка</label>
+                            <input type="file" name="" id="photo-input">
+                            <button type="submit">Качи</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="agent-info">
+                    <form action="" method="post">
+                        <div class="info-section-one-row">
+                            <div class="info-subsection"> 
+                                <label for="agent-first-name">Име: </label>
+                                <input type="text" id="agent-first-name">
+                            </div>
+                            <div class="info-subsection">
+                                <label for="agent-last-name">Фамилия: </label>
+                                <input type="text" id="agent-last-name">
+                            </div>
+                        </div>
+                        <div class="info-section"> 
+                            <label for="agent-email">Имейл: </label>
+                            <input type="email" id="agent-email">
+                            <label for="agent-password">Парола: </label>
+                            <input type="password" id="agent-password">
+                        </div>
+                        <div class="info-section">
+                            <label for="agent-phone">Телефон: </label>
+                            <input type="text" id="agent-phone">
+                            <label for="agent-position">Длъжност: </label>
+                            <input type="text" id="agent-position">
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="divider"></div>
+                <div class="agent-more-info">
+                    <form action="" method="post">
+                        <textarea name="" placeholder="Въведете допълнителна информация за себе си..." id="" cols="30" rows="10"></textarea>
                     </form>
                 </div>
             </div>
