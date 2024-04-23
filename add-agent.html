@@ -176,7 +176,7 @@
                     </div>
             </div>
             
-            <div class="add-agent-body d-flex flex-row align-items-center ms-5 pt-3">
+            <div class="add-agent-body d-grid ">
                 <div class="agent-photo-and-description">
                     <div class="add-agent-photo d-flex">
                         <form action="" method="post" enctype="multipart/form-data">
@@ -186,7 +186,6 @@
                         </form>
                     </div>
                 </div>
-                <div class="divider"></div>
                 <div class="agent-info">
                     <form action="" method="post">
                         <div class="info-section-one-row">
@@ -203,7 +202,13 @@
                             <label for="agent-email">Имейл: </label>
                             <input type="email" id="agent-email">
                             <label for="agent-password">Парола: </label>
-                            <input type="password" id="agent-password">
+
+                            <div class="password-area input-group">
+
+                                <input type="password" id="agent-password" class="form-control border-0" required></input>
+                                <button class="fa fa-solid fa-lock input-group-text"></button>
+                                
+                            </div>
                         </div>
                         <div class="info-section">
                             <label for="agent-phone">Телефон: </label>
@@ -214,7 +219,6 @@
                         
                     </form>
                 </div>
-                <div class="divider"></div>
                 <div class="agent-more-info">
                     <form action="" method="post">
                         <textarea name="" placeholder="Въведете допълнителна информация за себе си..." id="" cols="30" rows="10"></textarea>
