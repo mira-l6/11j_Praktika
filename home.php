@@ -4,7 +4,8 @@
 
     include "db_connection.php";
 
-    $sql = "SELECT * FROM `` ORDER BY `` LIMIT 100"; 
+    //select from vsichki tablici
+    $sql = "SELECT * FROM `` ORDER BY `upload` DESC LIMIT 100"; 
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($result);
     
