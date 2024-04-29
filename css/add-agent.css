@@ -129,7 +129,7 @@ input[type="file"]{
 }
 .agent-photo-custom-upload{
     background-color: rgb(233, 227, 227);
-    padding: 0.5em;
+    padding: 0.2em;
     border-radius: 10px;
     cursor: pointer;
     width: 100%;
