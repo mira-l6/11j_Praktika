@@ -7,7 +7,8 @@
     include "db_connection.php";
 
     //vsichki poleta isset
-    if(isset($_POST['']) && isset($_POST['']))
+    //snimkata da se dobavq s otdelna forma chrez upload.php
+    if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['experience']))
     {
         //vsichki poleta
         $name = validate($_POST['name']);
@@ -43,7 +44,7 @@
         }
         else if(empty($email))
         {
-            header("Location: add-agent.html?error=Имейлът е задължително!");
+            header("Location: add-agent.html?error=Имейлът е задължителен!");
             exit();
         }
         else if(empty($phone))
@@ -53,7 +54,7 @@
         }
         else if(empty($experience))
         {
-            header("Location: add-agent.html?error=Потребителското име е задължително!");
+            header("Location: add-agent.html?error=Длъжността е задължителна!");
             exit();
         }
         else
