@@ -40,3 +40,17 @@
     justify-content: flex-end;
     width: 23%;
 }
+
+@media(max-width: 1300px){
+    .estate-agents{
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+}
+@media(max-width: 840px) {
+    .estate-agents{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+    .agent-edit-boxbutton{
+        width: 100%;
+    }
+}
