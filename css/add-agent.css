@@ -49,7 +49,6 @@ body{
 
 .add-agent-body{
     height: calc(100vh - 184.8px);
-    
 }
 
 .add-agent-photo{
@@ -91,8 +90,7 @@ body{
 }
 
 .agent-more-info{
-    height: 100%;
-    margin: auto;
+    /* height: 100%; */
 }
 
 .info-section input, .info-subsection input{
