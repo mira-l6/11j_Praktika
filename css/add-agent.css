@@ -41,7 +41,9 @@ body{
 
 .agent-photo-and-description, .agent-info{
     height: 100%;
-    border-right: 3px solid rgba(232,209,145,0.4);
+}
+.agent-photo-and-description{
+    background-color: white;
 }
 
 /* ..agent-photo-and-description form{
@@ -50,6 +52,7 @@ body{
 
 .add-agent-body{
     height: calc(100vh - 184.8px);
+    background-color: rgb(233, 227, 227);
 }
 
 .add-agent-photo{
@@ -68,7 +71,7 @@ body{
 }
 
 .agent-info{
-    width: 43em;
+    width: 45%;
     background-color: rgb(233, 227, 227);
 }
 
@@ -91,8 +94,7 @@ body{
 }
 
 .agent-more-info{
-    height: 100%;
-    margin: auto;
+     background-color: white;
 }
 
 .info-section input, .info-subsection input{
