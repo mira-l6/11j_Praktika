@@ -46,11 +46,15 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Покупка</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Продажба</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Продажба</a>
+                                    </li>
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Наемане</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Отдаване на наем</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Финансова консултация</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Юридическа консултация</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Отдаване на
+                                            наем</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Финансова
+                                            консултация</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="#">Юридическа
+                                            консултация</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -174,22 +178,60 @@
 
         <div class="add-offer-box">
             <div class="add-offer-title d-flex flex-row">
-                    <h2>Добавяна на бизнес имот</h2>
-                    <div>
-                        <button class="add-offer-button delete-button">Отмени</button>
-                        <button class="add-offer-button add-button">Запази</button>
-                    </div>
+                <h2>Добавяна на бизнес имот</h2>
+                <div>
+                    <button class="add-offer-button delete-button">Отмени</button>
+                    <button class="add-offer-button add-button">Запази</button>
+                </div>
             </div>
             <div class="add-offer-body">
                 <form action="" method="post">
-                    
+                    <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
+                    <button type="button" onclick="document.getElementById('image-upload-multiple').click()">Качете
+                        снимките</button>
                 </form>
+                <div class="add-offer-image-container d-flex flex-wrap justify-content-start" id="container">
+                    <div class="image-box d-flex justify-content-center position-relative">
+                        <img src="img/contacts_background.png" alt="offer image" class="uploadImage">
+                        <span class="position-absolute material-icons" onclick="deleteImage(` + images.indexOf(i) + `)">delete</span>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 
+    <script>
+        let images = [];
 
-    <script src="/js/uploadMultiplePreview.js"></script>
+        function imageSelect() {
+            let image = document.getElementById('image-upload-multiple').files;
+            for (let i = 0; i < image.length; i++) {
+                images.push({
+                    "name": image[i].name,
+                    "url": URL.createObjectURL(image[i]),
+                    "file": image[i]
+                })
+            }
+            // document.getElementById('form').reset();
+            document.getElementById('container').innerHTML = imageShow();
+        }
+        function imageShow(){
+            var image = "";
+            images.forEach((i) => {
+                image += `<div class="image-box d-flex justify-content-center position-relative">
+                        <img src="` + i.url + `" alt="offer image" class="uploadImage>
+                        <span class="position-absolute material-icons" onclick="deleteImage(` + images.indexOf(i) + `)">delete</span>
+                    </div>`;
+            })
+            return image;
+        }
+        function deleteImage(e){
+
+        }
+
+    </script>
+    <script type="text/javascript" src="/js/uploadMultiplePreview.js"></script>
 </body>
+
 </html>

@@ -40,3 +40,11 @@
     /* height: calc(100vh - 184.8px); */
     background-color: var(--color-primary);
 }
+#image-upload-multiple{
+    display: none;
+}
+.image-box{
+    height: 120px;
+    width: 200px;
+    overflow: hidden;
+}
