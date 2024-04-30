@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="bg">
 
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/profile.css">
-    <!-- <link rel="stylesheet" href="/css/adminProfile.css"> -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Форум</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Начало</title>
+    </head>
 
-<body>
-    <!-- navbar start -->
-    <div>
+    <body>
+     <!-- nav start -->
+    
         <nav class="navbar short navbar-expand-md p-0">
             <div class="container-fluid beige-background">
                 <ul class="navbar-nav justify-content-around">
@@ -34,7 +33,7 @@
                     <div class="collapse navbar-collapse">
                         <li class="nav-item ">
                             <button class="btn btn-lg btn-pill blc"><a href="home.html"
-                                    class="nav-link">Начало</a></button>
+                                    class="nav-link disabled">Начало</a></button>
 
                         </li>
 
@@ -57,36 +56,26 @@
                         <!-- <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
                         </li> -->
 
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
                                     class="nav-link">Контакти</a></button>
                         </li>
 
-                        <li class="nav-item ">
-                            <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За
-                                    нас</a></button>
+                        <li class="nav-item">
+                            <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За нас</a>
+                            </button>
                         </li>
 
                     </div>
                 </ul>
-
                 <form class="d-flex justify-content-space-between">
                     <div class="collapse navbar-collapse">
-                        <button class="btn btn-lg btn-pill btn-marked blc search-button">
-                            <a href="search.html" class="nav-link"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a>
-                        </button>
-
+                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href=""
+                                class="nav-link"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
                         <a class="btn btn-lg btn-pill blc ms-1" href="login.html">
-
-                            <div class="profile-icon d-flex justify-content-center align-items-center">
-                                <span class="fa-solid fa-user fa">
-
-                                </span>
-                            </div>
-
-
+                                <div class="profile-icon d-flex justify-content-center align-items-center"><span
+                                        class="fa-solid fa-user fa"></span></div>
                         </a>
-
                     </div>
                 </form>
 
@@ -101,14 +90,13 @@
             <div class="offcanvas-body beige-background ps-0 pe-0">
                 <ul class="navbar-nav g-3 ms-0 ps-0">
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="home.html"
+                        <button class="btn btn-lg btn-pill blc w-100 text-start removed"><a href="home.html"
                                 class="nav-link ps-3">Начало</a></button>
                     </li>
 
                     <li class="nav-item">
-                        <button type="button"
-                            class="btn btn-lg btn-pill blc w-100 text-start collapsed-dropdown-style pt-3 pb-3"
-                            data-bs-toggle="collapse" data-bs-target="#service">
+                        <button type="button" class="btn btn-lg btn-pill blc w-100 text-start collapsed-dropdown-style pt-3 pb-3" data-bs-toggle="collapse"
+                            data-bs-target="#service">
                             <a class="ps-3">Услуги</a>
                         </button>
                         <div id="service" class="collapse container-fluid p-0">
@@ -150,12 +138,14 @@
                         <!-- <button class="btn btn-lg btn-pill blc" ><a href="" class="nav-link">Услуги</a></button> -->
                     </li>
 
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="contacts.html"
-                                class="nav-link ps-3">Контакти</a></button>
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill blc w-100 text-start">
+                            <a href="contacts.html" class="nav-link ps-3">Контакти</a>
+
+                        </button>
                     </li>
 
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="about.html"
                                 class="nav-link ps-3">За
                                 нас</a></button>
@@ -163,14 +153,12 @@
 
                     <li class="nav-item">
                         <button class="btn btn-lg btn-pill btn-marked blc w-100 text-start"><a href=""
-                                class="nav-link ps-3"><span
-                                    class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
+                                class="nav-link ps-3"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc profile-button w-100 text-start">
-                            <a href="login.html" class="nav-link ps-3"><span
-                                    class="fa-solid fa-user collapse-user-icon fa"></span>Профил</a>
+                        <button class="btn btn-lg btn-pill blc w-100 text-start profile-button">
+                            <a href="login.html" class="nav-link ps-3"><span class="fa-solid fa-user collapse-user-icon fa"></span>Профил</a>
                         </button>
                     </li>
 
@@ -178,62 +166,4 @@
 
             </div>
         </div>
-        <!-- navbar end -->
-        <div class="profile-box p-5">
-            <div class="d-grid profile-layout">
-                <div class="grid-item profile-info">
-                    <div class="profile-title d-flex p-3 align-items-center">
-                        <p>Моят профил</p>
-                    </div>
-                    <div class="details-space d-flex flex-column justify-content-around">
-                        <div class="profile-subtitle p-4">
-                            <p>Име: </p>
-                            <p>Фамилия: </p>
-                            <p>Потребителско име: </p>
-                            <p>Имейл: </p>
-                            <p>Телефон: </p>
-                            <p>Длъжност: </p>
-                        </div>
-                        <div class="profile-buttons d-flex-column pt-4 pb-4">
-                            <div class="d-flex flex-row">
-                                <div class="notice-button">
-                                    <a href="my-offers.html"
-                                        ><button class="d-flex justify-content-center align-items-center">Моите обяви<i
-                                            class="material-icons">arrow_forward</i>
-                                    </button></a>
-                                </div>
-                                <div class="edit-button">
-                                    <a href="edit-profile.html">
-                                    <button class="d-flex justify-content-center align-items-center"><i
-                                            class="material-icons">create</i>Редактиране
-                                    </button></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row mt-3">
-                                <div class="notice-button">
-                                    <a href="all-offers.html">
-                                    <button class="d-flex justify-content-center align-items-center">Всички обяви<i
-                                            class="material-icons">arrow_forward</i>
-                                    </button></a>
-                                </div>
-                                <div class="edit-button">
-                                    <a href="all-agents.html"
-                                            ><button class="d-flex justify-content-center align-items-center"><i
-                                            class="material-icons">create</i>Брокери
-                                    </button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item profile-image d-flex justify-content-center align-items-center p-3">
-                    <div></div>
-                </div>
-                <div class="grid-item profile-bio">
-                    <p class="p-4">Обичам да правя нещо и имам хобита...</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</body>
+    </body>
