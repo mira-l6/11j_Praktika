@@ -2,8 +2,8 @@
  
     $host="localhost";
     $port=3306;
-    $user="root";
-    $password="Katerina27";
+    $user="cpses_zhj8iwy9p0@localhost";
+    $password="";
     $dbname="ForumDB";
 
     $con = new mysqli($host, $user, $password, $dbname, $port)
