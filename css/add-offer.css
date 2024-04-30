@@ -36,15 +36,41 @@
     background-color: rgb(111, 208, 111);
 }
 
-.add-offer-body{
-    /* height: calc(100vh - 184.8px); */
-    background-color: var(--color-primary);
+.add-offer-body form button{
+    border: none;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
 }
 #image-upload-multiple{
     display: none;
 }
+
+.add-offer-image-container{
+    grid-template-columns: repeat(3, 1fr);
+    width: 50em;
+    height: 20em;
+    padding: 1em;
+    border: 5px solid rgb(233, 227, 227);
+    border-radius: 10px;
+    overflow: scroll;
+}
+
 .image-box{
-    height: 120px;
-    width: 200px;
+    /* background-color: red; */
+    height: 10em;
+    width: 15em;
     overflow: hidden;
+    margin-bottom: 1em;
+}
+.image-box img{
+    max-width: 100%;
+    border-radius: 20px;
+    /* border: 2px solid black; */
+}
+.image-box span{
+    
+    border-bottom-left-radius: 10px;
+    color: rgb(130, 128, 128); 
+    background-color: white;
 }

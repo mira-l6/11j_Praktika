@@ -187,14 +187,10 @@
             <div class="add-offer-body">
                 <form action="" method="post">
                     <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
-                    <button type="button" onclick="document.getElementById('image-upload-multiple').click()">Качете
-                        снимките</button>
+                    <button type="button" onclick="document.getElementById('image-upload-multiple').click()">Прикачване на снимки</button>
                 </form>
-                <div class="add-offer-image-container d-flex flex-wrap justify-content-start" id="container">
-                    <div class="image-box d-flex justify-content-center position-relative">
-                        <img src="img/contacts_background.png" alt="offer image" class="uploadImage">
-                        <span class="position-absolute material-icons" onclick="deleteImage(` + images.indexOf(i) + `)">delete</span>
-                    </div>
+                <div class="add-offer-image-container d-grid" id="container">
+                    
                 </div>
             </div>
         </div>
@@ -220,8 +216,8 @@
             var image = "";
             images.forEach((i) => {
                 image += `<div class="image-box d-flex justify-content-center position-relative">
-                        <img src="` + i.url + `" alt="offer image" class="uploadImage>
-                        <span class="position-absolute material-icons" onclick="deleteImage(` + images.indexOf(i) + `)">delete</span>
+                        <img src="` + i.url + `" alt="offer image">
+                        <span class="position-absolute material-icons" onclick="deleteImage(` + images.indexOf(i) + `)">cancel</span>
                     </div>`;
             })
             return image;
