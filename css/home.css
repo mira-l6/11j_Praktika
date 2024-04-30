@@ -192,9 +192,3 @@ input[type="number"]{
         border-left: 1px solid var(--color-primary);
     }
 }
-
-@media(max-width: 380px){
-    .filter-option{
-        font-size: 0.8em;
-    }
-}
