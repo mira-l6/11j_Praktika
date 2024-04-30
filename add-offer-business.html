@@ -185,12 +185,52 @@
                 </div>
             </div>
             <div class="add-offer-body">
-                <form action="" method="post" id="form">
-                    <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
-                    <button type="button" onclick="document.getElementById('image-upload-multiple').click()">Прикачване на снимки</button>
-                    <button type="button" onclick="document.getElementById('container').innerHTML = '';">Изчистване</button>
-                </form>
-                <div class="add-offer-image-container d-grid" id="container">
+                <div class="add-offer-images">
+                    <form action="" method="post" id="form">
+                        <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
+                        <button type="button"
+                            onclick="document.getElementById('image-upload-multiple').click()">Прикачване на
+                            снимки</button>
+                        <span class="text-danger">Препоръчително е прикачване наведнъж</span>
+                        <!-- <button type="button" onclick="document.getElementById('container').innerHTML = '';">Изчистване</button> -->
+                    </form>
+                    <div class="add-offer-image-container d-grid" id="container"></div>
+                </div>
+                <div class="add-offer-info">
+                    <input type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                    <input type="number" class="offer-input" placeholder="Цена" />
+                    <input type="number" class="offer-input" placeholder="Квадратура" />
+                    <input type="number" class="offer-input" placeholder="Етаж на апартамент" />
+                    <input type="number" class="offer-input" placeholder="Брой етажи общо" />
+                    <input type="number" class="offer-input" placeholder="Строителство(години)" />
+                    <input type="text" class="offer-input" placeholder="Строителство(тип)" />
+
+                    <select name="" id="">\
+                        <option value="" disabled selected>Вид</option>
+                    </select>
+
+                    <select name="" id="country">
+                        <option value="" disabled selected>Държава</option>
+                        <option value="Bulgaria">България</option>
+                        <option value="Greece">Гърция</option>
+                    </select>
+                    <select name="" id="populated-area">
+                        <option value="" disabled selected>Област</option>
+                    </select>
+                    <select name="" id="town">
+                        <option value="">Град/село</option>
+                    </select>
+                    <select name="" id="townarea">
+                        <option value="">Регион</option>
+                    </select>
+
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Добавете описание"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Добавете особености"></textarea>
+
+                    <input type="checkbox"/>Газ
+                    <input type="checkbox"/>ТЕЦ
+                    <input type="checkbox"/>Само за частни лица
+                    <input type="checkbox"/>Обзаведен
                     
                 </div>
             </div>
@@ -198,38 +238,39 @@
 
     </div>
 
-    <script>
-        let images = [];
-
-        function imageSelect() {
-            let image = document.getElementById('image-upload-multiple').files;
-            for (let i = 0; i < image.length; i++) {
-                images.push({
-                    "name": image[i].name,
-                    "url": URL.createObjectURL(image[i]),
-                    "file": image[i]
-                })
-            }
-            document.getElementById('form').reset();
-            document.getElementById('container').innerHTML = imageShow();
-        }
-        function imageShow(){
-            var image = "";
-            images.forEach((i) => {
-                image += `<div class="image-box d-flex justify-content-center position-relative">
-                        <img src="` + i.url + `" alt="offer image">
-                        <span class="position-absolute material-icons" onclick="deleteImage(` + images.indexOf(i) + `)">cancel</span>
-                    </div>`;
-            })
-            return image;
-        }
-        function deleteImage(e){
-            images.splice(e, 1);
-            document.getElementById('container').innerHTML = imageShow();
-        }
-
-    </script>
-    <script type="text/javascript" src="/js/uploadMultiplePreview.js"></script>
+    <script src="/js/uploadMultiplePreview.js"></script>
+    <script src="/js/addOfferFilters.js"></script>
+    <script src="/js/filter.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- 
+<option value="tburgas">град Бургас</option>
+<option value="tvarna">град Варна</option>
+<option value="tvt">град Велико Търново</option>
+<option value="tvidin">град Видин</option>
+<option value="tvraca">град Враца</option>
+<option value="tgabrovo">град Габрово</option>
+<option value="tdobrich">град Добрич</option>
+<option value="tkardjali">град Кърджали</option>
+<option value="tkustendil">град Кюстендил</option>
+<option value="tlovech">град Ловеч</option>
+<option value="tmontana">град Монтана</option>
+<option value="tpazardjik">град Пазарджик</option>
+<option value="tpernik">град Перник</option>
+<option value="tpleven">град Плевен</option>
+<option value="tplovdiv">град Пловдив</option>
+<option value="trazgrad">град Разград</option>
+<option value="truse">град Русе</option>
+<option value="tsilistra">град Силистра</option>
+<option value="tsliven">град Сливен</option>
+<option value="tsmolyan">град Смолян</option>
+<option value="tsofia">град София</option>
+<option value="tsz">град Стара Загора</option>
+<option value="ttargovishte">град Търговище</option>
+<option value="thaskovo">град Хасково</option>
+<option value="tshumen">град Шумен</option>
+<option value="tyambol">град Ямбол</option> -->
