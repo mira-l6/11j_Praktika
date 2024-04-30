@@ -13,7 +13,7 @@
         }
         else
         {
-            $sql = "SELECT id FROM login WHERE SELECT realtor_Email FROM realtor
+            $sql = "SELECT realtor_Email FROM realtor
             JOIN  login 
             WHERE login.login_RealtorID = realtor.realtor_ID; "
         }
