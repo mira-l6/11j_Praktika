@@ -15,6 +15,15 @@
         {
             $sql = "SELECT realtor_Email FROM realtor
             JOIN  login 
-            WHERE login.login_RealtorID = realtor.realtor_ID; "
+            WHERE login.login_RealtorID = realtor.realtor_ID; ";
+            if(!$sql->num_rows > 0)
+            {
+
+            }
+            else
+            {
+                $recoverycode = uniqid(true); 
+            }
+
         }
     }
