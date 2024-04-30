@@ -1,0 +1,42 @@
+.add-offer-box{
+    width: 100%;
+}
+
+.add-offer-title{
+    border-bottom: 3px solid var(--color-primary);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    padding: 2em 1em 1.5em 3.3em;
+}
+
+.add-offer-title h2{
+    color: white;
+    font-weight: 500;
+}
+.add-offer-button{
+    border: none;
+    border-radius: 20px;
+    width: 7em;
+    background-color: rgb(233, 227, 227);
+    padding: 0.5em 1em 0.5em 1em;  
+}
+.add-offer-button:hover{
+    background-color: rgb(186, 186, 186); 
+}
+.delete-button{
+    margin-right: 1em;
+}
+.delete-button:hover{
+    background-color: rgb(241, 133, 133);
+}
+.add-button:hover{
+    background-color: rgb(111, 208, 111);
+}
+
+.add-offer-body{
+    /* height: calc(100vh - 184.8px); */
+    background-color: var(--color-primary);
+}
