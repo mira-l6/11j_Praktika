@@ -185,9 +185,10 @@
                 </div>
             </div>
             <div class="add-offer-body">
-                <form action="" method="post">
+                <form action="" method="post" id="form">
                     <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
                     <button type="button" onclick="document.getElementById('image-upload-multiple').click()">Прикачване на снимки</button>
+                    <button type="button" onclick="document.getElementById('container').innerHTML = '';">Изчистване</button>
                 </form>
                 <div class="add-offer-image-container d-grid" id="container">
                     
@@ -209,7 +210,7 @@
                     "file": image[i]
                 })
             }
-            // document.getElementById('form').reset();
+            document.getElementById('form').reset();
             document.getElementById('container').innerHTML = imageShow();
         }
         function imageShow(){
@@ -223,7 +224,8 @@
             return image;
         }
         function deleteImage(e){
-
+            images.splice(e, 1);
+            document.getElementById('container').innerHTML = imageShow();
         }
 
     </script>
