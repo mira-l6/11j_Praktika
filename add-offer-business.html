@@ -184,54 +184,106 @@
                     <button class="add-offer-button add-button">Запази</button>
                 </div>
             </div>
-            <div class="add-offer-body">
+            <div class="add-offer-body d-grid">
                 <div class="add-offer-images">
                     <form action="" method="post" id="form">
                         <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
                         <button type="button"
                             onclick="document.getElementById('image-upload-multiple').click()">Прикачване на
                             снимки</button>
-                        <span class="text-danger">Препоръчително е прикачване наведнъж</span>
+                        <!-- <span class="text-danger">Препоръчително е прикачване наведнъж</span> -->
                         <!-- <button type="button" onclick="document.getElementById('container').innerHTML = '';">Изчистване</button> -->
                     </form>
                     <div class="add-offer-image-container d-grid" id="container"></div>
                 </div>
-                <div class="add-offer-info">
-                    <input type="text" class="offer-input" placeholder="Заглавие на обявата" />
-                    <input type="number" class="offer-input" placeholder="Цена" />
-                    <input type="number" class="offer-input" placeholder="Квадратура" />
-                    <input type="number" class="offer-input" placeholder="Етаж на апартамент" />
-                    <input type="number" class="offer-input" placeholder="Брой етажи общо" />
-                    <input type="number" class="offer-input" placeholder="Строителство(години)" />
-                    <input type="text" class="offer-input" placeholder="Строителство(тип)" />
 
-                    <select name="" id="">\
-                        <option value="" disabled selected>Вид</option>
-                    </select>
+                <div>
+                    <form action="" method="post" class="d-grid add-offer-architecture">
+                        <input type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                        <input type="number" class="offer-input" placeholder="Цена(лв)" />
+                        <input type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
+                        <input type="number" class="offer-input" placeholder="Етаж на апартамент" />
+                        <input type="number" class="offer-input" placeholder="Брой етажи общо" />
+                        <input type="number" class="offer-input" placeholder="Строителство(години)" />
+                        <input type="text" class="offer-input" placeholder="Строителство(тип)" />
+                    </form>
+                </div>
 
-                    <select name="" id="country">
-                        <option value="" disabled selected>Държава</option>
-                        <option value="Bulgaria">България</option>
-                        <option value="Greece">Гърция</option>
-                    </select>
-                    <select name="" id="populated-area">
-                        <option value="" disabled selected>Област</option>
-                    </select>
-                    <select name="" id="town">
-                        <option value="">Град/село</option>
-                    </select>
-                    <select name="" id="townarea">
-                        <option value="">Регион</option>
-                    </select>
+                <div class="add-offer-location-info">
 
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Добавете описание"></textarea>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Добавете особености"></textarea>
+                    <form action="/filter.php/" method="post">
+                        <div class="filter-box">
+                            <div class="filter-option"><label for="property-type">Тип имот</label>
+                                <!--падащо меню-->
+                                <select name="" id="property-type">
+                                    <option value="" disabled selected>Тип(имот)</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="property-selling-type">Вид</label>
+                                <!--падащо меню-->
+                                <select name="" id="property-type">
+                                    <option value="" disabled selected>Вид(продажба)</option>
+                                    <option value="">Продава</option>
+                                    <option value="">Купува</option>
+                                    <option value="">Отдава</option>
+                                    <option value="">Наема</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="country">Държава</label>
+                                <select name="" id="country">
+                                    <option value="" disabled selected>Държава</option>
+                                    <option value="Bulgaria">България</option>
+                                    <option value="Greece">Гърция</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="populated-area">Област</label>
+                                <select name="" id="populated-area">
+                                    <option value="" disabled selected>Област</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="town">Град/село</label>
+                                <select name="" id="town">
+                                    <option value="">Град/село</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="region">Регион</label>
+                                <select name="" id="townarea">
+                                    <option value="">Регион</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <input type="checkbox"/>Газ
-                    <input type="checkbox"/>ТЕЦ
-                    <input type="checkbox"/>Само за частни лица
-                    <input type="checkbox"/>Обзаведен
-                    
+                    </form>
+                </div>
+                <div class="add-offer-more-info">
+                    <form action="" class="d-flex flex-row align-items-center">
+                        <div class="add-offer-textareas">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Добавете описание"></textarea>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Добавете особености"></textarea>
+                        </div>
+
+                        <div class="add-offer-checkboxes d-flex justify-content-center f-row">
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Газ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">ТЕЦ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Само за частни лица</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Обзаведен</label></span>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -38,22 +38,33 @@
 
 .add-offer-body{
     height: calc(100vh - 184.8px);
-    background-color: var(--color-primary);
+    /* background-color: var(--color-primary); */
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .add-offer-body form button{
     border: none;
-    margin: 1em;
+    margin-top: 2em !important;
     padding: 1em;
+    width: 50em;
     border-radius: 10px;
 }
 #image-upload-multiple{
     display: none;
 }
 
+.add-offer-images{
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border-right: 3px solid white; */
+}
+
 .add-offer-image-container{
-    grid-template-columns: repeat(2, 1fr);
-    width: 35em;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50em;
     background-color: white;
     height: 20em;
     padding: 1em;
@@ -83,7 +94,125 @@
 
 textarea{
     resize: none;
+    width: 30em;
+    height: 5em;
+    border-radius: 10px;
+    border: 1px solid var(--color-primary);
 }
-textarea, input{
+input{
     border: none;
+}
+
+.add-offer-architecture{
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1em;
+    padding: 3em;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(233, 227, 227);
+}
+.offer-input:first-child{
+    grid-column: 1/3;
+}
+.offer-input{
+    height: 4.5em;
+    border-radius: 10px;
+}
+
+.add-offer-location-info{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding: 1em 1em 0 1em;
+}
+
+.add-offer-more-info{
+    /* padding: 1em 1em 0 1em; */
+    display: flex;
+    align-items: center;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 100%;
+    background-color: rgb(247, 242, 242);
+}
+
+.add-offer-textareas{
+    padding: 1.5em;
+}
+
+.add-offer-checkboxes{
+    padding-left: 2em;
+}
+
+.add-offer-checkboxes span{
+    padding: 1em;
+}
+.add-offer-checkboxes span label{
+    font-size: 1.3em;
+    padding-left: 0.5em;
+}
+
+.add-offer-more-info input{
+    width: 1.8em;
+    height: 1.8em;
+}
+
+
+
+/* home.css code to help style the filter */
+.filter-box{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50px;
+    border: 1px solid rgba(180, 161, 180, 0.4);
+    box-shadow: -2px 0px 27px 7px rgba(199, 193, 199, 0.4);
+}
+
+.line-break{
+    width: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line-break div{
+    width: 1px;
+    height: 60%;
+    background-color: var(--color-primary);
+}
+
+.filter-option{
+    border-radius: 50px;
+    padding: 0.4em 0 0.4em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.filter-option:hover{
+    background-color: rgba(201,193,201,0.40);
+    cursor: pointer;
+}
+.filter-option label{
+    margin-bottom: 0.3em;
+}
+
+.filter-option:first-child{
+    width: 19%;
+}
+.filter-option:nth-child(3){
+    width: 20%;
+}
+.filter-option:nth-child(5){
+    width: 20%;
+}
+.filter-option:nth-child(7){
+    width: 20%;
+}
+.filter-option:nth-child(9){
+    width: 19%;
+}
+.filter-option:nth-child(11){
+    width: 19%;
 }
