@@ -4,7 +4,7 @@
 
     include "db_connection.php";
     $result = '';
-    if(isset[$_POST['email']])
+    if(isset($_POST['email']))
     {
         $email = mysqli_real_escape_string($con, $_POST['email']);
         if($email == null)
