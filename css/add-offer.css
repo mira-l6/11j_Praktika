@@ -41,25 +41,26 @@
     /* background-color: var(--color-primary); */
     grid-template-columns: repeat(2, 1fr);
 }
-
 .add-offer-body form button{
     border: none;
     margin-top: 2em !important;
     padding: 1em;
     width: 50em;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 #image-upload-multiple{
     display: none;
 }
 
 .add-offer-images{
-    background-color: var(--color-primary);
+    background-color:rgb(233, 227, 227);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border-right: 3px solid white; */
+    padding-bottom: 2em;
+    border-right: 2px solid var(--color-primary);
 }
 
 .add-offer-image-container{
@@ -69,6 +70,7 @@
     height: 20em;
     padding: 1em;
     border-radius: 10px;
+    border-top-left-radius: 0 !important;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -86,6 +88,7 @@
     /* border: 2px solid black; */
 }
 .image-box span{
+    cursor: pointer;
     border-bottom-left-radius: 10px;
     color: rgb(130, 128, 128); 
     background-color: white;
@@ -97,10 +100,14 @@ textarea{
     width: 30em;
     height: 5em;
     border-radius: 10px;
-    border: 1px solid var(--color-primary);
+    border: none;
 }
 input{
     border: none;
+}
+select{
+    border: none;
+    border-bottom: 1px solid rgb(233, 227, 227) !important;
 }
 
 .add-offer-architecture{
@@ -123,26 +130,44 @@ input{
 
 .add-offer-location-info{
     grid-column: 1/3;
-    grid-row: 2/3;
-    padding: 1em 1em 0 1em;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
 }
+.add-offer-location-info form{
+    width: 80%;
+}
+
 
 .add-offer-more-info{
     /* padding: 1em 1em 0 1em; */
     display: flex;
     align-items: center;
     grid-column: 1/3;
-    grid-row: 3/4;
+    grid-row: 4/5;
+    border-top: 3px solid rgb(233, 227, 227);
     width: 100%;
-    background-color: rgb(247, 242, 242);
+    background-color: var(--color-primary);
+}
+.add-offer-more-info form{
+    border-top: 3px solid white;
+    width: 100%;
 }
 
 .add-offer-textareas{
+    display: flex;
+    justify-content: center;
     padding: 1.5em;
+    border-right: 2px solid rgb(233, 227, 227);
+    width: 50%;
+}
+textarea:first-child{
+    margin-right: 2em;
 }
 
 .add-offer-checkboxes{
-    padding-left: 2em;
+    width: 50%;
 }
 
 .add-offer-checkboxes span{
@@ -156,6 +181,150 @@ input{
 .add-offer-more-info input{
     width: 1.8em;
     height: 1.8em;
+}
+
+@media(max-width: 1600px){
+    .add-offer-image-container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 35em;
+    }
+    .add-offer-body form button{
+        width: 35em;
+    }
+    textarea{
+        resize: none;
+        width: 17em;
+        height: 5em;
+    }
+    .add-offer-checkboxes span label{
+        font-size: 1em;
+    }
+}
+@media(max-width: 1200px){
+    .add-offer-image-container{
+        grid-template-columns: repeat(1, 1fr);
+        width: 20em;
+    }
+    .add-offer-body form button{
+        width: 20em;
+    }
+    textarea{
+        resize: none;
+        width: 12em;
+        height: 5em;
+    }
+    .add-offer-checkboxes span label{
+        font-size: 1em;
+    }
+    .add-offer-more-info input{
+        width: 1.3em;
+        height: 1.3em;
+    }
+    .add-offer-location-info form select{
+        font-size: 0.8em;
+    }
+    
+}
+@media(max-width: 1000px){
+
+    .add-offer-more-info form{
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .add-offer-textareas{
+        width: 100% !important;
+        border-bottom: 3px solid white;
+    }
+    .add-offer-checkboxes{
+        background-color: rgb(233, 227, 227);
+        width: 100% !important;
+    }
+    textarea{
+        width: 20em;
+    }
+
+
+    .filter-box{
+        display: grid !important;
+        grid-template-columns: repeat(3,1fr) !important;
+        height: 10em ;
+    }
+    .line-break{
+        display: none !important;
+    }
+    .filter-option:first-child, .filter-option:nth-child(3), .filter-option:nth-child(5){
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 1px solid var(--color-primary);
+    }
+    .filter-option:first-child{
+        border-right: 1px solid var(--color-primary);
+        width: 100% !important;
+    }
+    .filter-option:nth-child(3){
+        width: 100% !important;
+    }
+    .filter-option:nth-child(5){
+        width: 100% !important;
+        border-left: 1px solid var(--color-primary);
+    }
+    .filter-option:nth-child(7){
+        grid-column: 1/2;
+        width: 100% !important;
+    }
+    .filter-option:nth-child(9){
+        grid-column: 2/3;
+        width: 100% !important;
+        border-top-left-radius: 0;
+        border-left: 1px solid var(--color-primary);
+    }
+    .filter-option:nth-child(11){
+        grid-column: 3/4;
+        width: 100% !important;
+        border-top-left-radius: 0;
+        border-left: 1px solid var(--color-primary);
+    }
+}
+
+@media(max-width: 870px){
+    body{
+        overflow-x: hidden;
+    }
+    .add-offer-images{
+        grid-column: 1/3;
+        grid-row: 2/3;
+        border-bottom: 3px solid var(--color-primary);
+    }
+    .add-offer-image-container{
+        width: 80%;
+    }
+    .add-offer-images form{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .add-offer-images form button{
+        margin: auto;
+        width: 80%;
+    }
+    .add-offer-architecture{ 
+        width: 100vw !important;
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    textarea{
+        width: 40%;
+    }
+}
+@media(max-width: 700px){
+    .add-offer-title h2{
+        font-size: 1.3em;
+    }
+    .add-offer-button{
+        font-size: 0.8em;
+    }
+    
 }
 
 
