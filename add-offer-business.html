@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/css/add-offer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>За нас</title>
@@ -178,56 +177,151 @@
 
         <div class="add-offer-box">
             <div class="add-offer-title d-flex flex-row">
-                <h2>Добавяна на бизнес имот</h2>
+                <h2>Добавяне на бизнес имот</h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
                     <button class="add-offer-button add-button">Запази</button>
                 </div>
             </div>
-            <div class="add-offer-body">
-                <form action="" method="post">
-                    <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
-                    <button type="button" onclick="document.getElementById('image-upload-multiple').click()">Прикачване на снимки</button>
-                </form>
-                <div class="add-offer-image-container d-grid" id="container">
-                    
+            <div class="add-offer-body d-grid">
+                <div class="add-offer-images">
+                    <form action="" method="post" id="form">
+                        <input type="file" id="image-upload-multiple" multiple="" onchange="imageSelect()">
+                        <button type="button"
+                            onclick="document.getElementById('image-upload-multiple').click()">Прикачване на
+                            снимки</button>
+                        <!-- <span class="text-danger">Препоръчително е прикачване наведнъж</span> -->
+                        <!-- <button type="button" onclick="document.getElementById('container').innerHTML = '';">Изчистване</button> -->
+                    </form>
+                    <div class="add-offer-image-container d-grid" id="container"></div>
+                </div>
+
+                <div>
+                    <form action="" method="post" class="d-grid add-offer-architecture">
+                        <input type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                        <input type="number" class="offer-input" placeholder="Цена(лв)" />
+                        <input type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
+                        <input type="number" class="offer-input" placeholder="Етаж на апартамент" />
+                        <input type="number" class="offer-input" placeholder="Брой етажи общо" />
+                        <input type="number" class="offer-input" placeholder="Строителство(години)" />
+                        <input type="text" class="offer-input" placeholder="Строителство(тип)" />
+                    </form>
+                </div>
+
+                <div class="add-offer-location-info">
+
+                    <form action="/filter.php/" method="post">
+                        <div class="filter-box">
+                            <div class="filter-option"><label for="property-type">Тип имот</label>
+                                <!--падащо меню-->
+                                <select name="" id="property-type">
+                                    <option value="" disabled selected>Тип (дейност)</option>
+                                    <option value="">Продава</option>
+                                    <option value="">Купува</option>
+                                    <option value="">Отдава</option>
+                                    <option value="">Наема</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="property-selling-type">Вид</label>
+                                <!--падащо меню-->
+                                <select name="" id="property-type">
+                                    <option value="" disabled selected>Вид (бизнес)</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="country">Държава</label>
+                                <select name="" id="country">
+                                    <option value="" disabled selected>Държава</option>
+                                    <option value="Bulgaria">България</option>
+                                    <option value="Greece">Гърция</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="populated-area">Област</label>
+                                <select name="" id="populated-area">
+                                    <option value="" disabled selected>Област</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="town">Град/село</label>
+                                <select name="" id="town">
+                                    <option value="">Град/село</option>
+                                </select>
+                            </div>
+                            <div class="line-break">
+                                <div></div>
+                            </div>
+                            <div class="filter-option"><label for="region">Регион</label>
+                                <select name="" id="townarea">
+                                    <option value="">Регион</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="add-offer-more-info">
+                    <form action="" class="d-flex flex-row align-items-center">
+                        <div class="add-offer-textareas">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Добавете описание"></textarea>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Добавете особености"></textarea>
+                        </div>
+
+                        <div class="add-offer-checkboxes d-flex justify-content-center f-row">
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Газ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">ТЕЦ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Само за частни лица</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Обзаведен</label></span>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <script>
-        let images = [];
-
-        function imageSelect() {
-            let image = document.getElementById('image-upload-multiple').files;
-            for (let i = 0; i < image.length; i++) {
-                images.push({
-                    "name": image[i].name,
-                    "url": URL.createObjectURL(image[i]),
-                    "file": image[i]
-                })
-            }
-            // document.getElementById('form').reset();
-            document.getElementById('container').innerHTML = imageShow();
-        }
-        function imageShow(){
-            var image = "";
-            images.forEach((i) => {
-                image += `<div class="image-box d-flex justify-content-center position-relative">
-                        <img src="` + i.url + `" alt="offer image">
-                        <span class="position-absolute material-icons" onclick="deleteImage(` + images.indexOf(i) + `)">cancel</span>
-                    </div>`;
-            })
-            return image;
-        }
-        function deleteImage(e){
-
-        }
-
-    </script>
-    <script type="text/javascript" src="/js/uploadMultiplePreview.js"></script>
+    <script src="/js/uploadMultiplePreview.js"></script>
+    <script src="/js/addOfferFilters.js"></script>
+    <script src="/js/filter.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- 
+<option value="tburgas">град Бургас</option>
+<option value="tvarna">град Варна</option>
+<option value="tvt">град Велико Търново</option>
+<option value="tvidin">град Видин</option>
+<option value="tvraca">град Враца</option>
+<option value="tgabrovo">град Габрово</option>
+<option value="tdobrich">град Добрич</option>
+<option value="tkardjali">град Кърджали</option>
+<option value="tkustendil">град Кюстендил</option>
+<option value="tlovech">град Ловеч</option>
+<option value="tmontana">град Монтана</option>
+<option value="tpazardjik">град Пазарджик</option>
+<option value="tpernik">град Перник</option>
+<option value="tpleven">град Плевен</option>
+<option value="tplovdiv">град Пловдив</option>
+<option value="trazgrad">град Разград</option>
+<option value="truse">град Русе</option>
+<option value="tsilistra">град Силистра</option>
+<option value="tsliven">град Сливен</option>
+<option value="tsmolyan">град Смолян</option>
+<option value="tsofia">град София</option>
+<option value="tsz">град Стара Загора</option>
+<option value="ttargovishte">град Търговище</option>
+<option value="thaskovo">град Хасково</option>
+<option value="tshumen">град Шумен</option>
+<option value="tyambol">град Ямбол</option> -->
