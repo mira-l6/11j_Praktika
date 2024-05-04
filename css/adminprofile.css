@@ -1,0 +1,5 @@
+@media(max-width: 600px) {
+    .profile-title p{
+        font-size: 0.9em;
+    }
+}
