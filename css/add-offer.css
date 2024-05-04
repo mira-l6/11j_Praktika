@@ -182,6 +182,9 @@ textarea:first-child{
     width: 1.8em;
     height: 1.8em;
 }
+.offer-input::placeholder{
+    padding-left: 1em;
+}
 
 @media(max-width: 1600px){
     .add-offer-image-container{
