@@ -71,7 +71,7 @@ input:active{
 
 }
 
-@media(max-width: 900px){
+/* @media(max-width: 900px){
     h2{
         font-size: 2rem;
     }
@@ -79,9 +79,9 @@ input:active{
         font-size: 1.1rem;
     }
     .reg{
-        width: 60%;
+        width: 100%;
     }
-}
+} */
 
 .forgot-password{
     /* background-color: var(--color-primary); */
