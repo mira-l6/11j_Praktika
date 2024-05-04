@@ -92,7 +92,7 @@ body{
 .details-space{
     border-left: 2px solid var(--color-primary);
     border-right: 2px solid var(--color-primary);
-    background-color: rgba(196, 193, 196, 0.4);
+    background-color: #e4e4e4;
     height: 80%;
     
 }
@@ -169,6 +169,9 @@ body{
     .profile-info{
         height: 38em;   
     }
+    .profile-title p{
+        font-size: 0.95em;
+    }
     .profile-bio{
         grid-row: 5/6 !important;
         grid-column: 1/4 !important;
@@ -178,6 +181,9 @@ body{
         width: 100%;
     }
     .profile-input{
+        font-size: 0.8em;
+    }
+    .input-title{
         font-size: 0.9em;
     }
 }
