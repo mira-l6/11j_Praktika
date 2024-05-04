@@ -3,8 +3,8 @@ body{
 }
 
 .profile-box{
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg"); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg");
     background-color: white;
     height: 100vh;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ body{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom: 1px solid rgb(134, 132, 126);
-    box-shadow: -2px 0px 27px 7px rgba(96, 93, 96, 0.6);
+    box-shadow: -2px 0px 27px 7px rgba(188, 185, 188, 0.4);
 }
 
 .profile-title{
@@ -98,7 +98,7 @@ body{
 }
 
 .profile-bio{
-    background-color: var(--color-primary);
+    background-color: rgba(232,209,145,1);  
     border-bottom: 1px solid rgb(134, 132, 126);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
