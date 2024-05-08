@@ -6,7 +6,7 @@
 
     include "db_connection.php";
 
-    if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']))
+    if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['country']))
     {
         function validate($data)
         {
