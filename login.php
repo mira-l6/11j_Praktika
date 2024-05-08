@@ -5,6 +5,11 @@
 
 
     include "db_connection.php";
+
+    //promenlivi za navigaciqta
+    $header = "https://forumimotibg.com/adminprofile.html";
+    $replace = true;
+
     if(isset($_POST['username']) && isset($_POST['password']))
     {
         function validate($data)
