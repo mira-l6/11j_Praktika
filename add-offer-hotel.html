@@ -236,8 +236,9 @@
                                 <div></div>
                             </div>
                             <div class="filter-option"><label for="populated-area">Населено място</label>
-                                <select name="" id="populated-area">
-                                    <option value="" disabled selected>Област</option>
+                                <select id="populated-place-add-hotel" name="populated-place" >
+                                    <option value="" disabled selected>Населено място</option>
+                                    
                                     <option value="outsidebg">Извън България</option>
                                     <!--t - grad town; p - oblast province-->
                                     <option value="tblagoevgrad">град Благоевград</option>
@@ -299,17 +300,9 @@
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="town">Град/село</label>
-                                <select name="" id="town">
-                                    <option value="">Град/село</option>
-                                </select>
-                            </div>
-                            <div class="line-break">
-                                <div></div>
-                            </div>
-                            <div class="filter-option"><label for="region">Регион</label>
-                                <select name="" id="townarea">
-                                    <option value="">Регион</option>
+                            <div class="filter-option"><label for="region">Район</label>
+                                <select name="town-area-hotel" id="town-area-add-hotel">
+                                    <option value="">Район</option>
                                 </select>
                             </div>
                         </div>
@@ -336,9 +329,10 @@
 
     </div>
 
-    <script src="/js/uploadMultiplePreview.js"></script>
-    <script src="/js/addOfferFilters.js"></script>
-    <script src="/js/filter.js"></script>
+    <script src="./js/uploadMultiplePreview.js"></script>
+    <script src="./js/addOfferFilters.js"></script>
+    <script src="./js/filter-add-hotel.js"></script>
+    <script src="./js/homeFetch.js"></script>
 </body>
 
 </html>
