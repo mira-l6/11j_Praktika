@@ -9,21 +9,21 @@ function AddProperRegion(){
     switch(town.value){
         case 'tblagoevgrad':
             townArea.innerHTML = `
-            <option value="">Ален мак</option>
-            <option value="">Балабарши</option>
-            <option value="">Бялата висота</option>
-            <option value="">Вароша</option>
-            <option value="">Втора промишлена зона</option>
-            <option value="">Грамада</option>
-            <option value="">Еленово 1</option>
-            <option value="">Еленово 2</option>
-            <option value="">Запад</option>
-            <option value="">Идеален център</option>
-            <option value="">Орлова чука</option>
-            <option value="">Освобождение</option>
-            <option value="">Първа промишлена зона</option>
-            <option value="">Струмско</option>
-            <option value="">Широк център</option>`
+            <option value="Ален мак">Ален мак</option>
+            <option value="Балабарши">Балабарши</option>
+            <option value="Бялата висота">Бялата висота</option>
+            <option value="Вароша">Вароша</option>
+            <option value="Втора промишлена зона">Втора промишлена зона</option>
+            <option value="Грамада">Грамада</option>
+            <option value="Еленово 1">Еленово 1</option>
+            <option value="Еленово 2">Еленово 2</option>
+            <option value="Запад">Запад</option>
+            <option value="Идеален център">Идеален център</option>
+            <option value="Орлова чука">Орлова чука</option>
+            <option value="Освобождение">Освобождение</option>
+            <option value="Първа промишлена зона">Първа промишлена зона</option>
+            <option value="Струмско">Струмско</option>
+            <option value="Широк център">Широк център</option>`
         break;
 
         case 'pblagoevgrad':
