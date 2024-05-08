@@ -103,74 +103,29 @@ body {
 }
 
 /* contacts media START */
-/* @media(max-width: 1251.2px) {
-  .main-card {
-    width: 20rem;
-    height: 20rem;
-  }
-
-  .main-card h4 {
-    font-size: 1.2rem;
-  }
-
-  .main-card p {
-    font-size: 1rem;
-  }
-}
-
-@media(max-width: 1400.8px) {
-  .main-contacts{
-    gap: 0;
-  }
-  .main-profile-button{
-    font-size: 1rem !important;
-  }
-}
-
-@media(max-width: 1005.2px) {
-  .main-card {
-    width: 16rem;
-    height: 18rem;
-  }
-
-  .main-card h4 {
-    font-size: 1rem;
-  }
-
-  .main-card p {
-    display: none;
-  }
-
-  .main-card a {
-    font-size: 0.85rem;
-    ;
-  }
-}
-
-@media(max-width: 820px) {
-  .main-card .image-icon-circle img {
-    width: 5.5rem;
-    height: 5rem;
-  }
-
-  .main-card {
-    width: 14rem;
-    height: 16rem;
-  }
-}
-
-@media(max-width: 722.4px) {
+@media(max-width: 1100px){
   .main-card{
-    width: 100%;
+    width: 50em;
   }
 }
-
-@media(max-height: 400px) {
-
-  .main-card .main-card-body p,
-  .card-button {
-    display: none;
+@media (max-width: 910px) {
+  .main-card{
+    width: 40em;
   }
-} */
+}
+@media (max-width: 750px) {
+  .main-card{
+    width: 30em;
+  }
+}
+@media(max-width: 570px){
+  .main-card{
+    width: 12em;
+    width: 23em;
+  }
+  .main-card-image img{
+    width: 8em;
+  }
+}
 
 /* contacts media END */
