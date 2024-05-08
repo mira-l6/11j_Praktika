@@ -1,5 +1,5 @@
-const townAreaAddHotel = document.getElementById('town-area');
-const townAddHotel = document.getElementById('populated-place');
+const townAreaAddHotel = document.getElementById('town-area-add-hotel');
+const townAddHotel = document.getElementById('populated-place-add-hotel');
 
 
 townAddHotel.addEventListener('change', AddProperRegion)
