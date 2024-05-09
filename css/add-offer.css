@@ -50,7 +50,9 @@
     border-top-right-radius: 10px;
 }
 #image-upload-multiple{
-    display: none;
+    position: absolute;
+    /* top: 50em; */
+    /* font-size: 0.5em; */
 }
 
 .add-offer-images{
@@ -126,6 +128,7 @@ select{
 .offer-input{
     height: 4.5em;
     border-radius: 10px;
+    padding-left: 2em;
 }
 
 .add-offer-location-info{
@@ -182,9 +185,9 @@ textarea:first-child{
     width: 1.8em;
     height: 1.8em;
 }
-.offer-input::placeholder{
+/* .offer-input::placeholder{
     padding-left: 1em;
-}
+} */
 
 @media(max-width: 1600px){
     .add-offer-image-container{

@@ -1,15 +1,23 @@
 let images = [];
 
 function imageSelect() {
+
     let image = document.getElementById('image-upload-multiple').files;
+
     for (let i = 0; i < image.length; i++) {
-        images.push({
-            "name": image[i].name,
-            "url": URL.createObjectURL(image[i]),
-            "file": image[i]
-        })
+
+        if (checkDuplicate(image[i].name)) {
+            images.push({
+                "name": image[i].name,
+                "url": URL.createObjectURL(image[i]),
+                "file": image[i]
+            })
+        } else {
+            window.alert(image[i].name + "is already displayed!")
+        }
+
     }
-    // document.getElementById('form').reset();
+    document.getElementById('form').reset();
     document.getElementById('container').innerHTML = imageShow();
 }
 function imageShow() {
@@ -25,4 +33,17 @@ function imageShow() {
 function deleteImage(e) {
     images.splice(e, 1);
     document.getElementById('container').innerHTML = imageShow();
+}
+function checkDuplicate(image) {
+    let result = true;
+    if (images.lenght > 0) {
+        for (i = 0; i < images.length; i++) {
+            if (images[i].name == image) {
+                result = false;
+                break;
+            }
+        }
+    }
+    return result;
+
 }
