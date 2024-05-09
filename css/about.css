@@ -2,6 +2,14 @@ body {
     overflow-x: hidden;
 }
 
+.about-title-box{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)), url("../img/scenery.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em 1em 1.5em 3.3em;
+}
+
 .secondary-color {
     background-color: var(--color-primary);
 }
@@ -52,4 +60,51 @@ hr{
 }
 .carousel{
     width: 100%;
+}
+.about-no-carousel{
+    display: none;
+}
+.about-no-carousel-images{
+    display: none;
+}
+
+@media (max-width: 1350px) {
+    .googlemaps-image-no-carousel{
+        height: 10em !important;  
+        width: clamp(10em, 30em, 45em) !important;
+    }
+    .carousel{
+        display: none;
+    }
+    .about-no-carousel{
+        display: block;
+    }
+    .about-no-carousel-images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+        border-top: 2px solid #b5b7c1;
+    }
+    .no-c-image{
+        margin: 1em;
+        width: 35em !important;
+        box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
+    }
+    .carousel-images{
+        padding-bottom: 2em;
+    }
+}
+@media (max-width: 1200px) {
+    .no-c-image{
+        width: 30em !important;
+    }
+}
+@media (max-width: 1050px) {
+    .no-c-image{
+        width: 25em !important;
+    }
+    .location-text h2{
+        font-size: 1.5em;
+    }
 }
