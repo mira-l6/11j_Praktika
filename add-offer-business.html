@@ -197,20 +197,20 @@
                 </div>
 
                 <div>
-                    <form action="" method="post" class="d-grid add-offer-architecture">
-                        <input type="text" class="offer-input" placeholder="Заглавие на обявата" />
-                        <input type="number" class="offer-input" placeholder="Цена(лв)" />
-                        <input type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
-                        <input type="number" class="offer-input" placeholder="Етаж на апартамент" />
-                        <input type="number" class="offer-input" placeholder="Брой етажи общо" />
-                        <input type="number" class="offer-input" placeholder="Строителство(годинa)" />
-                        <input type="text" class="offer-input" placeholder="Строителство(тип)" />
+                    <form action="add-offer-business.php" method="post" class="d-grid add-offer-architecture">
+                        <input name="offername" id="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                        <input name="price" id="price" type="number" class="offer-input" placeholder="Цена(лв)" />
+                        <input name="quadrature" id="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
+                        <input name="floorflat" id="floorflat" type="number" class="offer-input" placeholder="Етаж на апартамент" />
+                        <input name="floors" id="floors" type="number" class="offer-input" placeholder="Брой етажи общо" />
+                        <input name="constructionyear" id="constructionyear" type="number" class="offer-input" placeholder="Строителство(годинa)" />
+                        <input name="constructiontype" id="constructiontype" type="text" class="offer-input" placeholder="Строителство(тип)" />
                     </form>
                 </div>
 
                 <div class="add-offer-location-info">
 
-                    <form action="/filter.php/" method="post">
+                    <form action="add-offer-business.html" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
@@ -344,17 +344,17 @@
                     </form>
                 </div>
                 <div class="add-offer-more-info">
-                    <form action="" class="d-flex flex-row align-items-center">
+                    <form action="add-offer-business.php" class="d-flex flex-row align-items-center">
                         <div class="add-offer-textareas">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Добавете описание"></textarea>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Добавете особености"></textarea>
+                            <textarea name="description" id="description" cols="30" rows="10" placeholder="Добавете описание"></textarea>
+                            <textarea name="features" id="features" cols="30" rows="10" placeholder="Добавете особености"></textarea>
                         </div>
 
                         <div class="add-offer-checkboxes d-flex justify-content-center f-row">
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Газ</label></span>
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">ТЕЦ</label></span>
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Само за частни лица</label></span>
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Обзаведен</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas" /><label for="gas">Газ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp" /><label for="tpp">ТЕЦ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="forprivatepeople" /><label for="forprivatepeople">Само за частни лица</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished" /><label for="furnished">Обзаведен</label></span>
                         </div>
                     </form>
                 </div>
