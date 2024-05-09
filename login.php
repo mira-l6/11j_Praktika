@@ -35,11 +35,14 @@
         }
         else
         {
-            $sql = "SELECT * FROM `login` WHERE `login_Username`='$username' AND `login_Pass`='$password'"; 
+            $sql = $mysqli->execute_query("SELECT * FROM `login` WHERE `login_Username`=? AND `login_Pass`=?", [$username, $password]); 
+            echo "$ sql querito";
             $result = mysqli_query($con, $sql);
+            echo "vlizam v ifa";
             if(mysqli_num_rows($result) === 1)
             {
                 $row = mysqli_fetch_assoc($result);
+                echo "vzimam red";
                 //print_r($row);
                 if($row['login_Username'] === $username && $row['login_Pass'] === $password)
                 {
@@ -78,3 +81,4 @@
         header("Location: login.html?не бачкам");
         exit();
     }
+    

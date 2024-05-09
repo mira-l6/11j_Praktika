@@ -1,33 +1,33 @@
-const townArea = document.getElementById('town-area');
-const town = document.getElementById('populated-place');
+const townAreaAddLand = document.getElementById('town-area-add-land');
+const townAddLand = document.getElementById('populated-place-add-land');
 
 
-town.addEventListener('change', AddProperRegion)
+townAddLand.addEventListener('change', AddProperRegion)
 
 function AddProperRegion(){
     // const townOption = townArea.getElementsByTagName('option');
-    switch(town.value){
+    switch(townAddLand.value){
         case 'tblagoevgrad':
-            townArea.innerHTML = `
-            <option value="Ален мак">Ален мак</option>
-            <option value="Балабарши">Балабарши</option>
-            <option value="Бялата висота">Бялата висота</option>
-            <option value="Вароша">Вароша</option>
-            <option value="Втора промишлена зона">Втора промишлена зона</option>
-            <option value="Грамада">Грамада</option>
-            <option value="Еленово 1">Еленово 1</option>
-            <option value="Еленово 2">Еленово 2</option>
-            <option value="Запад">Запад</option>
-            <option value="Идеален център">Идеален център</option>
-            <option value="Орлова чука">Орлова чука</option>
-            <option value="Освобождение">Освобождение</option>
-            <option value="Първа промишлена зона">Първа промишлена зона</option>
-            <option value="Струмско">Струмско</option>
-            <option value="Широк център">Широк център</option>`
+            townAreaAddLand.innerHTML = `
+            <option value="">Ален мак</option>
+            <option value="">Балабарши</option>
+            <option value="">Бялата висота</option>
+            <option value="">Вароша</option>
+            <option value="">Втора промишлена зона</option>
+            <option value="">Грамада</option>
+            <option value="">Еленово 1</option>
+            <option value="">Еленово 2</option>
+            <option value="">Запад</option>
+            <option value="">Идеален център</option>
+            <option value="">Орлова чука</option>
+            <option value="">Освобождение</option>
+            <option value="">Първа промишлена зона</option>
+            <option value="">Струмско</option>
+            <option value="">Широк център</option>`
         break;
 
         case 'pblagoevgrad':
-            townArea.innerHTML = `
+            townAreaAddLand.innerHTML = `
             <option value="главен път Е79">главен път Е79
             <option value="гр. Банско">гр. Банско
             <option value="гр. Белица">гр. Белица
@@ -310,7 +310,7 @@ function AddProperRegion(){
         break;
 
         case 'tburgas':
-            townArea.innerHTML = `
+            townAreaAddLand.innerHTML = `
             <option value="Акациите">Акациите
             <option value="Банево">Банево
             <option value="Братя Миладинови">Братя Миладинови
@@ -374,7 +374,7 @@ function AddProperRegion(){
         break;
 
         case 'pburgas':
-            townArea.innerHTML = `
+            townAreaAddLand.innerHTML = `
             <option value="гр. Айтос">гр. Айтос
             <option value="гр. Ахелой">гр. Ахелой
             <option value="гр. Ахтопол">гр. Ахтопол
@@ -623,7 +623,7 @@ function AddProperRegion(){
         break;
 
         case 'tvarna':
-            townArea.innerHTML = `
+            townAreaAddLand.innerHTML = `
             <option value="Автогара">Автогара
             <option value="Аспарухово">Аспарухово
             <option value="Базар Левски">Базар Левски
@@ -726,7 +726,7 @@ function AddProperRegion(){
         break;
 
             case 'pvarna':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Аксаково">гр. Аксаково
                 <option value="гр. Белослав">гр. Белослав
                 <option value="гр. Бяла">гр. Бяла
@@ -886,7 +886,7 @@ function AddProperRegion(){
             break;
 
             case 'tvt':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Акация">Акация
                 <option value="Асенов">Асенов
                 <option value="Бузлуджа">Бузлуджа
@@ -906,7 +906,7 @@ function AddProperRegion(){
             break;
 
             case 'pvt':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е83">главен път Е83
                 <option value="главен път Е85">главен път Е85
                 <option value="гр. Бяла черква">гр. Бяла черква
@@ -1247,7 +1247,7 @@ function AddProperRegion(){
             break;
 
             case 'tvidin':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Акджамия">Акджамия
                 <option value="Александър Стамболийски">Александър Стамболийски
                 <option value="Баба Тонка">Баба Тонка
@@ -1282,7 +1282,7 @@ function AddProperRegion(){
             break;
 
             case 'pvidin':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Гара Орешец">Гара Орешец
                 <option value="гр. Белоградчик">гр. Белоградчик
                 <option value="гр. Брегово">гр. Брегово
@@ -1426,7 +1426,7 @@ function AddProperRegion(){
             break;
 
             case 'tvraca':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Бистрец">Бистрец
                 <option value="Вежен">Вежен
                 <option value="Дъбника">Дъбника
@@ -1453,7 +1453,7 @@ function AddProperRegion(){
             break;
 
             case 'pvraca':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Бяла Слатина">гр. Бяла Слатина
                 <option value="гр. Козлодуй">гр. Козлодуй
                 <option value="гр. Криводол">гр. Криводол
@@ -1580,7 +1580,7 @@ function AddProperRegion(){
             break;
 
             case 'tgabrovo':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Беленци">Беленци
                 <option value="Бичкиня">Бичкиня
                 <option value="Бойката">Бойката
@@ -1626,7 +1626,7 @@ function AddProperRegion(){
             break;
 
             case 'pgabrovo':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Дряново">гр. Дряново
                 <option value="гр. Плачковци">гр. Плачковци
                 <option value="гр. Севлиево">гр. Севлиево
@@ -1987,7 +1987,7 @@ function AddProperRegion(){
             break;
             
             case 'tdobrich':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Автогара">Автогара
                 <option value="Балик">Балик
                 <option value="Градска болница">Градска болница
@@ -2021,7 +2021,7 @@ function AddProperRegion(){
             break;
 
             case 'pdobrich':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 option value="гр. Балчик">гр. Балчик
                 <option value="гр. Генерал Тошево">гр. Генерал Тошево
                 <option value="гр. Каварна">гр. Каварна
@@ -2241,7 +2241,7 @@ function AddProperRegion(){
             break;
 
             case 'tkardjali':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Байкал">Байкал
                 <option value="Боровец">Боровец
                 <option value="Веселчане">Веселчане
@@ -2260,7 +2260,7 @@ function AddProperRegion(){
             break;
 
             case 'pkardjali':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Ардино">гр. Ардино
                 <option value="гр. Джебел">гр. Джебел
                 <option value="гр. Крумовград">гр. Крумовград
@@ -2737,7 +2737,7 @@ function AddProperRegion(){
             break;
 
             case 'tkustendil':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Бузлуджа">Бузлуджа
                 <option value="Бял камък">Бял камък
                 <option value="Върташево">Върташево
@@ -2760,7 +2760,7 @@ function AddProperRegion(){
             break;
 
             case 'pkustendil':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е79">главен път Е79
                 <option value="гр. Бобов дол">гр. Бобов дол
                 <option value="гр. Бобошево">гр. Бобошево
@@ -2945,7 +2945,7 @@ function AddProperRegion(){
             break;
             
             case 'tlovech':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Вароша">Вароша
                 <option value="Гозница">Гозница
                 <option value="Дикисана">Дикисана
@@ -2966,7 +2966,7 @@ function AddProperRegion(){
             break;
 
             case 'plovech':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е83">главен път Е83
                 <option value="гр. Априлци">гр. Априлци
                 <option value="гр. Летница">гр. Летница
@@ -3100,7 +3100,7 @@ function AddProperRegion(){
             break;
 
             case 'tmontana':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Жерави">Жерави
                 <option value="Жеравица">Жеравица
                 <option value="Идеален център">Идеален център
@@ -3124,7 +3124,7 @@ function AddProperRegion(){
             break;
 
             case 'pmontana':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Берковица">гр. Берковица
                 <option value="гр. Бойчиновци">гр. Бойчиновци
                 <option value="гр. Брусарци">гр. Брусарци
@@ -3257,7 +3257,7 @@ function AddProperRegion(){
             break;
 
             case 'tpazardjik':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Запад">Запад
                 <option value="Идеален център">Идеален център
                 <option value="Изток">Изток
@@ -3275,7 +3275,7 @@ function AddProperRegion(){
             break;
 
             case 'ppazardjik':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Батак">гр. Батак
                 <option value="гр. Белово">гр. Белово
                 <option value="гр. Брацигово">гр. Брацигово
@@ -3399,7 +3399,7 @@ function AddProperRegion(){
             break;
 
             case 'tpernik':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Байкушева махала">Байкушева махала
                 <option value="Бела вода">Бела вода
                 <option value="Бели брег">Бели брег
@@ -3444,7 +3444,7 @@ function AddProperRegion(){
             break;
 
             case 'ppernik':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е79">главен път Е79
                 <option value="гр. Батановци">гр. Батановци
                 <option value="гр. Брезник">гр. Брезник
@@ -3622,7 +3622,7 @@ function AddProperRegion(){
             break;
 
             case 'tpleven':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="9-ти квартал">9-ти квартал
                 <option value="Дружба 1">Дружба 1
                 <option value="Дружба 2">Дружба 2
@@ -3645,7 +3645,7 @@ function AddProperRegion(){
             break;
 
             case 'ppleven':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е83">главен път Е83
                 <option value="гр. Белене">гр. Белене
                 <option value="гр. Гулянци">гр. Гулянци
@@ -3774,7 +3774,7 @@ function AddProperRegion(){
             break;
 
             case 'tplovdiv':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Асеновградско шосе">Асеновградско шосе
                 <option value="Беломорски">Беломорски
                 <option value="Брезовско шосе">Брезовско шосе
@@ -3829,7 +3829,7 @@ function AddProperRegion(){
             break;
 
             case 'pplovdiv':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Асеновград">гр. Асеновград
                 <option value="гр. Баня">гр. Баня
                 <option value="гр. Брезово">гр. Брезово
@@ -4048,7 +4048,7 @@ function AddProperRegion(){
             break;
 
             case 'trazgrad':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Абитрус">Абитрус
                 <option value="Бели Лом">Бели Лом
                 <option value="Варош">Варош
@@ -4066,7 +4066,7 @@ function AddProperRegion(){
             break;
 
             case 'prazgrad':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Завет">гр. Завет
                 <option value="гр. Исперих">гр. Исперих
                 <option value="гр. Кубрат">гр. Кубрат
@@ -4173,7 +4173,7 @@ function AddProperRegion(){
             break;
 
             case 'truse':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Алеи Възраждане">Алеи Възраждане
                 <option value="Басарбово">Басарбово
                 <option value="Веждата">Веждата
@@ -4225,7 +4225,7 @@ function AddProperRegion(){
             break;
 
             case 'pruse':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е85">главен път Е85
                 <option value="гр. Борово">гр. Борово
                 <option value="гр. Бяла">гр. Бяла
@@ -4312,7 +4312,7 @@ function AddProperRegion(){
             break;
 
             case 'tsilistra':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Запад">Запад
                 <option value="Изток">Изток
                 <option value="Малчика">Малчика
@@ -4328,7 +4328,7 @@ function AddProperRegion(){
             break;
             
             case 'psilistra':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Алфатар">гр. Алфатар
                 <option value="гр. Главиница">гр. Главиница
                 <option value="гр. Дулово">гр. Дулово
@@ -4450,7 +4450,7 @@ function AddProperRegion(){
             break;
 
             case 'tsliven':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Българка">Българка
                 <option value="Даме Груев">Даме Груев
                 <option value="Дружба">Дружба
@@ -4472,7 +4472,7 @@ function AddProperRegion(){
             break;
 
             case 'psliven':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е85">главен път Е85
                 <option value="гр. Кермен">гр. Кермен
                 <option value="гр. Котел">гр. Котел
@@ -4589,7 +4589,7 @@ function AddProperRegion(){
             break;
 
             case 'tsmolyan':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Горно Влахово">Горно Влахово
                 <option value="Горно Райково">Горно Райково
                 <option value="Долно Райково">Долно Райково
@@ -4609,7 +4609,7 @@ function AddProperRegion(){
             break;
 
             case 'psmolyan':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Девин">гр. Девин
                 <option value="гр. Доспат">гр. Доспат
                 <option value="гр. Златоград">гр. Златоград
@@ -4857,7 +4857,7 @@ function AddProperRegion(){
             break;
 
             case 'tsofia':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <optgroup label="7">
                 <option value="7-ми 11-ти километър">7-ми 11-ти километър
                 <optgroup label="А">
@@ -5083,7 +5083,7 @@ function AddProperRegion(){
             break;
 
             case 'psofia':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Гара Бов">Гара Бов
                 <option value="Гара Лакатник">Гара Лакатник
                 <option value="в.з.Ярема">в.з.Ярема
@@ -5374,7 +5374,7 @@ function AddProperRegion(){
             break;
 
             case 'tsz':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Аязмото">Аязмото
                 <option value="Била">Била
                 <option value="Дъбрава">Дъбрава
@@ -5410,7 +5410,7 @@ function AddProperRegion(){
             break;
 
             case 'psz':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="главен път Е85">главен път Е85
                 <option value="гр. Гурково">гр. Гурково
                 <option value="гр. Гълъбово">гр. Гълъбово
@@ -5624,7 +5624,7 @@ function AddProperRegion(){
             break;
 
             case 'ttargovishte':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Боровец">Боровец
                 <option value="Бряг">Бряг
                 <option value="Вароша">Вароша
@@ -5642,7 +5642,7 @@ function AddProperRegion(){
             break;
 
             case 'ptargovishte':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Антоново">гр. Антоново
                 <option value="гр. Омуртаг">гр. Омуртаг
                 <option value="гр. Опака">гр. Опака
@@ -5842,7 +5842,7 @@ function AddProperRegion(){
             break;
 
             case 'thaskovo':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Бадема">Бадема
                 <option value="Болярово">Болярово
                 <option value="Воеводски">Воеводски
@@ -5870,7 +5870,7 @@ function AddProperRegion(){
             break;
 
             case 'phaskovo':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Димитровград">гр. Димитровград
                 <option value="гр. Ивайловград">гр. Ивайловград
                 <option value="гр. Любимец">гр. Любимец
@@ -6137,7 +6137,7 @@ function AddProperRegion(){
             break;
 
             case 'tshumen':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="2-ри корпус">2-ри корпус
                 <option value="5-ти полк">5-ти полк
                 <option value="Басейна">Басейна
@@ -6171,7 +6171,7 @@ function AddProperRegion(){
             break;
 
             case 'pshumen':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Велики Преслав">гр. Велики Преслав
                 <option value="гр. Върбица">гр. Върбица
                 <option value="гр. Каолиново">гр. Каолиново
@@ -6327,7 +6327,7 @@ function AddProperRegion(){
             break;
 
             case 'tyambol':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="Аврен">Аврен
                 <option value="Боровец">Боровец
                 <option value="Васил Левски">Васил Левски
@@ -6358,7 +6358,7 @@ function AddProperRegion(){
             break;
 
             case 'pyambol':
-                townArea.innerHTML = `
+                townAreaAddLand.innerHTML = `
                 <option value="гр. Болярово">гр. Болярово
                 <option value="гр. Елхово">гр. Елхово
                 <option value="гр. Стралджа">гр. Стралджа
@@ -6472,7 +6472,7 @@ function AddProperRegion(){
             break;
 
             default:
-                townArea.innerHTML =`
+                townAreaAddLand.innerHTML =`
                 <option>Район</option>
                 `
             break;
