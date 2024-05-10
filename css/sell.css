@@ -1,9 +1,8 @@
 .sell-title-box{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.5)), url("../img/scenery.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .sell-title{
@@ -13,17 +12,15 @@
 
 .sell-advice-answer{
     background-color: var(--color-primary);
-    font-size: 1.24em;
+    font-size: 1.2em;
     line-height: 2;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 2em;
     color: #263159;
 }
 
 .sell-advice-question{
     font-size: 1.3em;
     background-color: rgba(228,228,228,0.2);
-    margin: 0;
 }
 
 .sell-button{
@@ -33,7 +30,7 @@
     border: none;
     border-radius: 20px;
     font-size: 1.2em;
-    width: 20em;
+    padding: 1em;
 }
 .sell-button>button>a{
     width: 100%;
