@@ -250,30 +250,79 @@
                                     <option value="" disabled selected>Държава</option>
                                     <option value="Bulgaria">България</option>
                                     <option value="Greece">Гърция</option>
+                                    <option value="Друго">Друго</option>
                                 </select>
                             </div>
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="populated-area">Област</label>
-                                <select name="" id="populated-area">
-                                    <option value="" disabled selected>Област</option>
+                            <div class="filter-option"><label for="populated-area">Населено място</label>
+                                <select name="populated-place" id="populated-place-add-universal">
+                                    <option value="" disabled selected>Населено място</option>
+
+                                    <option value="all">Всички</option>
+                                    <option value="tblagoevgrad">град Благоевград</option>
+                                    <option value="pblagoevgrad">област Благоевград</option>
+                                    <option value="tburgas">град Бургас</option>
+                                    <option value="pburgas">област Бургас</option>
+                                    <option value="tvarna">град Варна</option>
+                                    <option value="pvarna">област Варна</option>
+                                    <option value="tvt">град Велико Търново</option>
+                                    <option value="pvt">област Велико Търново</option>
+                                    <option value="tvidin">град Видин</option>
+                                    <option value="pvidin">област Видин</option>
+                                    <option value="tvraca">град Враца</option>
+                                    <option value="pvraca">област Враца</option>
+                                    <option value="tgabrovo">град Габрово</option>
+                                    <option value="pgabrovo">област Габрово</option>
+                                    <option value="tdobrich">град Добрич</option>
+                                    <option value="pdobrich">област Добрич</option>
+                                    <option value="tkardjali">град Кърджали</option>
+                                    <option value="pkardjali">област Кърджали</option>
+                                    <option value="tkustendil">град Кюстендил</option>
+                                    <option value="pkustendil">област Кюстендил</option>
+                                    <option value="tlovech">град Ловеч</option>
+                                    <option value="plovech">област Ловеч</option>
+                                    <option value="tmontana">град Монтана</option>
+                                    <option value="pmontana">област Монтана</option>
+                                    <option value="tpazardjik">град Пазарджик</option>
+                                    <option value="ppazardjik">област Пазарджик</option>
+                                    <option value="tpernik">град Перник</option>
+                                    <option value="ppernik">област Перник</option>
+                                    <option value="tpleven">град Плевен</option>
+                                    <option value="ppleven">област Плевен</option>
+                                    <option value="tplovdiv">град Пловдив</option>
+                                    <option value="pplovdiv">област Пловдив</option>
+                                    <option value="trazgrad">град Разград</option>
+                                    <option value="prazgrad">област Разград</option>
+                                    <option value="truse">град Русе</option>
+                                    <option value="pruse">област Русе</option>
+                                    <option value="tsilistra">град Силистра</option>
+                                    <option value="psilistra">област Силистра</option>
+                                    <option value="tsliven">град Сливен</option>
+                                    <option value="psliven">област Сливен</option>
+                                    <option value="tsmolyan">град Смолян</option>
+                                    <option value="psmolyan">област Смолян</option>
+                                    <option value="tsofia">град София</option>
+                                    <option value="psofia">област София</option>
+                                    <option value="tsz">град Стара Загора</option>
+                                    <option value="psz">област Стара Загора</option>
+                                    <option value="ttargovishte">град Търговище</option>
+                                    <option value="ptargovishte">област Търговище</option>
+                                    <option value="thaskovo">град Хасково</option>
+                                    <option value="phaskovo">област Хасково</option>
+                                    <option value="tshumen">град Шумен</option>
+                                    <option value="pshumen">област Шумен</option>
+                                    <option value="tyambol">град Ямбол</option>
+                                    <option value="pyambol">област Ямбол</option>
                                 </select>
-                            </div>
+                            </div> 
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="town">Град/село</label>
-                                <select name="" id="town">
-                                    <option value="">Град/село</option>
-                                </select>
-                            </div>
-                            <div class="line-break">
-                                <div></div>
-                            </div>
-                            <div class="filter-option"><label for="region">Регион</label>
-                                <select name="" id="townarea">
-                                    <option value="">Регион</option>
+                            <div class="filter-option"><label for="region">Район</label>
+                                <select name="town-area" id="town-area-add-universal">
+                                    <option value="">Район</option>
                                 </select>
                             </div>
                         </div>
@@ -300,9 +349,10 @@
 
     </div>
 
-    <script src="/js/uploadMultiplePreview.js"></script>
-    <script src="/js/addOfferFilters.js"></script>
-    <script src="/js/filter.js"></script>
+    <script src="./js/uploadMultiplePreview.js"></script>
+    <script src="./js/addOfferFilters.js"></script>
+    <script src="./js/filter-add-universal.js"></script>
+    <script src="./js/homeFetch.js"></script>
     <!-- <script src="/js/offerRedirect.js"></script> -->
 </body>
 

@@ -223,20 +223,20 @@
                                 <div></div>
                             </div>
                             <div class="filter-option"><label for="country">Държава</label>
-                                <select name="country" id="country">
+                                <select name="" id="country">
                                     <option value="" disabled selected>Държава</option>
-                                    <option value="България">България</option>
-                                    <option value="Гърция">Гърция</option>
+                                    <option value="Bulgaria">България</option>
+                                    <option value="Greece">Гърция</option>
                                     <option value="Друго">Друго</option>
                                 </select>
                             </div>
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="populated-place">Населено място</label>
-                                <select name="populated-place" id="populated-place">
-                                    <option value="" disabled selected>Населено място</option><option value="" disabled selected>Населено място</option>
-                                    <!--t - grad town; p - oblast province-->
+                            <div class="filter-option"><label for="populated-area">Населено място</label>
+                                <select name="populated-place" id="populated-place-add-plot">
+                                    <option value="" disabled selected>Населено място</option>
+
                                     <option value="all">Всички</option>
                                     <option value="tblagoevgrad">град Благоевград</option>
                                     <option value="pblagoevgrad">област Благоевград</option>
@@ -297,16 +297,8 @@
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="town-area-add-land">Град/село</label>
-                                <select name="town-area-add-land" id="town-area-add-land">
-                                    <option value="">Град/село</option>
-                                </select>
-                            </div>
-                            <div class="line-break">
-                                <div></div>
-                            </div>
                             <div class="filter-option"><label for="region">Регион</label>
-                                <select name="" id="townarea">
+                                <select name="town-area" id="town-area-add-plot">
                                     <option value="">Регион</option>
                                 </select>
                             </div>
@@ -334,9 +326,10 @@
 
     </div>
 
-    <script src="/js/uploadMultiplePreview.js"></script>
-    <script src="/js/addOfferFilters.js"></script>
-    <script src="/js/filter.js"></script>
+    <script src="./js/uploadMultiplePreview.js"></script>
+    <script src="./js/addOfferFilters.js"></script>
+    <script src="./js/filter-add-plot.js"></script>
+    <script src="./js/homeFetch.js"></script>
     <!-- <script src="/js/offerRedirect.js"></script> -->
 </body>
 
