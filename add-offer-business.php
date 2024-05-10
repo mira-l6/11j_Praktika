@@ -17,6 +17,7 @@
             return $data;
         }
 
+        $offername = validate($_POST['offername']);
         $price = validate($_POST['price']);
         $quadrature = validate($_POST['quadrature']);
         $floorflat = validate($_POST['floorflat']);
@@ -35,6 +36,36 @@
         $forprivatepeople = $_POST['forprivatepeople'];
         $furnished = $_POST['furnished'];
 
+        if(empty($offername))
+        {
+            header("Location: login.html?error=Описанието е задължително!");
+            exit();
+        }
+        else if(empty($price))
+        {
+            header("Location: login.html?error=Описанието е задължително!");
+            exit();
+        }
+        else if(empty($quadrature))
+        {
+            header("Location: login.html?error=Описанието е задължително!");
+            exit();
+        }
+        else if(empty($floors))
+        {
+            header("Location: login.html?error=Описанието е задължително!");
+            exit();
+        }
+        else if(empty($constructionyear))
+        {
+            header("Location: login.html?error=Описанието е задължително!");
+            exit();
+        }
+        else if(empty($constructiontype))
+        {
+            header("Location: login.html?error=Описанието е задължително!");
+            exit();
+        }
         if(empty($propertytype))
         {
             header("Location: login.html?error=Типът на имота е задължителен!");
@@ -76,8 +107,9 @@
                 $features = htmlspecialchars($features);
             }
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
-                        VALUES ($price, $quadrature, $floorflat, $floors, $gas, $tpp, $constructionyear, $constructiontype, $description, $features, $forprivatepeople, $furnished, $country, $populatedplace, $nz, $townarea,$businesstype, $propertytype)"; 
+                        VALUES ($price, $quadrature, $floorflat, $floors, $gas, $tpp, $constructionyear, $constructiontype, $description, $features, $forprivatepeople, $furnished, $country, $populatedplace, $offername, $townarea,$businesstype, $propertytype)"; 
             $result = mysqli_query($con, $sql);
+            exit();
         }
     }
     else
