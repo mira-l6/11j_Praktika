@@ -24,7 +24,6 @@
         $constructionyear = validate($_POST['constructionyear']);
         $constructiontype = validate($_POST['constructiontype']);
         $propertytype = validate($_POST['property-type']);
-        $businesstype = validate($_POST['business-type']);
         $country = validate($_POST['country']);
         $populatedplace = validate($_POST['populated-place-add']);
         $townarea = validate($_POST['town-area-add']);
@@ -68,11 +67,6 @@
         else if(empty($propertytype))
         {
             header("Location: login.html?error=Типът на имота е задължителен!");
-            exit();
-        }
-        else if(empty($businesstype))
-        {
-            header("Location: login.html?error=Видът бизнес е задължителен!");
             exit();
         }
         else if(empty($country))
