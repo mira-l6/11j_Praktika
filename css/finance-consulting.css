@@ -1,0 +1,27 @@
+.finance-consulting-box{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5)), url("../img/scenery.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+}
+.finance-consulting-title{
+    color: white;
+    font-size: 2.5em;
+}
+.finance-consulting-subtitle{
+    font-size: 1.5em;
+}
+.finance-consulting-description{
+    padding: 2em;
+    background-color: var(--color-primary);
+    font-size: 1.2em;
+}
+.contact-button{
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+}
+.contact-button:hover{
+    background-color: rgb(186, 186, 186); 
+}
