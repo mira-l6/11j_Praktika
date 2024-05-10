@@ -25,3 +25,6 @@
 .contact-button:hover{
     background-color: rgb(186, 186, 186); 
 }
+.consulting-description-list{
+    list-style-type: circle;
+}
