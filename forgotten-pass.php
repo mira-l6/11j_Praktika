@@ -39,11 +39,11 @@
          $reset_password_url = "https://example.com/reset-pass.php?code=$confirmation_code";
 
          $to = $email;
-        $subject = 'Нулиране на парола';
-        $message = "За да нулирате паролата си, моля, посетете следния линк: $reset_password_url";
-        $headers = 'From: nqkakyvimeil@gmail.com' . "\r\n" .
-        'Reply-To: nqkakyv imeil@gmail.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+         $subject = 'Нулиране на парола';
+         $message = "За да нулирате паролата си, моля, посетете следния линк: $reset_password_url";
+         $headers = 'From: nqkakyvimeil@gmail.com' . "\r\n" .
+         'Reply-To: nqkakyv imeil@gmail.com' . "\r\n" .
+         'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
 
