@@ -198,28 +198,28 @@
                 </div>
 
                 <div>
-                    <form action="" method="post" class="d-grid add-offer-architecture">
-                        <input type="text" class="offer-input" placeholder="Заглавие на обявата" />
-                        <input type="number" class="offer-input" placeholder="Цена(лв)" />
-                        <input type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
-                        <input type="number" class="offer-input" placeholder="Брой етажи общо" />
-                        <input type="number" class="offer-input" placeholder="Строителство(годинa)" />
-                        <input type="text" class="offer-input" placeholder="Строителство(тип)" />
+                    <form action="add-offer-hotel.php" method="post" class="d-grid add-offer-architecture">
+                        <input id="offername" name="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                        <input id="price" name="price" type="number" class="offer-input" placeholder="Цена(лв)" />
+                        <input id="quadrature" name="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
+                        <input id="floors" name="floors" type="number" class="offer-input" placeholder="Брой етажи общо" />
+                        <input id="constructionyear" name="constructionyear" type="number" class="offer-input" placeholder="Строителство(годинa)" />
+                        <input id="constructiontype" name="constructiontype" type="text" class="offer-input" placeholder="Строителство(тип)" />
                     </form>
                 </div>
 
                 <div class="add-offer-location-info">
 
-                    <form action="/filter.php/" method="post">
+                    <form action="add-offer-hotel.php" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
-                                <select name="" id="property-type">
+                                <select name="property-type" id="property-type">
                                     <option value="" disabled selected>Тип (дейност)</option>
-                                    <option value="">Продава</option>
-                                    <option value="">Купува</option>
-                                    <option value="">Отдава</option>
-                                    <option value="">Наема</option>
+                                    <option value="Продава">Продава</option>
+                                    <option value="Купува">Купува</option>
+                                    <option value="Отдава">Отдава</option>
+                                    <option value="Наема">Наема</option>
                                 </select>
                             </div>
                             <div class="line-break">
@@ -228,8 +228,9 @@
                             <div class="filter-option"><label for="country">Държава</label>
                                 <select name="country" id="country">
                                     <option value="" disabled selected>Държава</option>
-                                    <option value="Bulgaria">България</option>
-                                    <option value="Greece">Гърция</option>
+                                    <option value="България">България</option>
+                                    <option value="Гърция">Гърция</option>
+                                    <option value="Друго">Друго</option>
                                 </select>
                             </div>
                             <div class="line-break">
@@ -239,7 +240,6 @@
                                 <select id="populated-place" name="populated-place" >
                                     <option value="" disabled selected>Населено място</option>
                                     
-                                    <option value="outsidebg">Извън България</option>
                                     <!--t - grad town; p - oblast province-->
                                     <option value="tblagoevgrad">град Благоевград</option>
                                     <option value="pblagoevgrad">област Благоевград</option>
@@ -317,10 +317,10 @@
                         </div>
 
                         <div class="add-offer-checkboxes d-flex justify-content-center f-row">
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Газ</label></span>
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">ТЕЦ</label></span>
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Само за частни лица</label></span>
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="" /><label for="">Обзаведен</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas" /><label for="gas">Газ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp" /><label for="tpp">ТЕЦ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="forprivatepeople" /><label for="forprivatepeople">Само за частни лица</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished" /><label for="furnished">Обзаведен</label></span>
                         </div>
                     </form>
                 </div>
