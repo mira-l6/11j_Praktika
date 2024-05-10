@@ -34,6 +34,8 @@
                     $_SESSION['login_Username'] = $row['login_Username'];
                     $_SESSION['login_Pass'] = $row['login_Pass'];
                     $_SESSION['login_RealtorID'] = $row['login_RealtorID'];
+                    $realtorid = $row['login_RealtorID'];
+                    $username = $row['login_Username'];
 
                     if($row['login_Username'] === "admin") 
                     {
