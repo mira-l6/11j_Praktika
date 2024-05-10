@@ -9,3 +9,19 @@
     color: white;
     font-size: 2.5em;
 }
+.finance-consulting-subtitle{
+    font-size: 1.5em;
+}
+.finance-consulting-description{
+    padding: 2em;
+    background-color: var(--color-primary);
+    font-size: 1.2em;
+}
+.contact-button{
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+}
+.contact-button:hover{
+    background-color: rgb(186, 186, 186); 
+}
