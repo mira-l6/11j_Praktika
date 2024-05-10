@@ -178,7 +178,7 @@
 
         <div class="add-offer-box">
             <div class="add-offer-title d-flex flex-row">
-                <h2>Добавяне на <span id="page-title"></span></h2>
+                <h2>Добавяне на парцел<span id="page-title"></span></h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
                     <button class="add-offer-button add-button">Запази</button>
@@ -198,25 +198,25 @@
                 </div>
 
                 <div>
-                    <form action="" method="post" class="d-grid add-offer-architecture">
-                        <input type="text" class="offer-input" placeholder="Заглавие на обявата" />
-                        <input type="number" class="offer-input" placeholder="Цена(лв)" />
-                        <input type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
+                    <form action="add-offer-plot.php" method="post" class="d-grid add-offer-architecture">
+                        <input id="offername" name="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                        <input id="price" name="price" type="number" class="offer-input" placeholder="Цена(лв)" />
+                        <input id="quadrature" name="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
                     </form>
                 </div>
 
                 <div class="add-offer-location-info">
 
-                    <form action="/filter.php/" method="post">
+                    <form action="add-offer-plot.php" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
-                                <select name="" id="property-type">
+                                <select name="property-type" id="property-type">
                                     <option value="" disabled selected>Тип (дейност)</option>
-                                    <option value="">Продава</option>
-                                    <option value="">Купува</option>
-                                    <option value="">Отдава</option>
-                                    <option value="">Наема</option>
+                                    <option value="Продава">Продава</option>
+                                    <option value="Купува">Купува</option>
+                                    <option value="Отдава">Отдава</option>
+                                    <option value="Наема">Наема</option>
                                 </select>
                             </div>
                             <div class="line-break">
