@@ -3,8 +3,7 @@ session_start();
 
 include "db_connection.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
+
     if (isset($_POST['password']) && isset($_POST['confirm_password']))
     {
         $password = $_POST['password'];
@@ -51,8 +50,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         echo "Липсват данни за възстановяване на паролата.";
     }
-}
-else
-{
 
-}
