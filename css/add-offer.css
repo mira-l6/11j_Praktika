@@ -85,9 +85,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-figure{
-    margin: auto;
-}
+
 .image-box{
     /* background-color: red; */
     height: 10em;
@@ -341,6 +339,9 @@ textarea:first-child{
     }
 }
 @media(max-width: 700px){
+    figure{
+        margin: auto;
+    }
     .add-offer-title h2{
         font-size: 1.3em;
     }
