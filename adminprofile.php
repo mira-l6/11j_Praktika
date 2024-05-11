@@ -1,5 +1,5 @@
-<?php
-    include "login.php";
+include "login.php";
+    $name; $lastname; $username; $email; $phone; $experience; $description;
 
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
     $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
@@ -10,7 +10,6 @@
     $phone = $rowgetrealtor['realtor_PhoneNumber'];
     $ezperience = $rowgetrealtor['realtor_Experience'];
     $description = $rowgetrealtor['realtor_Description'];
-    ?>
 
 
 <!DOCTYPE html>

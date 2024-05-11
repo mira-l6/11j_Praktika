@@ -1,19 +1,3 @@
-<?php
-    include "login.php";
-    $name; $lastname; $username; $email; $phone; $experience; $description;
-
-    $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
-    $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
-    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
-    $name = $rowgetrealtor['realtor_Name'];
-    $lastname = $rowgetrealtor['realtor_LastName'];
-    $email = $rowgetrealtor['realtor_Email'];
-    $phone = $rowgetrealtor['realtor_PhoneNumber'];
-    $ezperience = $rowgetrealtor['realtor_Experience'];
-    $description = $rowgetrealtor['realtor_Description'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -30,6 +14,19 @@
 </head>
 
 <body>
+    <?php
+        include "login.php";
+    
+        $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
+        $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+        $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
+        $name = $rowgetrealtor['realtor_Name'];
+        $lastname = $rowgetrealtor['realtor_LastName'];
+        $email = $rowgetrealtor['realtor_Email'];
+        $phone = $rowgetrealtor['realtor_PhoneNumber'];
+        $experience = $rowgetrealtor['realtor_Experience'];
+        $description = $rowgetrealtor['realtor_Description'];
+    ?>
     <!-- navbar start -->
     <div>
         <nav class="navbar short navbar-expand-md p-0">
@@ -205,28 +202,28 @@
                         <div class="profile-subtitle p-4 d-grid">
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php $name ?></span></p>
+                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php echo $name ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p><span class="input-title">Фамилия:</span><span class="profile-input"><?php $lastname ?></span></p>
+                                    <p><span class="input-title">Фамилия:</span><span class="profile-input"><?php echo $lastname ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Потребителско име:</span> <span class="profile-input"><?php $username ?></span></p>
+                                    <p><span class="input-title">Потребителско име:</span> <span class="profile-input"><?php echo $username ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p><span class="input-title">Имейл: </span><span class="profile-input"><?php $email ?></span></p>
+                                    <p><span class="input-title">Имейл: </span><span class="profile-input"><?php echo $email ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row pt-2">
                                 <div class="col-6">
-                                    <p><span class="input-title">Телефон:</span><span class="profile-input"><?php $phone ?></span></p>
+                                    <p><span class="input-title">Телефон:</span><span class="profile-input"><?php echo $phone ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p><span class="input-title">Длъжност:</span><span class="profile-input"><?php $experience ?></span></p>
+                                    <p><span class="input-title">Длъжност:</span><span class="profile-input"><?php echo $experience ?></span></p>
                                 </div>
                             </div>
                         
@@ -252,7 +249,7 @@
                     <div></div>
                 </div>
                 <div class="grid-item profile-bio">
-                    <p class="p-4">Обичам да правя нещо и имам хобита...</p>
+                    <p class="p-4"><?php echo $description ?></p>
                 </div>
             </div>
         </div>
