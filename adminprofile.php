@@ -1,3 +1,18 @@
+<?php
+    include "login.php";
+
+    $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
+    $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
+    $name = $rowgetrealtor['realtor_Name'];
+    $lastname = $rowgetrealtor['realtor_LastName'];
+    $email = $rowgetrealtor['realtor_Email'];
+    $phone = $rowgetrealtor['realtor_PhoneNumber'];
+    $ezperience = $rowgetrealtor['realtor_Experience'];
+    $description = $rowgetrealtor['realtor_Description'];
+    ?>
+
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -193,28 +208,28 @@
                         <div class="profile-subtitle p-4 d-grid">
                             <div class="row">
                                 <div class="col-6">
-                                    <p class="input-title">Име: <span class="profile-input">Мирослава</span></p>
+                                    <p class="input-title">Име: <span class="profile-input"><?php $name ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="input-title">Фамилия: <span class="profile-input">Ламбрева</span></p>
+                                    <p class="input-title">Фамилия: <span class="profile-input"><?php $lastname ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <p class="input-title">Потребителско име: <span class="profile-input">mira-6</span></p>
+                                    <p class="input-title">Потребителско име: <span class="profile-input"><?php $username ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="input-title">Имейл: <span class="profile-input">miralambreva19960@gmail.com</span></p>
+                                    <p class="input-title">Имейл: <span class="profile-input"><?php $email ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row pt-2">
                                 <div class="col-6">
-                                    <p class="input-title">Телефон: <span class="profile-input">0895432535</span></p>
+                                    <p class="input-title">Телефон: <span class="profile-input"><?php $phone ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="input-title">Длъжност: <span class="profile-input">Професионалист</span></p>
+                                    <p class="input-title">Длъжност: <span class="profile-input"><?php $experience ?></span></p>
                                 </div>
                             </div>
                             
