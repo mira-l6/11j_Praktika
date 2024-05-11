@@ -1,6 +1,6 @@
 .offer-display-box{
     grid-template-columns: repeat(4, 1fr);
-    margin: 2em 4em 2em 4em;
+    margin: 2em 2em 2em 2em;
     gap: 2em;
 }
 .offer-images{
