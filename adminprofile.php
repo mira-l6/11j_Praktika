@@ -1,17 +1,3 @@
-include "login.php";
-    $name; $lastname; $username; $email; $phone; $experience; $description;
-
-    $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
-    $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
-    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
-    $name = $rowgetrealtor['realtor_Name'];
-    $lastname = $rowgetrealtor['realtor_LastName'];
-    $email = $rowgetrealtor['realtor_Email'];
-    $phone = $rowgetrealtor['realtor_PhoneNumber'];
-    $ezperience = $rowgetrealtor['realtor_Experience'];
-    $description = $rowgetrealtor['realtor_Description'];
-
-
 <!DOCTYPE html>
 <html lang="bg">
 
