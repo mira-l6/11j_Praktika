@@ -226,13 +226,7 @@
                                     <p><span class="input-title">Длъжност:</span><span class="profile-input"><?php echo $experience ?></span></p>
                                 </div>
                             </div>
-                            
-                            <!-- <p>Име: </p>
-                            <p>Фамилия: </p>
-                            <p>Потребителско име: </p>
-                            <p>Имейл: </p>
-                            <p>Телефон: </p>
-                            <p>Длъжност: </p> -->
+                        
                         </div>
                         <div class="profile-buttons d-flex pt-4 pb-4">
                             <div class="d-flex flex-row">
