@@ -38,16 +38,16 @@ include "db_connection.php";
             }
             else
             {
-                echo "Липсва код за потвърждение.";
+                echo "Location: reset-pass.html?error=Липсва код за потвърждение.";
             }
         }
         else
         {
-            echo "Грешка: паролите не съвпадат.";
+            echo "Location: reset-pass.html?error=Паролите не съвпадат.";
         }
     }
     else
     {
-        echo "Липсват данни за възстановяване на паролата.";
+        echo "Location: reset-pass.html?error=Липсват данни за възстановяване на паролата.";
     }
 
