@@ -68,7 +68,7 @@ body{
     background-color: var(--color-primary);
 }
 .offer-header{
-    background-color: rgb(213, 210, 210) !important; 
+    background-color: #e9e6e9; 
 }
 
 .offer-agent-image{
@@ -88,7 +88,7 @@ body{
     font-size: 1.2em;
 }
 .offer-description{
-    background-color: rgb(186, 186, 186); 
+    background-color: #e9e6e9; 
 }
 .offer-contact{
     background-color: var(--color-primary);

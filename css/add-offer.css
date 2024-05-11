@@ -41,18 +41,27 @@
     /* background-color: var(--color-primary); */
     grid-template-columns: repeat(2, 1fr);
 }
-.add-offer-body form button{
+/* .add-offer-body form button{
     border: none;
     margin-top: 2em !important;
     padding: 1em;
     width: 50em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+} */
+.add-offer-images form label{
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    margin-top: 2em !important;
+    padding: 1em;
+    text-align: center;
+    width: 35em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 #image-upload-multiple{
-    position: absolute;
-    /* top: 50em; */
-    /* font-size: 0.5em; */
+    display: none;
 }
 
 .add-offer-images{
@@ -76,7 +85,9 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
+figure{
+    margin: auto;
+}
 .image-box{
     /* background-color: red; */
     height: 10em;
@@ -86,7 +97,7 @@
 }
 .image-box img{
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     /* border: 2px solid black; */
 }
 .image-box span{
@@ -197,9 +208,6 @@ textarea:first-child{
         grid-template-columns: repeat(2, 1fr);
         width: 35em;
     }
-    .add-offer-body form button{
-        width: 35em;
-    }
     textarea{
         resize: none;
         width: 17em;
@@ -214,7 +222,7 @@ textarea:first-child{
         grid-template-columns: repeat(1, 1fr);
         width: 20em;
     }
-    .add-offer-body form button{
+    .add-offer-images form label{
         width: 20em;
     }
     textarea{
@@ -318,7 +326,7 @@ textarea:first-child{
         justify-content: center;
         width: 100%;
     }
-    .add-offer-images form button{
+    .add-offer-images form label{
         margin: auto;
         width: 80%;
     }
