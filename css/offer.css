@@ -3,7 +3,7 @@ body{
 }
 
 .offer-images{
-    background-color: var(--color-primary);
+    /* background-color: rgb(186, 186, 186);  */
     height: 30em;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -44,20 +44,64 @@ body{
 }
 
 .first img{ 
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    box-shadow: -2px 0px 27px 7px rgba(142, 140, 142, 0.4);
+    /* border-top-left-radius: 5px; */
+    /* border-bottom-left-radius: 5px; */
+    border-radius: 5px;
+    box-shadow: -2px 0px 27px 7px rgba(206, 204, 206, 0.4);
+    
 }
 .second img{
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: -2px 0px 27px 7px rgba(142, 140, 142, 0.4);
+    /* border-top-right-radius: 5px; */
+    /* border-bottom-right-radius: 5px; */
+    border-radius: 5px;
+    box-shadow: -2px 0px 27px 7px rgba(206, 204, 206, 0.4);
 }
-img:hover{
+.small-image img{
+    border-radius: 5px;
+    box-shadow: -2px 0px 27px 7px rgba(206, 204, 206, 0.4);
+}
+.offer-images img:hover{
     opacity: 0.8;
 }
 
-
 .offer-info{
     background-color: var(--color-primary);
+}
+.offer-header{
+    background-color: rgb(213, 210, 210) !important; 
+}
+
+.offer-agent-image{
+    background-color: white;
+    width: 12em;
+    height: 12em;
+    padding: 0.2em;
+    border-radius: 50%;
+}
+.offer-agent-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.offer-description p, .offer-info{
+    font-size: 1.2em;
+}
+.offer-description{
+    background-color: rgb(186, 186, 186); 
+}
+.offer-contact{
+    background-color: var(--color-primary);
+}
+.offer-contact-form textarea{
+    margin-top: 1em;
+    resize: none;
+    border: none;
+    padding: 1em;
+    background-color: rgb(246, 245, 245);
+}
+.offer-form-area label{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0.5em 0.5em;
 }
