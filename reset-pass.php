@@ -13,41 +13,47 @@ include "db_connection.php";
         {
             header("Location: reset-pass.html?error=Въведете парола!");
             exit();
-        } elseif(empty($confirm_password)) 
+        } 
+        else if(empty($confirm_password)) 
         {
             header("Location: reset-pass.html?error=Въведете повторно паролата!");
             exit();
         }
-
-        if ($password === $confirm_password)
+        else
         {
-            if (isset($_GET['code']))
+            if ($password === $confirm_password)
             {
-                $confirmation_code = $_GET['code'];//vzima koda ot URL-a na stranicata
-                $sql = "UPDATE login SET login_Pass = '$password' 
-                        WHERE confirmation_code = '$confirmation_code'";
-                        
-                if ($con->query($sql) === TRUE)
+                if (isset($_GET['code']))
                 {
-                    echo "Паролата е успешно обновена.";
+                    $confirmation_code = $_GET['code'];//vzima koda ot URL-a na stranicata
+                    $sql = "UPDATE login SET login_Pass = '$password' 
+                            WHERE confirmation_code = '$confirmation_code'";
+                        
+                    if ($con->query($sql) === TRUE)
+                    {
+                        echo "Паролата е успешно обновена.";
+                    }
+                    else
+                    {
+                        echo "Грешка при обновяване на паролата: " . $con->error;
+                    }        
                 }
                 else
                 {
-                    echo "Грешка при обновяване на паролата: " . $con->error;
-                }        
+                    header("Location: reset-pass.html?error=Липсва код за потвърждение.");
+                    exit();
+                }
             }
             else
             {
-                echo "Location: reset-pass.html?error=Липсва код за потвърждение.";
+                header("Location: reset-pass.html?error=Паролите не съвпадат.");
+                exit();
             }
-        }
-        else
-        {
-            echo "Location: reset-pass.html?error=Паролите не съвпадат.";
         }
     }
     else
     {
-        echo "Location: reset-pass.html?error=Липсват данни за възстановяване на паролата.";
+        header("Location: reset-pass.html?error=Липсват данни за възстановяване на паролата.");
+        exit();
     }
 
