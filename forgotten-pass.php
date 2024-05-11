@@ -36,7 +36,7 @@
                         WHERE realtor.realtor_Email='$email'";
     if ($conn->query($sql_update_code) === TRUE) 
     {
-         $reset_password_url = "https://example.com/reset-pass.php?code=$confirmation_code";
+         $reset_password_url = "https://https://forumimotibg.com//reset-pass.php?code=$confirmation_code";
 
          $to = $email;
          $subject = 'Нулиране на парола';
