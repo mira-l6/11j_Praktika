@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -193,28 +197,28 @@
                         <div class="profile-subtitle p-4 d-grid">
                             <div class="row">
                                 <div class="col-6">
-                                    <p class="input-title">Име: <span class="profile-input"><?php $name ?></span></p>
+                                    <p class="input-title">Име: <span class="profile-input"><?php echo $_SESSION['name'] ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="input-title">Фамилия: <span class="profile-input"><?php $lastname ?></span></p>
+                                    <p class="input-title">Фамилия: <span class="profile-input"><?php echo $_SESSION['lastname'] ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <p class="input-title">Потребителско име: <span class="profile-input"><?php $username ?></span></p>
+                                    <p class="input-title">Потребителско име: <span class="profile-input"><?php echo $_SESSION['login_Username'] ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="input-title">Имейл: <span class="profile-input"><?php $email ?></span></p>
+                                    <p class="input-title">Имейл: <span class="profile-input"><?php echo $_SESSION['email'] ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row pt-2">
                                 <div class="col-6">
-                                    <p class="input-title">Телефон: <span class="profile-input"><?php $phone ?></span></p>
+                                    <p class="input-title">Телефон: <span class="profile-input"><?php echo $_SESSION['phone'] ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p class="input-title">Длъжност: <span class="profile-input"><?php $experience ?></span></p>
+                                    <p class="input-title">Длъжност: <span class="profile-input"><?php echo $_SESSION['experience'] ?></span></p>
                                 </div>
                             </div>
                             
@@ -246,7 +250,7 @@
                     <div></div>
                 </div>
                 <div class="grid-item profile-bio">
-                    <p class="p-4">Обичам да правя нещо и имам хобита...</p>
+                    <p class="p-4"><?php echo $_SESSION['description'] ?></p>
                 </div>
             </div>
         </div>
