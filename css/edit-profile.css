@@ -12,4 +12,40 @@
     height: 70%;
     border: none;
     padding: 1em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.profile-image div{
+    display: none;
+}
+.edit-profile-image input{
+   display: none;
+}
+.edit-profile-image label{
+    cursor: pointer;
+    background-color: var(--color-primary);
+    padding: 0.3em;
+    text-align: center;
+}
+#uploadPreview{
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid rgba(196, 193, 196, 1);;
+}
+
+@media (max-width: 600px) {
+    .edit-profile-bio textarea{
+        height: 10em;
+    }
+    .edit-profile-bio{
+        height: 12em;
+    }
+}
+@media (max-width: 1350px) {
+    .edit-profile-image{
+        padding: 1em;
+    }
 }

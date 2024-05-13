@@ -218,8 +218,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-item profile-image d-flex justify-content-center align-items-center">
-                    <div></div>
+                <div class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
+                    <form action="" class="d-flex flex-column">
+                        <img id="uploadPreview" />
+                        <label for="photo-input" class="agent-photo-custom-upload">Качи файл</label>
+                        <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
+                    </form>
                 </div>
                 <div class="grid-item profile-bio edit-profile-bio d-flex justify-content-center align-items-center">
                      <textarea name="" id="" placeholder="Допишете допълнителна информация..."></textarea>
@@ -228,4 +232,5 @@
         </div>
 
     </div>
+    <script src="/js/uploadPreview.js"></script>
 </body>
