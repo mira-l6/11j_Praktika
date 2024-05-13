@@ -15,7 +15,15 @@
 
 <body>
     <?php
-        include "login.php";
+        session_start();
+        /*$name = $_SESSION['name'];
+        $username = $_SESSION['username'];
+        $lastname = $_SESSION['lastname'];
+        $email = $_SESSION['email'];
+        $phone = $_SESSION['phone'];
+        $experience = $_SESSION['experience'];
+        $description = $_SESSION['description'];
+        $realtorid = $_SESSION['realtorid'];*/
 
         /*$sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
         $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
@@ -202,7 +210,7 @@
                         <div class="profile-subtitle p-4 d-grid">
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php echo $realtorid ?></span></p>
+                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php echo "Име".$name ?></span></p>
                                 </div>
                                 <div class="col-6">
                                     <p><span class="input-title">Фамилия:</span><span class="profile-input"><?php echo $lastname ?></span></p>

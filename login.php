@@ -3,15 +3,7 @@
     session_start();
 
     include "db_connection.php"; 
-    
 
-    $realtorid = 0;
-    $name = "";
-    $lastname = "";
-    $email = "";
-    $phone = "";
-    $experience = "";
-    $description = "";
 
    if(isset($_POST['username']) && isset($_POST['password'])) {
     $username = trim($_POST['username']);
@@ -36,17 +28,20 @@
                 $_SESSION['login_Pass'] = $row['login_Pass'];
                 $_SESSION['login_RealtorID'] = $row['login_RealtorID'];
 
-                $realtorid = $row['login_RealtorID'];
+                $_SESSION['realtorid'] = $row['login_RealtorID'];
+                $realtorid = $_SESSION['realtorid'];
 
                 $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
                 $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+
                 $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
-                $name = $rowgetrealtor['realtor_Name'];
-                $lastname = $rowgetrealtor['realtor_LastName'];
-                $email = $rowgetrealtor['realtor_Email'];
-                $phone = $rowgetrealtor['realtor_PhoneNumber'];
-                $experience = $rowgetrealtor['realtor_Experience'];
-                $description = $rowgetrealtor['realtor_Description'];
+
+                $_SESSION['name'] = $rowgetrealtor['realtor_Name'];
+                $_SESSION['lastname'] = $rowgetrealtor['realtor_LastName'];
+                $_SESSION['email'] = $rowgetrealtor['realtor_Email'];
+                $_SESSION['phone'] = $rowgetrealtor['realtor_PhoneNumber'];
+                $_SESSION['experience'] = $rowgetrealtor['realtor_Experience'];
+                $_SESSION['description'] = $rowgetrealtor['realtor_Description'];
 
                 
 
@@ -55,7 +50,7 @@
                     exit();
                 } else {
                     header("Location: profile.php");
-                    exit();
+                    
                 }                   
             } else {
                 header("Location: login.html?error=Грешно потребителско име или парола");
