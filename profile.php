@@ -16,8 +16,8 @@
 <body>
     <?php
         include "login.php";
-    
-        $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
+
+        /*$sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
         $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
         $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
         $name = $rowgetrealtor['realtor_Name'];
@@ -25,7 +25,7 @@
         $email = $rowgetrealtor['realtor_Email'];
         $phone = $rowgetrealtor['realtor_PhoneNumber'];
         $experience = $rowgetrealtor['realtor_Experience'];
-        $description = $rowgetrealtor['realtor_Description'];
+        $description = $rowgetrealtor['realtor_Description'];*/
     ?>
     <!-- navbar start -->
     <div>
@@ -202,7 +202,7 @@
                         <div class="profile-subtitle p-4 d-grid">
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php echo $name ?></span></p>
+                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php echo $realtorid ?></span></p>
                                 </div>
                                 <div class="col-6">
                                     <p><span class="input-title">Фамилия:</span><span class="profile-input"><?php echo $lastname ?></span></p>

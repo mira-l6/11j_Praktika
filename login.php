@@ -5,6 +5,14 @@
     include "db_connection.php"; 
     
 
+    $realtorid = 0;
+    $name = "";
+    $lastname = "";
+    $email = "";
+    $phone = "";
+    $experience = "";
+    $description = "";
+
    if(isset($_POST['username']) && isset($_POST['password'])) {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
@@ -29,6 +37,16 @@
                 $_SESSION['login_RealtorID'] = $row['login_RealtorID'];
 
                 $realtorid = $row['login_RealtorID'];
+
+                $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
+                $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+                $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
+                $name = $rowgetrealtor['realtor_Name'];
+                $lastname = $rowgetrealtor['realtor_LastName'];
+                $email = $rowgetrealtor['realtor_Email'];
+                $phone = $rowgetrealtor['realtor_PhoneNumber'];
+                $experience = $rowgetrealtor['realtor_Experience'];
+                $description = $rowgetrealtor['realtor_Description'];
 
                 
 
