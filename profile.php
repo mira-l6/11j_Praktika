@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -15,7 +19,7 @@
 
 <body>
     <?php
-        session_start();
+        //$name = $_SESSION['name'];
         /*$name = $_SESSION['name'];
         $username = $_SESSION['username'];
         $lastname = $_SESSION['lastname'];
@@ -210,7 +214,9 @@
                         <div class="profile-subtitle p-4 d-grid">
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php echo "Име".$name ?></span></p>
+                                    <p><span class="input-title">Име:</span><span class="profile-input">
+                                    <?php echo $_SESSION['name']
+                                    ?></span></p>
                                 </div>
                                 <div class="col-6">
                                     <p><span class="input-title">Фамилия:</span><span class="profile-input"><?php echo $lastname ?></span></p>
