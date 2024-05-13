@@ -41,18 +41,27 @@
     /* background-color: var(--color-primary); */
     grid-template-columns: repeat(2, 1fr);
 }
-.add-offer-body form button{
+/* .add-offer-body form button{
     border: none;
     margin-top: 2em !important;
     padding: 1em;
     width: 50em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+} */
+.add-offer-images form label{
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    margin-top: 2em !important;
+    padding: 1em;
+    text-align: center;
+    width: 35em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 #image-upload-multiple{
-    position: absolute;
-    /* top: 50em; */
-    /* font-size: 0.5em; */
+    display: none;
 }
 
 .add-offer-images{
@@ -86,7 +95,7 @@
 }
 .image-box img{
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
     /* border: 2px solid black; */
 }
 .image-box span{
@@ -103,6 +112,9 @@ textarea{
     height: 5em;
     border-radius: 10px;
     border: none;
+}
+.filter-option:hover select{
+    background-color: #e9e6e9;
 }
 input{
     border: none;
@@ -139,7 +151,7 @@ select{
     padding: 1em;
 }
 .add-offer-location-info form{
-    width: 80%;
+    width: 95%;
 }
 
 
@@ -194,9 +206,6 @@ textarea:first-child{
         grid-template-columns: repeat(2, 1fr);
         width: 35em;
     }
-    .add-offer-body form button{
-        width: 35em;
-    }
     textarea{
         resize: none;
         width: 17em;
@@ -211,7 +220,7 @@ textarea:first-child{
         grid-template-columns: repeat(1, 1fr);
         width: 20em;
     }
-    .add-offer-body form button{
+    .add-offer-images form label{
         width: 20em;
     }
     textarea{
@@ -249,8 +258,6 @@ textarea:first-child{
     textarea{
         width: 20em;
     }
-
-
     .filter-box{
         display: grid !important;
         grid-template-columns: repeat(3,1fr) !important;
@@ -297,6 +304,10 @@ textarea:first-child{
     body{
         overflow-x: hidden;
     }
+    .filter-box{
+        padding: 0em;
+        width: 99%;
+    }
     .add-offer-image-container{
         grid-template-columns: repeat(2,1fr);
     }
@@ -313,11 +324,12 @@ textarea:first-child{
         justify-content: center;
         width: 100%;
     }
-    .add-offer-images form button{
+    .add-offer-images form label{
         margin: auto;
         width: 80%;
     }
     .add-offer-architecture{ 
+        padding: 1em;
         width: 100vw !important;
         grid-column: 1/3;
         grid-row: 3/4;
@@ -327,6 +339,9 @@ textarea:first-child{
     }
 }
 @media(max-width: 700px){
+    figure{
+        margin: auto;
+    }
     .add-offer-title h2{
         font-size: 1.3em;
     }

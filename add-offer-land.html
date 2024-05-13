@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/add-offer.css">
+    <link rel="stylesheet" href="/css/add-offer-business.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>За нас</title>
 </head>
@@ -186,10 +187,9 @@
             <div class="add-offer-body d-grid">
                 <div class="add-offer-images">
                     <form action="" method="post" id="form">
-                        <input type="file" id="image-upload-multiple" multiple onclick="imageSelect() ">
-                        <button type="button"
-                            onclick="document.getElementById('image-upload-multiple').click()">Прикачване на
-                            снимки</button>
+                        <input type="file" id="image-upload-multiple" onchange="preview()" multiple>
+                        <label for="image-upload-multiple">Прикачване на
+                            снимки</label>
                         <!-- <span class="text-danger">Препоръчително е прикачване наведнъж</span> -->
                         <!-- <button type="button" onclick="document.getElementById('container').innerHTML = '';">Изчистване</button> -->
                     </form>

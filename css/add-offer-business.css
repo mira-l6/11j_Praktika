@@ -1,0 +1,35 @@
+.filter-option:nth-child(5){
+    width: 10%;
+}
+.filter-option:nth-child(1){
+    width: 15%;
+}
+.filter-option:nth-child(3){
+    width: 30%;
+}
+.filter-option:nth-child(7){
+    width: 25%;
+}
+
+@media (max-width: 1000px) {
+    .filter-option:nth-child(3){
+        grid-column: 2/4;
+    }.filter-option:nth-child(5){
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 0;
+        border: none;
+        border-right: 1px solid var(--color-primary);
+    }
+    .filter-option:nth-child(7){
+        grid-column: 2/3;
+    }
+    .filter-option:nth-child(7) select{
+        width: 7em;
+    }
+    .filter-option:nth-child(9){
+        grid-column: 3/4;
+    }
+    .filter-option:nth-child(9) select{
+        width: 7em;
+    }
+}

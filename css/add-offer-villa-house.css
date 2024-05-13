@@ -1,7 +1,3 @@
-.offer-input:nth-child(6){
-    grid-column: 1/3;
-}
-
 @media (max-width: 1000px) {
     .filter-box{
         grid-template-columns: repeat(2, 1fr) !important;
