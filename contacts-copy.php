@@ -1,25 +1,24 @@
 <?php
     session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="bg">
 
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contacts.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/profile.css">
-    <link rel="stylesheet" href="/css/adminprofile.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Форум</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Контакти</title>
 </head>
 
 <body>
-    <!-- navbar start -->
+    <!-- navbar start-->
     <div>
         <nav class="navbar short navbar-expand-md p-0">
             <div class="container-fluid beige-background">
@@ -63,7 +62,7 @@
 
                         <li class="nav-item ">
                             <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
-                                    class="nav-link">Контакти</a></button>
+                                    class="nav-link disabled">Контакти</a></button>
                         </li>
 
                         <li class="nav-item ">
@@ -73,24 +72,15 @@
 
                     </div>
                 </ul>
-
                 <form class="d-flex justify-content-space-between">
                     <div class="collapse navbar-collapse">
-                        <button class="btn btn-lg btn-pill btn-marked blc search-button">
-                            <a href="search.html" class="nav-link"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a>
-                        </button>
-
+                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="search.html"
+                                class="nav-link"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
                         <a class="btn btn-lg btn-pill blc ms-1" href="login.html">
-
-                            <div class="profile-icon d-flex justify-content-center align-items-center">
-                                <span class="fa-solid fa-user fa">
-
-                                </span>
+                            <div class="profile-icon d-flex justify-content-center align-items-center"><span
+                                    class="fa-solid fa-user fa"></span>
                             </div>
-
-
                         </a>
-
                     </div>
                 </form>
 
@@ -110,8 +100,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <button type="button"
-                            class="btn btn-lg btn-pill blc w-100 text-start collapsed-dropdown-style pt-3 pb-3"
+                        <button type="button" class="btn btn-lg btn-pill blc w-100 text-start pt-3 pb-3"
                             data-bs-toggle="collapse" data-bs-target="#service">
                             <a class="ps-3">Услуги</a>
                         </button>
@@ -155,7 +144,7 @@
                     </li>
 
                     <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="contacts.html"
+                        <button class="btn btn-lg btn-pill blc w-100 text-start removed"><a href="contacts.html"
                                 class="nav-link ps-3">Контакти</a></button>
                     </li>
 
@@ -172,7 +161,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc profile-button w-100 text-start">
+                        <button class="btn btn-lg btn-pill blc w-100 text-start profile-button">
                             <a href="login.html" class="nav-link ps-3"><span
                                     class="fa-solid fa-user collapse-user-icon fa"></span>Профил</a>
                         </button>
@@ -182,78 +171,123 @@
 
             </div>
         </div>
-        <!-- navbar end -->
-        <div class="profile-box p-5">
-            <div class="d-grid profile-layout mt-4">
-                <div class="grid-item profile-info">
-                    <div class="profile-title admin-title">
-                        <p class="p-1">Администраторски профил</p>
-                        <div class="admin-button-group">
-                            <button class="admin-button"><a href="all-offers.html"><i class="material-icons">panorama</i>Всички обяви</a></button>
-                            <button class="admin-button"><a href="all-agents.html"><i class="material-icons">people</i>Брокери</a></button>
-                        </div>
-                    </div>
-                    <div class="details-space d-flex flex-column justify-content-around">
-                        <div class="profile-subtitle p-4 d-grid">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p class="input-title">Име: <span class="profile-input"><?php echo $_SESSION['name'] ?></span></p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="input-title">Фамилия: <span class="profile-input"><?php echo $_SESSION['lastname'] ?></span></p>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-6">
-                                    <p class="input-title">Потребителско име: <span class="profile-input"><?php echo $_SESSION['login_Username'] ?></span></p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="input-title">Имейл: <span class="profile-input"><?php echo $_SESSION['email'] ?></span></p>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row pt-2">
-                                <div class="col-6">
-                                    <p class="input-title">Телефон: <span class="profile-input"><?php echo $_SESSION['phone'] ?></span></p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="input-title">Длъжност: <span class="profile-input"><?php echo $_SESSION['experience'] ?></span></p>
-                                </div>
-                            </div>
-                            
-                            <!-- <p>Име: </p>
-                            <p>Фамилия: </p>
-                            <p>Потребителско име: </p>
-                            <p>Имейл: </p>
-                            <p>Телефон: </p>
-                            <p>Длъжност: </p> -->
-                        </div>
-                        <div class="profile-buttons d-flex pt-4 pb-4">
-                            <div class="d-flex flex-row">
-                                <div class="notice-button">
-                                    <a href="my-offers.html"
-                                        ><button class="d-flex justify-content-center align-items-center">Моите обяви<i
-                                            class="material-icons">arrow_forward</i></button></a>
-                                </div>
-                                <div class="edit-button">
-                                    <a href="edit-profile.html"
-                                            ><button class="d-flex justify-content-center align-items-center"><i
-                                            class="material-icons">create</i>Редактиране</button></a>
+        <!--navbar end-->
 
-                                </div>
-                            </div>
-                        </div>
+
+        <div class="container-fluid main-contact-box main-image">
+            <div class="title-space">
+                <h1 class="primary-color title-font text-center pt-5 pb-5">Контакти</h1>
+            </div>
+            <div class="main-contacts-space">
+                <div class="d-flex justify-content-center">
+                    <div class="main-card d-flex flex-row">
+                       <div class="main-card-image"><img src="/img/JohnDoe.jpg" alt=""></div>
+                       <div class="main-card-info">
+                        <h4>Мирослава Ламбрева</h4>
+                        <p>0898989898</p>
+                       </div>
                     </div>
-                </div>
-                <div class="grid-item profile-image d-flex justify-content-center align-items-center">
-                    <div></div>
-                </div>
-                <div class="grid-item profile-bio">
-                    <p class="p-4"><?php echo $_SESSION['description'] ?></p>
+
+                    <!-- <div class="main-card card">
+                        <div class="image-icon-circle"><img src="img/personExample.jpg" alt=""></div>
+                        <div class="main-card-body card-body">
+                            <h4 class="card-title">Иван Иванов</h4>
+                            <p class="card-text">More info
+                            </p>
+                        </div>
+                        <div class="card-button main-profile-button"><a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="main-card card">
+                        <div class="image-icon-circle"><img src="img/personExample.jpg" alt=""></div>
+                        <div class="main-card-body card-body">
+                            <h4 class="card-title">Иван Иванов</h4>
+                            <p class="card-text">More info
+                            </p>
+                        </div>
+                        <div class="card-button main-profile-button"><a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
+        <div class="g-0 mb-0 ps-0 container-fluid subheading-1">
+            <h2 class="text-center mb-0 pb-4 pt-4">Запознайте се с нашите
+                    брокери.
+            </h2>
+        </div>
 
+        
+
+        <div class="container-fluid mt-0 contact-info d-flex-column gap-3">
+            <div class="d-grid estate-agents">
+            <?php
+            //masiv na brokerite
+            $agents = array(
+                array("name" => "Мирослава Ламбрева", "photo" => "/img/JohnDoe.jpg", "number" => "0898989898"),
+                array("name" => "k Ламбрева", "photo" => "/img/JohnDoe.jpg", "number" => "0898989898"),
+                array("name" => "Мирослава k", "photo" => "/img/JohnDoe.jpg", "number" => "0898989898"),
+                array("name" => "kk kk", "photo" => "/img/JohnDoe.jpg", "number" => "0898989898")
+            );
+
+            foreach($agents as $agent)
+            {
+                echo '<div class="agent">';
+                echo '    <div class="agent-photo">';
+                echo '        <img src="/img/JohnDoe.jpg" alt="">';
+                echo '    </div>';
+                echo '    <div class="agent-info">';
+                echo '        <h4 class="agent-name">'.$agent['name'].'/h4>';
+                echo '        <p class="agent-number">'.$agent['phone'].'</p>';
+                echo '    </div>';
+                echo '</div>';
+            }
+            
+        ?>
+                <div class="agent">
+                    <div class="agent-photo">
+                        <img src="/img/JohnDoe.jpg" alt="">
+                    </div>
+                    <div class="agent-info">
+                        <h4 class="agent-name">Мирослава Ламбрева</h4>
+                        <p class="agent-number">0898989898</p>
+                    </div>
+                </div>
+                <div class="agent">
+                    <div class="agent-photo">
+                        <img src="" alt="">
+                    </div>
+                    <div class="agent-info">
+                        <h4 class="agent-name">Мирослава Ламбрева</h4>
+                        <p class="agent-number">0898989898</p>
+                    </div>
+                </div>
+                <div class="agent">
+                    <div class="agent-photo">
+                        <img src="" alt="">
+                    </div>
+                    <div class="agent-info">
+                        <h4 class="agent-name">Мирослава Ламбрева</h4>
+                        <p class="agent-number">0898989898</p>
+                    </div>
+                </div>
+                <div class="agent">
+                    <div class="agent-photo">
+                        <img src="" alt="">
+                    </div>
+                    <div class="agent-info">
+                        <h4 class="agent-name">Мирослава Ламбрева</h4>
+                        <p class="agent-number">0898989898</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    </div>
+
 </body>
+
+
+
+</html>

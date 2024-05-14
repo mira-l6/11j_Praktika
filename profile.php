@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -15,9 +19,17 @@
 
 <body>
     <?php
-        include "login.php";
-    
-        $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
+        //$name = $_SESSION['name'];
+        /*$name = $_SESSION['name'];
+        $username = $_SESSION['username'];
+        $lastname = $_SESSION['lastname'];
+        $email = $_SESSION['email'];
+        $phone = $_SESSION['phone'];
+        $experience = $_SESSION['experience'];
+        $description = $_SESSION['description'];
+        $realtorid = $_SESSION['realtorid'];*/
+
+        /*$sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
         $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
         $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
         $name = $rowgetrealtor['realtor_Name'];
@@ -25,7 +37,7 @@
         $email = $rowgetrealtor['realtor_Email'];
         $phone = $rowgetrealtor['realtor_PhoneNumber'];
         $experience = $rowgetrealtor['realtor_Experience'];
-        $description = $rowgetrealtor['realtor_Description'];
+        $description = $rowgetrealtor['realtor_Description'];*/
     ?>
     <!-- navbar start -->
     <div>
@@ -202,28 +214,30 @@
                         <div class="profile-subtitle p-4 d-grid">
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Име:</span><span class="profile-input"><?php echo $name ?></span></p>
+                                    <p><span class="input-title">Име:</span><span class="profile-input">
+                                    <?php echo $_SESSION['name']
+                                    ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p><span class="input-title">Фамилия:</span><span class="profile-input"><?php echo $lastname ?></span></p>
+                                    <p><span class="input-title">Фамилия:</span><span class="profile-input"><?php echo $_SESSION['lastname'] ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Потребителско име:</span> <span class="profile-input"><?php echo $username ?></span></p>
+                                    <p><span class="input-title">Потребителско име:</span> <span class="profile-input"><?php echo $_SESSION['login_Usernmae'] ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p><span class="input-title">Имейл: </span><span class="profile-input"><?php echo $email ?></span></p>
+                                    <p><span class="input-title">Имейл: </span><span class="profile-input"><?php echo $_SESSION['email'] ?></span></p>
                                 </div>
                             </div>
                             <hr>
                             <div class="row pt-2">
                                 <div class="col-6">
-                                    <p><span class="input-title">Телефон:</span><span class="profile-input"><?php echo $phone ?></span></p>
+                                    <p><span class="input-title">Телефон:</span><span class="profile-input"><?php echo $_SESSION['phone'] ?></span></p>
                                 </div>
                                 <div class="col-6">
-                                    <p><span class="input-title">Длъжност:</span><span class="profile-input"><?php echo $experience ?></span></p>
+                                    <p><span class="input-title">Длъжност:</span><span class="profile-input"><?php echo $_SESSION['experience'] ?></span></p>
                                 </div>
                             </div>
                         
@@ -249,7 +263,7 @@
                     <div></div>
                 </div>
                 <div class="grid-item profile-bio">
-                    <p class="p-4"><?php echo $description ?></p>
+                    <p class="p-4"><?php echo $_SESSION['description'] ?></p>
                 </div>
             </div>
         </div>
