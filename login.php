@@ -29,7 +29,7 @@
                 $_SESSION['login_RealtorID'] = $row['login_RealtorID'];
 
                 $realtorid = $_SESSION['login_RealtorID'];
-
+                
                 $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
                 $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
                 if(mysqli_num_rows($result) === 1)
@@ -43,7 +43,6 @@
                     $_SESSION['experience'] = $rowgetrealtor['realtor_Experience'];
                     $_SESSION['description'] = $rowgetrealtor['realtor_Description'];
                 }
-                
                 
 
                 if($row['login_Username'] === "admin") {
