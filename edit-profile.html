@@ -45,12 +45,18 @@
                                     Услуги
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="buy.html">Покупка</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="sell.html">Продажба</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="rent.html">Наемане</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="for-rent.html">Отдаване на наем</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="finance-consulting.html">Финансова консултация</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="legal-consulting.html">Юридическа консултация</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="buy.html">Покупка</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="sell.html">Продажба</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="rent.html">Наемане</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="for-rent.html">Отдаване на наем</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="finance-consulting.html">Финансова консултация</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="legal-consulting.html">Юридическа консултация</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -73,7 +79,8 @@
                 <form class="d-flex justify-content-space-between">
                     <div class="collapse navbar-collapse">
                         <button class="btn btn-lg btn-pill btn-marked blc search-button">
-                            <a href="search.html" class="nav-link"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a>
+                            <a href="search.html" class="nav-link"><span
+                                    class="fa fa-solid fa-search pe-2"></span>Търсене</a>
                         </button>
 
                         <a class="btn btn-lg btn-pill blc ms-1" href="login.html">
@@ -182,55 +189,84 @@
 
         <div class="profile-box p-5">
             <div class="d-grid profile-layout mt-4">
-                <div class="grid-item profile-info">
-                    <div class="profile-title">
-                        <p class="p-1">Редактиране на профил</p>
-                    </div>
-                    <div class="details-space d-flex flex-column justify-content-around">
-                        <div class="profile-subtitle p-4 d-grid">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p><span class="input-title">Име:</span><input class="edit-profile-input"><?php echo $name ?></input></p>
+                <form action="" class="info-form d-grid">
+                    <div class="grid-item profile-info">
+                        <div class="profile-title">
+                            <p class="p-1">Редактиране на профил</p>
+                        </div>
+                        <div class="details-space d-flex flex-column justify-content-around">
+                            <div class="profile-subtitle p-4 d-grid">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p><span class="input-title">Име:</span><input class="edit-profile-input">
+                                            <?php echo $name ?></input>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p><span class="input-title">Фамилия:</span><input class="edit-profile-input">
+                                            <?php echo $lastname ?></input>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                    <p><span class="input-title">Фамилия:</span><input class="edit-profile-input"><?php echo $lastname ?></input></p>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p><span class="input-title">Потребителско име:</span> <input
+                                                class="edit-profile-input">
+                                            <?php echo $username ?></input>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p><span class="input-title">Имейл: </span><input class="edit-profile-input">
+                                            <?php echo $email ?></input>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row pt-2">
+                                    <div class="col-6">
+                                        <p><span class="input-title">Телефон:</span><input class="edit-profile-input">
+                                            <?php echo $phone ?></input>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p><span class="input-title">Длъжност:</span><input class="edit-profile-input">
+                                            <?php echo $experience ?></input>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="password-area col-6">
+                                        <p><span class="input-title">Парола:</span><input class="edit-profile-input"
+                                                type="password" disabled></input></p>
+                                    </div>
+                                    <div class="change-password-area col-6">
+                                        <button class="btn"><a href="reset-pass.html">-> Смяна на парола</a></button>
+                                    </div>
                                 </div>
                             </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-6">
-                                    <p><span class="input-title">Потребителско име:</span> <input class="edit-profile-input"><?php echo $username ?></input></p>
-                                </div>
-                                <div class="col-6">
-                                    <p><span class="input-title">Имейл: </span><input class="edit-profile-input"><?php echo $email ?></input></p>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row pt-2">
-                                <div class="col-6">
-                                    <p><span class="input-title">Телефон:</span><input class="edit-profile-input"><?php echo $phone ?></input></p>
-                                </div>
-                                <div class="col-6">
-                                    <p><span class="input-title">Длъжност:</span><input class="edit-profile-input"><?php echo $experience ?></input></p>
-                                </div>
-                            </div>
-                        
                         </div>
                     </div>
-                </div>
-                <div class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
+
+                    <div
+                        class="grid-item profile-bio edit-profile-bio d-flex justify-content-center align-items-center">
+                        <textarea name="" id="" placeholder="Допишете допълнителна информация..."></textarea>
+                    </div>
+                </form>
+                <div
+                    class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
                     <form action="" class="d-flex flex-column">
                         <img id="uploadPreview" />
                         <label for="photo-input" class="agent-photo-custom-upload">Качи файл</label>
                         <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
                     </form>
                 </div>
-                <div class="grid-item profile-bio edit-profile-bio d-flex justify-content-center align-items-center">
-                     <textarea name="" id="" placeholder="Допишете допълнителна информация..."></textarea>
-                </div>
+
             </div>
         </div>
 
     </div>
     <script src="/js/uploadPreview.js"></script>
+    <script src="/js/passwordShow.js"></script>
 </body>
