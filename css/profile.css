@@ -34,6 +34,7 @@ body{
 .profile-info{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    height: 35em;
     border-bottom: 1px solid rgb(134, 132, 126);
     box-shadow: -2px 0px 27px 7px rgba(188, 185, 188, 0.4);
 }
