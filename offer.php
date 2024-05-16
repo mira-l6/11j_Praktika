@@ -1,3 +1,46 @@
+<?php
+    session_start();
+    include "db_connection.php";
+
+    //$offerid = $_SESSION['offerid'];
+    $offerid = 1;
+
+    if($_SESSION['offer_Table'] === "business_property")
+    {
+        $sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid";
+        $resultgetoffer = mysqli_query($con, $sqlgetoffer);
+        $rowgetoffer = mysqli_fetch_assoc($resultgetoffer);
+        $_SESSION['offer_ID'] = $row['offer_ID'];
+        $propertyid = $_SESSION['offer_ID'];
+
+        //vzimane na dannite ot suotvetnata tablica
+        $sqlgetproperty = "SELECT * FROM `business_property` WHERE `offer_PropertyID`='$propertyid'";
+        $resultgetproperty = mysqli_query($con, $sqlgetproperty);
+        $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
+
+        $_SESSION['Price'] = $row['business_Price'];
+        $_SESSION['RealtorID'] = $row['business_RealtorID'];
+        $_SESSION['Quadrature'] = $row['business_Quadrature'];
+        $_SESSION['FloorFlat'] = $row['business_FloorBuilding'];
+        $_SESSION['Gas'] = $row['business_Gas'];
+        $_SESSION['Tpp'] = $row['business_Tpp'];
+        $_SESSION['ConstructionYear'] = $row['business_ConstructionYear'];
+        $_SESSION['ConstructionType'] = $row['business_ConstructionType'];
+        $_SESSION['Description'] = $row['business_Description'];
+        $_SESSION['Features'] = $row['business_Features'];
+        $_SESSION['ForPrivatePeople'] = $row['business_ForPrivatePeople'];
+        $_SESSION['Furnished'] = $row['business_Furnished'];
+        $_SESSION['Country'] = $row['business_Country'];
+        $_SESSION['Province'] = $row['business_Province'];
+        $_SESSION['City'] = $row['business_City'];
+        $_SESSION['Region'] = $row['business_Price'];
+        $_SESSION['Type'] = $row['business_Type'];
+        $_SESSION['PropertyType'] = $row['business_PropertyType'];
+        $_SESSION['UploadTime'] = $row['business_UploadTime'];
+    }
+    
+
+?>
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -189,17 +232,17 @@
     <div class="offer-header row p-4 mb-1">
         <div class="col-8">
             <!--kade shte e zaglavieto na obqwata-->
-            <h3></h3>
+            <h3><?php echo $_SESSION['City'] ?></h3>
         </div>
         <div class="col-4">
-            <h4>Цена: <span></span> EUR</h4>
+            <h4>Цена: <span><?php echo $_SESSION['Price'] ?></span> EUR</h4>
         </div>
     </div>
     <div class="offer-info mb-1 p-4 row">
         <div class="col-6 offer-subinfo d-flex flex-column justify-content-center">
             <h4 class="p-2">Обща информация:</h5>
                 <div class="p-2">
-                    <p>Квадратура: </p>
+                    <p>Квадратура: <?php echo $_SESSION['Quadrature'] ?></p>
                     <p>Етаж: </p>
                     <p>Строителство: </p>
                 </div>
@@ -218,7 +261,7 @@
     </div>
     <div class="offer-description p-4 mb-1">
         <h4>Описание на имота: </h4>
-        <p>Представяме на Вашето внимание тристаен апартамент на шести, последен етаж, в близост до Военна болница.....
+        <p><?php echo $_SESSION['Description'] ?>
         </p>
     </div>
     <div class="offer-contact p-4">
