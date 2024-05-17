@@ -359,7 +359,7 @@
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
-                    echo '<h6>Цена: <span>'.$rowgetnewoffer['offer_Prefix'].'_'.$rowgetofferobj['Price'].'</span> EUR</h6>';
+                    echo '<h6>Цена: <span>'.$rowgetnewoffer[$rowgetnewofferprefix.'_'.'Price'].'</span> EUR</h6>';
                     echo '<p>Продава <span>3-стаен апартамент</span></p>';
                     echo '<h6>град Пловдив</h6>';
                     echo '<h6>квартал Кичука</h6>';
