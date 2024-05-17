@@ -1,3 +1,22 @@
+<?php
+    session_start();
+    include "db_connection.php";
+
+    //izbor na nai-novite x oferti
+    $sqlgetnewoffers = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
+    $resultgetnewoffers = mysqli_query($con, $sqlgetoffer);
+    //nqkolko reda
+    $rowgetnewoffers = mysqli_fetch_assoc($resultgetoffer);
+
+    $_SESSION['offerscount'] = count($rowgetnewoffers);
+    $offerscount = $_SESSION['offerscount'];
+
+    /*
+    $_SESSION['offer_ID'] = $rowgetnewoffers[$index]['offer_ID'];
+    $_SESSION['offer_Table'] = $rowgetnewoffers['offer_ID'];
+    */
+?>
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -323,15 +342,16 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
-                for($i=0; $i < 4 /*$br*/; $i++)
+                for($i=0; $i < $offerscount /*$br*/; $i++)
                 {
+
                     echo '<div class="offer" onclick="window.location = \'offer.php\'">';
                     echo '<div class="offer-images">';
                     echo '<div id="offer-carousel" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
-                    echo '<h6>Цена: <span>'.'11'.'</span> EUR</h6>';
+                    echo '<h6>Цена: <span>'.$_SESSION['Price'].'</span> EUR</h6>';
                     echo '<p>Продава <span>3-стаен апартамент</span></p>';
                     echo '<h6>град Пловдив</h6>';
                     echo '<h6>квартал Кичука</h6>';

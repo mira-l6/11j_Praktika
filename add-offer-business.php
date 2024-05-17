@@ -1,6 +1,7 @@
 <?php
     //?
     //tazi str se izpulnqva pri zapazvane na biznes imot ot buton zapazi
+    //trqbva da se dobavq oferta v tablica offers
     session_start();
 
 
