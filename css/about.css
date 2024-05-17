@@ -27,10 +27,11 @@ body {
 }
 .office-image, .googlemaps-image{
     width: 25rem;
-    
+    height: 29em;
 }
 .office-image img, .googlemaps-image{
     max-width: 100%;
+    height: 100%;
 }
 hr{
     padding: 0;
@@ -71,7 +72,7 @@ hr{
 @media (max-width: 1350px) {
     .googlemaps-image-no-carousel{
         height: 10em !important;  
-        width: clamp(10em, 30em, 45em) !important;
+        width: 30em;
     }
     .carousel{
         display: none;
@@ -82,11 +83,12 @@ hr{
     .about-no-carousel-images{
         display: flex;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         padding-top: 2em;
         border-top: 2px solid #b5b7c1;
     }
     .no-c-image{
+        object-fit: cover;
         margin: 1em;
         width: 35em !important;
         box-shadow: -2px 0px 27px 7px rgba(172, 165, 172, 0.4);
@@ -106,5 +108,30 @@ hr{
     }
     .location-text h2{
         font-size: 1.5em;
+    }
+}
+@media(max-width: 880px){
+    .about-no-carousel-images{
+        flex-direction: column !important;
+    }
+    .no-c-image{
+        margin: 0;
+        width: 100% !important;
+    }
+    .no-c-image:first-child{
+        margin-bottom: 0.5em;
+    }
+    .location-text{
+        width: 100%;
+        border-right: 0;
+        margin-bottom: 1em;
+        border-bottom: 2px solid #b5b7c1;
+    }
+    .location-row{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .office-images, .about-no-carousel, .googlemaps-image-no-carousel{
+        width: 100%;
     }
 }
