@@ -192,3 +192,11 @@ input[type="number"]{
         border-left: 1px solid var(--color-primary);
     }
 }
+@media(max-width: 500px){
+    .filter-option label{
+        font-size: 0.8em;
+    }
+    .filter-option  select{
+        font-size: 0.6em
+    }
+}
