@@ -205,23 +205,13 @@
                             <div class="profile-subtitle p-4 d-grid">
                                 <div class="row">
                                     <div class="col-6">
-<<<<<<< HEAD:edit-profile-html.php
-                                        <p><span class="input-title">Име:</span><input class="edit-profile-input">
-                                            <?php echo $_SESSION['name'] ?></input>
-                                        </p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p><span class="input-title">Фамилия:</span><input class="edit-profile-input">
-                                            <?php echo $_SESSION['lastname'] ?></input>
-=======
-                                        <p><span class="input-title">Име:</span><input value="<?php echo $name ?>"
+                                        <p><span class="input-title">Име:</span><input value="<?php echo $_SESSION['name'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p><span class="input-title">Фамилия:</span><input
-                                                value="<?php echo $lastname ?>" class="edit-profile-input"></input>
->>>>>>> 64ca018412c3bd66fd5a24bb8a124e1b0265b8e7:edit-profile.html
+                                                value="<?php echo $_SESSION['lastname'] ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                 </div>
@@ -229,45 +219,25 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <p><span class="input-title">Потребител:</span> <input
-<<<<<<< HEAD:edit-profile-html.php
-                                                class="edit-profile-input">
-                                            <?php echo $_SESSION['login_Username'] ?></input>
+                                                value="<?php echo $_SESSION['login_Username'] ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
-                                        <p><span class="input-title">Имейл: </span><input class="edit-profile-input">
-                                            <?php echo $_SESSION['email'] ?></input>
-=======
-                                                value="<?php echo $username ?>" class="edit-profile-input"></input>
-                                        </p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p><span class="input-title">Имейл: </span><input value="<?php echo $email ?>"
+                                        <p><span class="input-title">Имейл: </span><input value="<?php echo $_SESSION['email'] ?>"
                                                 class="edit-profile-input"></input>
->>>>>>> 64ca018412c3bd66fd5a24bb8a124e1b0265b8e7:edit-profile.html
                                         </p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pt-2">
                                     <div class="col-6">
-<<<<<<< HEAD:edit-profile-html.php
-                                        <p><span class="input-title">Телефон:</span><input class="edit-profile-input">
-                                            <?php echo $_SESSION['phone'] ?></input>
-                                        </p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p><span class="input-title">Длъжност:</span><input class="edit-profile-input">
-                                            <?php echo $_SESSION['experience'] ?></input>
-=======
-                                        <p><span class="input-title">Телефон:</span><input value="<?php echo $phone ?>"
+                                        <p><span class="input-title">Телефон:</span><input value="<?php echo $_SESSION['phone'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p><span class="input-title">Длъжност:</span><input
-                                                value="<?php echo $experience ?>" class="edit-profile-input"></input>
->>>>>>> 64ca018412c3bd66fd5a24bb8a124e1b0265b8e7:edit-profile.html
+                                                value="<?php echo $_SESSION['experience'] ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                 </div>
