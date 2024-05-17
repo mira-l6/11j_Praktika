@@ -123,32 +123,34 @@
                             <ul class="navbar-nav w-100">
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Покупка</a>
+                                        <a class="nav-link text-start ps-4" href="buy.html">Покупка</a>
                                     </button>
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Продажба</a>
+                                        <a class="nav-link text-start ps-4" href="sell.html">Продажба</a>
                                     </button>
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Наемане</a>
+                                        <a class="nav-link text-start ps-4" href="rent.html">Наемане</a>
                                     </button>
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Отдаване на наем</a>
+                                        <a class="nav-link text-start ps-4" href="for-rent.html">Отдаване на наем</a>
                                     </button>
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Финансова консултация</a>
+                                        <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова
+                                            консултация</a>
                                     </button>
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Юридическа консултация</a>
+                                        <a class="nav-link text-start ps-4" href="legal-consulting.html">Юридическа
+                                            консултация</a>
                                     </button>
                                 </li>
                             </ul>
@@ -191,15 +193,19 @@
         <div class="profile-box p-5">
             <div class="d-grid profile-layout mt-4">
                 <div class="grid-item profile-info">
-                    <div class="profile-title d-flex justify-content-around">
+                    <div class="profile-title d-flex flex-row">
                         <p class="p-1">Редактиране на профил</p>
-                        <button type="submit" id="edit-agent-form">Запази</button>
+                        <div>
+                            <button>Отмени</button>
+                            <button id="forms-submitBtn">Запази</button>
+                        </div>
                     </div>
                     <div class="details-space d-flex flex-column justify-content-around">
-                        <form action="" method="post" id="edit-agent-form">
+                        <form action="" method="post" id="form-info">
                             <div class="profile-subtitle p-4 d-grid">
                                 <div class="row">
                                     <div class="col-6">
+<<<<<<< HEAD:edit-profile-html.php
                                         <p><span class="input-title">Име:</span><input class="edit-profile-input">
                                             <?php echo $_SESSION['name'] ?></input>
                                         </p>
@@ -207,6 +213,15 @@
                                     <div class="col-6">
                                         <p><span class="input-title">Фамилия:</span><input class="edit-profile-input">
                                             <?php echo $_SESSION['lastname'] ?></input>
+=======
+                                        <p><span class="input-title">Име:</span><input value="<?php echo $name ?>"
+                                                class="edit-profile-input"></input>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p><span class="input-title">Фамилия:</span><input
+                                                value="<?php echo $lastname ?>" class="edit-profile-input"></input>
+>>>>>>> 64ca018412c3bd66fd5a24bb8a124e1b0265b8e7:edit-profile.html
                                         </p>
                                     </div>
                                 </div>
@@ -214,6 +229,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <p><span class="input-title">Потребител:</span> <input
+<<<<<<< HEAD:edit-profile-html.php
                                                 class="edit-profile-input">
                                             <?php echo $_SESSION['login_Username'] ?></input>
                                         </p>
@@ -221,12 +237,21 @@
                                     <div class="col-6">
                                         <p><span class="input-title">Имейл: </span><input class="edit-profile-input">
                                             <?php echo $_SESSION['email'] ?></input>
+=======
+                                                value="<?php echo $username ?>" class="edit-profile-input"></input>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p><span class="input-title">Имейл: </span><input value="<?php echo $email ?>"
+                                                class="edit-profile-input"></input>
+>>>>>>> 64ca018412c3bd66fd5a24bb8a124e1b0265b8e7:edit-profile.html
                                         </p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pt-2">
                                     <div class="col-6">
+<<<<<<< HEAD:edit-profile-html.php
                                         <p><span class="input-title">Телефон:</span><input class="edit-profile-input">
                                             <?php echo $_SESSION['phone'] ?></input>
                                         </p>
@@ -234,14 +259,23 @@
                                     <div class="col-6">
                                         <p><span class="input-title">Длъжност:</span><input class="edit-profile-input">
                                             <?php echo $_SESSION['experience'] ?></input>
+=======
+                                        <p><span class="input-title">Телефон:</span><input value="<?php echo $phone ?>"
+                                                class="edit-profile-input"></input>
+                                        </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p><span class="input-title">Длъжност:</span><input
+                                                value="<?php echo $experience ?>" class="edit-profile-input"></input>
+>>>>>>> 64ca018412c3bd66fd5a24bb8a124e1b0265b8e7:edit-profile.html
                                         </p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="password-area col-6">
-                                        <p><span class="input-title">Парола:</span><input class="edit-profile-input"
-                                                type="password"></input></p>
+                                        <p><span class="input-title">Парола:</span><input value=""
+                                                class="edit-profile-input" type="password"></input></p>
                                     </div>
                                     <div class="change-password-area col-6">
                                         <button class="btn"><a href="reset-pass.html">Смяна на парола</a></button>
@@ -252,16 +286,17 @@
                 </div>
             </div>
 
-            <div class="grid-item profile-bio edit-profile-bio d-flex justify-content-center align-items-center">
-                <form action="" method="post" id="edit-agent-form" class="w-100 justify-content-center d-flex">
-                    <textarea name="" id="" placeholder="Допишете допълнителна информация..."></textarea>
-                </form>
-            </div>
             <div class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
                 <form action="" class="d-flex flex-column">
                     <img id="uploadPreview" />
                     <label for="photo-input" class="agent-photo-custom-upload">Качи файл</label>
                     <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
+                </form>
+            </div>
+
+            <div class="grid-item profile-bio edit-profile-bio d-flex justify-content-center align-items-center">
+                <form action="" method="post" id="form-bio" class="w-100 justify-content-center d-flex">
+                    <textarea name="" id="" placeholder="Допишете допълнителна информация..."></textarea>
                 </form>
             </div>
 
@@ -271,4 +306,21 @@
     </div>
     <script src="/js/uploadPreview.js"></script>
     <script src="/js/passwordShow.js"></script>
+
+    <!-- JavaScript to handle form submission -->
+    <script>
+
+        document.getElementById('form-submitBtn').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Submit the first form
+            document.getElementById('form-info').submit();
+
+            // After a slight delay, submit the second form
+            setTimeout(function () {
+                document.getElementById('form-bio').submit();
+            }, 100); // Adjust the delay as necessary
+        });
+    </script>
+
 </body>

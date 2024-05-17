@@ -53,7 +53,15 @@
   background-color: rgba(0, 0, 0, 0.075);
 }
 
-
+select{
+  color: black !important;
+}
+select:focus{
+  color: black !important;
+}
+a:hover{
+  color: black !important;
+}
 
 
 

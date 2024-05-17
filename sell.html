@@ -83,30 +83,52 @@
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body beige-background">
-                <ul class="navbar-nav g-3">
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="home.php" class="nav-link">Начало</a></button>
+            <div class="offcanvas-body beige-background ps-0 pe-0">
+                <ul class="navbar-nav g-3 ms-0 ps-0">
+                    <li class="nav-item">
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="home.php"
+                                class="nav-link ps-3">Начало</a></button>
                     </li>
 
                     <li class="nav-item">
-                        <button type="button" class="btn btn-lg btn-pill blc w-100 text-start pt-3 pb-3"
-                            data-bs-toggle="collapse" data-bs-target="#service">
+                        <button type="button" class="btn btn-lg btn-pill blc w-100 text-start collapsed-dropdown-style pt-3 pb-3" data-bs-toggle="collapse"
+                            data-bs-target="#service">
                             <a class="ps-3">Услуги</a>
                         </button>
                         <div id="service" class="collapse container-fluid p-0">
                             <ul class="navbar-nav w-100">
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Покупка</a>
+                                        <a class="nav-link text-start ps-4" href="buy.html">Покупка</a>
                                     </button>
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="#">Продажба</a>
+                                        <a class="nav-link text-start ps-4 removed" href="sell.html">Продажба</a>
+                                    </button>
+                                </li>
+                                <li class="nav-item w-100">
+                                    <button class="btn w-100">
+                                        <a class="nav-link text-start ps-4" href="rent.html">Наемане</a>
+                                    </button>
+                                </li>
+                                <li class="nav-item w-100">
+                                    <button class="btn w-100">
+                                        <a class="nav-link text-start ps-4" href="for-rent.html">Отдаване на наем</a>
+                                    </button>
+                                </li>
+                                <li class="nav-item w-100">
+                                    <button class="btn w-100">
+                                        <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова консултация</a>
+                                    </button>
+                                </li>
+                                <li class="nav-item w-100">
+                                    <button class="btn w-100">
+                                        <a class="nav-link text-start ps-4" href="legal-consulting.html">Юридическа консултация</a>
                                     </button>
                                 </li>
                             </ul>
+
                         </div>
 
 
@@ -114,31 +136,30 @@
                     </li>
 
                     <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
-                                class="nav-link">Контакти</a></button>
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="contacts.html"
+                                class="nav-link ps-3">Контакти</a></button>
                     </li>
 
                     <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="about.html"
+                                class="nav-link ps-3">За
                                 нас</a></button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill btn-marked blc"><a href="" class="nav-link"><span
-                                    class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
+                        <button class="btn btn-lg btn-pill btn-marked blc w-100 text-start"><a href="search.html"
+                                class="nav-link ps-3"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc profile-button">
-                            <a href="login.html" class="nav-link"><span
-                                    class="fa-solid fa-user collapse-user-icon fa"></span>Профил</a>
+                        <button class="btn btn-lg btn-pill blc profile-button w-100 text-start">
+                            <a href="login.html" class="nav-link ps-3"><span class="fa-solid fa-user collapse-user-icon fa"></span>Профил</a>
                         </button>
                     </li>
 
                 </ul>
 
             </div>
-
         </div>
 
         <div class="sell-title-box text-center p-5">

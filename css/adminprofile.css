@@ -49,6 +49,9 @@
         flex-direction: column;
         gap: 0;
     }
+    .profile-title p{
+        margin: 0;
+    }
     .admin-button{
         font-size: 0.5em;
     }
@@ -57,5 +60,13 @@
     }
     .profile-buttons{
         padding: 0;
+    }
+}
+@media(max-width: 500px){
+    .profile-title{
+        height: 20%;
+    }
+    .details-space{
+        height: 80%;
     }
 }

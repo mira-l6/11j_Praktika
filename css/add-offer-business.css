@@ -33,3 +33,9 @@
         width: 7em;
     }
 }
+
+@media(max-width: 530px){
+    .delete-button{
+        margin-bottom: 0.3em;
+    }
+}

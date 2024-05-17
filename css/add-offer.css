@@ -107,6 +107,7 @@
 }
 
 textarea{
+    padding: 1em;
     resize: none;
     width: 30em;
     height: 5em;
@@ -356,6 +357,40 @@ textarea:first-child{
     .add-offer-image-container{
         grid-template-columns: repeat(1,1fr);
         justify-content: center !important;
+    }
+}
+@media(max-width: 500px){
+    .add-offer-architecture{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .offer-input{
+        grid-column: 1/3 !important;
+    }
+    .add-offer-textareas{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .add-offer-textareas textarea{
+        margin: 1em;
+        width: 90%;
+    }
+    .add-offer-checkboxes{
+        flex-direction: column;
+    }
+    .filter-option label{
+        font-size: 0.8em;
+    }
+    .filter-option  select{
+        font-size: 0.6em
+    }
+}
+@media(max-width: 530px){
+    .filter-option select{
+        width: 7em;
+    }
+    .delete-button{
+        margin-bottom: 0.3em;
     }
 }
 
