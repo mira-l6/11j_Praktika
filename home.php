@@ -8,7 +8,7 @@
     //nqkolko reda
     $rowgetnewoffers = mysqli_fetch_assoc($resultgetnewoffers);
 
-    $_SESSION['offerscount'] = count($rowgetnewoffers);
+    $_SESSION['offerscount'] = 1;
     $offerscount = $_SESSION['offerscount'];
 
     /*
