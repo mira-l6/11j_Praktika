@@ -190,7 +190,7 @@
         <div class="profile-box p-5">
             <div class="d-grid profile-layout mt-4">
                 <div class="grid-item profile-info">
-                    <div class="profile-title d-flex justify-content-around">
+                    <div class="profile-title d-flex flex-row">
                         <p class="p-1">Редактиране на профил</p>
                         <button id="forms-submitBtn">Запази</button>
                     </div>
@@ -199,48 +199,40 @@
                             <div class="profile-subtitle p-4 d-grid">
                                 <div class="row">
                                     <div class="col-6">
-                                        <p><span class="input-title">Име:</span><input class="edit-profile-input">
-                                            <?php echo $name ?></input>
+                                        <p><span class="input-title">Име:</span><input value="<?php echo $name ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
-                                        <p><span class="input-title">Фамилия:</span><input class="edit-profile-input">
-                                            <?php echo $lastname ?></input>
+                                        <p><span class="input-title">Фамилия:</span><input value="<?php echo $lastname ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="col-6">
-                                        <p><span class="input-title">Потребител:</span> <input
-                                                class="edit-profile-input">
-                                            <?php echo $username ?></input>
+                                        <p><span class="input-title">Потребител:</span> <input value="<?php echo $username ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
-                                        <p><span class="input-title">Имейл: </span><input class="edit-profile-input">
-                                            <?php echo $email ?></input>
+                                        <p><span class="input-title">Имейл: </span><input value="<?php echo $email ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row pt-2">
                                     <div class="col-6">
-                                        <p><span class="input-title">Телефон:</span><input class="edit-profile-input">
-                                            <?php echo $phone ?></input>
+                                        <p><span class="input-title">Телефон:</span><input value="<?php echo $phone ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
-                                        <p><span class="input-title">Длъжност:</span><input class="edit-profile-input">
-                                            <?php echo $experience ?></input>
+                                        <p><span class="input-title">Длъжност:</span><input value="<?php echo $experience ?>" class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row">
                                     <div class="password-area col-6">
-                                        <p><span class="input-title">Парола:</span><input class="edit-profile-input"
-                                                type="password"></input></p>
+                                        <p><span class="input-title">Парола:</span><input value="" class="edit-profile-input" type="password"></input></p>
                                     </div>
                                     <div class="change-password-area col-6">
                                         <button class="btn"><a href="reset-pass.html">Смяна на парола</a></button>
