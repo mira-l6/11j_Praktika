@@ -23,7 +23,17 @@ body {
 }
 .main-card-image{
   padding: 1em;
-  border-right: 1px solid rgba(201,193,201,0.40);
+  border-right: 1px solid rgba(171, 166, 171, 0.4);
+}
+
+.main-card-info{
+  width: 100%;
+  padding: 1em;
+  align-self: center;
+  font-size: 1.5em;
+}
+.main-card-info h4{
+  font-size: 1.3em;
 }
 
 .card-button {
@@ -42,6 +52,7 @@ body {
 }
 
 .image-icon-circle img {
+  object-fit: cover;
   width: 6.5rem;
   height: 6.7rem;
   border-radius: 50%;
@@ -79,6 +90,7 @@ body {
 }
 
 .agent{
+  padding: 1em;
   box-shadow: -2px 0px 27px 7px rgba(108, 103, 108, 0.4);
   /* background-color: var(--color-primary); */
   border-radius: 20px;
@@ -90,8 +102,13 @@ body {
 .agent-photo{
   width: 12em;
   height: 12em;
+  border-right: 1px solid rgba(171, 166, 171, 0.4);
+}
+.agent-info{
+  padding: 1em;
 }
 .agent-photo img{
+  object-fit: cover;
   max-width: 100%;
   width: 12em;
   height: 12em;
@@ -127,6 +144,9 @@ body {
   .main-card{
     width: 30em;
   }
+  .main-card-info{
+    font-size: 1.3em;
+  }
 }
 @media(max-width: 570px){
   .main-card{
@@ -135,6 +155,17 @@ body {
   }
   .main-card-image img{
     width: 8em;
+  }
+  .main-card-info{
+    font-size: 1em;
+  }
+}
+@media(max-width: 450px){
+  .main-card{
+    padding: 0.2em;
+  }
+  .title-space{
+    height: 10%;
   }
 }
 
