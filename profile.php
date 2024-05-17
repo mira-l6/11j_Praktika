@@ -225,7 +225,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-6">
-                                    <p><span class="input-title">Потребителско име:</span> <span class="profile-input"><?php echo $_SESSION['login_Usernmae'] ?></span></p>
+                                    <p><span class="input-title">Потребителско име:</span> <span class="profile-input"><?php echo $_SESSION['login_Username'] ?></span></p>
                                 </div>
                                 <div class="col-6">
                                     <p><span class="input-title">Имейл: </span><span class="profile-input"><?php echo $_SESSION['email'] ?></span></p>

@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -200,12 +201,12 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <p><span class="input-title">Име:</span><input class="edit-profile-input">
-                                            <?php echo $name ?></input>
+                                            <?php echo $_SESSION['name'] ?></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p><span class="input-title">Фамилия:</span><input class="edit-profile-input">
-                                            <?php echo $lastname ?></input>
+                                            <?php echo $_SESSION['lastname'] ?></input>
                                         </p>
                                     </div>
                                 </div>
@@ -214,12 +215,12 @@
                                     <div class="col-6">
                                         <p><span class="input-title">Потребител:</span> <input
                                                 class="edit-profile-input">
-                                            <?php echo $username ?></input>
+                                            <?php echo $_SESSION['login_Username'] ?></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p><span class="input-title">Имейл: </span><input class="edit-profile-input">
-                                            <?php echo $email ?></input>
+                                            <?php echo $_SESSION['email'] ?></input>
                                         </p>
                                     </div>
                                 </div>
@@ -227,12 +228,12 @@
                                 <div class="row pt-2">
                                     <div class="col-6">
                                         <p><span class="input-title">Телефон:</span><input class="edit-profile-input">
-                                            <?php echo $phone ?></input>
+                                            <?php echo $_SESSION['phone'] ?></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p><span class="input-title">Длъжност:</span><input class="edit-profile-input">
-                                            <?php echo $experience ?></input>
+                                            <?php echo $_SESSION['experience'] ?></input>
                                         </p>
                                     </div>
                                 </div>
