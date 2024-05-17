@@ -3,13 +3,12 @@
     include "db_connection.php";
 
     //izbor na nai-novite x oferti
-    $sqlgetnewoffers = "SELECT * FROM `offer`";
+
+    //zaqvkata e testvana i raboti
+    $sqlgetnewoffers = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
     $resultgetnewoffers = mysqli_query($con, $sqlgetnewoffers);
     //nqkolko reda
-    $rowgetnewoffers = mysqli_fetch_assoc($resultgetnewoffers);
-
-    $_SESSION['offerscount'] = 1;
-    $offerscount = $_SESSION['offerscount'];
+    $offerscount = mysqli_num_rows($resultgetnewoffers);
 
     /*
     $_SESSION['offer_ID'] = $rowgetnewoffers[$index]['offer_ID'];
@@ -344,16 +343,23 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
-                for($i=0; $i < $offerscount /*$br*/; $i++)
+                while($rowgetnewoffers = mysqli_fetch_assoc($resultgetnewoffers))
                 {
+                    $rowgetnewoffertable = $rowgetnewoffer['offer_Table'];
+                    $rowgetnewofferprefix = $rowgetnewoffer['offer_Prefix'] . "_ID";
+                    $rowgetnewofferid = $rowgetnewoffer['offer_PropertyID'];
+                    $sqlgetofferobj = "SELECT * FROM `$rowgetnewoffertable` WHERE `$rowgetnewofferprefix`='$rowgetnewofferid'";
+                    $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
+                    $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
+                    
 
                     echo '<div class="offer" onclick="window.location = \'offer.php\'">';
                     echo '<div class="offer-images">';
-                    echo '<div id="offer-carousel" class="carousel slide" data-bs-ride="false">';
+                    echo '<div id="offer-carousel-'.$rowgetnewoffer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
-                    echo '<h6>Цена: <span>'.$_SESSION['Price'].'</span> EUR</h6>';
+                    echo '<h6>Цена: <span>'.$rowgetnewoffer['offer_Prefix'].'_'.$rowgetofferobj['Price'].'</span> EUR</h6>';
                     echo '<p>Продава <span>3-стаен апартамент</span></p>';
                     echo '<h6>град Пловдив</h6>';
                     echo '<h6>квартал Кичука</h6>';
