@@ -3,7 +3,7 @@
     include "db_connection.php";
 
     //izbor na nai-novite x oferti
-    $sqlgetnewoffers = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
+    $sqlgetnewoffers = "SELECT * FROM `offer`";
     $resultgetnewoffers = mysqli_query($con, $sqlgetnewoffers);
     //nqkolko reda
     $rowgetnewoffers = mysqli_fetch_assoc($resultgetnewoffers);
@@ -204,6 +204,8 @@
     </section>
     <!-- header end -->
 
+    <?php
+    /*
     <!-- filter start -->
     <section>
         <div class="filter-area pt-5 pb-5 d-flex flex-row justify-content-around">
@@ -333,7 +335,7 @@
         </div>
     </section>
     <!-- filter end -->
-
+    */?>
     
     <!--Offers start-->
     <section>
