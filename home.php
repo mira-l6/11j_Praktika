@@ -357,8 +357,8 @@
 
                 for($i = 0; $i < $offerscount; $i++)
                 {
-                    /*$offer = $offers[$i];
-
+                    $offer = $offers[$i];
+                    /*
                     $offertable = $offer['offer_Table'];
                     $offerprefix = $offer['offer_Prefix'];
                     $propertyid = $offer['offer_Prefix'] . "_ID";
