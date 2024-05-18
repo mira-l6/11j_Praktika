@@ -348,8 +348,10 @@
                     $rowgetnewoffertable = $rowgetnewoffer['offer_Table'];
                     $rowgetnewofferprefix = $rowgetnewoffer['offer_Prefix'] . "_ID";
                     $rowgetnewofferid = $rowgetnewoffer['offer_PropertyID'];
+
                     $sqlgetofferobj = "SELECT * FROM `$rowgetnewoffertable` WHERE `$rowgetnewofferprefix`='$rowgetnewofferid'";
                     $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
+
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
                     
 
@@ -359,7 +361,7 @@
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
-                    echo '<h6>Цена: <span>'.$rowgetnewoffer[$rowgetnewofferprefix.'_'.'Price'].'</span> EUR</h6>';
+                    echo '<h6>Цена: <span>'.$rowgetnewoffer[$rowgetnewofferprefix.'_Price'].'</span> EUR</h6>';
                     echo '<p>Продава <span>3-стаен апартамент</span></p>';
                     echo '<h6>град Пловдив</h6>';
                     echo '<h6>квартал Кичука</h6>';
