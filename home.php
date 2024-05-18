@@ -364,13 +364,13 @@
                     $propertyid = $offer['offer_Prefix'] . "_ID";
                     $rowgetnewofferid = $offer['offer_PropertyID'];
                     
-                    if($offertable === "business_property")
-                    {
+                    //if($offertable === "business_property")
+                    
                         $sqlgetofferobj = "SELECT * FROM `business_property` WHERE `business_ID`='$rowgetnewofferid'";
                     
                         $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
-                    }
                     
+
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
                     
 
