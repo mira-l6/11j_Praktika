@@ -371,6 +371,7 @@
 
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
                     
+                    $price = $offerprefix.'_Price';
 
                     echo '<div class="offer" onclick="window.location = \'offer.php\'">';
                     echo '<div class="offer-images">';
@@ -378,7 +379,7 @@
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
-                    echo '<h6>Цена: <span>'.$offer[$offerprefix.'_Price'].'</span> EUR</h6>';
+                    echo '<h6>Цена: <span>'.$offer[$price].'</span> EUR</h6>';
                     echo '<p>Продава <span>3-стаен апартамент</span></p>';
                     echo '<h6>град Пловдив</h6>';
                     echo '<h6>квартал Кичука</h6>';
