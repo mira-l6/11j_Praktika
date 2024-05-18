@@ -372,7 +372,13 @@
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
                     
                     $price = $offerprefix.'_Price';
+                    $name = $offerprefix.'_City';
+                    $province = $offerprefix.'_Province';
+                    $region = $offerprefix.'_Region';
                     $offerprice = $rowgetofferobj[$price];
+                    $offername = $rowgetofferobj[$name];
+                    $offerprovince = $rowgetofferobj[$province];
+                    $offerregion = $rowgetofferobj[$region];
 
                     echo '<div class="offer">';
                     echo '<div class="offer-images">';
@@ -381,9 +387,9 @@
                     echo '</div>';
                     echo '<div class="offer-info" onclick="window.location = \'offer.php\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
-                    echo '<p>Продава <span>3-стаен апартамент</span></p>';
-                    echo '<h6>град Пловдив</h6>';
-                    echo '<h6>квартал Кичука</h6>';
+                    echo '<p><span>'.$offername.'</span></p>';
+                    echo '<h6>'.$offerprovince.'</h6>';
+                    echo '<h6>'.$offerregion.'</h6>';
                     echo '</div>';
                     echo '</div>';
                 }
