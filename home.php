@@ -346,9 +346,9 @@
                 
                 $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
                 //nqkolko reda
-                /*
+                
                 $offerscount = mysqli_num_rows($resultgetnewoffer);
-
+                /*
                 $offers = array();
                 while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) 
                 {
