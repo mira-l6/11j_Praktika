@@ -339,7 +339,7 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
-
+                /*
                 //zaqvkata e testvana i raboti
                 $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
                 $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
@@ -350,11 +350,11 @@
                 while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) 
                 {
                     $offers[] = $rowgetnewoffer;
-                }
+                }*/
 
                 for($i = 0; $i < $offerscount; $i++)
                 {
-                    $offer = $offers[$i];
+                    /*$offer = $offers[$i];
 
                     $offertable = $offer['offer_Table'];
                     $offerprefix = $offer['offer_Prefix'];
@@ -364,12 +364,12 @@
                     $sqlgetofferobj = "SELECT * FROM `$offertable` WHERE `$propertyid`='$rowgetnewofferid'";
                     $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
 
-                    $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
+                    $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);*/
                     
 
                     echo '<div class="offer" onclick="window.location = \'offer.php\'">';
                     echo '<div class="offer-images">';
-                    echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
+                    echo '<div id="offer-carousel-'./*$offer['offer_ID']*/'1'.'" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
