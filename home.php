@@ -4,17 +4,7 @@
 
     //izbor na nai-novite x oferti
 
-    //zaqvkata e testvana i raboti
-    $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
-    $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
-    //nqkolko reda
-    $offerscount = mysqli_num_rows($resultgetnewoffer);
-
-    $offers = array();
-    while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) 
-    {
-        $offers[] = $rowgetnewoffer;
-    }
+    
 
     /*
     $_SESSION['offer_ID'] = $rowgetnewoffers[$index]['offer_ID'];
@@ -349,6 +339,19 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
+
+                //zaqvkata e testvana i raboti
+                $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
+                $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
+                //nqkolko reda
+                $offerscount = mysqli_num_rows($resultgetnewoffer);
+
+                $offers = array();
+                while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) 
+                {
+                    $offers[] = $rowgetnewoffer;
+                }
+
                 for($i = 0; $i < $offerscount; $i++)
                 {
                     $offer = $offers[$i];
