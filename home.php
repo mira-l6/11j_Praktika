@@ -339,6 +339,7 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
+                $offerscount = 6;
                 /*
                 //zaqvkata e testvana i raboti
                 $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
