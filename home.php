@@ -358,12 +358,12 @@
                 for($i = 0; $i < $offerscount; $i++)
                 {
                     $offer = $offers[$i];
-                    /*
+                    
                     $offertable = $offer['offer_Table'];
                     $offerprefix = $offer['offer_Prefix'];
                     $propertyid = $offer['offer_Prefix'] . "_ID";
                     $rowgetnewofferid = $offer['offer_PropertyID'];
-
+                    /*
                     $sqlgetofferobj = "SELECT * FROM `$offertable` WHERE `$propertyid`='$rowgetnewofferid'";
                     $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
 
