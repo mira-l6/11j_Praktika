@@ -349,11 +349,11 @@
                 $offerscount = mysqli_num_rows($resultgetnewoffer);
                 
                 $offers = array();
-                /*
+                
                 while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) 
                 {
                     $offers[] = $rowgetnewoffer;
-                }*/
+                }
 
                 for($i = 0; $i < $offerscount; $i++)
                 {
