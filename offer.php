@@ -9,9 +9,9 @@
     $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
     
 
-        $price = $row[$_SESSION['offer_Prefix'].'Price'];
-        $realtorid = $row['business_RealtorID'];
-        $quadrature = $row['business_Quadrature'];
+        $price = $rowgetproperty[$_SESSION['offer_Prefix'].'Price'];
+        $realtorid = $rowgetproperty['business_RealtorID'];
+        $quadrature = $rowgetproperty['business_Quadrature'];
         $_SESSION['FloorFlat'] = $row['business_FloorBuilding'];
         $_SESSION['Gas'] = $row['business_Gas'];
         $_SESSION['Tpp'] = $row['business_Tpp'];
@@ -231,7 +231,7 @@
     </div>
     <div class="offer-header row p-4 mb-1">
         <div class="col-8">
-            <!--kade shte e zaglavieto na obqwata-->
+            <!--zaglavie na obqwata-->
             <h3><?php echo $_SESSION['City'] ?></h3>
         </div>
         <div class="col-4">
