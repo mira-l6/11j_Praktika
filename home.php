@@ -365,9 +365,9 @@
                     $rowgetnewofferid = $offer['offer_PropertyID'];
                     
                     $sqlgetofferobj = "SELECT * FROM `$offertable` WHERE `$propertyid`='$rowgetnewofferid'";
-                    /*
+                    
                     $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
-
+/*
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);*/
                     
 
