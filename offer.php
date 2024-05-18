@@ -2,7 +2,7 @@
     session_start();
     include "db_connection.php";
 
-    $offerid = $_SESSION['offerid'];
+    $offerid = $_SESSION['offerobjid'];
     /*
     if($_SESSION['offer_Table'] === "business_property")
     {
