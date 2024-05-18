@@ -343,9 +343,10 @@
                 
                 //zaqvkata e testvana i raboti
                 $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
-                /*
+                
                 $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
                 //nqkolko reda
+                /*
                 $offerscount = mysqli_num_rows($resultgetnewoffer);
 
                 $offers = array();
