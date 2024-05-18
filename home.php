@@ -372,7 +372,7 @@
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
                     
                     $price = $offerprefix.'_Price';
-                    $offerprice = $offer[$price];
+                    $offerprice = $rowgetofferobj[$price];
 
                     echo '<div class="offer" onclick="window.location = \'offer.php\'">';
                     echo '<div class="offer-images">';
