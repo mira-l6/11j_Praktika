@@ -374,12 +374,12 @@
                     $price = $offerprefix.'_Price';
                     $offerprice = $rowgetofferobj[$price];
 
-                    echo '<div class="offer" onclick="window.location = \'offer.php\'">';
+                    echo '<div class="offer">';
                     echo '<div class="offer-images">';
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';
                     echo '</div>';
-                    echo '<div class="offer-info">';
+                    echo '<div class="offer-info" onclick="window.location = \'offer.php\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
                     echo '<p>Продава <span>3-стаен апартамент</span></p>';
                     echo '<h6>град Пловдив</h6>';
