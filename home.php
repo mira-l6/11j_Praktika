@@ -10,6 +10,12 @@
     //nqkolko reda
     $offerscount = mysqli_num_rows($resultgetnewoffer);
 
+    $offers = array();
+    while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) 
+    {
+        $offers[] = $rowgetnewoffer;
+    }
+
     /*
     $_SESSION['offer_ID'] = $rowgetnewoffers[$index]['offer_ID'];
     $_SESSION['offer_Table'] = $rowgetnewoffers['offer_ID'];
@@ -343,13 +349,15 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
-                while($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer))
+                for($i = 0; $i < $offerscount; $i++)
                 {
-                    $rowgetnewoffertable = $rowgetnewoffer['offer_Table'];
-                    $rowgetnewofferprefix = $rowgetnewoffer['offer_Prefix'] . "_ID";
-                    $rowgetnewofferid = $rowgetnewoffer['offer_PropertyID'];
+                    $offer = $offers[$i];
 
-                    $sqlgetofferobj = "SELECT * FROM `$rowgetnewoffertable` WHERE `$rowgetnewofferprefix`='$rowgetnewofferid'";
+                    $offertable = $offer['offer_Table'];
+                    $offerprefix = $offer['offer_Prefix'] . "_ID";
+                    $rowgetnewofferid = $offer['offer_PropertyID'];
+
+                    $sqlgetofferobj = "SELECT * FROM `$offertable` WHERE `$offerprefix`='$rowgetnewofferid'";
                     $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
 
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
@@ -357,11 +365,11 @@
 
                     echo '<div class="offer" onclick="window.location = \'offer.php\'">';
                     echo '<div class="offer-images">';
-                    echo '<div id="offer-carousel-'.$rowgetnewoffer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
+                    echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
-                    echo '<h6>Цена: <span>'.$rowgetnewoffer[$rowgetnewofferprefix.'_Price'].'</span> EUR</h6>';
+                    echo '<h6>Цена: <span>'.$offer[$offerprefix.'_Price'].'</span> EUR</h6>';
                     echo '<p>Продава <span>3-стаен апартамент</span></p>';
                     echo '<h6>град Пловдив</h6>';
                     echo '<h6>квартал Кичука</h6>';
