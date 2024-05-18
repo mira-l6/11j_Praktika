@@ -360,8 +360,11 @@
                     $offer = $offers[$i];
                     
                     $offertable = $offer['offer_Table'];
+                    $_SESSION['offer_Table'] = $offertable;
                     $offerprefix = $offer['offer_Prefix'];
+                    $_SESSION['offer_Prefix'] = $offerprefix;
                     $propertyid = $offer['offer_Prefix'] . "_ID";
+                    $_SESSION['property_ID'] = $propertyid;
                     $rowgetnewofferid = $offer['offer_PropertyID'];
                     
                     $sqlgetofferobj = "SELECT * FROM `".$offertable."` WHERE `".$propertyid."`='$rowgetnewofferid'";

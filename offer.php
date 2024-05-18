@@ -3,23 +3,15 @@
     include "db_connection.php";
 
     $offerid = $_SESSION['offerobjid'];
-    /*
-    if($_SESSION['offer_Table'] === "business_property")
-    {
-        $sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid";
-        $resultgetoffer = mysqli_query($con, $sqlgetoffer);
-        $rowgetoffer = mysqli_fetch_assoc($resultgetoffer);
-        $_SESSION['offer_ID'] = $row['offer_ID'];
-        $propertyid = $_SESSION['offer_ID'];
 
-        //vzimane na dannite ot suotvetnata tablica
-        $sqlgetproperty = "SELECT * FROM `business_property` WHERE `offer_PropertyID`='$propertyid'";
-        $resultgetproperty = mysqli_query($con, $sqlgetproperty);
-        $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
+    $sqlgetproperty = "SELECT * FROM `".$_SESSION['offer_Table']."` WHERE `".$_SESSION['property_ID']."`='$offerid'";
+    $resultgetproperty = mysqli_query($con, $sqlgetproperty);
+    $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
+    
 
-        $_SESSION['Price'] = $row['business_Price'];
-        $_SESSION['RealtorID'] = $row['business_RealtorID'];
-        $_SESSION['Quadrature'] = $row['business_Quadrature'];
+        $price = $row[$_SESSION['offer_Prefix'].'Price'];
+        $realtorid = $row['business_RealtorID'];
+        $quadrature = $row['business_Quadrature'];
         $_SESSION['FloorFlat'] = $row['business_FloorBuilding'];
         $_SESSION['Gas'] = $row['business_Gas'];
         $_SESSION['Tpp'] = $row['business_Tpp'];
@@ -36,7 +28,7 @@
         $_SESSION['Type'] = $row['business_Type'];
         $_SESSION['PropertyType'] = $row['business_PropertyType'];
         $_SESSION['UploadTime'] = $row['business_UploadTime'];
-    }*/
+    
 
     //vzimane na dannite za realtor
     /*
@@ -243,7 +235,7 @@
             <h3><?php echo $_SESSION['City'] ?></h3>
         </div>
         <div class="col-4">
-            <h4>Цена: <span><?php echo $_SESSION['Price'] ?></span> EUR</h4>
+            <h4>Цена: <span><?php echo $price ?></span> EUR</h4>
         </div>
     </div>
     <div class="offer-info mb-1 p-4 row">
