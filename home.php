@@ -364,11 +364,9 @@
                     $propertyid = $offer['offer_Prefix'] . "_ID";
                     $rowgetnewofferid = $offer['offer_PropertyID'];
                     
-                    //if($offertable === "business_property")
+                    $sqlgetofferobj = "SELECT * FROM `".$offertable."` WHERE `".$propertyid."`='$rowgetnewofferid'";
                     
-                        $sqlgetofferobj = "SELECT * FROM `".$offertable."` WHERE `".$propertyid."`='$rowgetnewofferid'";
-                    
-                        $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
+                    $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
                     
 
                     $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
@@ -376,7 +374,7 @@
 
                     echo '<div class="offer" onclick="window.location = \'offer.php\'">';
                     echo '<div class="offer-images">';
-                    echo '<div id="offer-carousel-'./*$offer['offer_ID']*/'1'.'" class="carousel slide" data-bs-ride="false">';
+                    echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="offer-info">';
