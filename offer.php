@@ -3,7 +3,7 @@
     include "db_connection.php";
 
     $offerid = $_SESSION['offerid'];
-
+    /*
     if($_SESSION['offer_Table'] === "business_property")
     {
         $sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid";
@@ -36,15 +36,17 @@
         $_SESSION['Type'] = $row['business_Type'];
         $_SESSION['PropertyType'] = $row['business_PropertyType'];
         $_SESSION['UploadTime'] = $row['business_UploadTime'];
-    }
+    }*/
 
     //vzimane na dannite za realtor
+    /*
     $realtorid = $_SESSION['RealtorID'];
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
     $resultgetrealtor = mysqli_query($con, $sqlgetoffer);
     $rowgetrealtor = mysqli_fetch_assoc($resultgetoffer);
     $_SESSION['offer_ID'] = $row['offer_ID'];
     $propertyid = $_SESSION['offer_ID'];
+    */
 
 ?>
 <!DOCTYPE html>
