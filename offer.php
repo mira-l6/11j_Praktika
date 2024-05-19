@@ -6,7 +6,11 @@
     $offertable = $_GET['table'];
 
     $sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid'";
-    $sqlgetproperty = "SELECT * FROM `".$offertable."` WHERE `".$_SESSION['offer_Prefix']."_ID`='$offerid'";
+    $resultgetoffer = mysqli_query($con, $sqlgetoffer);
+    $rowgetoffer = mysqli_fetch_assoc($resultgetoffer);
+    $propertyid = $rowgetoffer['property_ID'];
+
+    $sqlgetproperty = "SELECT * FROM `".$offertable."` WHERE `".$_SESSION['offer_Prefix']."_ID`='$propertyid'";
 
     $resultgetproperty = mysqli_query($con, $sqlgetproperty);
     $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
