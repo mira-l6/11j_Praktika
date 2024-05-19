@@ -37,10 +37,10 @@
         $_SESSION['PropertyType'] = $row['business_PropertyType'];
         $_SESSION['UploadTime'] = $row['business_UploadTime'];
     
-
+/*
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
     $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
-    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
+    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);*/
     
 ?>
 <!DOCTYPE html>
