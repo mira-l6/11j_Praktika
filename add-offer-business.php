@@ -118,6 +118,10 @@
                 $_SESSION['last_id'] = $last_id;
                 exit();
             }
+/*
+            $sqladdoffer = "INSERT INTO `offer`(`offer_Table`, `offer_PropertyID`, `offer_TimeOfUpload`, `offer_Prefix`)
+                        VALUES('business_property', $, $, `business`)";
+            $resultaddoffer = mysqli_query($con, $sqladdoffer);*/
         }
     }
     else
