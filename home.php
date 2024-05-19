@@ -383,9 +383,9 @@
                     $offerprovince = $rowgetofferobj[$province];
                     $offerregion = $rowgetofferobj[$region];
 
-                    echo '<div class="offer">';
                     $_SESSION['offerobjid'] = $offer['offer_ID'];
-                    echo '<div class="offer" onclick="window.location = \'offer.php\'">';
+                    
+                    echo '<div class="offer">';
                     echo '<div class="offer-images">';
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';

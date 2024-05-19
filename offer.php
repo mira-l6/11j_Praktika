@@ -4,13 +4,15 @@
 
     $offerid = $_SESSION['offerobjid'];
 
-    $sqlgetproperty = "SELECT * FROM `".$_SESSION['offer_Table']."` WHERE `".$_SESSION['property_ID']."`='$offerid'";
+    $sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid'";
+    $sqlgetproperty = "SELECT * FROM `".$_SESSION['offer_Table']."` WHERE `".$_SESSION['offer_Prefix']."_ID`='$offerid'";
+
     $resultgetproperty = mysqli_query($con, $sqlgetproperty);
     $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
     
 
         $price = $rowgetproperty[$_SESSION['offer_Prefix'].'Price'];
-        $realtorid = $rowgetproperty['business_RealtorID'];
+        $realtorid = $rowgetproperty[$_SESSION['offer_Prefix'].'RealtorID'];
         $quadrature = $rowgetproperty['business_Quadrature'];
         $_SESSION['FloorFlat'] = $row['business_FloorBuilding'];
         $_SESSION['Gas'] = $row['business_Gas'];
