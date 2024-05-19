@@ -128,12 +128,14 @@
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова консултация</a>
+                                    <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова
+                                        консултация</a>
                                 </button>
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="legal-consulting.html">Юридическа консултация</a>
+                                    <a class="nav-link text-start ps-4" href="legal-consulting.html">Юридическа
+                                        консултация</a>
                                 </button>
                             </li>
                         </ul>
@@ -174,17 +176,28 @@
     </div>
     <!-- nav end -->
 
+    <div class="popup">
+        <div class="top-bar">
+            <i class="close-btn material-icons" style="color: white">clear</i>
+        </div>
+        <button class="arrow-btn left-arrow"><i class="material-icons popup-arrow">arrow_back</i></button>
+        <button class="arrow-btn right-arrow"><i class="material-icons popup-arrow">arrow_forward</i></button>
+        <!--vsichki snimki shte sa tuk-->
+        <img src="img/contacts_background.png" alt="" class="large-image">
+    </div>
+
     <div class="container-fluid offer-images">
         <div class="first big-image">
-            <img src="img/9ec19d18-107e-41f9-bddf-4fc03411b2b5.webp" alt="">
+            <img src="img/scenery.jpg" alt="">
         </div>
-        <div class="small-image small-image-1"><img src="/img/download (5).jpg" alt=""></div>
-        <div class="small-image small-image-2"><img src="img/download (2).jpg" alt=""></div>
-        <div class="small-image small-image-3"><img src="img/download (4).jpg" alt=""></div>
-        <div class="small-image small-image-4"><img src="img/download (6).jpg" alt=""></div>
+        <div class="small-image small-image-1"><img src="/img/contacts_background.png" alt=""></div>
+        <div class="small-image small-image-2"><img src="img/JohnDoe.jpg" alt=""></div>
+        <div class="small-image small-image-3"><img src="img/Начало 2.png" alt=""></div>
+        <div class="small-image small-image-4"><img src="img/personExample.jpg" alt=""></div>
         <div class="second big-image">
-            <img src="img/1677856812_en-idei-club-p-inside-the-house-dizain-1.jpg" alt="">
+            <img src="img/office.png" alt="">
         </div>
+        <button class="offer-images-buttonShow" id="show"><a href="">Всички снимки</a></button>
     </div>
     <div class="offer-header row p-4 mb-1">
         <div class="col-8">
@@ -222,12 +235,10 @@
         </p>
     </div>
     <div class="offer-contact p-4">
-        <h4>Оставете запитване:</h4>
         <form action="" method="post" class="offer-contact-form">
+            <h4>Оставете запитване:</h4>
             <textarea name="" id="" class="w-100 rounded-2 form-control"></textarea>
-        </form>
-        <div>
-            <form action="" class="row">
+            <div class="row">
                 <div class="col-6 offer-form-area">
                     <label for="">Имейл: </label>
                     <input type="email" class="form-control">
@@ -236,9 +247,10 @@
                     <label for="">Телефон за връзка: </label>
                     <input type="text" class="form-control">
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+    <script src="/js/offerImagesShow.js"></script>
 </body>
 
 </html>
