@@ -1,48 +1,48 @@
 <?php
-    session_start();
-    include "db_connection.php";
+session_start();
+include "db_connection.php";
 
-    $offerid = $_GET['id'];
-    $offertable = $_GET['table'];
-    $propertyprefix = $_GET['prefix'];
+$offerid = $_GET['id'];
+$offertable = $_GET['table'];
+$propertyprefix = $_GET['prefix'];
 
-    $sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid'";
-    $resultgetoffer = mysqli_query($con, $sqlgetoffer);
-    $rowgetoffer = mysqli_fetch_assoc($resultgetoffer);
-    $propertyid = $rowgetoffer['offer_PropertyID'];
+$sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid'";
+$resultgetoffer = mysqli_query($con, $sqlgetoffer);
+$rowgetoffer = mysqli_fetch_assoc($resultgetoffer);
+$propertyid = $rowgetoffer['offer_PropertyID'];
 
-    $sqlgetproperty = "SELECT * FROM `".$offertable."` WHERE `".$propertyprefix."_ID`='$propertyid'";
+$sqlgetproperty = "SELECT * FROM `" . $offertable . "` WHERE `" . $propertyprefix . "_ID`='$propertyid'";
 
-    $resultgetproperty = mysqli_query($con, $sqlgetproperty);
-    $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
-    
+$resultgetproperty = mysqli_query($con, $sqlgetproperty);
+$rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
 
-        $price = $rowgetproperty[$propertyprefix.'_Price'];
-        $realtorid = $rowgetproperty[$propertyprefix.'_RealtorID'];
-        $quadrature = $rowgetproperty[$propertyprefix.'_Quadrature'];
-        $floorflat = $rowgetproperty[$propertyprefix.'_FloorFlat'];
-        $floorbuilding = $rowgetproperty[$propertyprefix.'_FloorBuilding'];
-        $gas = $rowgetproperty[$propertyprefix.'_Gas'];
-        $tpp = $rowgetproperty[$propertyprefix.'_Tpp'];
-        $constructionyear = $rowgetproperty[$propertyprefix.'_ConstructionYear'];
-        $constructiontype = $rowgetproperty[$propertyprefix.'_ConstructionType'];
-        $description = $rowgetproperty[$propertyprefix.'_Description'];
-        $features = $rowgetproperty[$propertyprefix.'_Features'];
-        $furnished = $rowgetproperty[$propertyprefix.'_Furnished'];
-        $country = $rowgetproperty[$propertyprefix.'_Country'];
-        $province = $rowgetproperty[$propertyprefix.'_Province'];
-        $city = $rowgetproperty[$propertyprefix.'_City'];
-        $region = $rowgetproperty[$propertyprefix.'_Region'];
-        $propertytype = $rowgetproperty[$propertyprefix.'_Type'];
-        $uploadtime = $rowgetproperty[$propertyprefix.'_UploadTime'];
-        //ako e biznes
-        $businesstype = $rowgetproperty['business_PropertyType'];
-    
+
+$price = $rowgetproperty[$propertyprefix . '_Price'];
+$realtorid = $rowgetproperty[$propertyprefix . '_RealtorID'];
+$quadrature = $rowgetproperty[$propertyprefix . '_Quadrature'];
+$floorflat = $rowgetproperty[$propertyprefix . '_FloorFlat'];
+$floorbuilding = $rowgetproperty[$propertyprefix . '_FloorBuilding'];
+$gas = $rowgetproperty[$propertyprefix . '_Gas'];
+$tpp = $rowgetproperty[$propertyprefix . '_Tpp'];
+$constructionyear = $rowgetproperty[$propertyprefix . '_ConstructionYear'];
+$constructiontype = $rowgetproperty[$propertyprefix . '_ConstructionType'];
+$description = $rowgetproperty[$propertyprefix . '_Description'];
+$features = $rowgetproperty[$propertyprefix . '_Features'];
+$furnished = $rowgetproperty[$propertyprefix . '_Furnished'];
+$country = $rowgetproperty[$propertyprefix . '_Country'];
+$province = $rowgetproperty[$propertyprefix . '_Province'];
+$city = $rowgetproperty[$propertyprefix . '_City'];
+$region = $rowgetproperty[$propertyprefix . '_Region'];
+$propertytype = $rowgetproperty[$propertyprefix . '_Type'];
+$uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
+//ako e biznes
+$businesstype = $rowgetproperty['business_PropertyType'];
+
 /*
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
     $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
     $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);*/
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="bg">
@@ -220,6 +220,19 @@
     </div>
     <!-- nav end -->
 
+    <!--popup neshta moje i da gi mahna-->
+    <div class="popup">
+        <div class="top-bar">
+            <i class="close-btn material-icons" style="color: white">clear</i>
+        </div>
+        <button class="arrow-btn left-arrow"><i class="material-icons popup-arrow">arrow_back</i></button>
+        <button class="arrow-btn right-arrow"><i class="material-icons popup-arrow">arrow_forward</i></button>
+        <!--vsichki snimki shte sa tuk-->
+        <img src="img/contacts_background.png" alt="" class="large-image">
+    </div>
+    <!--kraj na popup-->
+
+
     <div class="container-fluid offer-images">
         <div class="first big-image">
             <img src="img/9ec19d18-107e-41f9-bddf-4fc03411b2b5.webp" alt="">
@@ -232,6 +245,44 @@
             <img src="img/1677856812_en-idei-club-p-inside-the-house-dizain-1.jpg" alt="">
         </div>
     </div>
+
+    <!--carousel za vsichi snimki, toj shte se pokazva samo na malak enkran-->
+    <div id="offer-images-carousel" class="carousel slide offer-images-carousel" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#offer-images-carousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#offer-images-carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#offer-images-carousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/contacts_background.png" alt="Los Angeles" class="carousel-image d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/scenery.jpg" alt="Chicago" class="carousel-image d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/Начало 2.png" alt="New York" class="carousel-image d-block w-100">
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#offer-images-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#offer-images-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!--kraj na carousel-->
+
+
     <div class="offer-header row p-4 mb-1">
         <div class="col-8">
             <!--zaglavie na obqwata-->
@@ -245,9 +296,9 @@
         <div class="col-6 offer-subinfo d-flex flex-column justify-content-center">
             <h4 class="p-2">Обща информация:</h5>
                 <div class="p-2">
+                    <p>Строителство: <?php echo $constructiontype . ', ' . $constructionyear ?></p>
+                    <p>Етаж: <?php echo $floorflat . ' от ' . $floorbuilding ?></p>
                     <p>Квадратура: <?php echo $quadrature ?></p>
-                    <p>Етаж: <?php echo $floorflat.' от '.$floorbuilding ?></p>
-                    <p>Строителство: <?php echo $constructiontype.', '.$constructionyear ?></p>
                 </div>
         </div>
         <div class="col-6 offer-agent d-flex align-items-center">
@@ -257,7 +308,8 @@
             <div class="ps-5">
                 <h5><?php echo $rowgetrealtor['realtor_Name'] ?></h5>
                 <h5><?php echo $rowgetrealtor['realtor_Experience'] ?></h5>
-                <p><span style="font-weight: 600">Телефон:</span> <?php echo $rowgetrealtor['realtor_PhoneNumber'] ?></p>
+                <p><span style="font-weight: 600">Телефон:</span> <?php echo $rowgetrealtor['realtor_PhoneNumber'] ?>
+                </p>
                 <p><span style="font-weight: 600">Имейл:</span> <?php echo $rowgetrealtor['realtor_Email'] ?></p>
             </div>
         </div>
@@ -279,7 +331,7 @@
                     <input type="email" class="form-control">
                 </div>
                 <div class="col-6 offer-form-area">
-                    <label for="">Телефон за връзка: </label>
+                    <label for="">Телефон: </label>
                     <input type="text" class="form-control">
                 </div>
             </form>
