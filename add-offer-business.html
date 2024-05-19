@@ -181,7 +181,7 @@
                 <h2>Добавяне на бизнес имот</h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
-                    <button type="submit" form="main-offer-form" class="add-offer-button add-button">Запази</button>
+                    <button id="submit-all-forms" type="submit" class="add-offer-button add-button">Запази</button>
                 </div>
             </div>
             <div class="add-offer-body d-grid">
@@ -210,7 +210,7 @@
 
                 <div class="add-offer-location-info">
 
-                    <form action="add-offer-business.html" method="post">
+                    <form id="drop-down-form" action="add-offer-business.html" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
@@ -219,7 +219,7 @@
                                     <option value="Продава">Продава</option>
                                     <option value="Купува">Купува</option>
                                     <option value="Отдава">Отдава</option>
-                                    <option value="НАема">Наема</option>
+                                    <option value="Наема">Наема</option>
                                 </select>
                             </div>
                             <div class="line-break">
@@ -270,7 +270,7 @@
                                 <div></div>
                             </div>
                             <div class="filter-option"><label for="populated-place">Населено място</label>
-                                <select id="populated-place-add" name="populated-place">
+                                <select id="populated-place-add" name="populated-place-add">
                                     <option value="" disabled selected>Населено място</option>
                                     
                                     <!--t - grad town; p - oblast province-->
@@ -336,7 +336,7 @@
                             </div>
                             
                             <div class="filter-option"><label for="region">Район</label>
-                                <select name="town-area" id="town-area-add">
+                                <select name="town-area-add" id="town-area-add">
                                     <option value="all">Район</option>
                                 </select>
                             </div>
@@ -345,7 +345,7 @@
                     </form>
                 </div>
                 <div class="add-offer-more-info">
-                    <form action="add-offer-business.php" class="d-flex flex-row align-items-center">
+                    <form id="description" action="add-offer-business.php" class="d-flex flex-row align-items-center">
                         <div class="add-offer-textareas">
                             <textarea name="description" id="description" cols="30" rows="10" placeholder="Добавете описание"></textarea>
                             <textarea name="features" id="features" cols="30" rows="10" placeholder="Добавете особености"></textarea>
@@ -364,7 +364,16 @@
 
     </div>
 
-    
+    <script>
+        document.getElementById('submit-all-forms').addEventListener('click', function(event) 
+        {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('form').submit();
+            document.getElementById('main-offer-form').submit();
+            document.getElementById('drop-down-form').submit();
+            document.getElementById('description').submit();
+        });
+    </script>
 </body>
 
 <script src="./js/uploadMultiplePreview.js"></script>
