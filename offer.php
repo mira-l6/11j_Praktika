@@ -2,7 +2,7 @@
     session_start();
     include "db_connection.php";
 
-    $offerid = $_SESSION['offerobjid'];
+    $offerid = $_GET['id'];
 
     $sqlgetoffer = "SELECT * FROM `offer` WHERE `offer_ID`='$offerid'";
     $sqlgetproperty = "SELECT * FROM `".$_SESSION['offer_Table']."` WHERE `".$_SESSION['offer_Prefix']."_ID`='$offerid'";
