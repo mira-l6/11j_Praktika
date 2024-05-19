@@ -38,15 +38,12 @@
         $_SESSION['UploadTime'] = $row['business_UploadTime'];
     
 
-    //vzimane na dannite za realtor
-    /*
-    $realtorid = $_SESSION['RealtorID'];
+    
+    $realtorid = $rowgetproperty[$propertyprefix.'_RealtorID'];
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
-    $resultgetrealtor = mysqli_query($con, $sqlgetoffer);
-    $rowgetrealtor = mysqli_fetch_assoc($resultgetoffer);
-    $_SESSION['offer_ID'] = $row['offer_ID'];
-    $propertyid = $_SESSION['offer_ID'];
-    */
+    $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
+    
 
 ?>
 <!DOCTYPE html>
@@ -260,10 +257,10 @@
                 <img src="" alt="">
             </div>
             <div class="ps-5">
-                <h5>Мирослава Ламбрева</h5>
-                <h5>Боркер</h5>
-                <p><span style="font-weight: 600">Телефон:</span> 0895432535</p>
-                <p><span style="font-weight: 600">Имейл:</span> miralambreva19960@gmail.com</p>
+                <h5><?php echo $rowgetrealtor['realtor_Name'] ?></h5>
+                <h5><?php echo $rowgetrealtor['realtor_Experience'] ?></h5>
+                <p><span style="font-weight: 600">Телефон:</span> <?php echo $rowgetrealtor['realtor_PhoneNumber'] ?></p>
+                <p><span style="font-weight: 600">Имейл:</span> <?php echo $rowgetrealtor['realtor_Email'] ?></p>
             </div>
         </div>
     </div>
