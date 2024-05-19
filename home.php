@@ -388,7 +388,7 @@
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     echo '</div>';
                     echo '</div>';
-                    echo '<div class="offer-info" onclick="window.location = \'offer.php?id=<?php echo htmlspecialchars($offer[\'offer_ID\']); ?>\'">';
+                    echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
                     echo '<p><span>'.$offername.'</span></p>';
                     echo '<h6>'.$offerprovince.'</h6>';
