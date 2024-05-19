@@ -110,7 +110,14 @@
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
                         VALUES ($price, $quadrature, $floorflat, $floors, $gas, $tpp, $constructionyear, $constructiontype, $description, $features, $forprivatepeople, $furnished, $country, $populatedplace, $offername, $townarea,$businesstype, $propertytype)"; 
             $result = mysqli_query($con, $sql);
-            exit();
+            if($result)
+            {
+                // vzima id na posledniq dobaven zapis
+                $last_id = mysqli_insert_id($con);
+                // zapazva go
+                $_SESSION['last_id'] = $last_id;
+                exit();
+            }
         }
     }
     else
