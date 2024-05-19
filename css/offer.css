@@ -74,6 +74,9 @@ body{
     background-color: #e9e6e9; 
 }
 
+.offer-agent{
+    justify-content: flex-end;
+}
 .offer-agent-image{
     background-color: white;
     width: 12em;
@@ -83,9 +86,12 @@ body{
 }
 .offer-agent-image img{
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 12em;
+    height: 12em;
     border-radius: 50%;
+}
+.subinfo-input{
+    font-weight: 600;
 }
 .offer-description p, .offer-info{
     font-size: 1.2em;
@@ -128,9 +134,84 @@ body{
 }
 @media (max-width: 950px) {
     .offer-images{
-        background-color: red;
+        display: none;
+    }
+    .offer-images-carousel{
+        display: block !important;
+    }
+    .offer-info{
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .offer-agent{
+        border-top: 4px solid white;
+        justify-content: flex-start;
+    }
+    .offer-agent, .offer-subinfo{
+        width: 100%;
+        padding: 1em;
+    }
+    .offer-subinfo div{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #e9e6e9;
+        border-radius: 5px;
+    }
+    .offer-agent-image{
+        width: 10em;
+        height: 10em;
     }
 }
+@media (max-width: 750px) {
+    .offer-subinfo div{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .offer-agent-image{
+        width: 8em;
+        height: 8em;
+    }
+}
+@media (max-width: 600px) {
+    .offer-subinfo{
+        font-size: 0.8em;
+        padding: 2em;
+    }
+
+    .offer-agent{
+        flex-direction: column-reverse;
+    }
+    .offer-agent-info{
+        font-size: 0.85em !important;
+        width: 100%;
+        background-color: #e9e6e9 !important;
+        border-radius: 5px;
+        padding: 1em;
+    }
+    .offer-agent-image{
+        margin: 1em;
+    }
+    .offer-agent-image img{
+        width: 8em !important;
+        height: 8em !important;
+    }
+    .offer-description{
+        font-size: 0.85em;
+    }
+}
+
+.carousel-image{
+    object-fit: cover;
+    height: 20em;
+}
+
+.offer-images-carousel{
+    border-top: 2px solid grey;
+    display: none;
+    height: 20em;
+    margin-bottom: 0.5em;
+}
+
 
 
 /* popup styling */
@@ -138,7 +219,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:  translate(-50%, -50%) scale(0);
+    /* transform:  translate(-50%, -50%); scale(0); */
     width: 95%;
     max-width: 1600px;
     height: 90vh;
@@ -150,7 +231,7 @@ body{
     z-index: 5;
     overflow: hidden;
     transition: 1s;
-    opacity: 0;
+    display: none;
 }
 /* .popup.active{
     transform: translate(-50%, -50%) scale(1);
@@ -173,11 +254,11 @@ body{
     padding: 1em;
 }
 .close-btn{
-    opacity: 0;
+    display: none;
     cursor: pointer;
 }
 .arrow-btn{
-    opacity: 0;
+    display: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -196,7 +277,7 @@ body{
     border-radius: 50%;
     padding: 0.4em;
     background-color: #e9e6e9;
-    opacity: 0;
+    display: none;
 }
 .arrow-btn .popup-arrow:hover{
     color: white;
@@ -207,5 +288,5 @@ body{
     width: 80%;
     height: 80%;
     object-fit: contain;
-    opacity: 0;
+    display: none;
 }

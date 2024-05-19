@@ -176,6 +176,8 @@
     </div>
     <!-- nav end -->
 
+
+    <!--popup neshta moje i da gi mahna-->
     <div class="popup">
         <div class="top-bar">
             <i class="close-btn material-icons" style="color: white">clear</i>
@@ -185,6 +187,8 @@
         <!--vsichki snimki shte sa tuk-->
         <img src="img/contacts_background.png" alt="" class="large-image">
     </div>
+    <!--kraj na popup-->
+
 
     <div class="container-fluid offer-images">
         <div class="first big-image">
@@ -199,6 +203,43 @@
         </div>
         <button class="offer-images-buttonShow" id="show"><a href="">Всички снимки</a></button>
     </div>
+
+    <!--carousel za vsichi snimki, toj shte se pokazva samo na malak enkran-->
+    <div id="offer-images-carousel" class="carousel slide offer-images-carousel" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#offer-images-carousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#offer-images-carousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#offer-images-carousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/contacts_background.png" alt="Los Angeles" class="carousel-image d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/scenery.jpg" alt="Chicago" class="carousel-image d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/Начало 2.png" alt="New York" class="carousel-image d-block w-100">
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#offer-images-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#offer-images-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!--kraj na carousel-->
+
     <div class="offer-header row p-4 mb-1">
         <div class="col-8">
             <!--kade shte e zaglavieto na obqwata-->
@@ -209,19 +250,19 @@
         </div>
     </div>
     <div class="offer-info mb-1 p-4 row">
-        <div class="col-6 offer-subinfo d-flex flex-column justify-content-center">
+        <div class="col-3 offer-subinfo d-flex flex-column justify-content-center">
             <h4 class="p-2">Обща информация:</h5>
                 <div class="p-2">
-                    <p>Квадратура: </p>
-                    <p>Етаж: </p>
-                    <p>Строителство: </p>
+                    <p>Строителство: <span class="subinfo-input">тухла</span></p>
+                    <p>Етаж: <span class="subinfo-input">5</span></p>
+                    <p>Квадратура: <span class="subinfo-input">100 000 км2</span></p>
                 </div>
         </div>
-        <div class="col-6 offer-agent d-flex align-items-center">
+        <div class="col-9 offer-agent d-flex align-items-center">
             <div class="offer-agent-image">
                 <img src="" alt="">
             </div>
-            <div class="ps-5">
+            <div class="ps-5 offer-agent-info">
                 <h5>Мирослава Ламбрева</h5>
                 <h5>Боркер</h5>
                 <p><span style="font-weight: 600">Телефон:</span> 0895432535</p>
@@ -244,7 +285,7 @@
                     <input type="email" class="form-control">
                 </div>
                 <div class="col-6 offer-form-area">
-                    <label for="">Телефон за връзка: </label>
+                    <label for="">Телефон: </label>
                     <input type="text" class="form-control">
                 </div>
             </div>
