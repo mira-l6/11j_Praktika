@@ -20,22 +20,23 @@
         $price = $rowgetproperty[$propertyprefix.'_Price'];
         $realtorid = $rowgetproperty[$propertyprefix.'_RealtorID'];
         $quadrature = $rowgetproperty[$propertyprefix.'_Quadrature'];
-        $_SESSION['FloorFlat'] = $row['business_FloorBuilding'];
-        $_SESSION['Gas'] = $row['business_Gas'];
-        $_SESSION['Tpp'] = $row['business_Tpp'];
-        $_SESSION['ConstructionYear'] = $row['business_ConstructionYear'];
-        $_SESSION['ConstructionType'] = $row['business_ConstructionType'];
-        $_SESSION['Description'] = $row['business_Description'];
-        $_SESSION['Features'] = $row['business_Features'];
-        $_SESSION['ForPrivatePeople'] = $row['business_ForPrivatePeople'];
-        $_SESSION['Furnished'] = $row['business_Furnished'];
-        $_SESSION['Country'] = $row['business_Country'];
-        $_SESSION['Province'] = $row['business_Province'];
-        $_SESSION['City'] = $row['business_City'];
-        $_SESSION['Region'] = $row['business_Price'];
-        $_SESSION['Type'] = $row['business_Type'];
-        $_SESSION['PropertyType'] = $row['business_PropertyType'];
-        $_SESSION['UploadTime'] = $row['business_UploadTime'];
+        $floorflat = $rowgetproperty[$propertyprefix.'_FloorFlat'];
+        $floorbuilding = $rowgetproperty[$propertyprefix.'_FloorBuilding'];
+        $gas = $rowgetproperty[$propertyprefix.'_Gas'];
+        $tpp = $rowgetproperty[$propertyprefix.'_Tpp'];
+        $constructionyear = $rowgetproperty[$propertyprefix.'_ConstructionYear'];
+        $constructiontype = $rowgetproperty[$propertyprefix.'_ConstructionType'];
+        $description = $rowgetproperty[$propertyprefix.'_Description'];
+        $features = $rowgetproperty[$propertyprefix.'_Features'];
+        $furnished = $rowgetproperty[$propertyprefix.'_Furnished'];
+        $country = $rowgetproperty[$propertyprefix.'_Country'];
+        $province = $rowgetproperty[$propertyprefix.'_Province'];
+        $city = $rowgetproperty[$propertyprefix.'_City'];
+        $region = $rowgetproperty[$propertyprefix.'_Region'];
+        $propertytype = $rowgetproperty[$propertyprefix.'_Type'];
+        $uploadtime = $rowgetproperty[$propertyprefix.'_UploadTime'];
+        //ako e biznes
+        $businesstype = $rowgetproperty['business_PropertyType'];
     
 /*
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
@@ -234,7 +235,7 @@
     <div class="offer-header row p-4 mb-1">
         <div class="col-8">
             <!--zaglavie na obqwata-->
-            <h3><?php echo $_SESSION['City'] ?></h3>
+            <h3><?php echo $city ?></h3>
         </div>
         <div class="col-4">
             <h4>Цена: <span><?php echo $price ?></span> EUR</h4>
@@ -244,9 +245,9 @@
         <div class="col-6 offer-subinfo d-flex flex-column justify-content-center">
             <h4 class="p-2">Обща информация:</h5>
                 <div class="p-2">
-                    <p>Квадратура: <?php echo $_SESSION['Quadrature'] ?></p>
-                    <p>Етаж: </p>
-                    <p>Строителство: </p>
+                    <p>Квадратура: <?php echo $quadrature ?></p>
+                    <p>Етаж: <?php echo $floorflat.' от '.$floorbuilding ?></p>
+                    <p>Строителство: <?php echo $constructiontype.', '.$constructionyear ?></p>
                 </div>
         </div>
         <div class="col-6 offer-agent d-flex align-items-center">
@@ -263,7 +264,7 @@
     </div>
     <div class="offer-description p-4 mb-1">
         <h4>Описание на имота: </h4>
-        <p><?php echo $_SESSION['Description'] ?>
+        <p><?php echo $description ?>
         </p>
     </div>
     <div class="offer-contact p-4">
