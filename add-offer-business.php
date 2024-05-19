@@ -18,19 +18,19 @@
             return $data;
         }
 
-        $offername = validate($_POST['offername']);
-        $price = validate($_POST['price']);
-        $quadrature = validate($_POST['quadrature']);
-        $floorflat = validate($_POST['floorflat']);
-        $floors = validate($_POST['floors']);
-        $constructionyear = validate($_POST['constructionyear']);
-        $constructiontype = validate($_POST['constructiontype']);
-        $propertytype = validate($_POST['property-type']);
-        $businesstype = validate($_POST['business-type']);
-        $country = validate($_POST['country']);
-        $populatedplace = validate($_POST['populated-place-add']);
-        $townarea = validate($_POST['town-area-add']);
-        $description = validate($_POST['description']);
+        $offername = trim($_POST['offername']);
+        $price = trim($_POST['price']);
+        $quadrature = trim($_POST['quadrature']);
+        $floorflat = trim($_POST['floorflat']);
+        $floors = trim($_POST['floors']);
+        $constructionyear = trim($_POST['constructionyear']);
+        $constructiontype = trim($_POST['constructiontype']);
+        $propertytype = trim($_POST['property-type']);
+        $businesstype = trim($_POST['business-type']);
+        $country = trim($_POST['country']);
+        $populatedplace = trim($_POST['populated-place-add']);
+        $townarea = trim($_POST['town-area-add']);
+        $description = trim($_POST['description']);
         //checkboxovete sa true/false i direktno se prisvoqvat
         $gas = $_POST['gas'];
         $tpp = $_POST['tpp'];
