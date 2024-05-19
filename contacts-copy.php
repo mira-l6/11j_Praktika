@@ -11,6 +11,9 @@
     $adminname = $rowgetadmin['realtor_Name'];
     $adminlastname = $rowgetadmin['realtor_LastName'];
     $adminphone = $rowgetadmin['realtor_PhoneNumber'];
+    $adminexperience = $rowgetadmin['realtor_Experience'];
+    $adminemail = $rowgetadmin['realtor_Email'];
+    $admindescription = $rowgetadmin['realtor_Description'];
 ?>
 <!DOCTYPE html>
 <html lang="bg">
@@ -195,7 +198,10 @@
                        <div class="main-card-image"><img src="/img/JohnDoe.jpg" alt=""></div>
                        <div class="main-card-info">
                         <h4><?php echo $adminname.' '.$adminlastname ?></h4>
+                        <p><?php echo $adminexperience ?></p>
                         <p><?php echo $adminphone ?></p>
+                        <p><?php echo $adminemail ?></p>
+                        <p><?php echo $admindescription ?></p>
                        </div>
                     </div>
 
