@@ -1,5 +1,16 @@
 <?php
     session_start();
+    include 'db_connection.php';
+
+    $sqlgetlogin = "SELECT * FROM `login` WHERE `login_Username`='admin'";
+    $resultgetlogin = mysqli_query($con, $sqlgetlogin);
+    $rowgetlogin = mysqli_fetch_assoc($resultgetlogin);
+    $sqlgetadmin = "SELECT * FROM `realtor` WHERE `realtor_ID`='".$rowgetlogin['login_RealtorID']."'";
+    $resultgetadmin = mysqli_query($con, $sqlgetadmin);
+    $rowgetadmin = mysqli_fetch_assoc($resultgetadmin);
+    $adminname = $rowgetadmin['realtor_Name'];
+    $adminlastname = $rowgetadmin['realtor_LastName'];
+    $adminphone = $rowgetadmin['realtor_PhoneNumber'];
 ?>
 <!DOCTYPE html>
 <html lang="bg">
@@ -183,8 +194,8 @@
                     <div class="main-card d-flex flex-row">
                        <div class="main-card-image"><img src="/img/JohnDoe.jpg" alt=""></div>
                        <div class="main-card-info">
-                        <h4>Мирослава Ламбрева</h4>
-                        <p>0898989898</p>
+                        <h4><?php echo $adminname.' '.$adminlastname ?></h4>
+                        <p><?php echo $adminphone ?></p>
                        </div>
                     </div>
 
