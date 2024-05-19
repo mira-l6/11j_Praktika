@@ -186,8 +186,8 @@
             </div>
             <div class="add-offer-body d-grid">
                 <div class="add-offer-images">
-                    <form action="" method="post" id="form">
-                        <input type="file" id="image-upload-multiple" multiple onchange="preview()">
+                    <form action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
+                        <input type="file" id="image-upload-multiple" name="images[]" multiple onchange="preview()">
                         <label for="image-upload-multiple">Прикачване на
                             снимки</label>
                         <!-- <span class="text-danger">Препоръчително е прикачване наведнъж</span> -->
