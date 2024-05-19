@@ -11,9 +11,9 @@
     $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
     
 
-        $price = $rowgetproperty[$_SESSION['offer_Prefix'].'Price'];
-        $realtorid = $rowgetproperty[$_SESSION['offer_Prefix'].'RealtorID'];
-        $quadrature = $rowgetproperty['business_Quadrature'];
+        $price = $rowgetproperty[$_SESSION['offer_Prefix'].'_Price'];
+        $realtorid = $rowgetproperty[$_SESSION['offer_Prefix'].'_RealtorID'];
+        $quadrature = $rowgetproperty[$_SESSION['offer_Prefix'].'_Quadrature'];
         $_SESSION['FloorFlat'] = $row['business_FloorBuilding'];
         $_SESSION['Gas'] = $row['business_Gas'];
         $_SESSION['Tpp'] = $row['business_Tpp'];
