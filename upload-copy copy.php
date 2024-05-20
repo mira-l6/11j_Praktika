@@ -14,6 +14,7 @@
         {
             $target_file = $targetdirectory . basename($_FILES['images']['name'][$key]);
             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $uploadOk = 1;
 
             //proverka dali e kacheno izobrazhenie
             $check = getimagesize($_FILES['images']['tmp_name'][$key]);
@@ -44,13 +45,13 @@
                 $uploadOk = 0;
             }
 
-            /*
+            
             if($uploadOk == 0) 
             {
                 echo "Файлът не беше качен.";
             } 
             else 
-            {*/
+            {
                 if(move_uploaded_file($_FILES['images']['tmp_name'][$key], $target_file)) 
                 {
                     echo "Файлът ". htmlspecialchars(basename($_FILES['images']['name'][$key])). " беше успешно качен.";
@@ -69,7 +70,7 @@
                 {
                     echo "Възникна грешка при качването на вашия файл.";
                 }
-            /*}*/
+            }
         }
     } 
     else 
