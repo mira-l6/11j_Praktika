@@ -44,13 +44,13 @@
                 $uploadOk = 0;
             }
 
-            
+            /*
             if($uploadOk == 0) 
             {
                 echo "Файлът не беше качен.";
             } 
             else 
-            {
+            {*/
                 if(move_uploaded_file($_FILES['images']['tmp_name'][$key], $target_file)) 
                 {
                     echo "Файлът ". htmlspecialchars(basename($_FILES['images']['name'][$key])). " беше успешно качен.";
@@ -69,7 +69,7 @@
                 {
                     echo "Възникна грешка при качването на вашия файл.";
                 }
-            }
+            /*}*/
         }
     } 
     else 
