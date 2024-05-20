@@ -212,7 +212,7 @@
 
                 <div class="add-offer-location-info">
 
-                    <form id="drop-down-form" action="add-offer-business.php" method="post">
+                    <form id="drop-down-form" action="drop-down-form.php" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
@@ -347,7 +347,7 @@
                     </form>
                 </div>
                 <div class="add-offer-more-info">
-                    <form id="description" action="add-offer-business.php" class="d-flex flex-row align-items-center">
+                    <form id="description" action="description.php" class="d-flex flex-row align-items-center">
                         <div class="add-offer-textareas">
                             <textarea name="description" id="description" cols="30" rows="10" placeholder="Добавете описание"></textarea>
                             <textarea name="features" id="features" cols="30" rows="10" placeholder="Добавете особености"></textarea>
@@ -374,6 +374,7 @@
             document.getElementById('main-offer-form').submit();
             document.getElementById('drop-down-form').submit();
             document.getElementById('description').submit();
+            document.getElementById('form').submit();
         });
     </script>
     
