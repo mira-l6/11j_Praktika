@@ -82,7 +82,7 @@
                         </li> -->
 
                         <li class="nav-item ">
-                            <button class="btn btn-lg btn-pill blc"><a href="contacts.html"
+                            <button class="btn btn-lg btn-pill blc"><a href="contacts.php"
                                     class="nav-link">Контакти</a></button>
                         </li>
 
@@ -175,7 +175,7 @@
                     </li>
 
                     <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="contacts.html"
+                        <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="contacts.php"
                                 class="nav-link ps-3">Контакти</a></button>
                     </li>
 
