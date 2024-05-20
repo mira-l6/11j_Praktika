@@ -275,7 +275,7 @@
                     echo '        <img src="/img/JohnDoe.jpg" alt="">';
                     echo '    </div>';
                     echo '    <div class="agent-info">';
-                    echo '        <h4 class="agent-name">'.$realtorname.$realtorlastname.'</h4>';
+                    echo '        <h4 class="agent-name">'.$realtorname.' '.$realtorlastname.'</h4>';
                     echo '        <p class="agent-experience">'.$realtorexperience.'</p>';
                     echo '        <p class="agent-number">'.$realtorphone.'</p>';
                     echo '        <p class="agent-email">'.$realtoremail.'</p>';
@@ -286,15 +286,6 @@
             ?>
                 <div class="agent">
                     <div class="agent-photo">
-                        <img src="/img/JohnDoe.jpg" alt="">
-                    </div>
-                    <div class="agent-info">
-                        <h4 class="agent-name">Мирослава Ламбрева</h4>
-                        <p class="agent-number">0898989898</p>
-                    </div>
-                </div>
-                <div class="agent">
-                    <div class="agent-photo">
                         <img src="" alt="">
                     </div>
                     <div class="agent-info">
@@ -302,24 +293,7 @@
                         <p class="agent-number">0898989898</p>
                     </div>
                 </div>
-                <div class="agent">
-                    <div class="agent-photo">
-                        <img src="" alt="">
-                    </div>
-                    <div class="agent-info">
-                        <h4 class="agent-name">Мирослава Ламбрева</h4>
-                        <p class="agent-number">0898989898</p>
-                    </div>
-                </div>
-                <div class="agent">
-                    <div class="agent-photo">
-                        <img src="" alt="">
-                    </div>
-                    <div class="agent-info">
-                        <h4 class="agent-name">Мирослава Ламбрева</h4>
-                        <p class="agent-number">0898989898</p>
-                    </div>
-                </div>
+            
             </div>
         </div>
     </div>

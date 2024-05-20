@@ -182,6 +182,8 @@
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
                     <button id="submit-all-forms" type="submit" class="add-offer-button add-button">Запази</button>
+
+                    
                 </div>
             </div>
             <div class="add-offer-body d-grid">
@@ -197,7 +199,7 @@
                 </div>
 
                 <div>
-                    <form action="add-offer-business.php" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
+                    <form action="main-offer-from.php" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
                         <input name="offername" id="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
                         <input name="price" id="price" type="number" class="offer-input" placeholder="Цена(лв)" />
                         <input name="quadrature" id="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
@@ -374,6 +376,7 @@
             document.getElementById('description').submit();
         });
     </script>
+    
 </body>
 
 <script src="./js/uploadMultiplePreview.js"></script>

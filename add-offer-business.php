@@ -6,25 +6,11 @@
 
 
     include "db_connection.php";
+    include "main-offer-form.php";
 
     //offername?
     if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['description']) /*features e незадължително поле; checkboks sa ili 1, ili 0 => nqma da se proverqva s isset*/)
     {
-        function validate($data)
-        {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-
-        $offername = trim($_POST['offername']);
-        $price = trim($_POST['price']);
-        $quadrature = trim($_POST['quadrature']);
-        $floorflat = trim($_POST['floorflat']);
-        $floors = trim($_POST['floors']);
-        $constructionyear = trim($_POST['constructionyear']);
-        $constructiontype = trim($_POST['constructiontype']);
         $propertytype = trim($_POST['property-type']);
         $businesstype = trim($_POST['business-type']);
         $country = trim($_POST['country']);
