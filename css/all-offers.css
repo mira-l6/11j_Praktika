@@ -20,3 +20,6 @@
 .all-offers-dropdown option{
     color: black;
 }
+.all-offers-title select{
+    color: white !important;
+}

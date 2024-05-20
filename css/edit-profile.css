@@ -12,7 +12,31 @@
     justify-content: space-between;
 }
 
-.profile-title button {
+
+.input-1 .edit-profile-input{
+    width: calc(100% - 43.7px - 13.44px);
+}
+.input-2 .edit-profile-input{
+    width: calc(100% - 87.6px - 13.44px);
+}
+.input-3 .edit-profile-input{
+    width: calc(100% - 117.81px - 13.44px);
+}
+.input-4 .edit-profile-input{
+    width: calc(100% - 71.31px - 13.44px);
+}
+.input-5 .edit-profile-input{
+    width: calc(100% - 81.45px - 13.44px);
+}
+.input-6 .edit-profile-input{
+    width: calc(100% - 96.6px - 13.44px);
+}
+.input-7 .edit-profile-input{
+    width: calc(100% - 72.63px - 13.44px);
+}
+
+
+.profile-title .profile-title-buttons button {
     height: 70%;
     background-color: #e6e6e6;
     border: none;
@@ -21,18 +45,19 @@
     border-radius: 10px;
 }
 
-.profile-title button:hover {
+.profile-title .profile-title-buttons button:hover {
     background-color: rgb(180, 183, 180);
 }
-
-.profile-bio form {
+.edit-profile-bio{
+    padding: 0;
+}
+.edit-profile-bio form{
     height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
 }
-
-.edit-profile-bio {
-    padding-top: 2em;
-}
-
 .edit-profile-bio textarea {
     resize: none;
     width: 80%;
@@ -88,36 +113,47 @@
     .edit-profile-image {
         padding: 1em;
     }
+    .button-popup{
+        left: 20% !important;
+        right: 20% !important;
+    }
 }
 
 @media(max-width: 950px) {
     .profile-info {
         height: 40em !important;
     }
+    .profile-title{
+        height: 15%;
+    }
+    .details-space{
+        height: 85%;
+    }
+    .button-popup{
+        left: 10% !important;
+        right: 10% !important;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 665px) {
     .profile-title{
         font-size: 1.4em;
     }
-    .edit-profile-bio textarea {
-        height: 10em;
-    }
-
     .edit-profile-input{
         font-size: 0.9em;
-    }
-
-    .edit-profile-bio {
-        height: 12em;
     }
     .profile-box{
         padding: 1em !important;
     }
+    .button-popup{
+        left: 5% !important;
+        right: 5% !important;
+        text-align: center;
+    }
 }
 @media(max-width: 500px){
     .edit-profile-input{
-        width: 100%;
+        width: 100% !important;
         margin-left: 0;
         margin-top: 1em;
     }
@@ -135,8 +171,70 @@
         padding: 0.5em !important;
     }
 }
+@media(max-width: 450px){
+    .profile-title-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 0.2em;
+    }
+}
+
+/* button popup */
+
+.button-popup{
+    visibility: hidden;
+    position: fixed;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    top: 30%;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.show {
+    visibility: visible !important;
+}
+
+.deny-button, .add-form button{
+    font-size: 0.64em;
+    border: none;
+    background-color: rgb(199, 203, 199);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 10px;
+}
+.deny-button:hover{
+    background-color: rgb(230, 117, 117);
+}
+.add-form button:hover{
+    background-color: rgb(112, 199, 112);
+}
+.add-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-buttons{
+    gap: 0.5em;
+    margin-top: 0.8em;
+}
+
+.page-mask {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+  
 
 
+
+/* ako e nujno da stane edin form, tova e stila */
 
 /*.info-form {
     grid-column: 1/4;
