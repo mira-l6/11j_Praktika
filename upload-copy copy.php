@@ -12,7 +12,7 @@
         //obhozhdane na vsichki snimki
         foreach($_FILES['images']['name'] as $key => $val) 
         {
-            $target_file = $target_dir . basename($_FILES['images']['name'][$key]);
+            $target_file = $targetdirectory . basename($_FILES['images']['name'][$key]);
             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
             //proverka dali e kacheno izobrazhenie
