@@ -244,7 +244,23 @@ input[type="file"]{
         left: 5% !important;
         right: 5% !important;
     }
-    
+    .agent-info form{
+        width: 22em;
+    }
+    .add-agent-body{
+        padding: 0.4em !important;
+    }
+    .agent-more-info textarea{
+        width: 100%;
+    }
+    .add-agent-buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    .add-agent-button{
+        height: 3em;
+        width: 5.5em;
+    }
 }
 
 

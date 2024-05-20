@@ -172,7 +172,16 @@
                     <h2>Редактиране на брокер</h2>
                     <div class="add-agent-buttons">
                         <button class="add-agent-button delete-button">Отмени</button>
-                        <button class="add-agent-button add-button" id="button-agent-add">Запази</button>
+                        <button class="add-agent-button add-button" id="button-agent-add" onclick="popupShow()">Запази</button>
+                    </div>
+                    <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
+                        <h5>Сигурни ли сте, че искате да приемете промените?</h5>
+                        <div class="d-flex align-items-center popup-buttons">
+                            <button class="deny-button" onclick="popupClose()">Отказ</button>
+                            <form class="add-form" action="" method="post">
+                                <button type="submit">Добавяне</button>
+                            </form>
+                        </div>
                     </div>
             </div>
             
@@ -229,8 +238,9 @@
 
         </div>
 
-
+        <div id="pageMask" class="page-mask"></div>
         <script src="/js/uploadPreview.js"></script>
         <script src="/js/passwordShow.js"></script>
+        <script src="/js/editProfilePopup.js"></script>
     </body>
 </html>
