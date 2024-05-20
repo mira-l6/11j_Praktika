@@ -7,21 +7,16 @@
 
     include "db_connection.php";
     include "main-offer-form.php";
+    include "drop-down-form.php";
+    include "description.php";
 
-    //offername?
-    if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['description']) /*features e незадължително поле; checkboks sa ili 1, ili 0 => nqma da se proverqva s isset*/)
-    {
         $propertytype = trim($_POST['property-type']);
         $businesstype = trim($_POST['business-type']);
         $country = trim($_POST['country']);
         $populatedplace = trim($_POST['populated-place-add']);
         $townarea = trim($_POST['town-area-add']);
         $description = trim($_POST['description']);
-        //checkboxovete sa true/false i direktno se prisvoqvat
-        $gas = $_POST['gas'];
-        $tpp = $_POST['tpp'];
-        $forprivatepeople = $_POST['forprivatepeople'];
-        $furnished = $_POST['furnished'];
+        
         $realtorid = $_SESSION['login_RealtorID'];
 
         if(empty($offername))
@@ -87,13 +82,7 @@
         //features e незадължително поле
         else
         {
-            //ako ima zadadeni osobenosti, dannite se validirat.
-            if(isset($_POST['features']))
-            {
-                $features = $_POST['features'];
-                $features = trim($features);
-                $features = htmlspecialchars($features);
-            }
+            
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_Realtor_ID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
                         VALUES ($price, $realtorid, $quadrature, $floorflat, $floors, $gas, $tpp, $constructionyear, $constructiontype, $description, $features, $forprivatepeople, $furnished, $country, $populatedplace, $offername, $townarea,$businesstype, $propertytype)"; 
             $result = mysqli_query($con, $sql);
@@ -110,11 +99,3 @@
                         VALUES('business_property', $, $, `business`)";
             $resultaddoffer = mysqli_query($con, $sqladdoffer);*/
         }
-    }
-    else
-    {
-        header("Location: add-offer-business.html?не бачкам");
-        exit();
-    }
-
-    
