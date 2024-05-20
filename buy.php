@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include "db_connection.php";
+    include "filter.php";
+?>
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -283,6 +288,50 @@
                 <div class="filter-search-button">
                     <button class="p-3"><i class="material-icons">sort</i>Филтрирай</button>
                 </div>
+
+                <?php
+                    for($i = 0; $i < $offerscount; $i++)
+                    {
+                        $offer = $offers[$i];
+                        
+                        $offertable = $offer['offer_Table'];
+                        $_SESSION['offer_Table'] = $offertable;
+                        $offerprefix = $offer['offer_Prefix'];
+                        $_SESSION['offer_Prefix'] = $offerprefix;
+                        $propertyid = $offer['offer_Prefix'] . "_ID";
+                        $_SESSION['property_ID'] = $propertyid;
+                        $rowgetnewofferid = $offer['offer_PropertyID'];
+                        
+                        $sqlgetofferobj = "SELECT * FROM `".$offertable."` WHERE `".$propertyid."`='$rowgetnewofferid'";
+                        
+                        $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
+                        
+    
+                        $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
+                        
+                        $price = $offerprefix.'_Price';
+                        $name = $offerprefix.'_City';
+                        $province = $offerprefix.'_Province';
+                        $region = $offerprefix.'_Region';
+                        $offerprice = $rowgetofferobj[$price];
+                        $offername = $rowgetofferobj[$name];
+                        $offerprovince = $rowgetofferobj[$province];
+                        $offerregion = $rowgetofferobj[$region];
+    
+                        echo '<div class="offer">';
+                        echo '<div class="offer-images">';
+                        echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
+                        echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
+                        echo '<p><span>'.$offername.'</span></p>';
+                        echo '<h6>'.$offerprovince.'</h6>';
+                        echo '<h6>'.$offerregion.'</h6>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                ?>
             </div>
         </section>
         <!-- filter end -->

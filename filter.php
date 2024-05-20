@@ -12,19 +12,19 @@
     //value = all v html faila
     if(isset($_POST['property-type']))
     {
-        $property_type = validate($_POST['property-type']);
+        $property_type = trim($_POST['property-type']);
     }
     if(isset($_POST['populated-place']))
     {
-        $populated_place = validate($_POST['populated-place']);
+        $populated_place = trim($_POST['populated-place']);
     }
     if(isset($_POST['town-area']))
     {
-        $town_area = validate($_POST['town-area']);
+        $town_area = trim($_POST['town-area']);
     }
     if(isset($_POST['max-price']))
     {
-        $max_price = validate($_POST['max-price']);
+        $max_price = trim($_POST['max-price']);
     }
     else
     {
@@ -39,11 +39,11 @@
         $quadrature = null;
     }
    
-    
-    function validate($data)
+    $sqlgetoffer = "";
+    $resultgetoffer = mysqli_query($con, $sqlgetoffer);
+    $offerscount = mysqli_num_rows($resultgetoffer);
+
+    while ($rowgetoffer = mysqli_fetch_assoc($resultgetoffer)) 
     {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
+        $offers[] = $rowgetoffer;
     }
