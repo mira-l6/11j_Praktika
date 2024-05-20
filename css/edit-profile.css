@@ -36,7 +36,7 @@
 }
 
 
-.profile-title button {
+.profile-title .profile-title-buttons button {
     height: 70%;
     background-color: #e6e6e6;
     border: none;
@@ -45,7 +45,7 @@
     border-radius: 10px;
 }
 
-.profile-title button:hover {
+.profile-title .profile-title-buttons button:hover {
     background-color: rgb(180, 183, 180);
 }
 .edit-profile-bio{
@@ -113,6 +113,10 @@
     .edit-profile-image {
         padding: 1em;
     }
+    .button-popup{
+        left: 20% !important;
+        right: 20% !important;
+    }
 }
 
 @media(max-width: 950px) {
@@ -125,25 +129,26 @@
     .details-space{
         height: 85%;
     }
+    .button-popup{
+        left: 10% !important;
+        right: 10% !important;
+    }
 }
 
 @media (max-width: 665px) {
     .profile-title{
         font-size: 1.4em;
     }
-    /* .edit-profile-bio textarea {
-        height: 10em;
-    } */
-
     .edit-profile-input{
         font-size: 0.9em;
     }
-
-    /* .edit-profile-bio {
-        height: 12em;
-    } */
     .profile-box{
         padding: 1em !important;
+    }
+    .button-popup{
+        left: 5% !important;
+        right: 5% !important;
+        text-align: center;
     }
 }
 @media(max-width: 500px){
@@ -174,6 +179,62 @@
     }
 }
 
+/* button popup */
+
+.button-popup{
+    visibility: hidden;
+    position: fixed;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    top: 30%;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.show {
+    visibility: visible !important;
+}
+
+.deny-button, .add-form button{
+    font-size: 0.64em;
+    border: none;
+    background-color: rgb(199, 203, 199);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 10px;
+}
+.deny-button:hover{
+    background-color: rgb(230, 117, 117);
+}
+.add-form button:hover{
+    background-color: rgb(112, 199, 112);
+}
+.add-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-buttons{
+    gap: 0.5em;
+    margin-top: 0.8em;
+}
+
+.page-mask {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+  
+
+
+
+/* ako e nujno da stane edin form, tova e stila */
 
 /*.info-form {
     grid-column: 1/4;
