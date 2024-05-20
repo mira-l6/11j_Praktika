@@ -192,26 +192,26 @@
 
         <div class="profile-box p-5">
             <div class="d-grid profile-layout mt-4">
-                <form action="" method="post">
-                    <div class="grid-item profile-info">
-                        <div class="profile-title d-flex flex-row">
-                            <p class="p-1">Редактиране на профил</p>
-                            <div>
-                                <button>Отмени</button>
-                                <button type="submit">Запази</button>
-                            </div>
+                <div class="grid-item profile-info">
+                    <div class="profile-title d-flex flex-row">
+                        <p class="p-1">Редактиране на профил</p>
+                        <div class="profile-title-buttons">
+                            <button>Отмени</button>
+                            <button>Запази</button>
                         </div>
-                        <div class="details-space d-flex flex-column justify-content-around">
-                            <div class="profile-subtitle p-4 d-grid">
+                    </div>
+                    <div class="details-space d-flex flex-column justify-content-around">
+                        <div class="profile-subtitle p-4 d-grid">
+                            <form action="">
                                 <div class="row">
                                     <div class="col-6">
-                                        <p><span class="input-title">Име:</span><input
+                                        <p class="input-1"><span class="input-title">Име:</span><input
                                                 value="<?php echo $_SESSION['name'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
-                                        <p><span class="input-title">Фамилия:</span><input
+                                        <p class="input-2"><span class="input-title">Фамилия:</span><input
                                                 value="<?php echo $_SESSION['lastname'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
@@ -220,13 +220,13 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-6">
-                                        <p><span class="input-title">Потребител:</span> <input
+                                        <p class="input-3"><span class="input-title">Потребител:</span> <input
                                                 value="<?php echo $_SESSION['login_Username'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
-                                        <p><span class="input-title">Имейл: </span><input
+                                        <p class="input-4"><span class="input-title">Имейл: </span><input
                                                 value="<?php echo $_SESSION['email'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
@@ -235,13 +235,13 @@
                                 <hr>
                                 <div class="row pt-2">
                                     <div class="col-6">
-                                        <p><span class="input-title">Телефон:</span><input
+                                        <p class="input-5"><span class="input-title">Телефон:</span><input
                                                 value="<?php echo $_SESSION['phone'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
-                                        <p><span class="input-title">Длъжност:</span><input
+                                        <p class="input-6"><span class="input-title">Длъжност:</span><input
                                                 value="<?php echo $_SESSION['experience'] ?>"
                                                 class="edit-profile-input"></input>
                                         </p>
@@ -250,22 +250,17 @@
                                 <hr>
                                 <div class="row">
                                     <div class="password-area col-6">
-                                        <p><span class="input-title">Парола:</span><input value=""
+                                        <p class="input-7"><span class="input-title">Парола:</span><input value=""
                                                 class="edit-profile-input" type="password"></input></p>
                                     </div>
                                     <div class="change-password-area col-6">
                                         <button class="btn"><a href="reset-pass.html">Смяна на парола</a></button>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
-
-                    <div class="grid-item profile-bio edit-profile-bio d-flex justify-content-center align-items-center">
-                        <textarea name="" id="" placeholder="Допишете допълнителна информация..."></textarea>
-                    </div>
-
-                </form>
+                </div>
 
                 <div
                     class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
@@ -273,6 +268,12 @@
                         <img id="uploadPreview" />
                         <label for="photo-input" class="agent-photo-custom-upload">Качи файл</label>
                         <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
+                    </form>
+                </div>
+
+                <div class="grid-item profile-bio edit-profile-bio d-flex justify-content-center align-items-center">
+                    <form action="">
+                        <textarea name="" id="" placeholder="Допишете допълнителна информация..."></textarea>
                     </form>
                 </div>
 

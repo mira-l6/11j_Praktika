@@ -12,6 +12,30 @@
     justify-content: space-between;
 }
 
+
+.input-1 .edit-profile-input{
+    width: calc(100% - 43.7px - 13.44px);
+}
+.input-2 .edit-profile-input{
+    width: calc(100% - 87.6px - 13.44px);
+}
+.input-3 .edit-profile-input{
+    width: calc(100% - 117.81px - 13.44px);
+}
+.input-4 .edit-profile-input{
+    width: calc(100% - 71.31px - 13.44px);
+}
+.input-5 .edit-profile-input{
+    width: calc(100% - 81.45px - 13.44px);
+}
+.input-6 .edit-profile-input{
+    width: calc(100% - 96.6px - 13.44px);
+}
+.input-7 .edit-profile-input{
+    width: calc(100% - 72.63px - 13.44px);
+}
+
+
 .profile-title button {
     height: 70%;
     background-color: #e6e6e6;
@@ -24,15 +48,16 @@
 .profile-title button:hover {
     background-color: rgb(180, 183, 180);
 }
-
-.profile-bio form {
+.edit-profile-bio{
+    padding: 0;
+}
+.edit-profile-bio form{
     height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
 }
-
-.edit-profile-bio {
-    padding-top: 2em;
-}
-
 .edit-profile-bio textarea {
     resize: none;
     width: 80%;
@@ -94,30 +119,36 @@
     .profile-info {
         height: 40em !important;
     }
+    .profile-title{
+        height: 15%;
+    }
+    .details-space{
+        height: 85%;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 665px) {
     .profile-title{
         font-size: 1.4em;
     }
-    .edit-profile-bio textarea {
+    /* .edit-profile-bio textarea {
         height: 10em;
-    }
+    } */
 
     .edit-profile-input{
         font-size: 0.9em;
     }
 
-    .edit-profile-bio {
+    /* .edit-profile-bio {
         height: 12em;
-    }
+    } */
     .profile-box{
         padding: 1em !important;
     }
 }
 @media(max-width: 500px){
     .edit-profile-input{
-        width: 100%;
+        width: 100% !important;
         margin-left: 0;
         margin-top: 1em;
     }
@@ -135,7 +166,13 @@
         padding: 0.5em !important;
     }
 }
-
+@media(max-width: 450px){
+    .profile-title-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 0.2em;
+    }
+}
 
 
 /*.info-form {
