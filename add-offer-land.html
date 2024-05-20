@@ -181,7 +181,16 @@
                 <h2>Добавяне на земеделска земя</h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
-                    <button class="add-offer-button add-button">Запази</button>
+                    <button class="add-offer-button add-button" onclick="popupShow()">Запази</button>
+                </div>
+                <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
+                    <h5>Сигурни ли сте, че искате да приемете промените?</h5>
+                    <div class="d-flex align-items-center popup-buttons">
+                        <button class="deny-button" onclick="popupClose()">Отказ</button>
+                        <form class="add-form" action="" method="post">
+                            <button type="submit">Добавяне</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="add-offer-body d-grid">
@@ -349,10 +358,12 @@
 
     </div>
 
+    <div id="pageMask" class="page-mask"></div>
     <script src="./js/uploadMultiplePreview.js"></script>
     <script src="./js/addOfferFilters.js"></script>
     <script src="./js/filter-add-land.js"></script>
     <script src="./js/homeFetch.js"></script>
+    <script src="/js/editProfilePopup.js"></script>
 </body>
 
 </html>

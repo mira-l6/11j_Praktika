@@ -36,6 +36,7 @@
     background-color: rgb(111, 208, 111);
 }
 
+
 .add-offer-body{
     height: calc(100vh - 184.8px);
     /* background-color: var(--color-primary); */
@@ -299,6 +300,10 @@ textarea:first-child{
         border-top-left-radius: 0;
         border-left: 1px solid var(--color-primary);
     }
+    .button-popup{
+        left: 20% !important;
+        right: 20% !important;
+    }
 }
 
 @media(max-width: 870px){
@@ -338,6 +343,10 @@ textarea:first-child{
     textarea{
         width: 40%;
     }
+    .button-popup{
+        left: 10% !important;
+        right: 10% !important;
+    }
 }
 @media(max-width: 700px){
     figure{
@@ -351,6 +360,10 @@ textarea:first-child{
     }
     .add-offer-checkboxes span{
         padding: 0.4em;
+    }
+    .button-popup{
+        left: 5% !important;
+        right: 5% !important;
     }
 }
 @media(max-width: 650px){
@@ -393,6 +406,61 @@ textarea:first-child{
         margin-bottom: 0.3em;
     }
 }
+
+/* button popup */
+
+.button-popup{
+    text-align: center;
+    visibility: hidden;
+    position: fixed;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    top: 30%;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.show {
+    visibility: visible !important;
+}
+
+.deny-button, .add-form button{
+    font-size: 1em !important;
+    font-size: 0.64em;
+    border: none;
+    background-color: rgb(199, 203, 199);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 10px;
+}
+.deny-button:hover{
+    background-color: rgb(230, 117, 117);
+}
+.add-form button:hover{
+    background-color: rgb(112, 199, 112);
+}
+.add-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-buttons{
+    gap: 0.5em;
+    margin-top: 0.8em;
+}
+
+.page-mask {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+  
 
 
 
