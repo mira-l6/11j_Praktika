@@ -15,7 +15,7 @@
             $features = trim($_POST['features']);
         }
 
-        //exit();
+        exit();
     }
     else
     {
