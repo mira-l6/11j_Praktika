@@ -151,35 +151,35 @@ $businesstype = $rowgetproperty['business_PropertyType'];
                         <a class="ps-3">Услуги</a>
                     </button>
                     <div id="service" class="collapse container-fluid p-0">
-                        <ul class="navbar-nav w-100">
+                        <ul class="navbar-nav w-100 services-nav">
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="#">Покупка</a>
+                                    <a class="nav-link text-start ps-4" href="buy.php">Покупка</a>
                                 </button>
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="#">Продажба</a>
+                                    <a class="nav-link text-start ps-4" href="sell.html">Продажба</a>
                                 </button>
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="#">Наемане</a>
+                                    <a class="nav-link text-start ps-4" href="rent.html">Наемане</a>
                                 </button>
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="#">Отдаване на наем</a>
+                                    <a class="nav-link text-start ps-4" href="for-rent.html">Отдаване на наем</a>
                                 </button>
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="#">Финансова консултация</a>
+                                    <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова консултация</a>
                                 </button>
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="#">Юридическа консултация</a>
+                                    <a class="nav-link text-start ps-4" href="legal-consulting.html">Юридическа консултация</a>
                                 </button>
                             </li>
                         </ul>

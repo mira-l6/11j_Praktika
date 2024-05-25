@@ -172,7 +172,7 @@ a {
 }
 
 .btn-marked {
-  background-color: var(--color-primary);  
+  background-color: rgb(232, 204, 126);
 }
 
 .btn-marked:hover {
@@ -197,7 +197,7 @@ a {
 }
 
 .yellow-button{
-  box-shadow: -2px 0px 27px 7px rgba(59, 57, 59, 0.4);
+  color: black;
 }
 
 .profile-icon{
@@ -225,6 +225,13 @@ a {
 .fa-user{
   font-size: 1.3em;
 }
+.services-nav li{
+  background-color: #e9e9e9;
+}
+.services-nav{
+  border-top: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+}
 
 /*heading media changes START*/
 @media(max-width: 1140px){
@@ -248,3 +255,9 @@ a {
 }
 
 /*nav-bar media changes END*/
+
+@media(max-width: 400px){
+  .yellow-button{
+    width: 7em;
+  }
+}
