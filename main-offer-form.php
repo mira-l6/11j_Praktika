@@ -12,7 +12,7 @@
         $constructionyear = trim($_POST['constructionyear']);
         $constructiontype = trim($_POST['constructiontype']);
 
-        exit();
+        //exit();
     }
     else
     {
