@@ -9,7 +9,7 @@
     include "main-offer-form.php";
     include "drop-down-form.php";
     include "description.php";
-    include "upload-copy copy";
+    include "upload-copy copy.php";
         
         $realtorid = $_SESSION['login_RealtorID'];
             
@@ -22,13 +22,12 @@
                 $last_id = mysqli_insert_id($con);
                 // zapazva go
                 $_SESSION['last_id'] = $last_id;
-                exit();
             }
 
-            $sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', $offer_id)";
+            $sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', '$offer_id')";
             if (mysqli_query($con, $sql_img)) 
             {
-                echo "Информацията за изображението беше успешно запазена в базата данни.";
+                //echo "Информацията за изображението беше успешно запазена в базата данни.";
             } 
             else 
             {

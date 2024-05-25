@@ -21,4 +21,4 @@
     {
         header("Location: add-offer-business.html?descriprion se precaka");
         exit();
-    }
+    } 
