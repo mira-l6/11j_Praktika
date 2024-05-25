@@ -29,7 +29,7 @@
     }
     else
     {
-        header("Location: add-offer-business.html?main-offer-form se precaka");
+        header("Location: add-offer-business.html?main-offer-form se precaka v add biznes");
         exit();
     } 
 
