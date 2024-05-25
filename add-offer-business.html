@@ -373,15 +373,18 @@
 
     </div>
 
-    <div id="pageMask" class="page-mask"></div>
-<script src="./js/uploadMultiplePreview.js"></script>
-<script src="./js/addOfferFilters.js"></script>
-<script src="./js/filter-add.js"></script>
-<script src="./js/homeFetch.js"></script>
-<script src="/js/editProfilePopup.js"></script>
-</html>
     <script>
         document.getElementById('submit-all-forms').addEventListener('click', function(event) 
+        {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('form').submit();
+            document.getElementById('main-offer-form').submit();
+            document.getElementById('drop-down-form').submit();
+            document.getElementById('description').submit();
+        });
+    </script>
+    <script>
+        /*document.getElementById('submit-all-forms').addEventListener('click', function(event) 
         {
             event.preventDefault(); // Prevent the default form submission
 
@@ -428,7 +431,7 @@
             .catch(error => {
                 console.error('Error:', error);
             });
-        });
+        });*/
     </script>
     
 </body>
