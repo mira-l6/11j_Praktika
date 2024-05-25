@@ -373,17 +373,10 @@
 
     </div>
 
+    
     <script>
-        /*document.getElementById('submit-all-forms').addEventListener('click', function(event) 
-        {
-            event.preventDefault(); // Prevent the default form submission
-            document.getElementById('form').submit();
-            document.getElementById('main-offer-form').submit();
-            document.getElementById('drop-down-form').submit();
-            document.getElementById('description').submit();
-        });*/
-    </script>
-    <script>
+    document.addEventListener('DOMContentLoaded', function() 
+    {
         document.getElementById('submit-all-forms').addEventListener('click', function(event) 
         {
             event.preventDefault(); // Prevent the default form submission
@@ -411,9 +404,9 @@
             for (let [key, value] of descriptionFormData.entries()) {
                 combinedFormData.append(key, value);
             }
-            for (let [key, value] of imageUploadFormData.entries()) {
+            /*for (let [key, value] of imageUploadFormData.entries()) {
                 combinedFormData.append(key, value);
-            }
+            }*/
 
             // Send the combined data to the add-offer-business.php using Fetch API
             fetch('add-offer-business.php', {
@@ -438,6 +431,7 @@
             // Collect form data
             document.getElementById('form').submit();
         });
+    });
     </script>
     
 </body>
