@@ -12,10 +12,18 @@
 
 .sell-advice-answer{
     background-color: var(--color-primary);
+    text-align: justify;
     font-size: 1.2em;
     line-height: 2;
+    color: rgb(24, 24, 24);
+}
+
+.sell-advice-section{
     padding: 2em;
-    color: #263159;
+    width: 100%;
+}
+.sell-advice-section:first-child, .sell-advice-section:nth-child(2){
+    border-bottom: 7px solid rgba(228,228,228,1);;
 }
 
 .sell-advice-question{
@@ -34,4 +42,13 @@
 }
 .sell-button>button>a{
     width: 100%;
+}
+.sell-button button:hover{
+    background-color: rgb(182, 182, 182);
+}
+
+@media(max-width: 470px){
+    .sell-title{
+        padding: 0.5em !important;
+    }
 }
