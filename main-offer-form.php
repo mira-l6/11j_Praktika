@@ -12,10 +12,10 @@
         $constructionyear = trim($_POST['constructionyear']);
         $constructiontype = trim($_POST['constructiontype']);
 
-        exit();
+        //exit();
     }
     else
     {
         header("Location: add-offer-business.html?main-offer-form se precaka");
         exit();
-    }
+    } 

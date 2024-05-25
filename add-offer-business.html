@@ -188,7 +188,7 @@
                     <div class="d-flex align-items-center popup-buttons">
                         <button class="deny-button" onclick="popupClose()">Отказ</button>
                         <form class="add-form" action="add-offer-business.php" method="post">
-                            <button type="submit">Добавяне</button>
+                            <button id="popup-submit" type="submit" onclick="popupClose()">Добавяне</button>
                         </form>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                 </div>
 
                 <div>
-                    <form action="main-offer-from.php" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
+                    <form action="main-offer-form.php" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
                         <input name="offername" id="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
                         <input name="price" id="price" type="number" class="offer-input" placeholder="Цена(лв)" />
                         <input name="quadrature" id="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
@@ -374,14 +374,69 @@
     </div>
 
     <script>
-        document.getElementById('submit-all-forms').addEventListener('click', function(event) 
+        /*document.getElementById('submit-all-forms').addEventListener('click', function(event) 
         {
             event.preventDefault(); // Prevent the default form submission
-            //document.getElementById('form').submit();
+            document.getElementById('form').submit();
             document.getElementById('main-offer-form').submit();
             document.getElementById('drop-down-form').submit();
             document.getElementById('description').submit();
+        });*/
+    </script>
+    <script>
+        document.getElementById('submit-all-forms').addEventListener('click', function(event) 
+        {
+            event.preventDefault(); // Prevent the default form submission
+
+            
             //document.getElementById('form').submit();
+            //document.getElementById('main-offer-form').submit();
+            //document.getElementById('drop-down-form').submit();
+            //document.getElementById('description').submit();
+
+            // Display the popup
+            //document.getElementById('popup').style.display = 'block';
+        });
+
+        document.getElementById('popup-submit').addEventListener('click', function() 
+        {
+            // Hide the popup
+            //document.getElementById('popup').style.display = 'none';
+
+            // Collect form data
+            const mainOfferFormData = new FormData(document.getElementById('main-offer-form'));
+            const dropDownFormData = new FormData(document.getElementById('drop-down-form'));
+            const descriptionFormData = new FormData(document.getElementById('description'));
+            const imageUploadFormData = new FormData(document.getElementById('form'));
+
+            // Merge all form data into one FormData object
+            const combinedFormData = new FormData();
+            for (let [key, value] of mainOfferFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            for (let [key, value] of dropDownFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            for (let [key, value] of descriptionFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            for (let [key, value] of imageUploadFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+
+            // Send the combined data to the add-offer-business.php using Fetch API
+            fetch('add-offer-business.php', {
+                method: 'POST',
+                body: combinedFormData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                // Optionally handle the response, redirect, or show a success message
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         });
     </script>
     
