@@ -396,18 +396,9 @@
 
             // Display the popup
             //document.getElementById('popup').style.display = 'block';
-        });
-
-        document.getElementById('popup-submit').addEventListener('click', function() 
-        {
-            // Hide the popup
-            //document.getElementById('popup').style.display = 'none';
-
-            // Collect form data
             const mainOfferFormData = new FormData(document.getElementById('main-offer-form'));
             const dropDownFormData = new FormData(document.getElementById('drop-down-form'));
             const descriptionFormData = new FormData(document.getElementById('description'));
-            const imageUploadFormData = new FormData(document.getElementById('form'));
 
             // Merge all form data into one FormData object
             const combinedFormData = new FormData();
@@ -437,6 +428,15 @@
             .catch(error => {
                 console.error('Error:', error);
             });
+        });
+
+        document.getElementById('popup-submit').addEventListener('click', function() 
+        {
+            // Hide the popup
+            //document.getElementById('popup').style.display = 'none';
+
+            // Collect form data
+            document.getElementById('form').submit();
         });
     </script>
     
