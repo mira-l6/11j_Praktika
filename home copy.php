@@ -386,30 +386,8 @@
                     echo '<div class="offer">';
                     echo '<div class="offer-images">';
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
-                    echo '<div class="carousel-indicators">';
-                    echo '</div>';
-                    //slideshow carousel
-                    echo '<div class="carousel-inner">';
-                    //edna sn
-                    echo '<div class="carousel-item active">';
-                    echo '<img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">';
-                    echo '</div>';
-                    //edna sn
-                    echo '<div class="carousel-item active">';
-                    echo '<img src="img/Начало 2.png" alt="Office" class="d-block w-100">';
-                    echo '</div>';
-                    //left and right control items
-                    echo '<button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
-                    data-bs-slide="prev">';
-                    echo '<span class="carousel-control-prev-icon"></span>';
-                    echo '</button>';
-                    echo '<button class="carousel-control-next" type="button" data-bs-target="#offer-carousel"
-                    data-bs-slide="next">';
-                    echo '<span class="carousel-control-next-icon"></span>';
-                    echo '</button>';
                     echo '</div>';
                     echo '</div>';
-                    //end of carousel
                     echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
                     echo '<p><span>'.$offername.'</span></p>';
