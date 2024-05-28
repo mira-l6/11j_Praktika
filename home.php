@@ -385,8 +385,15 @@
 
                     echo '<div class="offer">';
                     echo '<div class="offer-images">';
+                    //carousel
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
+                    //indicators
                     echo '<div class="carousel-indicators">';
+                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="0"
+                    class="active"></button>';
+                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="1"></button>';
+                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="2"></button>';
+                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="3"></button>';
                     echo '</div>';
                     //slideshow carousel
                     echo '<div class="carousel-inner">';
@@ -397,6 +404,7 @@
                     //edna sn
                     echo '<div class="carousel-item active">';
                     echo '<img src="img/Начало 2.png" alt="Office" class="d-block w-100">';
+                    echo '</div>';
                     echo '</div>';
                     //left and right control items
                     echo '<button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
