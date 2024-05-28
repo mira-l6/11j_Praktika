@@ -388,6 +388,7 @@
                     //carousel
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     //indicators
+                    /*
                     echo '<div class="carousel-indicators">';
                     echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="0"
                     class="active"></button>';
@@ -422,7 +423,7 @@
                         echo '<img src="img/image.jpg" alt="Los Angeles" class="d-block w-100">';
                         echo '</div>';
                     }*/
-                    
+                    /*
                     echo '</div>';
                     //left and right control items
                     echo '<button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
@@ -434,6 +435,7 @@
                     echo '<span class="carousel-control-next-icon"></span>';
                     echo '</button>';
                     echo '</div>';
+                    */
                     echo '</div>';
                     //end of carousel
                     echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
