@@ -398,7 +398,8 @@
                     //slideshow carousel
                     echo '<div class="carousel-inner">';
 
-                    $sqlgetpics = "SELECT * FROM `".$offertable."_Images` WHERE `".$offerprefix."_OfferID`='$propertyid'";
+                    $picofferid = $offerprefix."_OfferID";
+                    $sqlgetpics = "SELECT * FROM `".$offertable."_Images` WHERE `".$picofferid."`='$propertyid'";
                     $resultgetpics = mysqli_query($con, $sqlgetpics);
                     $picscount = mysqli_num_rows($resultgetpics);
                     $pics = array();
