@@ -397,14 +397,31 @@
                     echo '</div>';
                     //slideshow carousel
                     echo '<div class="carousel-inner">';
-                    //edna sn
-                    echo '<div class="carousel-item active">';
-                    echo '<img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">';
-                    echo '</div>';
-                    //edna sn
-                    echo '<div class="carousel-item active">';
-                    echo '<img src="img/Начало 2.png" alt="Office" class="d-block w-100">';
-                    echo '</div>';
+
+                    $sqlgetpics = "SELECT * FROM `".$offertable."_Images` WHERE `".$offerprefix."_OfferID`='$propertyid'";
+                    $resultgetpics = mysqli_query($con, $sqlgetpics);
+                    $picscount = mysqli_num_rows($resultgetpics);
+                    $pics = array();
+                
+                    while ($rowgetpic = mysqli_fetch_assoc($resultgetpics)) 
+                    {
+                        $pics[] = $rowgetpics;
+                    }
+    
+                    
+                        $offer = $offers[$i];
+                    //cikul za snimkite
+                    for($j = 0; $j < $picscount; $j++)
+                    {
+                        $pic = $offers[$j];
+                        $imgurlsess = $offertable.'_Image_Url';
+                        $picurl = $pic[$imgurlsess];
+                        $_SESSION['picurl'] = $picurl;
+                        echo '<div class="carousel-item active">';
+                        echo '<img src="'.$picurl.'" alt="Los Angeles" class="d-block w-100">';
+                        echo '</div>';
+                    }
+                    
                     echo '</div>';
                     //left and right control items
                     echo '<button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
