@@ -33,6 +33,10 @@
                 // zapazva go
                 $_SESSION['last_id'] = $last_id;
             }
+            if(!$result)
+            {
+                echo "Добавянето на офертата в бизнес проперти не стана.";
+            }
 
             /*$sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', '$offer_id')";
             if (mysqli_query($con, $sql_img)) 
@@ -47,9 +51,17 @@
 
             $sqlgettime = "SELECT * FROM `business_property` WHERE `business_ID`='$last_id'";
             $resultgettime = mysqli_query($con, $sqlgettime);
+            if(!$resultgettime)
+            {
+                echo "Взимането на последния бизнес имот беше неуспешно.";
+            }
             $rowgettime = mysqli_fetch_assoc($sqlgettime);
             $timeofupload = $rowgettime['business_TimeOfUpload'];
 
             $sqladdoffer = "INSERT INTO `offer`(`offer_Table`, `offer_PropertyID`, `offer_TimeOfUpload`, `offer_Prefix`)
                         VALUES('business_property', '$last_id', '$timeofupload', `business`)";
             $resultaddoffer = mysqli_query($con, $sqladdoffer);
+            if(!$resultaddoffer)
+            {
+                echo "Добавяне на оферта в таблица оффер не беше успешно.";
+            }

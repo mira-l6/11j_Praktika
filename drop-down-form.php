@@ -14,6 +14,6 @@
     }
     else
     {
-        header("Location: add-offer-business.html?main-offer-form se precaka");
+        header("Location: add-offer-business.html?дроп даун se precaka");
         exit();
     } 
