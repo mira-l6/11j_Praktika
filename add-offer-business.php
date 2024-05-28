@@ -9,7 +9,6 @@
     include "main-offer-form.php";
     include "drop-down-form.php";
     include "description.php";
-    include "upload-copy copy.php";
 
     //FORM
     //za uploadvane na snimki
@@ -35,7 +34,7 @@
                 $_SESSION['last_id'] = $last_id;
             }
 
-            $sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', '$offer_id')";
+            /*$sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', '$offer_id')";
             if (mysqli_query($con, $sql_img)) 
             {
                 //echo "Информацията за изображението беше успешно запазена в базата данни.";
@@ -44,7 +43,7 @@
             {
                 echo "Възникна грешка при запазването на информацията за изображението: " . mysqli_error($con);
             }
-
+*/
 
             $sqlgettime = "SELECT * FROM `business_property` WHERE `business_ID`='$last_id'";
             $resultgettime = mysqli_query($con, $sqlgettime);
