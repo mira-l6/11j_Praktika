@@ -412,7 +412,7 @@
                     
                         $offer = $offers[$i];
                     //cikul za snimkite
-                    for($j = 0; $j < $picscount; $j++)
+                    /*for($j = 0; $j < $picscount; $j++)
                     {
                         $pic = $offers[$j];
                         $imgurlsess = $offertable.'_Image_Url';
@@ -421,7 +421,7 @@
                         echo '<div class="carousel-item active">';
                         echo '<img src="img/image.jpg" alt="Los Angeles" class="d-block w-100">';
                         echo '</div>';
-                    }
+                    }*/
                     
                     echo '</div>';
                     //left and right control items
