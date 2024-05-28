@@ -181,14 +181,14 @@
                 <h2>Добавяне на бизнес имот</h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
-                    <button id="submit-all-forms" type="submit" class="add-offer-button add-button" onclick="popupShow()">Запази</button>
+                    <button id="submit-all-forms" class="add-offer-button add-button" onclick="popupShow()">Запази</button>
                 </div>
                 <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
                     <h5>Искате ли да приемете промените?</h5>
                     <div class="d-flex align-items-center popup-buttons">
                         <button class="deny-button" onclick="popupClose()">Отказ</button>
                         <form class="add-form" method="post">
-                            <button id="popup-submit" type="submit" onclick="popupClose()">Добавяне</button>
+                            <button id="popup-submit" onclick="popupClose()">Добавяне</button>
                         </form>
                     </div>
                 </div>
@@ -356,7 +356,7 @@
                 <div class="add-offer-more-info">
                     <form id="description" action="description.php" method="post" class="d-flex flex-row align-items-center">
                         <div class="add-offer-textareas">
-                            <textarea name="description" id="description" for="description" ="30" rows="10" placeholder="Добавете описание" autocomplete="off"></textarea>
+                            <textarea name="description" id="description" for="description" cols="30" rows="10" placeholder="Добавете описание" autocomplete="off"></textarea>
                             <textarea name="features" id="features" for="features" cols="30" rows="10" placeholder="Добавете особености"autocomplete="off"></textarea>
                         </div>
 
