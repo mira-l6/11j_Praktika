@@ -419,7 +419,7 @@
                         $picurl = $pic[$imgurlsess];
                         $_SESSION['picurl'] = $picurl;
                         echo '<div class="carousel-item active">';
-                        echo '<img src="'.$picurl.'" alt="Los Angeles" class="d-block w-100">';
+                        echo '<img src="img/image.jpg" alt="Los Angeles" class="d-block w-100">';
                         echo '</div>';
                     }
                     
