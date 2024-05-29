@@ -383,6 +383,11 @@
                     $offerprovince = $rowgetofferobj[$province];
                     $offerregion = $rowgetofferobj[$region];
 
+                    $picofferid = $offerprefix."_OfferID";
+                    $sqlgetpics = "SELECT * FROM `".$offertable."_Images` WHERE `".$picofferid."`='$propertyid'";
+                    $resultgetpics = mysqli_query($con, $sqlgetpics);
+                    $picscount = mysqli_num_rows($resultgetpics);
+                    
                     echo '<div class="offer">';
                     echo '<div class="offer-images">';
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
