@@ -57,18 +57,18 @@ body{
     background-color: #e4e4e4 !important;
     border-radius: 20px;
 }
-.profile-image div{
-    background-image: url(/img/personExample.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.profile-image img{
+    object-fit: cover;
+    margin: 1em;
     width: 15em;
     height: 15em;
+    border-radius: 5px;
     border: 2px solid rgba(196, 193, 196, 0.4);
 }
 
 .notice-button, .edit-button{
     width: 50%;
-    padding-left: 2em;
+    /* padding-left: 2em; */
 }
 .notice-button button, .edit-button button{
     border-radius: 20px;
@@ -77,18 +77,25 @@ body{
     /* box-shadow: -2px 0px 27px 7px rgba(196, 193, 196, 0.4); */
 }
 .notice-button:hover, .edit-button:hover{
-    background-color: rgb(223, 218, 223);
+    background-color: rgba(196, 193, 196, 0.1) !important;
 }
 .notice-button:hover button, .edit-button:hover button{
-    background-color: rgb(223, 218, 223);
+    background-color: rgba(196, 193, 196, 0.1) !important;
 }
 .profile-buttons{
     border-top: 1px solid rgba(196, 193, 196, 0.4);
 }
 .profile-buttons div{
     background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
     width: 100%;
     border-radius: 20px;
+}
+.profile-buttons button{
+    color: black !important;
+    /* width: 100% !important; */
+    background-color: #f0f0f0 !important;
 }
 
 .details-space{
