@@ -263,6 +263,7 @@
                 {
                     $realtor = $realtors[$i];
                     
+                    $realtorid = $realtor['realtor_ID'];
                     $realtorname = $realtor['realtor_Name'];
                     $realtorlastname = $realtor['realtor_LastName'];
                     $realtorexperience = $realtor['realtor_Experience'];
@@ -270,9 +271,14 @@
                     $realtoremail = $realtor['realtor_Email'];
                     $realtordescription = $realtor['realtor_Description'];
 
+                    $sqlrealtorimg = "SELECT * FROM `realtor_images` WHERE `realtorimg_RealtorID`='$realtorid'";
+                    $resultrealtorimg = mysqli_query($con, $sqlrealtorimg);
+                    $rowrealtorimg = mysqli_fetch_assoc($resultrealtorimg);
+                    $imgurl = $rowrealtorimg['realtorimg_Url'];
+
                     echo '<div class="agent">';
                     echo '    <div class="agent-photo">';
-                    echo '        <img src="/img/JohnDoe.jpg" alt="">';
+                    echo '        <img src="'.$imgurl.'" alt="">';
                     echo '    </div>';
                     echo '    <div class="agent-info">';
                     echo '        <h4 class="agent-name">'.$realtorname.' '.$realtorlastname.'</h4>';
