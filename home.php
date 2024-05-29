@@ -393,9 +393,29 @@
                     echo '<div class="offer-images">';
                     //carousel
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
+                    //indicators
+
+                    //slideshow carousel
+                    echo '<div class="carousel-inner">';
+                    $pics = array();
+                    while ($rowgetpic = mysqli_fetch_assoc($resultgetpics)) 
+                    {
+                        $pics[] = $rowgetpics;
+                    }
+                    //cikul za snimkite
+                    for($j = 0; $j < $picscount; $j++)
+                    {
+                        $pic = $offers[$j];
+                        $imgurlsess = $offertable.'_Image_Url';
+                        $picurl = $pic[$imgurlsess];
+                        $_SESSION['picurl'] = $picurl;
+                        echo '<div class="carousel-item active">';
+                        echo '<img src="img/image.jpg" alt="Los Angeles" class="d-block w-100">';
+                        echo '</div>';
+                    }
 
                     echo '</div>';
-                    //echo '</div>';
+                    echo '</div>';
                     echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
                     echo '<p><span>'.$offername.'</span></p>';
@@ -432,8 +452,6 @@
                         $pics[] = $rowgetpics;
                     }
     
-                    
-                        $offer = $offers[$i];
                     //cikul za snimkite
                     /*for($j = 0; $j < $picscount; $j++)
                     {
