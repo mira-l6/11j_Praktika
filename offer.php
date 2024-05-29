@@ -89,7 +89,7 @@ $businesstype = $rowgetproperty['business_PropertyType'];
                                 Услуги
                             </button>
                             <ul class="dropdown-menu">
-                                <li class="nav-item p-1"><a class="dropdown-item nav-link" href="buy.html">Покупка</a>
+                                <li class="nav-item p-1"><a class="dropdown-item nav-link" href="buy.php">Покупка</a>
                                 </li>
                                 <li class="nav-item p-1"><a class="dropdown-item nav-link" href="sell.html">Продажба</a>
                                 </li>

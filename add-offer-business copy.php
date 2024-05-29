@@ -87,8 +87,7 @@
             if($result)
             {
                 // vzima id na posledniq dobaven zapis
-                //$last_id = mysqli_insert_id($con);
-                $last_id = $conn->insert_id;
+                $last_id = mysqli_insert_id($con);
                 // zapazva go
                 $_SESSION['last_id'] = $last_id;
             }
