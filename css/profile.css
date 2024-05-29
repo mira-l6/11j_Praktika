@@ -57,12 +57,12 @@ body{
     background-color: #e4e4e4 !important;
     border-radius: 20px;
 }
-.profile-image div{
-    background-image: url(/img/personExample.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.profile-image img{
+    object-fit: cover;
+    margin: 1em;
     width: 15em;
     height: 15em;
+    border-radius: 5px;
     border: 2px solid rgba(196, 193, 196, 0.4);
 }
 
