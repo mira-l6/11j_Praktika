@@ -182,9 +182,9 @@
             <div class="agents-list pt-4">
                 <div class="container-fluid mt-0 contact-info d-flex-column gap-3">
                     <div class="d-grid estate-agents">
-                        <?php
+                    <?php
                         $sqlgetrealtor = "SELECT * FROM `realtor` ORDER BY `realtor_Name` ASC";
-                
+                        /*
                         $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
                         //nqkolko reda
                 
@@ -223,7 +223,7 @@
                             echo '        <p class="agent-description">'.$realtordescription.'</p>';
                             echo '    </div>';
                             echo '</div>';
-                        }
+                        }*/
                         ?>
                         <div class="agent">
                             <div class="agent-photo"><img src="" alt=""></div>
