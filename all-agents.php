@@ -184,10 +184,10 @@
                     <div class="d-grid estate-agents">
                     <?php
                         $sqlgetrealtor = "SELECT * FROM `realtor` ORDER BY `realtor_Name` ASC";
-                        /*
+                        
                         $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
                         //nqkolko reda
-                
+                    /*
                         $realtorscount = mysqli_num_rows($resultgetrealtor) - 1;
                 
                         $offers = array();
