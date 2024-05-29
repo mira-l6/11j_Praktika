@@ -182,6 +182,49 @@
             <div class="agents-list pt-4">
                 <div class="container-fluid mt-0 contact-info d-flex-column gap-3">
                     <div class="d-grid estate-agents">
+                        <?php
+                        $sqlgetrealtor = "SELECT * FROM `realtor` ORDER BY `realtor_Name` ASC";
+                
+                        $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+                        //nqkolko reda
+                
+                        $realtorscount = mysqli_num_rows($resultgetrealtor) - 1;
+                
+                        $offers = array();
+                
+                        while ($rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor)) 
+                        {
+                            if($rowgetrealtor['realtor_ID'] != 1)
+                            {
+                                $realtors[] = $rowgetrealtor;
+                            }
+                        }
+
+                        for($i = 0; $i < $realtorscount; $i++)
+                        {
+                            $realtor = $realtors[$i];
+                    
+                            $realtorname = $realtor['realtor_Name'];
+                            $realtorlastname = $realtor['realtor_LastName'];
+                            $realtorexperience = $realtor['realtor_Experience'];
+                            $realtorphone = $realtor['realtor_PhoneNumber'];
+                            $realtoremail = $realtor['realtor_Email'];
+                            $realtordescription = $realtor['realtor_Description'];
+
+                            echo '<div class="agent">';
+                            echo '    <div class="agent-photo">';
+                            echo '        <img src="/img/JohnDoe.jpg" alt="">';
+                            echo '    </div>';
+                            echo '    <div class="agent-info">';
+                            echo '        <h4 class="agent-name">'.$realtorname.' '.$realtorlastname.'</h4>';
+                            echo '        <p class="agent-experience">'.$realtorexperience.'</p>';
+                            echo '        <p class="agent-number">'.$realtorphone.'</p>';
+                            echo '        <p class="agent-email">'.$realtoremail.'</p>';
+                            echo '        <p class="agent-description">'.$realtordescription.'</p>';
+                            echo '    </div>';
+                            echo '</div>';
+                        }
+                        ?>
                         <div class="agent">
                             <div class="agent-photo"><img src="" alt=""></div>
                             <div class="agent-info">
