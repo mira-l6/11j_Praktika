@@ -413,78 +413,21 @@
                         echo '<img src="img/image.jpg" alt="Los Angeles" class="d-block w-100">';
                         echo '</div>';
                     }
-
-                    echo '</div>';
-                    echo '</div>';
-                    echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
-                    echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
-                    echo '<p><span>'.$offername.'</span></p>';
-                    echo '<h6>'.$offerprovince.'</h6>';
-                    echo '<h6>'.$offerregion.'</h6>';
-                    echo '</div>';
-                    echo '</div>';
-
-                    /*
-                    echo '<div class="offer">';
-                    echo '<div class="offer-images">';
-                    //carousel
-                    echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
-                    //indicators
-                    /*
-                    echo '<div class="carousel-indicators">';
-                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="0"
-                    class="active"></button>';
-                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="1"></button>';
-                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="2"></button>';
-                    echo '<button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="3"></button>';
-                    echo '</div>';
-                    //slideshow carousel
-                    echo '<div class="carousel-inner">';
-
-                    $picofferid = $offerprefix."_OfferID";
-                    $sqlgetpics = "SELECT * FROM `".$offertable."_Images` WHERE `".$picofferid."`='$propertyid'";
-                    $resultgetpics = mysqli_query($con, $sqlgetpics);
-                    $picscount = mysqli_num_rows($resultgetpics);
-                    $pics = array();
-                
-                    while ($rowgetpic = mysqli_fetch_assoc($resultgetpics)) 
-                    {
-                        $pics[] = $rowgetpics;
-                    }
-    
-                    //cikul za snimkite
-                    /*for($j = 0; $j < $picscount; $j++)
-                    {
-                        $pic = $offers[$j];
-                        $imgurlsess = $offertable.'_Image_Url';
-                        $picurl = $pic[$imgurlsess];
-                        $_SESSION['picurl'] = $picurl;
-                        echo '<div class="carousel-item active">';
-                        echo '<img src="img/image.jpg" alt="Los Angeles" class="d-block w-100">';
-                        echo '</div>';
-                    }*/
-                    /*
                     echo '</div>';
                     //left and right control items
-                    echo '<button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
-                    data-bs-slide="prev">';
-                    echo '<span class="carousel-control-prev-icon"></span>';
-                    echo '</button>';
-                    echo '<button class="carousel-control-next" type="button" data-bs-target="#offer-carousel"
-                    data-bs-slide="next">';
-                    echo '<span class="carousel-control-next-icon"></span>';
-                    echo '</button>';
+
+
                     echo '</div>';
-                    
                     echo '</div>';
                     //end of carousel
+
                     echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
                     echo '<p><span>'.$offername.'</span></p>';
                     echo '<h6>'.$offerprovince.'</h6>';
                     echo '<h6>'.$offerregion.'</h6>';
                     echo '</div>';
-                    echo '</div>';*/
+                    echo '</div>';
                 }
             ?>
 
