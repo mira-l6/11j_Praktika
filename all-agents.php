@@ -233,6 +233,9 @@
                             echo '        <p class="agent-email">'.$realtoremail.'</p>';
                             echo '        <p class="agent-description">'.$realtordescription.'</p>';
                             echo '    </div>';
+                            echo '<div class="agent-edit-boxbutton">';
+                            echo '<button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>';
+                            echo '</div>';
                             echo '</div>';
                         }
                         ?>
