@@ -1,7 +1,7 @@
 <?php
     session_start();
     include "db_connection.php";
-    include "filter.php";
+    //include "filter.php";
 ?>
 <!DOCTYPE html>
 <html lang="bg">
