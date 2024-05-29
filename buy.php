@@ -179,7 +179,7 @@
                     <div class="filter-box">
                         <div class="filter-option"><label for="property-type">Тип имот</label>
                             <!--падащо меню-->
-                            <select id="property-type" name="property-filter">
+                            <select id="property-type" name="property-type">
                                 <option value="all">Всички</option>
                                 <option value="room1">Едностаен</option>
                                 <option value="room2">Двустаен</option>
