@@ -279,7 +279,9 @@
                         </div>
                         <div class="line-break"><div></div></div>
                         <div class="filter-option"><label for="quadrature">Квадратура</label>
-                            <input type="number" id="quadrature" name="property-filter" placeholder="Въведете...">
+                            <!--<input type="number" id="quadrature" name="property-filter" placeholder="Въведете..."> -->
+                            <input type="number" id="max-quadrature" name="property-filter" placeholder="От..." class="min-quadrature">
+                            <input type="number" id="min-quadrature" name="property-filter" placeholder="До..." class="max-quadrature">
                         </div>
                     </div>
 
