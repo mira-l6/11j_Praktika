@@ -9,7 +9,7 @@ function AddProperRegion(){
     switch(townAdd.value){
         case 'tblagoevgrad':
             townAreaAdd.innerHTML = `
-            <option value="Ален мак"name="region">Ален мак</option>
+            <option value="Ален мак">Ален мак</option>
             <option value="Балабарши">Балабарши</option>
             <option value="Бялата висота">Бялата висота</option>
             <option value="Вароша">Вароша</option>
