@@ -391,9 +391,11 @@
 
                     echo '<div class="offer">';
                     echo '<div class="offer-images">';
+                    //carousel
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
+
                     echo '</div>';
-                    echo '</div>';
+                    //echo '</div>';
                     echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
                     echo '<p><span>'.$offername.'</span></p>';
@@ -401,6 +403,7 @@
                     echo '<h6>'.$offerregion.'</h6>';
                     echo '</div>';
                     echo '</div>';
+
                     /*
                     echo '<div class="offer">';
                     echo '<div class="offer-images">';
