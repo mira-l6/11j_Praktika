@@ -181,14 +181,14 @@
                 <h2>Добавяне на бизнес имот</h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
-                    <button class="add-offer-button add-button" onclick="popupShow()">Запази</button>
+                    <button id="submit-all-forms" class="add-offer-button add-button" onclick="popupShow()">Запази</button>
                 </div>
                 <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
-                    <h5>Сигурни ли сте, че искате да приемете промените?</h5>
+                    <h5>Искате ли да приемете промените?</h5>
                     <div class="d-flex align-items-center popup-buttons">
                         <button class="deny-button" onclick="popupClose()">Отказ</button>
-                        <form class="add-form" action="" method="post">
-                            <button type="submit">Добавяне</button>
+                        <form class="add-form" method="post">
+                            <button id="popup-submit" onclick="popupClose()">Добавяне</button>
                         </form>
                     </div>
                 </div>
@@ -206,37 +206,37 @@
                 </div>
 
                 <div>
-                    <form action="add-offer-business.php" method="post" class="d-grid add-offer-architecture">
-                        <input name="offername" id="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
-                        <input name="price" id="price" type="number" class="offer-input" placeholder="Цена(лв)" />
-                        <input name="quadrature" id="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
-                        <input name="floorflat" id="floorflat" type="number" class="offer-input" placeholder="Етаж на апартамент" />
-                        <input name="floors" id="floors" type="number" class="offer-input" placeholder="Брой етажи общо" />
-                        <input name="constructionyear" id="constructionyear" type="number" class="offer-input" placeholder="Строителство(годинa)" />
-                        <input name="constructiontype" id="constructiontype" type="text" class="offer-input" placeholder="Строителство(тип)" />
+                    <form action="main-offer-form.php" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
+                        <input name="offername" id="offername" for="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                        <input name="price" id="price" for="price" type="number" class="offer-input" placeholder="Цена(лв)" />
+                        <input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
+                        <input name="floorflat" id="floorflat" for="floorflat" type="number" class="offer-input" placeholder="Етаж на апартамент" />
+                        <input name="floors" id="floors" for="floors" type="number" class="offer-input" placeholder="Брой етажи общо" />
+                        <input name="constructionyear" id="constructionyear" for="constructionyear" type="number" class="offer-input" placeholder="Строителство(годинa)" />
+                        <input name="constructiontype" id="constructiontype" for="constructiontype" type="text" class="offer-input" placeholder="Строителство(тип)" />
                     </form>
                 </div>
 
                 <div class="add-offer-location-info">
 
-                    <form action="add-offer-business.html" method="post">
+                    <form id="drop-down-form" action="drop-down-form.php" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
-                                <select name="property-type" id="property-type">
+                                <select name="property-type" id="property-type" autocomplete="off">
                                     <option value="" disabled selected>Тип (дейност)</option>
                                     <option value="Продава">Продава</option>
                                     <option value="Купува">Купува</option>
                                     <option value="Отдава">Отдава</option>
-                                    <option value="НАема">Наема</option>
+                                    <option value="Наема">Наема</option>
                                 </select>
                             </div>
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="property-selling-type">Вид</label>
+                            <div class="filter-option"><label for="business-type">Вид</label>
                                 <!--падащо меню-->
-                                <select name="business-type" id="business-type">
+                                <select name="business-type" id="business-type" autocomplete="off">
                                     <option value="" disabled selected>Вид (бизнес)</option>
                                     <option value="Автомивка">Автомивка</option>
                                     <option value="Автосервиз">Автосервиз</option>
@@ -268,7 +268,7 @@
                                 <div></div>
                             </div>
                             <div class="filter-option"><label for="country">Държава</label>
-                                <select name="country" id="country">
+                                <select name="country" id="country" autocomplete="off">
                                     <option value="" disabled selected>Държава</option>
                                     <option value="България">България</option>
                                     <option value="Гърция">Гърция</option>
@@ -278,8 +278,8 @@
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="populated-place">Населено място</label>
-                                <select id="populated-place-add" name="populated-place">
+                            <div class="filter-option"><label for="populated-place-add">Населено място</label>
+                                <select id="populated-place-add" name="populated-place-add" autocomplete="off">
                                     <option value="" disabled selected>Населено място</option>
                                     
                                     <!--t - grad town; p - oblast province-->
@@ -344,8 +344,8 @@
                                 <div></div>
                             </div>
                             
-                            <div class="filter-option"><label for="region">Район</label>
-                                <select name="town-area" id="town-area-add">
+                            <div class="filter-option"><label for="town-area-add">Район</label>
+                                <select name="town-area-add" id="town-area-add" autocomplete="off">
                                     <option value="all">Район</option>
                                 </select>
                             </div>
@@ -354,10 +354,10 @@
                     </form>
                 </div>
                 <div class="add-offer-more-info">
-                    <form action="add-offer-business.php" class="d-flex flex-row align-items-center">
+                    <form id="description" action="description.php" method="post" class="d-flex flex-row align-items-center">
                         <div class="add-offer-textareas">
-                            <textarea name="description" id="description" cols="30" rows="10" placeholder="Добавете описание"></textarea>
-                            <textarea name="features" id="features" cols="30" rows="10" placeholder="Добавете особености"></textarea>
+                            <textarea name="description" id="description" for="description" cols="30" rows="10" placeholder="Добавете описание" autocomplete="off"></textarea>
+                            <textarea name="features" id="features" for="features" cols="30" rows="10" placeholder="Добавете особености"autocomplete="off"></textarea>
                         </div>
 
                         <div class="add-offer-checkboxes d-flex justify-content-center f-row">
@@ -374,6 +374,54 @@
     </div>
 
     
+    <script>
+    document.addEventListener('DOMContentLoaded', function() 
+    {
+        document.getElementById('submit-all-forms').addEventListener('click', function(event) 
+        {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const mainOfferFormData = new FormData(document.getElementById('main-offer-form'));
+            const dropDownFormData = new FormData(document.getElementById('drop-down-form'));
+            const descriptionFormData = new FormData(document.getElementById('description'));
+
+            //Merge all form data into one FormData object
+            const combinedFormData = new FormData();
+            for (let [key, value] of mainOfferFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            for (let [key, value] of dropDownFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            for (let [key, value] of descriptionFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            /*for (let [key, value] of imageUploadFormData.entries()) {
+                combinedFormData.append(key, value);
+            }*/
+
+            // Send the combined data to the add-offer-business.php using Fetch API
+            fetch('add-offer-business.php', {
+                method: 'POST',
+                body: combinedFormData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                // Optionally handle the response, redirect, or show a success message
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+
+        document.getElementById('popup-submit').addEventListener('click', function() 
+        {
+            
+        });
+    });
+    </script>
+    
 </body>
 
 
@@ -381,36 +429,6 @@
 <script src="./js/uploadMultiplePreview.js"></script>
 <script src="./js/addOfferFilters.js"></script>
 <script src="./js/filter-add.js"></script>
-<script src="./js/homeFetch.js"></script>
+
 <script src="/js/editProfilePopup.js"></script>
 </html>
-
-
-
-<!-- 
-<option value="tburgas">град Бургас</option>
-<option value="tvarna">град Варна</option>
-<option value="tvt">град Велико Търново</option>
-<option value="tvidin">град Видин</option>
-<option value="tvraca">град Враца</option>
-<option value="tgabrovo">град Габрово</option>
-<option value="tdobrich">град Добрич</option>
-<option value="tkardjali">град Кърджали</option>
-<option value="tkustendil">град Кюстендил</option>
-<option value="tlovech">град Ловеч</option>
-<option value="tmontana">град Монтана</option>
-<option value="tpazardjik">град Пазарджик</option>
-<option value="tpernik">град Перник</option>
-<option value="tpleven">град Плевен</option>
-<option value="tplovdiv">град Пловдив</option>
-<option value="trazgrad">град Разград</option>
-<option value="truse">град Русе</option>
-<option value="tsilistra">град Силистра</option>
-<option value="tsliven">град Сливен</option>
-<option value="tsmolyan">град Смолян</option>
-<option value="tsofia">град София</option>
-<option value="tsz">град Стара Загора</option>
-<option value="ttargovishte">град Търговище</option>
-<option value="thaskovo">град Хасково</option>
-<option value="tshumen">град Шумен</option>
-<option value="tyambol">град Ямбол</option> -->
