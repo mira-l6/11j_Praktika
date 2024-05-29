@@ -236,6 +236,9 @@
                             echo '</div>';
                         }
                         ?>
+
+                        <?php
+                        /*Mira div kod
                         <div class="agent">
                             <div class="agent-photo"><img src="" alt=""></div>
                             <div class="agent-info">
@@ -246,67 +249,8 @@
                                 <button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>
                             </div>
                         </div>
-                        <div class="agent">
-                            <div class="agent-photo"><img src="" alt=""></div>
-                            <div class="agent-info">
-                                <h4 class="agent-name">Мирослава Ламбрева</h4>
-                                <p class="agent-number">0898989898</p>
-                            </div>
-                            <div class="agent-edit-boxbutton">
-                                <button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>
-                            </div>
-                        </div>
-                        <div class="agent">
-                            <div class="agent-photo"><img src="" alt=""></div>
-                            <div class="agent-info">
-                                <h4 class="agent-name">Мирослава Ламбрева</h4>
-                                <p class="agent-number">0898989898</p>
-                            </div>
-                            <div class="agent-edit-boxbutton">
-                                <button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>
-                            </div>
-                        </div>
-                        <div class="agent">
-                            <div class="agent-photo"><img src="" alt=""></div>
-                            <div class="agent-info">
-                                <h4 class="agent-name">Мирослава Ламбрева</h4>
-                                <p class="agent-number">0898989898</p>
-                            </div>
-                            <div class="agent-edit-boxbutton">
-                                <button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>
-                            </div>
-                        </div>
-                        <div class="agent">
-                            <div class="agent-photo"><img src="" alt=""></div>
-                            <div class="agent-info">
-                                <h4 class="agent-name">Мирослава Ламбрева</h4>
-                                <p class="agent-number">0898989898</p>
-                            </div>
-                            <div class="agent-edit-boxbutton">
-                                <button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>
-                            </div>
-                        </div>
-                        <div class="agent">
-                            <div class="agent-photo"><img src="" alt=""></div>
-                            <div class="agent-info">
-                                <h4 class="agent-name">Мирослава Ламбрева</h4>
-                                <p class="agent-number">0898989898</p>
-                            </div>
-                            <div class="agent-edit-boxbutton">
-                                <button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>
-                            </div>
-                        </div>
-                        <div class="agent">
-                            <div class="agent-photo"><img src="" alt=""></div>
-                            <div class="agent-info">
-                                <h4 class="agent-name">Мирослава Ламбрева</h4>
-                                <p class="agent-number">0898989898</p>
-                            </div>
-                            <div class="agent-edit-boxbutton">
-                                <button class="agent-edit-button"><a href=""><i class="material-icons">create</i></a></button>
-                            </div>
-                        </div>
-                        
+                        */
+                        ?>                        
                     </div>
                 </div>
             </div>
