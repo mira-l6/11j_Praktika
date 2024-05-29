@@ -10,23 +10,85 @@
 
     //proverka dali za vsqko ot menutata e izbrana stoinost; opciq vsichki
     //value = all v html faila
-    if(isset($_POST['property-type']))
+    if(($_POST['property-type']) == "all")
     {
         $property_type = trim($_POST['property-type']);
-        $propertytypeqry = "``";
+        $propertytypeqry = "`business_property`, `garage`, `hotel`, `house`, `house_floor`, `industrial_premise`, `land`, `maisonette`, `office`, `plot`, `restaurant`, `room1`, `room2`, `room3`, `room4`, `roomn`, `shop`, `storage`, `studio`, `villa`";
     }
     else
     {
-        $propertytypeqry = "";
+        switch($_POST['property-type'])
+        {
+            case "room1":
+                $propertytypeqry = "`room1`";
+                break;
+            case "room2":
+                $propertytypeqry = "`room2`";
+                break;
+            case "room3":
+                $propertytypeqry = "`room3`";
+                break;
+            case "room4":
+                $propertytypeqry = "`room4`";
+                break;
+            case "roomn":
+                $propertytypeqry = "`roomn`";
+                break;
+            case "maisonette":
+                $propertytypeqry = "`maisonette`";
+                break;
+            case "studio":
+                $propertytypeqry = "`studio`";
+                break;
+            case "office":
+                $propertytypeqry = "`office`";
+                break;
+            case "store":
+                $propertytypeqry = "`store`";
+                break;
+            case "restaurant":
+                $propertytypeqry = "`restaurant`";
+                break;
+            case "storage":
+                $propertytypeqry = "`storage`";
+                break;
+            case "hotel":
+                $propertytypeqry = "`hotel`";
+                break;
+            case "industrial":
+                $propertytypeqry = "`industrial_premise`";
+                break;
+            case "business":
+                $propertytypeqry = "`business_property`";
+                break;
+            case "housefloor":
+                $propertytypeqry = "`housefloor`";
+                break;
+            case "house":
+                $propertytypeqry = "`house`";
+                break;
+            case "villa":
+                $propertytypeqry = "`villa`";
+                break;
+            case "plot":
+                $propertytypeqry = "`plot`";
+                break;
+            case "garage":
+                $propertytypeqry = "`garage`";
+                break;
+            case "land":
+                $propertytypeqry = "`land`";
+                break;
+        }
     }
-    if(isset($_POST['populated-place']))
+    if(($_POST['populated-place']) == "all")
+    {
+        $populatedplaceqry = "";
+    }
+    else
     {
         $populated_place = trim($_POST['populated-place']);
-        $populatedplaceqry = "";
-    }
-    else
-    {
-        $populatedplaceqry = "";
+        $populatedplaceqry = "``".$populated_place;
     }
     if(isset($_POST['town-area']))
     {
