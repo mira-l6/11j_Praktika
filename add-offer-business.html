@@ -380,20 +380,12 @@
         document.getElementById('submit-all-forms').addEventListener('click', function(event) 
         {
             event.preventDefault(); // Prevent the default form submission
-
             
-            //document.getElementById('form').submit();
-            //document.getElementById('main-offer-form').submit();
-            //document.getElementById('drop-down-form').submit();
-            //document.getElementById('description').submit();
-
-            // Display the popup
-            //document.getElementById('popup').style.display = 'block';
             const mainOfferFormData = new FormData(document.getElementById('main-offer-form'));
             const dropDownFormData = new FormData(document.getElementById('drop-down-form'));
             const descriptionFormData = new FormData(document.getElementById('description'));
 
-            // Merge all form data into one FormData object
+            //Merge all form data into one FormData object
             const combinedFormData = new FormData();
             for (let [key, value] of mainOfferFormData.entries()) {
                 combinedFormData.append(key, value);
