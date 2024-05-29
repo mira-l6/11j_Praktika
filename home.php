@@ -409,8 +409,11 @@
                         $imgurlsess = $offertable.'_Image_Url';
                         $picurl = $pic[$imgurlsess];
                         $_SESSION['picurl'] = $picurl;
-                        echo '<div class="carousel-item active">';
-                        echo '<img src="img/image.jpg" alt="Los Angeles" class="d-block w-100">';
+                        // Set the active class only for the first item of carosel
+                        $activeclass = ($j === 0) ? 'active' : '';
+
+                        echo '<div class="carousel-item '.$activeclass.'">';
+                        echo '<img src="'. htmlspecialchars($picurl).'" alt="Image '.($j+1).'" class="d-block w-100">';
                         echo '</div>';
                     }
                     echo '</div>';
