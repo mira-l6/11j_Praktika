@@ -384,7 +384,7 @@
                     $offerregion = $rowgetofferobj[$region];
 
                     $picofferid = $offerprefix."_OfferID";
-                    $pictable = $offertable . "_Images";
+                    $pictable = $offertable . "_images";
                     $sqlgetpics = "SELECT * FROM `".$pictable."` WHERE `".$picofferid."`='$propertyid'";
                     $resultgetpics = mysqli_query($con, $sqlgetpics);
                     $picscount = mysqli_num_rows($resultgetpics);
