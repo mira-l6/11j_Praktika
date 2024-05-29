@@ -290,6 +290,8 @@
                     echo '</div>';
                 }
             ?>
+            <?php
+            /*
                 <div class="agent">
                     <div class="agent-photo">
                         <img src="" alt="">
@@ -299,6 +301,7 @@
                         <p class="agent-number">0898989898</p>
                     </div>
                 </div>
+                */?>
             
             </div>
         </div>
