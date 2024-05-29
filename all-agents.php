@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include "db_connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -187,7 +192,7 @@
                         
                         $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
                         //nqkolko reda
-                    /*
+                    
                         $realtorscount = mysqli_num_rows($resultgetrealtor) - 1;
                 
                         $offers = array();
@@ -223,7 +228,7 @@
                             echo '        <p class="agent-description">'.$realtordescription.'</p>';
                             echo '    </div>';
                             echo '</div>';
-                        }*/
+                        }
                         ?>
                         <div class="agent">
                             <div class="agent-photo"><img src="" alt=""></div>
