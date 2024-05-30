@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "db_connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -260,7 +261,15 @@
                     </div>
                 </div>
                 <div class="grid-item profile-image d-flex justify-content-center align-items-center">
-                    <img src="/img/personExample.jpg" alt="">
+                    <?php
+                        $realtorid = $_SESSION['login_RealtorID'];
+                        $sqlrealtorimg = "SELECT * FROM `realtor_images` WHERE `realtorimg_RealtorID`='$realtorid'";
+                        $resultrealtorimg = mysqli_query($con, $sqlrealtorimg);
+                        $rowrealtorimg = mysqli_fetch_assoc($resultrealtorimg);
+                        $imgurl = $rowrealtorimg['realtorimg_Url'];
+
+                        echo '<img src="'.$imgurl.'" alt="">';
+                    ?>
                 </div>
                 <div class="grid-item profile-bio">
                     <p class="p-4"><?php echo $_SESSION['description'] ?></p>
