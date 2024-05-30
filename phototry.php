@@ -47,7 +47,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link"
-                                            href="buy.html">Покупка</a></li>
+                                            href="buy.php">Покупка</a></li>
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link"
                                             href="sell.html">Продажба</a></li>
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link"
@@ -196,12 +196,13 @@
 
                 <div
                     class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
+                    <?php $_SESSION['last_id'] = 1 ?>
                     <form action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
                         <input type="file" id="image-upload-multiple" name="images[]" multiple onchange="preview()">
                         <label for="image-upload-multiple">Прикачване на
                             снимки</label>
 
-                        <?php $_SESSION['last_id'] = 1 ?>
+                        
 
                         <button type="submit" class="add-offer-button add-button">Запази</button>
                         
@@ -213,7 +214,6 @@
 
     </div>
     <script src="/js/uploadPreview.js"></script>
-    <script src="/js/passwordShow.js"></script>
 
  
 

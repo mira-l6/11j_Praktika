@@ -1,7 +1,7 @@
 <?php
     session_start();
     include "db_connection.php";
-    include "filter.php";
+    //include "filter.php";
 ?>
 <!DOCTYPE html>
 <html lang="bg">
@@ -49,7 +49,7 @@
                                     Услуги
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="buy.html">Покупка</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="buy.php">Покупка</a></li>
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link" href="sell.html">Продажба</a></li>
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link" href="rent.html">Наемане</a></li>
                                     <li class="nav-item p-1"><a class="dropdown-item nav-link" href="for-rent.html">Отдаване на наем</a></li>
@@ -179,7 +179,7 @@
                     <div class="filter-box">
                         <div class="filter-option"><label for="property-type">Тип имот</label>
                             <!--падащо меню-->
-                            <select id="property-type" name="property-filter">
+                            <select id="property-type" name="property-type">
                                 <option value="all">Всички</option>
                                 <option value="room1">Едностаен</option>
                                 <option value="room2">Двустаен</option>
@@ -279,7 +279,9 @@
                         </div>
                         <div class="line-break"><div></div></div>
                         <div class="filter-option"><label for="quadrature">Квадратура</label>
-                            <input type="number" id="quadrature" name="property-filter" placeholder="Въведете...">
+                            <!--<input type="number" id="quadrature" name="property-filter" placeholder="Въведете..."> -->
+                            <input type="number" id="max-quadrature" name="property-filter" placeholder="От..." class="min-quadrature">
+                            <input type="number" id="min-quadrature" name="property-filter" placeholder="До..." class="max-quadrature">
                         </div>
                     </div>
 

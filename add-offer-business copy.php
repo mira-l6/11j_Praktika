@@ -6,12 +6,10 @@
 
 
     include "db_connection.php";
-    //include "main-offer-form.php";
-    //include "drop-down-form.php";
-    //include "description.php";
 
         
-    $realtorid = $_SESSION['login_RealtorID'];
+    //$realtorid = $_SESSION['login_RealtorID'];
+    $realtorid = 2;
             
     //маин оффер
     if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']))
