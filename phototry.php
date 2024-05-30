@@ -213,7 +213,6 @@
 
     </div>
     <script src="/js/uploadPreview.js"></script>
-    <script src="/js/passwordShow.js"></script>
 
  
 
