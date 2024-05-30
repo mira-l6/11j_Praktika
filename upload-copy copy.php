@@ -57,8 +57,9 @@
                     //echo "Файлът ". htmlspecialchars(basename($_FILES['images']['name'][$key])). " беше успешно качен.";
                     $image_name = htmlspecialchars(basename($_FILES['images']['name'][$key]));
                     $offer_id = $_SESSION['last_id'];
-                    /*
+                    
                     $sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', '$offer_id')";
+                    /*
                     if (mysqli_query($con, $sql_img)) 
                     {
                         echo "Информацията за изображението беше успешно запазена в базата данни.";
