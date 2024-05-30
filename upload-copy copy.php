@@ -59,6 +59,7 @@
                     $offer_id = $_SESSION['last_id'];
                     
                     $sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', '$offer_id')";
+                    $result_img = mysqli_query($con, $sql_img);
                     /*
                     if (mysqli_query($con, $sql_img)) 
                     {
