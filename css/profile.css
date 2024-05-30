@@ -58,7 +58,7 @@ body{
     border-radius: 20px;
 }
 .profile-image img{
-    object-fit: cover;
+    object-fit: cover !important;
     margin: 1em;
     width: 15em;
     height: 15em;
