@@ -88,9 +88,14 @@
             $result = mysqli_query($con, $sql);
             if($result)
             {
+                /*
                 // vzima id na posledniq dobaven zapis
                 $last_id = mysqli_insert_id($con);
                 // zapazva go
+                $_SESSION['last_id'] = $last_id;*/
+                $sqllast = "SELECT `business_ID` FROM `business_property` ORDER BY `business_UploadTime` DESC LIMIT 1";
+                $resultlast = mysqli_query($con, $sqllast);
+                $last_id = $resultlast;
                 $_SESSION['last_id'] = $last_id;
             }
             if(!$result)
