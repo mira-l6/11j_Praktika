@@ -1,3 +1,7 @@
+button{
+    color: black !important;
+}
+
 .filter-area{
     box-shadow: none !important;
 }
@@ -22,4 +26,10 @@
 }
 .all-offers-title select{
     color: white !important;
+}
+
+@media(max-width: 450px){
+    .all-offers-title{
+        gap: 2em;
+    }
 }
