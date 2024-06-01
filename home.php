@@ -193,7 +193,7 @@
     <!-- header start -->
     <section class="main-image d-flex justify-content-center align-items-center flex-column">
         <h1 class="title-font text-center primary-color">Добре дошли!</h1>
-        <h1 class="title-font text-center primary-color">Разгледайте нашите оферти!</h1>
+        <h1 class="title-font home-title text-center primary-color">Разгледайте нашите оферти!</h1>
         <i style="color: white; font-size: 3em" class="material-icons">expand_more</i>
 
     </section>

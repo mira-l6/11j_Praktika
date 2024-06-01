@@ -1,4 +1,9 @@
 
+.home-title{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .price-paragraph{
     font-size: 1.5rem;
 }
