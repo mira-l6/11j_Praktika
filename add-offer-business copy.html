@@ -178,25 +178,25 @@
 
         <div class="add-offer-box">
             <div class="add-offer-title d-flex flex-row">
-                <h2>Добавяне на земеделска земя</h2>
+                <h2>Добавяне на бизнес имот</h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
-                    <button class="add-offer-button add-button" onclick="popupShow()">Запази</button>
+                    <button id="submit-all-forms" class="add-offer-button add-button" onclick="popupShow()">Запази</button>
                 </div>
                 <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
-                    <h5>Сигурни ли сте, че искате да приемете промените?</h5>
+                    <h5>Искате ли да приемете промените?</h5>
                     <div class="d-flex align-items-center popup-buttons">
                         <button class="deny-button" onclick="popupClose()">Отказ</button>
-                        <form class="add-form" action="" method="post">
-                            <button type="submit">Добавяне</button>
+                        <form class="add-form" method="post">
+                            <button id="popup-submit" onclick="popupClose()">Добавяне</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="add-offer-body d-grid">
                 <div class="add-offer-images">
-                    <form action="" method="post" id="form">
-                        <input type="file" id="image-upload-multiple" onchange="preview()" multiple>
+                    <form action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
+                        <input type="file" id="image-upload-multiple" name="images[]" multiple onchange="preview()">
                         <label for="image-upload-multiple">Прикачване на
                             снимки</label>
                         <!-- <span class="text-danger">Препоръчително е прикачване наведнъж</span> -->
@@ -206,24 +206,24 @@
                 </div>
 
                 <div>
-                    <form action="add-offer-land.php" method="post" class="d-grid add-offer-architecture">
-                        <input id="offername" name="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
-                        <input id="price" name="price" type="number" class="offer-input" placeholder="Цена(лв)" />
-                        <input id="quadrature" name="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
-                        <input id="purpose" name="purpose" type="text" class="offer-input" placeholder="Предназначение" />
-                        <input id="category" name="category" type="text" class="offer-input" placeholder="Категория" />
-                        <input id="rent" name="rent" type="number" class="offer-input" placeholder="Рента" />
-                        <input id="date" name="date" type="text" class="offer-input" onfocus="(this.type='date')" placeholder="Дата на договор за рента" />
+                    <form action="main-offer-form.php" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
+                        <input name="offername" id="offername" for="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
+                        <input name="price" id="price" for="price" type="number" class="offer-input" placeholder="Цена(лв)" />
+                        <input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
+                        <input name="floorflat" id="floorflat" for="floorflat" type="number" class="offer-input" placeholder="Етаж на апартамент" />
+                        <input name="floors" id="floors" for="floors" type="number" class="offer-input" placeholder="Брой етажи общо" />
+                        <input name="constructionyear" id="constructionyear" for="constructionyear" type="number" class="offer-input" placeholder="Строителство(годинa)" />
+                        <input name="constructiontype" id="constructiontype" for="constructiontype" type="text" class="offer-input" placeholder="Строителство(тип)" />
                     </form>
                 </div>
 
                 <div class="add-offer-location-info">
 
-                    <form action="add-offer-land.php" method="post">
+                    <form id="drop-down-form" action="drop-down-form.php" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
-                                <select name="property-type" id="property-type">
+                                <select name="property-type" id="property-type" autocomplete="off">
                                     <option value="" disabled selected>Тип (дейност)</option>
                                     <option value="Продава">Продава</option>
                                     <option value="Купува">Купува</option>
@@ -234,30 +234,41 @@
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="property-selling-type">Вид</label>
+                            <div class="filter-option"><label for="business-type">Вид</label>
                                 <!--падащо меню-->
-                                <select name="land-type" id="land-type">
+                                <select name="business-type" id="business-type" autocomplete="off">
                                     <option value="" disabled selected>Вид (бизнес)</option>
-                                    <option value="all">Всички</option>
-                                    <option value="Нива">Нива</option>
-                                    <option value="Зеленчукова градина">Зеленчукова градина</option>
-                                    <option value="Оризище">Оризище</option>
-                                    <option value="Оранжерия">Оранжерия</option>
-                                    <option value="Овощна градина">Овощна градина</option>
-                                    <option value="Лозе">Лозе</option>
-                                    <option value="Разсадник">Разсадник</option>
-                                    <option value="Ливада">Ливада</option>
-                                    <option value="Пасище, мера">Пасище, мера</option>
-                                    <option value="Изоставена орна земя">Изоставена орна земя</option>
-                                    <option value="Изоставени трайни насаждения">Изоставени трайни насаждения</option>
-                                    <option value="Гори и храсти в земеделска земя">Гори и храсти в земеделска земя</option>
+                                    <option value="Автомивка">Автомивка</option>
+                                    <option value="Автосервиз">Автосервиз</option>
+                                    <option value="Аквапарк">Аквапарк</option>
+                                    <option value="Аптека">Аптека</option>
+                                    <option value="Банков офис">Банков офис</option>
+                                    <option value="Бензиностанция/Газстанция">Бензиностанция/Газстанция</option>
+                                    <option value="Вилно селище">Вилно селище</option>
+                                    <option value="Гараж">Гараж</option>
+                                    <option value="Детски център">Детски център</option>
+                                    <option value="Дом за възрастни хора">Дом за възрастни хора</option>
+                                    <option value="Клиника">Клиника</option>
+                                    <option value="Лекарски кабинет">Лекарски кабинет</option>
+                                    <option value="Паркинг">Паркинг</option>
+                                    <option value="Паркомясто">Паркомясто</option>
+                                    <option value="Самостоятелна сграда">Самостоятелна сграда</option>
+                                    <option value="Соларен парк">Соларен парк</option>
+                                    <option value="СПА/Соларно студио">СПА/Соларно студио</option>
+                                    <option value="Стоматологичен кабинет">Стоматологичен кабинет</option>
+                                    <option value="Търговски комплекс">Търговски комплекс</option>
+                                    <option value="Фабрика/Завод">Фабрика/Завод</option>
+                                    <option value="Ферма">Ферма</option>
+                                    <option value="Фитнес зала">Фитнес зала</option>
+                                    <option value="Фотографско студио">Фотографско студио</option>
+                                    <option value="Фризьорски/Козметичен салон">Фризьорски/Козметичен салон</option>
                                 </select>
                             </div>
                             <div class="line-break">
                                 <div></div>
                             </div>
                             <div class="filter-option"><label for="country">Държава</label>
-                                <select name="country" id="country">
+                                <select name="country" id="country" autocomplete="off">
                                     <option value="" disabled selected>Държава</option>
                                     <option value="България">България</option>
                                     <option value="Гърция">Гърция</option>
@@ -267,9 +278,10 @@
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="populated-area">Населено място</label>
-                                <select name="populated-place-add-land" id="populated-place-add-land">
+                            <div class="filter-option"><label for="populated-place-add">Населено място</label>
+                                <select id="populated-place-add" name="populated-place-add" autocomplete="off">
                                     <option value="" disabled selected>Населено място</option>
+                                    
                                     <!--t - grad town; p - oblast province-->
                                     <option value="all">Всички</option>
                                     <option value="tblagoevgrad">град Благоевград</option>
@@ -331,8 +343,9 @@
                             <div class="line-break">
                                 <div></div>
                             </div>
-                            <div class="filter-option"><label for="region">Район</label>
-                                <select name="town-area-add-land" id="town-area-add-land">
+                            
+                            <div class="filter-option"><label for="town-area-add">Район</label>
+                                <select name="town-area-add" id="town-area-add" autocomplete="off">
                                     <option value="all">Район</option>
                                 </select>
                             </div>
@@ -341,15 +354,17 @@
                     </form>
                 </div>
                 <div class="add-offer-more-info">
-                    <form action="add-offer-land.php" class="d-flex flex-row align-items-center">
+                    <form id="description" action="description.php" method="post" class="d-flex flex-row align-items-center">
                         <div class="add-offer-textareas">
-                            <textarea name="description" id="description" cols="30" rows="10" placeholder="Добавете описание"></textarea>
-                            <textarea name="features" id="features" cols="30" rows="10" placeholder="Добавете особености"></textarea>
+                            <textarea name="description" id="description" for="description" cols="30" rows="10" placeholder="Добавете описание" autocomplete="off"></textarea>
+                            <textarea name="features" id="features" for="features" cols="30" rows="10" placeholder="Добавете особености"autocomplete="off"></textarea>
                         </div>
 
                         <div class="add-offer-checkboxes d-flex justify-content-center f-row">
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="rentcontract" /><label for="rentcontract">Договор за рента</label></span>
-                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="forprivatepeople" /><label for="forprivatepeople">Само за частни лица</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas" value="on"/><label for="gas">Газ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp" value="on"/><label for="tpp">ТЕЦ</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="forprivatepeople" value="on"/><label for="forprivatepeople">Само за частни лица</label></span>
+                            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished" value="on"/><label for="furnished">Обзаведен</label></span>
                         </div>
                     </form>
                 </div>
@@ -358,12 +373,62 @@
 
     </div>
 
-    <div id="pageMask" class="page-mask"></div>
-    <script src="./js/uploadMultiplePreview.js"></script>
-    <script src="./js/addOfferFilters.js"></script>
-    <script src="./js/filter-add-land.js"></script>
-    <script src="./js/homeFetch.js"></script>
-    <script src="/js/editProfilePopup.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() 
+    {
+        document.getElementById('submit-all-forms').addEventListener('click', function(event) 
+        {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const mainOfferFormData = new FormData(document.getElementById('main-offer-form'));
+            const dropDownFormData = new FormData(document.getElementById('drop-down-form'));
+            const descriptionFormData = new FormData(document.getElementById('description'));
+
+            //Merge all form data into one FormData object
+            const combinedFormData = new FormData();
+            for (let [key, value] of mainOfferFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            for (let [key, value] of dropDownFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            for (let [key, value] of descriptionFormData.entries()) {
+                combinedFormData.append(key, value);
+            }
+            /*for (let [key, value] of imageUploadFormData.entries()) {
+                combinedFormData.append(key, value);
+            }*/
+
+            // Send the combined data to the add-offer-business.php using Fetch API
+            fetch('add-offer-business copy.php', {
+                method: 'POST',
+                body: combinedFormData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                // Optionally handle the response, redirect, or show a success message
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+
+        document.getElementById('popup-submit').addEventListener('click', function() 
+        {
+            document.getElementById('form').submit();
+        });
+    });
+    </script>
+    
 </body>
 
+
+<div id="pageMask" class="page-mask"></div>
+<script src="./js/uploadMultiplePreview.js"></script>
+<script src="./js/addOfferFilters.js"></script>
+<script src="./js/filter-add.js"></script>
+
+<script src="/js/editProfilePopup.js"></script>
 </html>

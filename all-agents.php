@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/all-agents.css">
     <link rel="stylesheet" href="/css/contacts.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>За нас</title>
+    <title>Форум</title>
 </head>
 
 <body>

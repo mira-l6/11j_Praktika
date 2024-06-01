@@ -3,14 +3,14 @@ body{
 }
 
 .offer-images{
-    /* background-color: rgb(186, 186, 186);  */
+    /* background-color: var(--color-primary); */
     height: 30em;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 2;
-    gap: 0.5em;
-    padding: 3em 5em 2em 5em;
-    margin-bottom: 0.5em;
+    gap: 0.2em;
+    padding: 3em 5em 3em 5em;
+    margin-bottom: 1em;
 }
 .big-image img, .small-image img{
     width: 100%;
@@ -75,7 +75,9 @@ body{
 }
 
 .offer-agent{
-    justify-content: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
 }
 .offer-agent-image{
     background-color: white;
@@ -93,6 +95,17 @@ body{
 .subinfo-input{
     font-weight: 600;
 }
+
+.offer-subinfo-info{
+    background-color: #e9e6e9 !important;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 2em !important ;
+}
+
 .offer-description p, .offer-info{
     font-size: 1.2em;
 }
@@ -146,7 +159,8 @@ body{
     }
     .offer-agent{
         border-top: 4px solid white;
-        justify-content: flex-start;
+        justify-content: flex-start !important;
+        flex-direction: row;
     }
     .offer-agent, .offer-subinfo{
         width: 100%;

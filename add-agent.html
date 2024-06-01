@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/add-agent.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Начало</title>
+    <title>Форум</title>
 </head>
 
 <body>
@@ -186,8 +186,8 @@
                 <h5>Сигурни ли сте, че искате да приемете промените?</h5>
                 <div class="d-flex align-items-center popup-buttons">
                     <button class="deny-button" onclick="popupClose()">Отказ</button>
-                    <form class="add-form" action="agent-upload.php" method="post">
-                        <button type="submit" id="submit-all-info">Добавяне</button>
+                    <form class="add-form" action="" method="post">
+                        <button type="submit">Добавяне</button>
                     </form>
                 </div>
             </div>
@@ -197,7 +197,7 @@
             <div class="agent-photo-and-description col-3 d-flex justify-content-center align-items-center">
                 <div class="add-agent-photo d-flex">
                     <p>Изберете снимка</p>
-                    <form action="upload-copy copy.php" id="agent-photo" method="post" enctype="multipart/form-data">
+                    <form action="upload-copy.php" method="post" enctype="multipart/form-data">
                         <img id="uploadPreview" />
                         <label for="photo-input" class="agent-photo-custom-upload">Качи файл</label>
                         <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
@@ -205,7 +205,7 @@
                 </div>
             </div>
             <div class="agent-info col-7 d-flex justify-content-center align-items-center">
-                <form action="" method="post" id="main-form">
+                <form action="" method="post">
                     <div class="info-section-one-row">
                         <div class="info-subsection">
                             <label for="agent-first-name">Име: </label>
@@ -239,62 +239,14 @@
                 </form>
             </div>
             <div class="agent-more-info col-3 p-5 d-flex justify-content-center align-items-center">
-                <form action="" method="post" class="d-flex justify-content-center align-items-center" id="description-form">
-                    <textarea name="" placeholder="Въведете допълнителна информация за себе си..." id="agent-description" cols="36"
+                <form action="" method="post" class="d-flex justify-content-center align-items-center">
+                    <textarea name="" placeholder="Въведете допълнителна информация за себе си..." id="" cols="36"
                         rows="13"></textarea>
                 </form>
             </div>
         </div>
 
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() 
-        {
-            document.getElementById('button-agent-add').addEventListener('click', function(event) 
-            {
-                event.preventDefault(); // Prevent the default form submission
-                
-                const mainFormData = new FormData(document.getElementById('main-form'));
-                const descriptionFormData = new FormData(document.getElementById('description-form'));
-    
-                //Merge all form data into one FormData object
-                const combinedFormData = new FormData();
-                for (let [key, value] of mainFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }
-                for (let [key, value] of descriptionFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }
-                /*for (let [key, value] of imageUploadFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }*/
-    
-                // Send the combined data to the add-offer-business.php using Fetch API
-                fetch('add-agent.php', {
-                    method: 'POST',
-                    body: combinedFormData
-                })
-                .then(response => response.text())
-                .then(data => {
-                    console.log(data);
-                    // Optionally handle the response, redirect, or show a success message
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            });
-    
-            document.getElementById('submit-all-info').addEventListener('click', function() 
-            {
-                // Hide the popup
-                //document.getElementById('popup').style.display = 'none';
-    
-                // Collect form data
-                document.getElementById('agent-photo').submit();
-            });
-        });
-        </script>
 
     <div id="pageMask" class="page-mask"></div>
     <script src="/js/uploadPreview.js"></script>
