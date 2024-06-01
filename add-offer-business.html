@@ -403,7 +403,7 @@
 
             // Send the combined data to the add-offer-business.php using Fetch API
             fetch('add-offer-business.php', {
-                method: 'POST',
+                method: 'post',
                 body: combinedFormData
             })
             .then(response => response.text())
