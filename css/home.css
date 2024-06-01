@@ -83,6 +83,14 @@ input[type="number"]{
     margin-bottom: 0.3em;
 }
 
+.two-option-filter div{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.two-option-filter:first-child div input:first-child{
+    border-right: 10px solid red;
+}
+
 .filter-option:first-child{
     width: 19%;
 }
@@ -193,10 +201,31 @@ input[type="number"]{
     }
 }
 @media(max-width: 500px){
-    .filter-option label{
-        font-size: 0.8em;
+    .filter-box{
+        display: flex;
+        flex-direction: column;
+        height: 30em;
     }
-    .filter-option  select{
-        font-size: 0.6em
+    .filter-option{
+        padding: 1.28em !important;
+        border: none !important;
+        border-bottom: 1px solid var(--color-primary) !important;
     }
+    .filter-option:first-child{
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    .filter-option:nth-child(7){
+        border: none !important;
+    }
+    .filter-option:last-child{
+        border-bottom: none !important;
+        border-top-left-radius: 50px;
+        border-top: 1px solid var(--color-primary) !important;
+
+    }   
+    .filter-option select, .filter-option input{
+        width: 80%;
+    }
+
 }
