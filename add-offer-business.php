@@ -6,9 +6,6 @@
 
 
     include "db_connection.php";
-    //include "main-offer-form.php";
-    //include "drop-down-form.php";
-    //include "description.php";
 
         
     $realtorid = $_SESSION['login_RealtorID'];
@@ -27,19 +24,31 @@
         //exit();
     }
     //дроп даун
-    if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']))
-    {
+    //if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']))
+    
         $propertytype = trim($_POST['property-type']);
         $businesstype = trim($_POST['business-type']);
         $country = trim($_POST['country']);
         $province = trim($_POST['populated-place-add']);
         $region = trim($_POST['town-area-add']);
-    }
+    
     //дескрип
     if(isset($_POST['description']))
     {
         $description = trim($_POST['description']);
-        if($_POST['gas'] == "on")
+        
+
+        if(isset($_POST['features']))
+        {
+            $features = trim($_POST['features']);
+        }
+        else
+        {
+            $features = null;
+        }
+
+    }
+    if($_POST['gas'] == "on")
         {
             $gas = 1;
         }
@@ -72,17 +81,6 @@
             $furnished = 0;
         }
 
-        if(isset($_POST['features']))
-        {
-            $features = trim($_POST['features']);
-        }
-        else
-        {
-            $features = null;
-        }
-
-    }
-
     $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$price', '$realtorid', '$quadrature', '$floorflat', '$floors', '$gas', '$tpp', '$constructionyear', '$constructiontype', '$description', '$features', '$forprivatepeople', '$furnished', '$country', '$populatedplace', '$offername', '$townarea', '$businesstype', '$propertytype')"; 
             $result = mysqli_query($con, $sql);
@@ -93,9 +91,10 @@
                 $last_id = mysqli_insert_id($con);
                 // zapazva go
                 $_SESSION['last_id'] = $last_id;*/
-                $sqllast = "SELECT `business_ID` FROM `business_property` ORDER BY `business_UploadTime` DESC LIMIT 1";
+                $sqllast = "SELECT * FROM `business_property` ORDER BY `business_UploadTime` DESC LIMIT 1";
                 $resultlast = mysqli_query($con, $sqllast);
-                $last_id = $resultlast;
+                $rowlast = mysqli_fetch_assoc($resultlast);
+                $last_id = $rowlast[`business_ID`];
                 $_SESSION['last_id'] = $last_id;
             }
             if(!$result)
