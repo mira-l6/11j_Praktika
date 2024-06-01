@@ -201,7 +201,7 @@
                         <p><?php echo $adminexperience ?></p>
                         <p><?php echo $adminphone ?></p>
                         <p><?php echo $adminemail ?></p>
-                        <p><?php echo $admindescription ?></p>
+                        <p class="main-description"><?php echo $admindescription ?></p>
                        </div>
                     </div>
 
@@ -282,10 +282,12 @@
                     echo '    </div>';
                     echo '    <div class="agent-info">';
                     echo '        <h4 class="agent-name">'.$realtorname.' '.$realtorlastname.'</h4>';
-                    echo '        <p class="agent-experience">'.$realtorexperience.'</p>';
-                    echo '        <p class="agent-number">'.$realtorphone.'</p>';
-                    echo '        <p class="agent-email">'.$realtoremail.'</p>';
-                    echo '        <p class="agent-description">'.$realtordescription.'</p>';
+                    echo '        <div class="main-card-subinfo">';
+                    echo '          <p class="agent-experience">'.$realtorexperience.'</p>';
+                    echo '          <p class="agent-number">'.$realtorphone.'</p>';
+                    echo '          <p class="agent-email">'.$realtoremail.'</p>';
+                    echo '          <p class="agent-description">'.$realtordescription.'</p>';
+                    echo '        </div>';    
                     echo '    </div>';
                     echo '</div>';
                 }
