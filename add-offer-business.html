@@ -187,7 +187,7 @@
                     <h5>Искате ли да приемете промените?</h5>
                     <div class="d-flex align-items-center popup-buttons">
                         <button class="deny-button" onclick="popupClose()">Отказ</button>
-                        <form class="add-form" method="post">
+                        <form name="add-form" class="add-form" method="post">
                             <button id="popup-submit" onclick="popupClose()">Добавяне</button>
                         </form>
                     </div>
@@ -195,7 +195,7 @@
             </div>
             <div class="add-offer-body d-grid">
                 <div class="add-offer-images">
-                    <form action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
+                    <form name="form" action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
                         <input type="file" id="image-upload-multiple" name="images[]" multiple onchange="preview()">
                         <label for="image-upload-multiple">Прикачване на
                             снимки</label>
@@ -206,7 +206,7 @@
                 </div>
 
                 <div>
-                    <form action="main-offer-form.php" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
+                    <form name="main-offer-form" action="" method="post" id="main-offer-form" class="d-grid add-offer-architecture">
                         <input name="offername" id="offername" for="offername" type="text" class="offer-input" placeholder="Заглавие на обявата" />
                         <input name="price" id="price" for="price" type="number" class="offer-input" placeholder="Цена(лв)" />
                         <input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input" placeholder="Квадратура(кв. метри)" />
@@ -219,7 +219,7 @@
 
                 <div class="add-offer-location-info">
 
-                    <form id="drop-down-form" action="drop-down-form.php" method="post">
+                    <form name="drop-down-form" id="drop-down-form" action="" method="post">
                         <div class="filter-box">
                             <div class="filter-option"><label for="property-type">Тип имот</label>
                                 <!--падащо меню-->
@@ -353,7 +353,7 @@
                     </form>
                 </div>
                 <div class="add-offer-more-info">
-                    <form id="description" action="description.php" method="post" class="d-flex flex-row align-items-center">
+                    <form id="description" name="description" action="" method="post" class="d-flex flex-row align-items-center">
                         <div class="add-offer-textareas">
                             <textarea name="description" id="description" for="description" cols="30" rows="10" placeholder="Добавете описание" autocomplete="off"></textarea>
                             <textarea name="features" id="features" for="features" cols="30" rows="10" placeholder="Добавете особености"autocomplete="off"></textarea>
