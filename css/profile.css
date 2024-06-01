@@ -171,7 +171,7 @@ body{
     }
     .profile-info{
         height: 38em;
-        margin-bottom: 1em;
+        /* margin-bottom: 1em; */
     }
 }
 @media(max-width: 600px) {
