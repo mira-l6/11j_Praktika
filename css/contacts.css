@@ -126,6 +126,7 @@ body {
   align-items: center;
 }
 .agent-photo{
+  /* object-fit: cover; */
   width: 14em;
   height: 100%;
   display: flex;
