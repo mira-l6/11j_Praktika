@@ -27,6 +27,14 @@ body {
 .main-card-image{
   padding: 1em;
   border-right: 1px solid rgba(171, 166, 171, 0.4);
+  display: flex;
+  align-items: center;
+}
+.main-card-image img{
+  width: 13em;
+  height: 16em;
+  object-fit: cover;
+  border-radius: 2px;
 }
 
 .main-card-info{
@@ -42,6 +50,13 @@ body {
   margin-bottom: 0em;
   font-size: 0.8em;
 }
+.main-description{
+  overflow-y: scroll;
+  height: 4em;
+  border-top: 1px solid rgba(171, 166, 171, 0.4);
+  margin-top: 0.5em;
+}
+
 
 .card-button {
   padding: 0.8rem;
@@ -227,6 +242,18 @@ body {
   .main-card{
     width: 40em;
   }
+
+  .main-card-info h4{
+    font-size: 0.98em;
+  }
+  .main-card-info p{
+    font-size: 0.7em;
+  }
+  .main-card-image img{
+    width: 12em;
+    height: 13em;
+  }
+
   .estate-agents{
     grid-template-columns: repeat(1, 1fr);
   }
@@ -243,10 +270,31 @@ body {
 @media (max-width: 750px) {
   .main-card{
     width: 30em;
+    padding-top: 0.5em !important; 
+    padding-left: 2em !important; 
+    padding-right: 1em !important; 
+    padding-bottom: 2em !important;
   }
   .main-card-info{
     font-size: 1.3em;
   }
+  .main-description{
+    position: relative;
+    left: -80%;
+    top: 1.5em;
+    width: 190%;
+  }
+  .main-card-image{
+    border: none;
+  }
+  
+  .main-card-image img{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    align-self: flex-start;
+  }
+
   .agent-description{
     width: 150%;
     left: -45%;
@@ -256,15 +304,27 @@ body {
 }
 @media(max-width: 570px){
   .main-card{
-    width: 12em;
+    height: 17em;
     width: 23em;
+    padding: 0.5em !important;
+    padding-bottom: 2em !important;
   }
   .main-card-image img{
-    width: 8em;
+    width: 6.5em;
+    height: 6.5em;
   }
   .main-card-info{
-    font-size: 1em;
+    font-size: 1.3em;
+    padding: 1em;
+    align-self: flex-start;
   }
+  .main-description{
+    position: relative;
+    left: -80%;
+    top: 2em;
+    width: 190%;
+  }
+
   .agent-description{
     width: 180%;
     left: -80%;
@@ -274,6 +334,7 @@ body {
   .agent-info{
     font-size: 0.9em;
   }
+
 }
 @media(max-width: 450px){
   .main-card{
