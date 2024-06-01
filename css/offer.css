@@ -106,16 +106,6 @@ body{
     padding: 2em !important ;
 }
 
-.offer-subinfo-info div p{
-    width: 50%;
-}
-.offer-subinfo div p:first-child{
-    border-right: 2px solid var(--color-primary);
-}
-.offer-subinfo-info div p:nth-child(2){
-    padding-left: 1em;
-}
-
 .offer-description p, .offer-info{
     font-size: 1.2em;
 }

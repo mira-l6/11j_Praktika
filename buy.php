@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/buy.css">
     <link rel="stylesheet" href="/css/home.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Продажба</title>
+    <title>Форум</title>
 </head>
 
 <body>

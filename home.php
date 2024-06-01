@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/home-offer.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Начало</title>
+    <title>Форум</title>
 </head>
 
 <body>
