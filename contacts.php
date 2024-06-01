@@ -232,7 +232,7 @@
             </div>
         </div>
         <div class="g-0 mb-0 ps-0 container-fluid subheading-1">
-            <h2 class="text-center mb-0 pb-4 pt-4">Запознайте се с нашите
+            <h2 class="text-center mb-0 pb-4 pt-4 ps-1 pe-1">Запознайте се с нашите
                     брокери.
             </h2>
         </div>
