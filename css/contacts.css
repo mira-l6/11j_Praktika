@@ -35,6 +35,10 @@ body {
 .main-card-info h4{
   font-size: 1.3em;
 }
+.main-card-subinfo p{
+  margin-bottom: 0em;
+  font-size: 0.8em;
+}
 
 .card-button {
   padding: 0.8rem;
@@ -100,8 +104,10 @@ body {
   align-items: center;
 }
 .agent-photo{
-  width: 12em;
-  height: 12em;
+  width: 14em;
+  height: 100%;
+  display: flex;
+  align-items: center;
   border-right: 1px solid rgba(171, 166, 171, 0.4);
 }
 .agent-info{
@@ -110,20 +116,32 @@ body {
 .agent-photo img{
   object-fit: cover;
   max-width: 100%;
-  width: 12em;
-  height: 12em;
+  width: 14em;
+  height: 100%;
+  max-height: 15em;
   padding: 1em;
 }
 
+.agent-subinfo p{
+  margin-bottom: 0.3em;
+}
+.agent-description{
+  overflow-y: scroll;
+  height: 5em;
+  width: 25em;
+  border-top: 1px solid rgba(171, 166, 171, 0.4);
+  margin-top: 1em;
+}
+
 .estate-agents{
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
 }
 
 /* contacts media START */
 
 @media(max-width: 1300px){
   .estate-agents{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
