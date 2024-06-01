@@ -26,6 +26,10 @@
 
 
     }
+    else
+    {
+        echo "Адд-агент.пхп се прецака";
+    }
 
     function validate($data)
     {
