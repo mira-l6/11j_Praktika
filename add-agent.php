@@ -17,6 +17,7 @@
         $phone = trim($_POST['agent-position']);
         $experience = trim($_POST['agent-description']);
 
+        echo $name.$surname.$username.$password.$email.$phone.$experience;
 
             //zaqvka za dobavqne na zapis
             //snimkata se dobavq v otdelna forma i shte se obrabotva s upload formata; url i name mogat da sa null
