@@ -198,10 +198,12 @@
                        <div class="main-card-image"><img src="/img/JohnDoe.jpg" alt=""></div>
                        <div class="main-card-info">
                         <h4><?php echo $adminname.' '.$adminlastname ?></h4>
-                        <p><?php echo $adminexperience ?></p>
-                        <p><?php echo $adminphone ?></p>
-                        <p><?php echo $adminemail ?></p>
-                        <p class="main-description"><?php echo $admindescription ?></p>
+                        <div class="main-card-subinfo">
+                            <p><?php echo $adminexperience ?></p>
+                            <p><?php echo $adminphone ?></p>
+                            <p><?php echo $adminemail ?></p>
+                            <p class="main-description"><?php echo $admindescription ?></p>
+                        </div>
                        </div>
                     </div>
 
