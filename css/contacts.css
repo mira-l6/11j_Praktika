@@ -7,6 +7,9 @@
   font-weight: 0;
 }
 
+.container-fluid{
+  padding-left: 0 !important;
+}
 body {
   overflow-x: hidden;
 }
@@ -84,6 +87,10 @@ body {
   width: 100vw;
 }
 
+.agent-info p{
+  overflow-wrap: break-word !important;
+}
+
 .subheading-1{
   background-color: var(--color-primary);
   box-shadow: -2px 0px 27px 7px rgba(209, 202, 209, 0.4);
@@ -115,10 +122,11 @@ body {
 }
 .agent-photo img{
   object-fit: cover;
-  max-width: 100%;
-  width: 14em;
-  height: 100%;
+  /* max-width: 100%; */
   max-height: 15em;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
   padding: 1em;
 }
 
@@ -133,21 +141,86 @@ body {
   margin-top: 1em;
 }
 
+/* .agent-info{
+  width: 336px;
+} */
+
 .estate-agents{
   grid-template-columns: repeat(2,1fr);
 }
 
 /* contacts media START */
 
-@media(max-width: 1300px){
-  .estate-agents{
-    grid-template-columns: repeat(1, 1fr);
+@media(max-width: 1500px){
+  .agent{
+    /* width: 90%; */
+    height: 18em;
+    justify-content: center;
+    align-items: center;
+  }
+  .agent-photo{
+    width: 10em;
+    border-right: none !important;
+  }
+  .agent-info{
+    align-self: flex-start;
+    height: 160px;  
+  }
+  .agent-photo img{
+    align-self: flex-start;
+    display: block !important;
+    object-fit: cover;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+  }
+  .agent-description{
+    position: relative;
+    left: -38%;
+    right: 0;
+    top: 1em;
+    width: 140%;
   }
 }
+
+@media(max-width: 1210px){
+  /* .agent-info{
+    width: 14em
+  } */
+  /* .agent-info p{
+    text-align:start;
+  } */
+  .agent{
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 20em;
+  }
+  .agent-description{
+    width: 165%;
+    left: -65%;
+  }
+  .agent-email{
+    /* width: 3em; */
+    width: 100%;
+    overflow-wrap: break-word !important;
+    word-break: break-all;
+  }
+}
+
 
 @media(max-width: 1100px){
   .main-card{
     width: 50em;
+  }
+  .agent-description{
+    width: 180%;
+    left: -80%;
+    right: 10%;
+  }
+  .agent-info p{
+    font-size: 0.9em;
   }
 }
 @media (max-width: 910px) {
@@ -157,6 +230,15 @@ body {
   .estate-agents{
     grid-template-columns: repeat(1, 1fr);
   }
+  .agent-info p{
+    font-size: 1em;
+  }
+  .agent-description{
+    width: 140%;
+    left: -35%;
+    right: 10%;
+    top: 2em;
+  }
 }
 @media (max-width: 750px) {
   .main-card{
@@ -164,6 +246,12 @@ body {
   }
   .main-card-info{
     font-size: 1.3em;
+  }
+  .agent-description{
+    width: 150%;
+    left: -45%;
+    right: 10%;
+    top: 1em;
   }
 }
 @media(max-width: 570px){
@@ -177,6 +265,15 @@ body {
   .main-card-info{
     font-size: 1em;
   }
+  .agent-description{
+    width: 180%;
+    left: -80%;
+    right: 10%;
+    top: 1em;
+  }
+  .agent-info{
+    font-size: 0.9em;
+  }
 }
 @media(max-width: 450px){
   .main-card{
@@ -184,6 +281,22 @@ body {
   }
   .title-space{
     height: 10%;
+  }
+  .agent-description{
+    width: 200%;
+    left: -100%;
+    right: 10%;
+    top: 1em;
+  }
+  .agent-photo img{
+    width: 8.5em;
+    height: 8.5em;
+  }
+  .agent-email{
+    position: relative;
+    left: -100%;
+    width: 200%;
+    top: 1em;
   }
 }
 
