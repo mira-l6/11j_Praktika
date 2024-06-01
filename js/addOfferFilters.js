@@ -7,12 +7,12 @@ function filterByCountry(){
         case 'Bulgaria':
             populatedArea.innerHTML = `
             <option value="">Област</option>
-            <option value="pburgas">област Бургас</option>
-            <option value="pvarna">област Варна</option>
-            <option value="pvt">област Велико Търново</option>
-            <option value="pvidin">област Видин</option>
-            <option value="pvraca">област Враца</option>
-            <option value="pgabrovo">област Габрово</option>
+            <option value="област Бургас">област Бургас</option>
+            <option value="област Варна">област Варна</option>
+            <option value="област Велико Търново">област Велико Търново</option>
+            <option value="област Видин">област Видин</option>
+            <option value="област Враца">област Враца</option>
+            <option value="област Габрово">област Габрово</option>
             <option value="pdobrich">област Добрич</option>
             <option value="pkardjali">област Кърджали</option>
             <option value="pkustendil">област Кюстендил</option>
