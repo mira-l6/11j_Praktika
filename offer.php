@@ -16,7 +16,6 @@ $sqlgetproperty = "SELECT * FROM `" . $offertable . "` WHERE `" . $propertyprefi
 $resultgetproperty = mysqli_query($con, $sqlgetproperty);
 $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
 
-
 $price = $rowgetproperty[$propertyprefix . '_Price'];
 $realtorid = $rowgetproperty[$propertyprefix . '_RealtorID'];
 $quadrature = $rowgetproperty[$propertyprefix . '_Quadrature'];
