@@ -37,13 +37,13 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
 //ako e biznes
 $businesstype = $rowgetproperty['business_PropertyType'];
 
-    $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
+   /* $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
     $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
     $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
     $realtorname = $rowgetrealtor['realtor_Name'];
     $realtorlastname = $rowgetrealtor['realtor_LastName'];
     $realtornumber = $rowgetrealtor['realtor_PhoneNumber'];
-    $realtoremail = $rowgetrealtor['realtor_Email'];
+    $realtoremail = $rowgetrealtor['realtor_Email'];*/
 
 ?>
 <!DOCTYPE html>
