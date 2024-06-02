@@ -38,10 +38,9 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
 //ako e biznes
 $businesstype = $rowgetproperty['business_PropertyType'];
 
-/*
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
     $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
-    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);*/
+    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
 
 ?>
 <!DOCTYPE html>
