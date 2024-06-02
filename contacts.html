@@ -62,12 +62,18 @@
                                     Услуги
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="buy.php">Покупка</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="sell.html">Продажба</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="rent.html">Наемане</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="for-rent.html">Отдаване на наем</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="finance-consulting.html">Финансова консултация</a></li>
-                                    <li class="nav-item p-1"><a class="dropdown-item nav-link" href="legal-consulting.html">Юридическа консултация</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="buy.php">Покупка</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="sell.html">Продажба</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="rent.html">Наемане</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="for-rent.html">Отдаване на наем</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="finance-consulting.html">Финансова консултация</a></li>
+                                    <li class="nav-item p-1"><a class="dropdown-item nav-link"
+                                            href="legal-consulting.html">Юридическа консултация</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -142,12 +148,14 @@
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова консултация</a>
+                                        <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова
+                                            консултация</a>
                                     </button>
                                 </li>
                                 <li class="nav-item w-100">
                                     <button class="btn w-100">
-                                        <a class="nav-link text-start ps-4" href="legal-consulting.html">Юридическа консултация</a>
+                                        <a class="nav-link text-start ps-4" href="legal-consulting.html">Юридическа
+                                            консултация</a>
                                     </button>
                                 </li>
                             </ul>
@@ -195,16 +203,16 @@
             <div class="main-contacts-space">
                 <div class="d-flex justify-content-center">
                     <div class="main-card d-flex flex-row">
-                       <div class="main-card-image"><img src="/img/JohnDoe.jpg" alt=""></div>
-                       <div class="main-card-info">
-                        <h4><?php echo $adminname.' '.$adminlastname ?></h4>
-                        <div class="main-card-subinfo">
-                            <p><?php echo $adminexperience ?></p>
-                            <p><?php echo $adminphone ?></p>
-                            <p><?php echo $adminemail ?></p>
-                            <p class="main-description"><?php echo $admindescription ?></p>
+                        <div class="main-card-image"><img src="/img/JohnDoe.jpg" alt=""></div>
+                        <div class="main-card-info">
+                            <h4>Александрър Димитров</h4>
+                            <div class="main-card-subinfo">
+                                <p>Главен администратор</p>
+                                <p>0893838383</p>
+                                <p>а.йгфдлглдгдфкгдлгйдл</p>
+                                <p class="main-description">Аз съм главният администратор Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, illo dolorem? Labore quasi aspernatur quam adipisci odio consectetur vitae explicabo mollitia suscipit iste cupiditate vel quod, aliquid ratione animi sequi, delectus harum molestiae quaerat corrupti maiores, facere repellendus impedit. Et vitae perspiciatis ipsam reprehenderit tenetur consectetur eos tempore vero nam!</p>
+                            </div>
                         </div>
-                       </div>
                     </div>
 
                     <!-- <div class="main-card card">
@@ -233,21 +241,26 @@
         </div>
         <div class="g-0 mb-0 ps-0 container-fluid subheading-1">
             <h2 class="text-center mb-0 pb-4 pt-4 ps-1 pe-1">Запознайте се с нашите
-                    брокери.
+                брокери.
             </h2>
         </div>
 
-        
+
 
         <div class="container-fluid mt-0 contact-info d-flex-column gap-3">
             <div class="d-grid estate-agents">
-        <?php
-                $sqlgetrealtor = "SELECT * FROM `realtor` ORDER BY `realtor_Name` ASC";
-                $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+                <!-- <?php
                 
+                //zaqvkata e testvana i raboti
+                $sqlgetrealtor = "SELECT * FROM `realtor` ORDER BY `realtor_Name` ASC";
+                
+                $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
                 //nqkolko reda
+                
                 $realtorscount = mysqli_num_rows($resultgetrealtor) - 1;
+                
                 $offers = array();
+                
                 while ($rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor)) 
                 {
                     if($rowgetrealtor['realtor_ID'] != 1)
@@ -279,29 +292,92 @@
                     echo '    </div>';
                     echo '    <div class="agent-info">';
                     echo '        <h4 class="agent-name">'.$realtorname.' '.$realtorlastname.'</h4>';
-                    echo '        <div class="main-card-subinfo">';
-                    echo '          <p class="agent-experience">'.$realtorexperience.'</p>';
-                    echo '          <p class="agent-number">'.$realtorphone.'</p>';
-                    echo '          <p class="agent-email">'.$realtoremail.'</p>';
-                    echo '          <p class="agent-description">'.$realtordescription.'</p>';
-                    echo '        </div>';    
+                    echo '        <p class="agent-experience">'.$realtorexperience.'</p>';
+                    echo '        <p class="agent-number">'.$realtorphone.'</p>';
+                    echo '        <p class="agent-email">'.$realtoremail.'</p>';
+                    echo '        <p class="agent-description">'.$realtordescription.'</p>';
                     echo '    </div>';
                     echo '</div>';
                 }
             ?>
             <?php
-            /*
+            /* -->
                 <div class="agent">
                     <div class="agent-photo">
-                        <img src="" alt="">
+                        <img src="/img/JohnDoe.jpg" alt="">
                     </div>
                     <div class="agent-info">
                         <h4 class="agent-name">Мирослава Ламбрева</h4>
-                        <p class="agent-number">0898989898</p>
+                        <div class="agent-subinfo">
+                            <p class="agent-experience">Професионалист</p>
+                            <p class="agent-number">0898989898</p>
+                            <p class="agent-email">ivan.ivanov@gmail.com</p>
+                            <p class="agent-description">Аз съм Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quidem provident aut voluptates doloremque incidunt, excepturi accusantium repellendus
+                                minus perspiciatis rerum? Enim eaque animi sit repudiandae voluptatibus nostrum corrupti
+                                tempore eligendi harum. Eligendi enim tenetur, hic nemo commodi quia officia maiores
+                                illum, dignissimos, adipisci animi quam aspernatur excepturi impedit quod
+                                necessitatibus!</p>
+                        </div>
                     </div>
                 </div>
-                */?>
-            
+                <div class="agent">
+                    <div class="agent-photo">
+                        <img src="/img/contacts_background.png" alt="">
+                    </div>
+                    <div class="agent-info">
+                        <h4 class="agent-name">Мирослава Ламбрева</h4>
+                        <div class="agent-subinfo">
+                            <p class="agent-experience">Професионалист</p>
+                            <p class="agent-number">0898989898</p>
+                            <p class="agent-email">kostadin.dimitrov@gmail.com</p>
+                            <p class="agent-description">Аз съм Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quidem provident aut voluptates doloremque incidunt, excepturi accusantium repellendus
+                                minus perspiciatis rerum? Enim eaque animi sit repudiandae voluptatibus nostrum corrupti
+                                tempore eligendi harum. Eligendi enim tenetur, hic nemo commodi quia officia maiores
+                                illum, dignissimos, adipisci animi quam aspernatur excepturi impedit quod
+                                necessitatibus!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent">
+                    <div class="agent-photo">
+                        <img src="/img/JohnDoe.jpg" alt="">
+                    </div>
+                    <div class="agent-info">
+                        <h4 class="agent-name">Мирослава Ламбрева</h4>
+                        <div class="agent-subinfo">
+                            <p class="agent-experience">Професионалист</p>
+                            <p class="agent-number">0898989898</p>
+                            <p class="agent-email">ivan.ivanov.ivanov@gmail.com</p>
+                            <p class="agent-description">Аз съм Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quidem provident aut voluptates doloremque incidunt, excepturi accusantium repellendus
+                                minus perspiciatis rerum? Enim eaque animi sit repudiandae voluptatibus nostrum corrupti
+                                tempore eligendi harum. Eligendi enim tenetur, hic nemo commodi quia officia maiores
+                                illum, dignissimos, adipisci animi quam aspernatur excepturi impedit quod
+                                necessitatibus!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent">
+                    <div class="agent-photo">
+                        <img src="/img/JohnDoe.jpg" alt="">
+                    </div>
+                    <div class="agent-info">
+                        <h4 class="agent-name">Мирослава Ламбрева</h4>
+                        <div class="agent-subinfo">
+                            <p class="agent-experience">Професионалист</p>
+                            <p class="agent-number">0898989898</p>
+                            <p class="agent-email">kolko.moje.da.l.@gmial</p>
+                            <p class="agent-description">Аз съм Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quidem provident aut voluptates doloremque incidunt, excepturi accusantium repellendus
+                                minus perspiciatis rerum? Enim eaque animi sit repudiandae voluptatibus nostrum corrupti
+                                tempore eligendi harum. Eligendi enim tenetur, hic nemo commodi quia officia maiores
+                                illum, dignissimos, adipisci animi quam aspernatur excepturi impedit quod
+                                necessitatibus!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

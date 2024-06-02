@@ -38,8 +38,15 @@
     align-self: flex-start;
     display: flex;
     justify-content: flex-end;
-    width: 23%;
+    width: 5%;
 }
+
+.agent{
+    width: 44em;
+}
+/* .agent-edit-boxbutton i{
+    border-top-right-radius: 50px;
+} */
 
 @media(max-width: 1300px){
     .estate-agents{

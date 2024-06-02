@@ -38,4 +38,39 @@
     .delete-button{
         margin-bottom: 0.3em;
     }
+
+    .filter-option label{
+        font-size: 1em !important;
+    }
+    .filter-option  select{
+        width: 90% !important;
+        font-size: 1em !important;
+    }
+
+    .filter-box{
+        display: flex !important;
+        flex-direction: column !important;
+        height: 30em;
+    }
+    .filter-option{
+        padding: 1.20em !important;
+        border: none !important;
+        border-bottom: 1px solid var(--color-primary) !important;
+    }
+    .filter-option:first-child{
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    .filter-option:nth-child(7){
+        border: none !important;
+    }
+    .filter-option:last-child{
+        border-bottom: none !important;
+        border-top-left-radius: 50px;
+        border-top: 1px solid var(--color-primary) !important;
+
+    }   
+    .filter-option select, .filter-option input{
+        width: 80%;
+    }
 }

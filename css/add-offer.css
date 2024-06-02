@@ -1,3 +1,7 @@
+a{
+    color: black !important;
+}
+
 .add-offer-box{
     width: 100%;
 }
@@ -16,10 +20,18 @@
     color: white;
     font-weight: 500;
 }
+.add-offer-title div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .add-offer-button{
     border: none;
     border-radius: 20px;
     width: 7em;
+    height: 3em;
+    color: black !important;
     background-color: rgb(233, 227, 227);
     padding: 0.5em 1em 0.5em 1em;  
 }
@@ -123,7 +135,7 @@ input{
 }
 select{
     border: none;
-    border-bottom: 1px solid rgb(233, 227, 227) !important;
+    border-top: 1px solid rgb(233, 227, 227) !important;
 }
 
 .add-offer-architecture{
@@ -238,7 +250,7 @@ textarea:first-child{
         height: 1.3em;
     }
     .add-offer-location-info form select{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     
 }
@@ -391,19 +403,19 @@ textarea:first-child{
     .add-offer-checkboxes{
         flex-direction: column;
     }
-    .filter-option label{
-        font-size: 0.8em;
-    }
-    .filter-option  select{
-        font-size: 0.6em
-    }
+
 }
 @media(max-width: 530px){
-    .filter-option select{
+    /* .filter-option select{
         width: 7em;
-    }
+    } */
     .delete-button{
         margin-bottom: 0.3em;
+    }
+
+    .filter-option:nth-child(5){
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0 !important;
     }
 }
 

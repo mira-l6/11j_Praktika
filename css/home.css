@@ -1,4 +1,9 @@
 
+.home-title{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .price-paragraph{
     font-size: 1.5rem;
 }
@@ -207,7 +212,7 @@ input[type="number"]{
         height: 30em;
     }
     .filter-option{
-        padding: 1.28em !important;
+        padding: 1.20em !important;
         border: none !important;
         border-bottom: 1px solid var(--color-primary) !important;
     }

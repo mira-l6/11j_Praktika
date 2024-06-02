@@ -59,6 +59,9 @@ select{
 select:focus{
   color: black !important;
 }
+a{
+  color: black !important;
+}
 a:hover{
   color: black !important;
 }

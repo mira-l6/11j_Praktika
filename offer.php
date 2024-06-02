@@ -294,7 +294,7 @@ $businesstype = $rowgetproperty['business_PropertyType'];
     </div>
     <div class="offer-info mb-1 p-4 row">
         <div class="col-6 offer-subinfo d-flex flex-column justify-content-center">
-            <h4 class="p-2">Обща информация:</h5>
+            <h4 class="p-2">Обща информация:</h4>
                 <div class="p-2">
                     <p>Строителство: <?php echo $constructiontype . ', ' . $constructionyear ?></p>
                     <p>Етаж: <?php echo $floorflat . ' от ' . $floorbuilding ?></p>
