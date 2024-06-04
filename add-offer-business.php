@@ -10,26 +10,26 @@
 
     $realtorid = $_SESSION['login_RealtorID'];
             
-    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    //маин оффер
-    if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['description']))
+    if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
-        $offername = trim($_POST['offername']);
-        $price = trim($_POST['price']);
-        $quadrature = trim($_POST['quadrature']);
-        $floorflat = trim($_POST['floorflat']);
-        $floors = trim($_POST['floors']);
-        $constructionyear = trim($_POST['constructionyear']);
-        $constructiontype = trim($_POST['constructiontype']);
-        //exit();
-        $propertytype = trim($_POST['property-type']);
-        $businesstype = trim($_POST['business-type']);
-        $country = trim($_POST['country']);
-        $province = trim($_POST['populated-place-add']);
-        $region = trim($_POST['town-area-add']);
-        $description = trim($_POST['description']);
+        if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['description']))
+        {
+            $offername = trim($_POST['offername']);
+            $price = trim($_POST['price']);
+            $quadrature = trim($_POST['quadrature']);
+            $floorflat = trim($_POST['floorflat']);
+            $floors = trim($_POST['floors']);
+            $constructionyear = trim($_POST['constructionyear']);
+            $constructiontype = trim($_POST['constructiontype']);
+            $propertytype = trim($_POST['property-type']);
+            $businesstype = trim($_POST['business-type']);
+            $country = trim($_POST['country']);
+            $province = trim($_POST['populated-place-add']);
+            $region = trim($_POST['town-area-add']);
+            $description = trim($_POST['description']);
 
-
+            echo $offername.$price.$constructiontype.$propertytype.$country.$province.$region;
+            
         if(isset($_POST['features']))
         {
             $features = trim($_POST['features']);
