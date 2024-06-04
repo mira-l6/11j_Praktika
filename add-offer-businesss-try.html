@@ -14,9 +14,18 @@
     <div class="add-offer-box">
         <div class="add-offer-title d-flex flex-row">
             <h2>Добавяне на бизнес имот</h2>
-            <div>
+            <div>   
                 <button class="add-offer-button delete-button">Отмени</button>
-                <button id="submit-all-forms" class="add-offer-button add-button" >Запази</button>
+                <button id="submit-all-forms" class="add-offer-button add-button" onclick="popupShow()">Запази</button>
+            </div>
+            <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
+                <h5>Искате ли да приемете промените?</h5>
+                <div class="d-flex align-items-center popup-buttons">
+                    <button class="deny-button" onclick="popupClose()">Отказ</button>
+                    <form name="add-form" class="add-form" method="post">
+                        <button id="popup-submit" onclick="popupClose()">Добавяне</button>
+                    </form>
+                </div>
             </div>
             <!-- <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
                 <h5>Искате ли да приемете промените?</h5>
@@ -28,7 +37,7 @@
                 </div>
             </div> -->
         </div>
-        <form action="" method="post">
+        <form id="big-form" name="big-form" action="" method="post">
             <div class="add-offer-body d-grid">
 
                 <div>
@@ -221,56 +230,19 @@
 
     </div>
 
-
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('submit-all-forms').addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent the default form submission
+        document.addEventListener('DOMContentLoaded', function()
+    {
+        document.getElementById('popup-submit').addEventListener('click', function() 
+        {
+            // Hide the popup
+            //document.getElementById('popup').style.display = 'none';
 
-                const mainOfferFormData = new FormData(document.getElementById('main-offer-form'));
-                const dropDownFormData = new FormData(document.getElementById('drop-down-form'));
-                const descriptionFormData = new FormData(document.getElementById('description'));
-
-                //Merge all form data into one FormData object
-                const combinedFormData = new FormData();
-                for (let [key, value] of mainOfferFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }
-                for (let [key, value] of dropDownFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }
-                for (let [key, value] of descriptionFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }
-                /*for (let [key, value] of imageUploadFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }*/
-
-                // Send the combined data to the add-offer-business.php using Fetch API
-                fetch('add-offer-business.php', {
-                    method: 'post',
-                    body: combinedFormData
-                })
-                    .then(response => response.text())
-                    /*.then(data => {
-                        console.log(data);
-                        // Optionally handle the response, redirect, or show a success message
-                    })*/
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
-            });
-
-            document.getElementById('popup-submit').addEventListener('click', function () {
-                // Hide the popup
-                //document.getElementById('popup').style.display = 'none';
-
-                // Collect form data
-                document.getElementById('form').submit();
-            });
+            // Collect form data
+            document.getElementById('form').submit();
         });
+    })
     </script>
-
 </body>
 
 
