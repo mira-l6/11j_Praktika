@@ -8,7 +8,7 @@
     $realtorid = 2;
     //$realtorid = $_SESSION['login_RealtorID'];
             //echo $realtorid;
-        if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['description']))
+        if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['description-text']))
         {
             $offername = trim($_POST['offername']);
             $price = trim($_POST['price']);
@@ -22,7 +22,7 @@
             $country = trim($_POST['country']);
             $province = trim($_POST['populated-place-add']);
             $region = trim($_POST['town-area-add']);
-            $description = trim($_POST['description']);
+            $description = trim($_POST['description-text']);
 
         if($_POST['features'] != null)
         {

@@ -23,7 +23,7 @@
     $country = trim($business['country']);
     $province = trim($business['populated-place-add']);
     $region = trim($business['town-area-add']);
-    $description = trim($business['description']);
+    $description = trim($business['description-text']);
 
 
 
