@@ -16,7 +16,6 @@ $sqlgetproperty = "SELECT * FROM `" . $offertable . "` WHERE `" . $propertyprefi
 $resultgetproperty = mysqli_query($con, $sqlgetproperty);
 $rowgetproperty = mysqli_fetch_assoc($resultgetproperty);
 
-
 $price = $rowgetproperty[$propertyprefix . '_Price'];
 $realtorid = $rowgetproperty[$propertyprefix . '_RealtorID'];
 $quadrature = $rowgetproperty[$propertyprefix . '_Quadrature'];
@@ -38,10 +37,13 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
 //ako e biznes
 $businesstype = $rowgetproperty['business_PropertyType'];
 
-/*
     $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
-    $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
-    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);*/
+    /*$resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+    $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
+    $realtorname = $rowgetrealtor['realtor_Name'];
+    $realtorlastname = $rowgetrealtor['realtor_LastName'];
+    $realtornumber = $rowgetrealtor['realtor_PhoneNumber'];
+    $realtoremail = $rowgetrealtor['realtor_Email'];*/
 
 ?>
 <!DOCTYPE html>
@@ -306,11 +308,11 @@ $businesstype = $rowgetproperty['business_PropertyType'];
                 <img src="" alt="">
             </div>
             <div class="ps-5">
-                <h5><?php echo $rowgetrealtor['realtor_Name'] ?></h5>
-                <h5><?php echo $rowgetrealtor['realtor_Experience'] ?></h5>
-                <p><span style="font-weight: 600">Телефон:</span> <?php echo $rowgetrealtor['realtor_PhoneNumber'] ?>
+                <h5><?php echo $realtorname ?></h5>
+                <h5><?php echo $realtorlastname ?></h5>
+                <p><span style="font-weight: 600">Телефон:</span> <?php echo $realtornumber ?>
                 </p>
-                <p><span style="font-weight: 600">Имейл:</span> <?php echo $rowgetrealtor['realtor_Email'] ?></p>
+                <p><span style="font-weight: 600">Имейл:</span> <?php echo $realtoremail ?></p>
             </div>
         </div>
     </div>

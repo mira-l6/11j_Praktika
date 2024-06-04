@@ -242,17 +242,12 @@
         <div class="container-fluid mt-0 contact-info d-flex-column gap-3">
             <div class="d-grid estate-agents">
         <?php
-                
-                //zaqvkata e testvana i raboti
                 $sqlgetrealtor = "SELECT * FROM `realtor` ORDER BY `realtor_Name` ASC";
-                
                 $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+                
                 //nqkolko reda
-                
                 $realtorscount = mysqli_num_rows($resultgetrealtor) - 1;
-                
                 $offers = array();
-                
                 while ($rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor)) 
                 {
                     if($rowgetrealtor['realtor_ID'] != 1)

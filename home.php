@@ -1,15 +1,6 @@
 <?php
     session_start();
     include "db_connection.php";
-
-    //izbor na nai-novite x oferti
-
-    
-
-    /*
-    $_SESSION['offer_ID'] = $rowgetnewoffers[$index]['offer_ID'];
-    $_SESSION['offer_Table'] = $rowgetnewoffers['offer_ID'];
-    */
 ?>
 
 <!DOCTYPE html>

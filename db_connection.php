@@ -14,5 +14,5 @@
         header("Location: login.html?не бачкам");
         exit();
     }
-
+ 
     //$con->close();
