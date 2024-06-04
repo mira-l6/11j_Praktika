@@ -11,6 +11,10 @@
         $data = file_get_contents("php://input");
         $business = json_decode($data, true);
     }
+    else
+    {
+        echo "Post ne e setnat";
+    }
     $offername = trim($business['offername']);
     $price = trim($business['price']);
     $quadrature = trim($business['quadrature']);
