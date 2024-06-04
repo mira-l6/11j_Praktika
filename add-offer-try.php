@@ -69,7 +69,7 @@
             VALUES ('$price', '$realtorid', '$quadrature', '$floorflat', '$floors', '$gas', '$tpp', '$constructionyear', '$constructiontype', '$description', '$features', '$forprivatepeople', '$furnished', '$country', '$populatedplace', '$offername', '$townarea', '$businesstype', '$propertytype')"; 
         $result = mysqli_query($con, $sql);
         if($result)
-            {
+        {
                 /*
                 // vzima id na posledniq dobaven zapis
                 $last_id = mysqli_insert_id($con);
@@ -77,14 +77,23 @@
                 $_SESSION['last_id'] = $last_id;*/
                 $sqllast = "SELECT * FROM `business_property` ORDER BY `business_UploadTime` DESC LIMIT 1";
                 $resultlast = mysqli_query($con, $sqllast);
+                if($resultlast)
+                {
                 $rowlast = mysqli_fetch_assoc($resultlast);
                 $last_id = $rowlast[`business_ID`];
                 $_SESSION['last_id'] = $last_id;
-            }
-            if(!$result)
-            {
-                echo "Добавянето на офертата в бизнес проперти не стана.";
-            }
+                }
+                else
+                {
+                    echo "Query for getting the last offer not working";
+                }
+        }
+        else
+        {
+            echo "No result from add property query";
+        }
+
+        
             $sqlgettime = "SELECT * FROM `business_property` WHERE `business_ID`='$last_id'";
             $resultgettime = mysqli_query($con, $sqlgettime);
             if(!$resultgettime)
