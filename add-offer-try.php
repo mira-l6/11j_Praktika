@@ -8,7 +8,7 @@
     $realtorid = 2;
     //$realtorid = $_SESSION['login_RealtorID'];
             //echo $realtorid;
-        if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']))
+        if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['description']))
         {
             $offername = trim($_POST['offername']);
             $price = trim($_POST['price']);
@@ -93,7 +93,7 @@
             echo "No result from add property query";
         }
 
-        
+
             $sqlgettime = "SELECT * FROM `business_property` WHERE `business_ID`='$last_id'";
             $resultgettime = mysqli_query($con, $sqlgettime);
             if(!$resultgettime)
