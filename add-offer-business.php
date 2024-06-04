@@ -6,13 +6,34 @@
     include "db_connection.php";
 
 
-    $realtorid = $_SESSION['login_RealtorID'];
-            echo $realtorid;
-    if ($_SERVER['REQUEST_METHOD'] === 'POST')
+    if(isset($_POST))
     {
-        if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['description']))
-        {
-            $offername = trim($_POST['offername']);
+        $data = file_get_contents("php://input");
+        $business = json_decode($data, true);
+    }
+    $offername = trim($business['offername']);
+    $price = trim($business['price']);
+    $quadrature = trim($business['quadrature']);
+    $floorflat = trim($business['floorflat']);
+    $floors = trim($business['floors']);
+    $constructionyear = trim($business['constructionyear']);
+    $constructiontype = trim($business['constructiontype']);
+    $propertytype = trim($business['property-type']);
+    $businesstype = trim($business['business-type']);
+    $country = trim($business['country']);
+    $province = trim($business['populated-place-add']);
+    $region = trim($business['town-area-add']);
+    $description = trim($business['description']);
+
+
+
+    $realtorid = $_SESSION['login_RealtorID'];
+            //echo $realtorid;
+    //if ($_SERVER['REQUEST_METHOD'] === 'POST')
+    //{
+        //if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['description']))
+        //{
+            /*$offername = trim($_POST['offername']);
             $price = trim($_POST['price']);
             $quadrature = trim($_POST['quadrature']);
             $floorflat = trim($_POST['floorflat']);
@@ -26,17 +47,17 @@
             $region = trim($_POST['town-area-add']);
             $description = trim($_POST['description']);
 
-            echo $offername.$price.$constructiontype.$propertytype.$country.$province.$region;
+            echo $offername.$price.$constructiontype.$propertytype.$country.$province.$region;*/
 
-        if(isset($_POST['features']))
+        if($business['features'] != null)
         {
-            $features = trim($_POST['features']);
+            $features = trim($business['features']);
         }
         else
         {
             $features = null;
         }
-        if($_POST['gas'] == "on")
+        if($business['gas'] == "on")
         {
             $gas = 1;
         }
@@ -44,7 +65,7 @@
         {
             $gas = 0;
         }
-        if($_POST['tpp'] == "on")
+        if($business['tpp'] == "on")
         {
             $tpp = 1;
         }
@@ -52,7 +73,7 @@
         {
             $tpp = 0;
         }
-        if($_POST['forprivatepeople'] == "on")
+        if($business['forprivatepeople'] == "on")
         {
             $forprivatepeople = 1;
         }
@@ -60,7 +81,7 @@
         {
             $forprivatepeople = 0;
         }
-        if($_POST['furnished'] == "on")
+        if($business['furnished'] == "on")
         {
             $furnished = 1;
         }
@@ -68,6 +89,7 @@
         {
             $furnished = 0;
         }
+        
         $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$price', '$realtorid', '$quadrature', '$floorflat', '$floors', '$gas', '$tpp', '$constructionyear', '$constructiontype', '$description', '$features', '$forprivatepeople', '$furnished', '$country', '$populatedplace', '$offername', '$townarea', '$businesstype', '$propertytype')"; 
         $result = mysqli_query($con, $sql);
@@ -103,8 +125,8 @@
             {
                 echo "Добавяне на оферта в таблица оффер не беше успешно.";
             }
-    }
-    }
+    //}
+    //}
     //дроп даун
     //if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']))
 /*
