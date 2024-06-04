@@ -3,13 +3,11 @@
     //tazi str se izpulnqva pri zapazvane na biznes imot ot buton zapazi
     //trqbva da se dobavq oferta v tablica offers
     session_start();
-
-
     include "db_connection.php";
 
 
     $realtorid = $_SESSION['login_RealtorID'];
-            
+            echo $realtorid;
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']) && isset($_POST['description']))
@@ -29,7 +27,7 @@
             $description = trim($_POST['description']);
 
             echo $offername.$price.$constructiontype.$propertytype.$country.$province.$region;
-            
+
         if(isset($_POST['features']))
         {
             $features = trim($_POST['features']);
