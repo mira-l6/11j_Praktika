@@ -26,8 +26,8 @@
     $description = trim($business['description-text']);
 
 
-
-    $realtorid = $_SESSION['login_RealtorID'];
+    $realtorid = 2;
+    //$realtorid = $_SESSION['login_RealtorID'];
             //echo $realtorid;
     //if ($_SERVER['REQUEST_METHOD'] === 'POST')
     //{
