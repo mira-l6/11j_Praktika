@@ -100,7 +100,11 @@
             {
                 echo "Добавяне на оферта в таблица оффер не беше успешно.";
             }
-    }
+        }
+        else
+        {
+            echo "Isset ne sa zadadeni.";
+        }
     //дроп даун
     //if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']))
 /*
@@ -195,7 +199,4 @@
             {
                 echo "Добавяне на оферта в таблица оффер не беше успешно.";
             }*/
-    else
-    {
-        echo "Nqkoi ot post methodite ne e zadaden.";
-    }
+    
