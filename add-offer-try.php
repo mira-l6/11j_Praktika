@@ -68,32 +68,43 @@
         $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$price', '$realtorid', '$quadrature', '$floorflat', '$floors', '$gas', '$tpp', '$constructionyear', '$constructiontype', '$description', '$features', '$forprivatepeople', '$furnished', '$country', '$populatedplace', '$offername', '$townarea', '$businesstype', '$propertytype')"; 
         $result = mysqli_query($con, $sql);
-        if($result)
-        {
+        
+        //if($result)
+        //{
                 /*
                 // vzima id na posledniq dobaven zapis
                 $last_id = mysqli_insert_id($con);
                 // zapazva go
                 $_SESSION['last_id'] = $last_id;*/
-                $sqllast = "SELECT * FROM `business_property` ORDER BY `business_UploadTime` DESC LIMIT 1";
+                $sqllast = "SELECT * FROM `business_property` ORDER BY `business_ID` DESC LIMIT 1";
                 $resultlast = mysqli_query($con, $sqllast);
                 if($resultlast)
                 {
-                $rowlast = mysqli_fetch_assoc($resultlast);
-                $last_id = $rowlast[`business_ID`];
-                $_SESSION['last_id'] = $last_id;
+                    $rowlast = mysqli_fetch_assoc($resultlast);
+                    $last_id = $rowlast[`business_ID`];
+                    $_SESSION['last_id'] = $last_id;
+                    $timeofupload = $rowlast['business_TimeOfUpload'];
+
+                    $sqladdoffer = "INSERT INTO `offer`(`offer_Table`, `offer_PropertyID`, `offer_TimeOfUpload`, `offer_Prefix`)
+                        VALUES('business_property', '$last_id', '$timeofupload', 'business')";
+                    $resultaddoffer = mysqli_query($con, $sqladdoffer);
+
+                    if(!$resultaddoffer)
+                    {
+                        header("Location: login.html?error=Dobavqne v tablica offer be neuspeshno.");
+                    }
                 }
                 else
                 {
-                    echo "Query for getting the last offer not working";
+                    header("Location: login.html?error=Query for getting the last business property not working");
                 }
-        }
-        else
-        {
-            echo "No result from add property query";
-        }
+        //}
+        //else
+        //{
+        //    echo "No result from add property query";
+        //}
 
-
+            /*
             $sqlgettime = "SELECT * FROM `business_property` WHERE `business_ID`='$last_id'";
             $resultgettime = mysqli_query($con, $sqlgettime);
             if(!$resultgettime)
@@ -113,7 +124,7 @@
         else
         {
             echo "Isset ne sa zadadeni.";
-        }
+        }*/
     //дроп даун
     //if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']))
 /*
@@ -209,3 +220,4 @@
                 echo "Добавяне на оферта в таблица оффер не беше успешно.";
             }*/
     
+        }
