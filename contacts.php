@@ -287,6 +287,9 @@
                     echo '          <p class="agent-description">'.$realtordescription.'</p>';
                     echo '        </div>';    
                     echo '    </div>';
+                    echo '    <div class="agent-description-responsive">';
+                    echo '        <p class="agent-description-responsive-text">'.$realtordescription.'</p>';
+                    echo '    </div>';
                     echo '</div>';
                 }
             ?>
