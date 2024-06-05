@@ -81,10 +81,9 @@
                 if($resultlast)
                 {
                     $rowlast = mysqli_fetch_assoc($resultlast);
-                    $last_id = 46;
-                    //$last_id = $rowlast[`business_ID`];
+                    $last_id = $rowlast[`business_ID`];
                     $_SESSION['last_id'] = $last_id;
-                    $timeofupload = $rowlast['business_TimeOfUpload'];
+                    $timeofupload = $rowlast['business_UploadTime'];
 
                     $sqladdoffer = "INSERT INTO `offer`(`offer_Table`, `offer_PropertyID`, `offer_TimeOfUpload`, `offer_Prefix`)
                         VALUES('business_property', '$last_id', '$timeofupload', 'business')";
