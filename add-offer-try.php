@@ -94,6 +94,7 @@
                 {
                     header("Location: login.html?error=Query for getting the last business property not working");
                 }
+            header("Location: add-offer-business.html");
         }
         else
         {
