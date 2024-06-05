@@ -275,6 +275,7 @@
                     $imgurl = $rowrealtorimg['realtorimg_Url'];
 
                     echo '<div class="agent">';
+                    echo '  <div class="agent-inner-box">';
                     echo '    <div class="agent-photo">';
                     echo '        <img src="'.$imgurl.'" alt="">';
                     echo '    </div>';
@@ -287,9 +288,10 @@
                     echo '          <p class="agent-description">'.$realtordescription.'</p>';
                     echo '        </div>';    
                     echo '    </div>';
-                    echo '    <div class="agent-description-responsive">';
-                    echo '        <p class="agent-description-responsive-text">'.$realtordescription.'</p>';
-                    echo '    </div>';
+                    echo '  </div>';
+                    echo '  <div class="agent-description-responsive">';
+                    echo '    <p class="agent-description-responsive-text">'.$realtordescription.'</p>';
+                    echo '  </div>';
                     echo '</div>';
                 }
             ?>
