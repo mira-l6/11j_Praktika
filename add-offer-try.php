@@ -6,7 +6,6 @@
     include "db_connection.php";
 
     $realtorid = 2;
-    echo "Realtorid = 2.";
     //$realtorid = $_SESSION['login_RealtorID'];
             //echo $realtorid;
         if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['description-text']))
@@ -70,8 +69,8 @@
             VALUES ('$price', '$realtorid', '$quadrature', '$floorflat', '$floors', '$gas', '$tpp', '$constructionyear', '$constructiontype', '$description', '$features', '$forprivatepeople', '$furnished', '$country', '$populatedplace', '$offername', '$townarea', '$businesstype', '$propertytype')"; 
         $result = mysqli_query($con, $sql);
         
-        if($result)
-        {
+        //if($result)
+        //{
                 /*
                 // vzima id na posledniq dobaven zapis
                 $last_id = mysqli_insert_id($con);
@@ -89,11 +88,11 @@
                 {
                     echo "Query for getting the last offer not working";
                 }
-        }
-        else
-        {
-            echo "No result from add property query";
-        }
+        //}
+        //else
+        //{
+        //    echo "No result from add property query";
+        //}
 
 
             $sqlgettime = "SELECT * FROM `business_property` WHERE `business_ID`='$last_id'";
