@@ -6,6 +6,7 @@
     include "db_connection.php";
 
     $realtorid = 2;
+    echo "Realtorid = 2.";
     //$realtorid = $_SESSION['login_RealtorID'];
             //echo $realtorid;
         if(isset($_POST['offername']) && isset($_POST['price']) && isset($_POST['quadrature']) && isset($_POST['floorflat']) && isset($_POST['floors']) && isset($_POST['constructionyear']) && isset($_POST['constructiontype']) && isset($_POST['description-text']))
@@ -68,7 +69,7 @@
         $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$price', '$realtorid', '$quadrature', '$floorflat', '$floors', '$gas', '$tpp', '$constructionyear', '$constructiontype', '$description', '$features', '$forprivatepeople', '$furnished', '$country', '$populatedplace', '$offername', '$townarea', '$businesstype', '$propertytype')"; 
         $result = mysqli_query($con, $sql);
-        echo "Zaqvkata za dobavqne na biznes se izpulni.";
+        
         if($result)
         {
                 /*
