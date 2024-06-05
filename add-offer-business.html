@@ -188,14 +188,14 @@
                     <div class="d-flex align-items-center popup-buttons">
                         <button class="deny-button" onclick="popupClose()">Отказ</button>
                         <form name="add-form" class="add-form" method="post">
-                            <button id="popup-submit" onclick="popupClose()">Добавяне</button>
+                            <button id="popup-submit" onclick="popupClose()" type="submit">Добавяне</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="add-offer-body d-grid">
                 <div class="add-offer-images">
-                    <form name="form" action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
+                    <form action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
                         <input type="file" id="image-upload-multiple" name="images[]" multiple onchange="preview()">
                         <label for="image-upload-multiple">Прикачване на
                             снимки</label>
