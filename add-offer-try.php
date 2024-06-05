@@ -76,7 +76,7 @@
                 $last_id = mysqli_insert_id($con);
                 // zapazva go
                 $_SESSION['last_id'] = $last_id;*/
-                $sqllast = "SELECT * FROM `business_property` ORDER BY `business_UploadTime` DESC LIMIT 1";
+                $sqllast = "SELECT * FROM `business_property` ORDER BY `business_ID` DESC LIMIT 1";
                 $resultlast = mysqli_query($con, $sqllast);
                 if($resultlast)
                 {
