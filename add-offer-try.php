@@ -80,13 +80,23 @@
                 $resultlast = mysqli_query($con, $sqllast);
                 if($resultlast)
                 {
-                $rowlast = mysqli_fetch_assoc($resultlast);
-                $last_id = $rowlast[`business_ID`];
-                $_SESSION['last_id'] = $last_id;
+                    $rowlast = mysqli_fetch_assoc($resultlast);
+                    $last_id = $rowlast[`business_ID`];
+                    $_SESSION['last_id'] = $last_id;
+                    $timeofupload = $rowlast['business_TimeOfUpload'];
+
+                    $sqladdoffer = "INSERT INTO `offer`(`offer_Table`, `offer_PropertyID`, `offer_TimeOfUpload`, `offer_Prefix`)
+                        VALUES('business_property', '$last_id', '$timeofupload', 'business')";
+                    $resultaddoffer = mysqli_query($con, $sqladdoffer);
+
+                    if(!$resultaddoffer)
+                    {
+                        header("Location: login.html?error=Dobavqne v tablica offer be neuspeshno.");
+                    }
                 }
                 else
                 {
-                    echo "Query for getting the last offer not working";
+                    header("Location: login.html?error=Query for getting the last business property not working");
                 }
         //}
         //else
@@ -94,7 +104,7 @@
         //    echo "No result from add property query";
         //}
 
-
+            /*
             $sqlgettime = "SELECT * FROM `business_property` WHERE `business_ID`='$last_id'";
             $resultgettime = mysqli_query($con, $sqlgettime);
             if(!$resultgettime)
@@ -114,7 +124,7 @@
         else
         {
             echo "Isset ne sa zadadeni.";
-        }
+        }*/
     //дроп даун
     //if(isset($_POST['property-type']) && isset($_POST['business-type']) && isset($_POST['country']) && isset($_POST['populated-place-add']) && isset($_POST['town-area-add']))
 /*
@@ -210,3 +220,4 @@
                 echo "Добавяне на оферта в таблица оффер не беше успешно.";
             }*/
     
+        }
