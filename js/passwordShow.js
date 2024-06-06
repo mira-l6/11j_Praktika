@@ -1,4 +1,4 @@
-let pass = document.getElementById('agent-password');
+let pass = document.getElementById('password');
 
 function passShow(){
     if(pass.type === 'text'){
