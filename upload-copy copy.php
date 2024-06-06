@@ -60,6 +60,14 @@
                     
                     $sql_img = "INSERT INTO `business_property_images` (`business_Image_Url`, `business_Image_Name`, `business_OfferID`) VALUES ('$target_file', '$image_name', '$offer_id')";
                     $result_img = mysqli_query($con, $sql_img);
+                    if($result_img)
+                    {
+                        header("Location: add-offer-business.html?uspeshno dobavihte oferta i snimka");
+                    }
+                    else
+                    {
+                        header("Location: add-offer-business.html?error=Neuspeshno se dobavi snimka");
+                    }
                     /*
                     if (mysqli_query($con, $sql_img)) 
                     {

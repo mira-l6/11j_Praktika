@@ -194,8 +194,7 @@
             <div class="d-grid profile-layout mt-4">
                 
 
-                <div
-                    class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
+                <div class="grid-item profile-image edit-profile-image d-flex justify-content-center align-items-center">
                     <?php $_SESSION['last_id'] = 1 ?>
                     <form action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
                         <input type="file" id="image-upload-multiple" name="images[]" multiple onchange="preview()">

@@ -181,21 +181,21 @@
                 <h2>Добавяне на бизнес имот</h2>
                 <div>
                     <button class="add-offer-button delete-button">Отмени</button>
-                    <button id="submit-all-forms" class="add-offer-button add-button">Запази</button>
+                    <button id="submit-all-forms" class="add-offer-button add-button" onclick="popupShow()">Запази</button>
                 </div>
                 <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
                     <h5>Искате ли да приемете промените?</h5>
                     <div class="d-flex align-items-center popup-buttons">
                         <button class="deny-button" onclick="popupClose()">Отказ</button>
                         <form name="add-form" class="add-form" method="post">
-                            <button id="popup-submit" onclick="popupClose()">Добавяне</button>
+                            <button id="popup-submit" onclick="popupClose()" type="submit">Добавяне</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="add-offer-body d-grid">
                 <div class="add-offer-images">
-                    <form name="form" action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
+                    <form action="upload-copy copy.php" method="post" enctype="multipart/form-data" id="form">
                         <input type="file" id="image-upload-multiple" name="images[]" multiple onchange="preview()">
                         <label for="image-upload-multiple">Прикачване на
                             снимки</label>
@@ -416,14 +416,14 @@
             });
         });
 
-        document.getElementById('popup-submit').addEventListener('click', function() 
-        {
+        //document.getElementById('popup-submit').addEventListener('click', function() 
+        //{
             // Hide the popup
             //document.getElementById('popup').style.display = 'none';
 
             // Collect form data
-            document.getElementById('form').submit();
-        });
+            //document.getElementById('form').submit();
+        //});
     });
     </script>
     
