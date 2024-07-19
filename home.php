@@ -330,8 +330,6 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
-                
-                //zaqvkata e testvana i raboti
                 $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
                 
                 $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
@@ -391,16 +389,16 @@
                     $pics = array();
                     while ($rowgetpic = mysqli_fetch_assoc($resultgetpics)) 
                     {
-                        $pics[] = $rowgetpics;
+                        $pics[] = $rowgetpic;
                     }
                     //cikul za snimkite
                     for($j = 0; $j < $picscount; $j++)
                     {
-                        $pic = $offers[$j];
-                        $imgurlsess = $offertable.'_Image_Url';
-                        $picurl = $pic[$imgurlsess];
+                        $pic = $pics[$j];
+                        //$imgurlsess = $offertable.'_Image_Url';
+                        $picurl = $pic['business_Image_Url'];
                         $_SESSION['picurl'] = $picurl;
-                        // Set the active class only for the first item of carosel
+                        // Active class само за първия елемент на carousel
                         $activeclass = ($j === 0) ? 'active' : '';
 
                         echo '<div class="carousel-item '.$activeclass.'">';
