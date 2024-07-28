@@ -198,7 +198,7 @@
 
             <div style="display: flex; justify-content: space-around; text-align: left; margin-bottom: 20px;">
                 <div class="advantages-box">
-                    <i class="material-icons">Partner Exchange</i>
+                    <i class="material-icons">people</i>
                     <hr>
                     <p>This is some text under the icon.</p>
                 </div>
