@@ -196,8 +196,10 @@
             </p>
 
             <div style="display: flex; justify-content: space-around; text-align: left; margin-bottom: 20px;">
-                <div>
-                    Безплатно
+                <div class="advantages-box">
+                    <i class="fas fa-star"></i>
+                    <hr>
+                    <p>This is some text under the icon.</p>
                 </div>
                 <div>
                     Безплатно
