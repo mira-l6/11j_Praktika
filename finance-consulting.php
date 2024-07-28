@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/consulting.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Форум</title>
 </head>
 
@@ -197,7 +198,7 @@
 
             <div style="display: flex; justify-content: space-around; text-align: left; margin-bottom: 20px;">
                 <div class="advantages-box">
-                    <i class="fas fa-star"></i>
+                    <i class="material-icons">Partner Exchange</i>
                     <hr>
                     <p>This is some text under the icon.</p>
                 </div>
