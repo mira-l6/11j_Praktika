@@ -75,3 +75,19 @@
 {
     color: #ffffff;
 }
+
+.text-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.image-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

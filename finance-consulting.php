@@ -225,13 +225,13 @@
             </div>
 
             <div style="display: flex; justify-content: space-around; text-align: left; margin-bottom: 20px;">
-                <div class="">
+                <div class="text-column">
                     <p>
                         Ипотечните кредити предоставят възможност за покупка на Вашата мечтана къща или апартамент. С гъвкави условия за срокове и лихвени проценти, тези кредити предлагат високо ниво на сигурност и стабилност. Независимо дали сте първи купувач, или просто търсите нов дом, ипотечните кредити Ви дават възможност да реализирате своите жилищни мечти. 
                     </p>
                 </div>
-                <div>
-                    <img class="navbar-brand logo" src="./img/consulting2.jpg" alt="">
+                <div class="image-column">
+                    <img src="./img/consulting2.jpg" alt="">
                 </div>
             </div>
             
