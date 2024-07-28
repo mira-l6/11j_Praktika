@@ -200,19 +200,27 @@
                 <div class="advantages-box">
                     <i class="material-icons">people</i>
                     <hr>
-                    <p>This is some text under the icon.</p>
+                    <p>Съдействие при избора на кредит и банка</p>
                 </div>
                 <div>
-                    Безплатно
+                    <i class="material-icons">access_time</i>
+                    <hr>
+                    <p>Пестите време и усилия</p>
                 </div>
                 <div>
-                    Безплатно
+                    <i class="material-icons">tag_faces</i>
+                    <hr>
+                    <p>Индивидуална оферта за Вас</p>
                 </div>
                 <div>
-                    Безплатно
+                    <i class="material-icons">library_books</i>
+                    <hr>
+                    <p>Съдействие при изпълнение на кредита</p>
                 </div>
                 <div>
-                    Безплатно
+                    <i class="material-icons">business_center</i>
+                    <hr>
+                    <p>Богат опит и индивидуален подход</p>
                 </div>
             </div>
 
