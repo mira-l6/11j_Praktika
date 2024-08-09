@@ -194,7 +194,7 @@
         </div>
 
         <div class="add-agent-body row justify-content-center">
-            <!--<div class="agent-photo-and-description col-3 d-flex justify-content-center align-items-center">
+            <div class="agent-photo-and-description col-3 d-flex justify-content-center align-items-center">
                 <div class="add-agent-photo d-flex">
                     <p>Изберете снимка</p>
                     <form action="upload-copy copy.php" id="agent-photo" method="post" enctype="multipart/form-data">
@@ -203,20 +203,11 @@
                         <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
                     </form>
                 </div>
-            </div>-->
+            </div>
             <!--<div class="agent-info col-7 d-flex justify-content-center align-items-center">-->
-            <div class="agent-info col-7 d-flex justify-content-center align-items-center">
+            <!--<div class="agent-info col-7 d-flex justify-content-center align-items-center">-->
                 <form id="main-form" name="main-form">
-                    <div class="agent-photo-and-description col-3 d-flex justify-content-center align-items-center">
-                        <div class="add-agent-photo d-flex">
-                            <p>Изберете снимка</p>
-                            <form action="upload-copy copy.php" id="agent-photo" method="post" enctype="multipart/form-data">
-                                <img id="uploadPreview" />
-                                <label for="photo-input" class="agent-photo-custom-upload">Качи файл</label>
-                                <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
-                            </form>
-                        </div>
-                    </div>
+                <div class="agent-info col-7 d-flex justify-content-center align-items-center">
                     <div class="info-section-one-row">
                         <div class="info-subsection">
                             <label for="agent-first-name">Име: </label>
@@ -246,12 +237,13 @@
                         <label for="agent-position">Длъжност: </label>
                         <input type="text" id="agent-position">
                     </div>
-                </div>
+                
                 <div class="agent-more-info col-3 p-5 d-flex justify-content-center align-items-center">
                     <form class="d-flex justify-content-center align-items-center" id="description-form" name="description-form">
                         <textarea name="agent-description" placeholder="Въведете допълнителна информация за себе си..." cols="36"
                             rows="13" id="agent-description"></textarea>
                     </form>
+                </div>
                 </div>
                 </form>
             <!--</div>-->
