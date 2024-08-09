@@ -6,6 +6,7 @@
             <ul style="list-style: none; padding: 0;">
                 <li><a href="home.php" style="color: white; text-decoration: none;">Начало</a></li>
                 <li><a href="search.php" style="color: white; text-decoration: none;">Търсене</a></li>
+                <li><a href="buy.php" style="color: white; text-decoration: none;">Покупка</a></li><li><a href="sell.php" style="color: white; text-decoration: none;">Продажба</a></li>
                 <li><a href="contacts.php" style="color: white; text-decoration: none;">Контакти</a></li>
                 <li><a href="about.php" style="color: white; text-decoration: none;">За нас</a></li>
             </ul>
