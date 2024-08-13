@@ -101,7 +101,7 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="email">Потребителско име:</label>
+                <label for="username">Потребителско име:</label>
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
