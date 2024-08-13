@@ -1,315 +1,144 @@
 <!DOCTYPE html>
 <html lang="bg">
-
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/add-agent.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Форум</title>
+    <title>Добави брокер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .custom-file-upload {
+            display: block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button[type="button"] {
+            background-color: #f44336;
+            color: white;
+        }
+        .image-preview {
+            width: 100%;
+            height: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-
 <body>
-    <!-- nav start -->
-
-    <nav class="navbar short navbar-expand-md p-0">
-        <div class="container-fluid beige-background">
-            <ul class="navbar-nav justify-content-around">
-                <a href="index.html">
-                    <div class="brand-div">
-                        <img class="navbar-brand logo" src="./img/logo.png" alt="logo">
-                    </div>
-                </a>
-
-                <button class="navbar-toggler" height="50%;" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse">
-                    <li class="nav-item ">
-                        <button class="btn btn-lg btn-pill blc"><a href="home.php" class="nav-link">Начало</a></button>
-
-                    </li>
-
-                    <li class="nav-item ">
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-lg btn-pill blc dropdown-toggle dropdown-style"
-                                data-bs-toggle="dropdown">
-                                Услуги
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item p-1"><a class="dropdown-item nav-link" href="buy.php">Покупка</a>
-                                </li>
-                                <li class="nav-item p-1"><a class="dropdown-item nav-link" href="sell.html">Продажба</a>
-                                </li>
-                                <li class="nav-item p-1"><a class="dropdown-item nav-link" href="rent.html">Наемане</a>
-                                </li>
-                                <li class="nav-item p-1"><a class="dropdown-item nav-link" href="for-rent.html">Отдаване
-                                        на наем</a></li>
-                                <li class="nav-item p-1"><a class="dropdown-item nav-link"
-                                        href="finance-consulting.php">Финансова консултация</a></li>
-                                <li class="nav-item p-1"><a class="dropdown-item nav-link"
-                                        href="legal-consulting.php">Юридическа консултация</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- <button class="btn btn-lg btn-pill blc"><a href="" class="nav-link">Услуги</a></button>
-                        </li> -->
-
-                        <li class="nav-item">
-                            <button class="btn btn-lg btn-pill blc"><a href="contacts.php"
-                                    class="nav-link">Контакти</a></button>
-                        </li>
-
-                    <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За нас</a>
-                        </button>
-                    </li>
-
-                </div>
-            </ul>
-            <form class="d-flex justify-content-space-between">
-                <div class="collapse navbar-collapse">
-                    <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="search.html"
-                            class="nav-link"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
-                    <a class="btn btn-lg btn-pill blc ms-1" href="login.html">
-                        <div class="profile-icon d-flex justify-content-center align-items-center"><span
-                                class="fa-solid fa-user fa"></span></div>
-                    </a>
-                </div>
-            </form>
-
-        </div>
-    </nav>
-
-    <div class="offcanvas offcanvas-end" id="navbarNav" aria-labelledby="sidebar">
-        <div class="offcanvas-header beige-background">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body beige-background ps-0 pe-0">
-            <ul class="navbar-nav g-3 ms-0 ps-0">
-                <li class="nav-item">
-                    <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="home.php"
-                            class="nav-link ps-3">Начало</a></button>
-                </li>
-
-                <li class="nav-item">
-                    <button type="button"
-                        class="btn btn-lg btn-pill blc w-100 text-start collapsed-dropdown-style pt-3 pb-3"
-                        data-bs-toggle="collapse" data-bs-target="#service">
-                        <a class="ps-3">Услуги</a>
-                    </button>
-                    <div id="service" class="collapse container-fluid p-0">
-                        <ul class="navbar-nav w-100 services-nav">
-                            <li class="nav-item w-100">
-                                <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="buy.php">Покупка</a>
-                                </button>
-                            </li>
-                            <li class="nav-item w-100">
-                                <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="sell.html">Продажба</a>
-                                </button>
-                            </li>
-                            <li class="nav-item w-100">
-                                <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="rent.html">Наемане</a>
-                                </button>
-                            </li>
-                            <li class="nav-item w-100">
-                                <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="for-rent.html">Отдаване на наем</a>
-                                </button>
-                            </li>
-                            <li class="nav-item w-100">
-                                <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="finance-consulting.php">Финансова
-                                        консултация</a>
-                                </button>
-                            </li>
-                            <li class="nav-item w-100">
-                                <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="legal-consulting.php">Юридическа
-                                        консултация</a>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <!-- <button class="btn btn-lg btn-pill blc" ><a href="" class="nav-link">Услуги</a></button> -->
-                </li>
-
-                    <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc w-100 text-start">
-                            <a href="contacts.php" class="nav-link ps-3">Контакти</a>
-
-                    </button>
-                </li>
-
-                <li class="nav-item">
-                    <button class="btn btn-lg btn-pill blc w-100 text-start"><a href="about.html"
-                            class="nav-link ps-3">За
-                            нас</a></button>
-                </li>
-
-                <li class="nav-item">
-                    <button class="btn btn-lg btn-pill btn-marked blc w-100 text-start"><a href=""
-                            class="nav-link ps-3"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
-                </li>
-
-                <li class="nav-item">
-                    <button class="btn btn-lg btn-pill blc w-100 text-start profile-button">
-                        <a href="login.html" class="nav-link ps-3"><span
-                                class="fa-solid fa-user collapse-user-icon fa"></span>Профил</a>
-                    </button>
-                </li>
-
-            </ul>
-
-        </div>
+    <div class="container">
+        <h1>Добави брокер</h1>
+        <form action="add_broker.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image">Изберете снимка:</label>
+                <div class="image-preview" id="imagePreview"></div>
+                <label for="image" class="custom-file-upload">
+                    Качи файл
+                </label>
+                <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)">
+            </div>
+            <div class="form-group">
+                <label for="first_name">Име:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Фамилия:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Имейл:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Парола:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Длъжност:</label>
+                <input type="text" id="position" name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="additional_info">Въведете допълнителна информация за себе си:</label>
+                <textarea id="additional_info" name="additional_info" rows="4"></textarea>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="resetForm()">Отмени</button>
+                <button type="submit">Добави</button>
+            </div>
+        </form>
     </div>
-
-    <div class="add-agent-box">
-        <div class="add-agent-title d-flex flex-row">
-            <h2>Добави брокер</h2>
-            <div class="add-agent-buttons">
-                <button class="add-agent-button delete-button">Отмени</button>
-                <button class="add-agent-button add-button" id="button-agent-add" onclick="popupShow()">Добави</button>
-            </div>
-            <div id="popup" class="button-popup d-flex justify-content-center align-items-center flex-column">
-                <h5>Сигурни ли сте, че искате да приемете промените?</h5>
-                <div class="d-flex align-items-center popup-buttons">
-                    <button class="deny-button" onclick="popupClose()">Отказ</button>
-                    <form class="add-form" action="agent-upload.php" method="post">
-                        <button type="submit" id="submit-all-info">Добавяне</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="add-agent-body row justify-content-center">
-            <div class="agent-photo-and-description col-3 d-flex justify-content-center align-items-center">
-                <div class="add-agent-photo d-flex">
-                    <p>Изберете снимка</p>
-                    <form action="upload-copy copy.php" id="agent-photo" method="post" enctype="multipart/form-data">
-                        <img id="uploadPreview" />
-                        <label for="photo-input" class="agent-photo-custom-upload">Качи файл</label>
-                        <input id="photo-input" type="file" name="myPhoto" onchange="PreviewImage();" />
-                    </form>
-                </div>
-            </div>
-            <!--<div class="agent-info col-7 d-flex justify-content-center align-items-center">-->
-            <div class="agent-info col-7 d-flex justify-content-center align-items-center">
-                <form id="main-form" name="main-form">
-                    <div class="info-section-one-row">
-                        <div class="info-subsection">
-                            <label for="agent-first-name">Име: </label>
-                            <input type="text" id="agent-first-name">
-                        </div>
-                        <div class="info-subsection">
-                            <label for="agent-last-name">Фамилия: </label>
-                            <input type="text" id="agent-last-name">
-                        </div>
-                    </div>
-                    <div class="info-section">
-                        <label for="agent-email">Имейл: </label>
-                        <input type="email" id="agent-email">
-                        <label for="password">Парола: </label>
-
-                        <div class="password-area input-group">
-
-                            <input type="password" id="password" class="form-control border-0" required></input>
-                            <button type="button" class="fa fa-solid fa-lock input-group-text"
-                                onclick="passShow()"></button>
-
-                        </div>
-                    </div>
-                    <div class="info-section">
-                        <label for="agent-phone">Телефон: </label>
-                        <input type="text" id="agent-phone">
-                        <label for="agent-position">Длъжност: </label>
-                        <input type="text" id="agent-position">
-                    </div>
-                </div>
-                <div class="agent-more-info col-3 p-5 d-flex justify-content-center align-items-center">
-                    <form class="d-flex justify-content-center align-items-center" id="description-form" name="description-form">
-                        <textarea name="agent-description" placeholder="Въведете допълнителна информация за себе си..." cols="36"
-                            rows="13" id="agent-description"></textarea>
-                    </form>
-                </div>
-                </form>
-            <!--</div>-->
-            <!--
-            <div class="agent-more-info col-3 p-5 d-flex justify-content-center align-items-center">
-                <form class="d-flex justify-content-center align-items-center" id="description-form" name="description-form">
-                    <textarea name="agent-description" placeholder="Въведете допълнителна информация за себе си..." cols="36"
-                        rows="13" id="agent-description"></textarea>
-                </form>
-            </div>
-        -->
-        </div>
-
-    </div>
-
     <script>
-        document.addEventListener('DOMContentLoaded', function() 
-        {
-            document.getElementById('button-agent-add').addEventListener('click', function(event) 
-            {
-                event.preventDefault(); // Prevent the default form submission
+        function previewImage(event) {
+            const imagePreview = document.getElementById('imagePreview');
+            const file = event.target.files[0];
+            const reader = new FileReader();
 
-                const mainFormData = new FormData(document.getElementById('main-form'));
-                const descriptionFormData = new FormData(document.getElementById('description-form'));
+            reader.onload = function(e) {
+                imagePreview.style.backgroundImage = `url(${e.target.result})`;
+            }
 
-                //Merge all form data into one FormData object
-                const combinedFormData = new FormData();
-                for (let [key, value] of mainFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }
-                for (let [key, value] of descriptionFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }
-                /*for (let [key, value] of imageUploadFormData.entries()) {
-                    combinedFormData.append(key, value);
-                }*/
+            reader.readAsDataURL(file);
+        }
 
-                // Send the combined data to the add-offer-business.php using Fetch API
-                fetch('add-agent.php', {
-                    method: 'post',
-                    body: combinedFormData
-                })
-                .then(response => response.text())
-                /*.then(data => {
-                    console.log(data);
-                    // Optionally handle the response, redirect, or show a success message
-                })*/
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            });
-
-            document.getElementById('submit-all-info').addEventListener('click', function() 
-            {
-                // Hide the popup
-                //document.getElementById('popup').style.display = 'none';
-
-                // Collect form data
-                document.getElementById('agent-photo').submit();
-            });
-        });
-        </script>
-
-
-    <div id="pageMask" class="page-mask"></div>
-    <script src="/js/uploadPreview.js"></script>
-    <script src="/js/passwordShow.js"></script>
-    <script src="/js/editProfilePopup.js"></script>
+        function resetForm() {
+            document.querySelector('form').reset();
+            document.getElementById('imagePreview').style.backgroundImage = '';
+        }
+    </script>
 </body>
-
 </html>
