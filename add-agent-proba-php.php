@@ -28,13 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             VALUES ('$first_name', '$last_name', '$phone', '$position', '$additional_info', '$email')";
 
     $result = mysqli_query($con, $sql);
-    /*if ($result) 
+    if ($result) 
     {
         $realtor_id = mysqli_insert_id($con);
         $sql1 = "INSERT INTO `login` (`login_Username`, `login_Pass`, `login_RealtorID`) 
             VALUES ('$username', '$password', '$realtor_id')";
         
-        if ($con->query($sql1) === TRUE) 
+        $result1 = mysqli_query($con, $sql1);
+        if ($result1) 
         {
             $sql2 = "INSERT INTO `realtor_images` (`realtorimg_Name`, `realtorimg_Url`, `realtorimg_RealtorID`) 
                 VALUES ('$image', '$target_file', '$realtor_id')";
@@ -67,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         header("Location: add-agent-proba.php?error=Неуспешно добавяне на брокер");
     }
-    */
+    
 
     //$con->close();
 }
