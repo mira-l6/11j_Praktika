@@ -79,7 +79,7 @@
 <body>
     <div class="container">
         <h1>Добави брокер</h1>
-        <form action="add_broker.php" method="POST" enctype="multipart/form-data">
+        <form action="add-agent-proba-php.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="image">Изберете снимка:</label>
                 <div class="image-preview" id="imagePreview"></div>
@@ -99,6 +99,10 @@
             <div class="form-group">
                 <label for="email">Имейл:</label>
                 <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Потребителско име:</label>
+                <input type="text" id="username" name="username" required>
             </div>
             <div class="form-group">
                 <label for="password">Парола:</label>
