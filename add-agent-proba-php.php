@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $username = $_POST['username'];
-    //$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    //$password = $_POST['password'];
     $phone = $_POST['phone'];
     $position = $_POST['position'];
     $additional_info = $_POST['additional_info'];
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
     // Inserting data into the database
     $sql = "INSERT INTO `realtor` (`realtor_Name`, `realtor_LastName`, `realtor_PhoneNumber`, `realtor_Experience`, `realtor_Description`, `realtor_Email`) 
-            VALUES ('$first_name', '$last_name', '$phone', '$password', '$phone', '$position', '$additional_info', '$email')";
+            VALUES ('$first_name', '$last_name', '$phone', '$position', '$additional_info', '$email')";
 
     $result = mysqli_query($con, $sql);
     /*if ($result) 
