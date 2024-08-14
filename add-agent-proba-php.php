@@ -1,82 +1,40 @@
 <?php
-session_start();
-include "db_connection.php";
+//първоначален код
+    //?
+    //tazi str se izpulnqva pri zapazvane na broker ot buton zapazi
+    session_start();
+    include "db_connection.php";
 
-
-
-// Handling form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $username = $_POST['username'];
-    //$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-    $password = $_POST['password'];
-    $phone = $_POST['phone'];
-    $position = $_POST['position'];
-    $additional_info = $_POST['additional_info'];
-
-    // Handling image upload
-    //250 кб
-    if($_FILES['image']['size'] > 250000)
+    //vsichki poleta isset
+    //snimkata da se dobavq s otdelna forma chrez upload.php
+    if(isset($_POST['agent-first-name']) && isset($_POST['agent-last-name']) && isset($_POST['agent-email']) && isset($_POST['agent-password']) && isset($_POST['agent-phone']) && isset($_POST['agent-position']) && isset($_POST['agent-description']))
     {
-        $image = $_FILES['image']['name'];
-        $target_dir = "img/";
-        $target_file = $target_dir . basename($image);
-        move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+        //vsichki poleta
+        $name = trim($_POST['agent-first-name']);
+        $surname = trim($_POST['agent-last-name']);
+        $username = trim($_POST['agent-email']);
+        $password = trim($_POST['agent-password']);
+        $email = trim($_POST['agent-phone']);
+        $phone = trim($_POST['agent-position']);
+        $experience = trim($_POST['agent-description']);
 
-        // Inserting data into the database
-        $sql = "INSERT INTO `realtor` (`realtor_Name`, `realtor_LastName`, `realtor_PhoneNumber`, `realtor_Experience`, `realtor_Description`, `realtor_Email`) 
-                VALUES ('$first_name', '$last_name', '$phone', '$position', '$additional_info', '$email')";
+            //zaqvka za dobavqne na zapis
+            //snimkata se dobavq v otdelna forma i shte se obrabotva s upload formata; url i name mogat da sa null
+            $sql = "INSERT INTO `realtor`(`realtor_Name`, `realtor_LastName`, `realtor_PhoneNumber`, `realtor_Experience`, `realtor_Description`, `realtor_Email`)
+                        VALUES ('$name', '$lastname', '$phonenumber', '$experience', '$description', '$email')"; 
+            $result = mysqli_query($con, $sql);
 
-        $result = mysqli_query($con, $sql);
-        if ($result) 
-        {
-            $realtor_id = mysqli_insert_id($con);
-            $sql1 = "INSERT INTO `login` (`login_Username`, `login_Pass`, `login_RealtorID`) 
-                VALUES ('$username', '$password', '$realtor_id')";
-        
-            $result1 = mysqli_query($con, $sql1);
-            if ($result1) 
-            {
-                $sql2 = "INSERT INTO `realtor_images` (`realtorimg_Name`, `realtorimg_Url`, `realtorimg_RealtorID`) 
-                    VALUES ('$image', '$target_file', '$realtor_id')";
-            
-                if ($con->query($sql2) === TRUE) 
-                {
-                    $image_id = mysqli_insert_id($con);
-                    $sql3 = "UPDATE `realtor` SET `realtor_ImageID`='$image_id' WHERE `realtor_ID`='$realtor_id'";
 
-                    if ($con->query($sql2) === TRUE) 
-                    {
-                        header("Location: add-agent-proba.php?Успешно добавихте брокер");
-                    }
-                    else
-                    {
-                        header("Location: add-agent-proba.php?Неуспешно променихте imgid");
-                    }
-                }
-                else
-                {
-                    header("Location: add-agent-proba.php?error=Неуспешно добавихте снимка");
-                }
-            }
-            else
-            {
-                header("Location: add-agent-proba.php?error=Неуспешно добавихте login");
-            }
-        } 
-        else 
-        {
-            
-        }
     }
     else
     {
-        header("Location: add-agent-proba.php?error=Изображението е твърде голямо");
+        echo "Адд-агент.пхп се прецака";
     }
-    
 
-    //$con->close();
-}
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
