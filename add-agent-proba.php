@@ -106,7 +106,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Парола:</label>
-                <input type="text" id="password" name="password" required>
+                <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
                 <label for="phone">Телефон:</label>
