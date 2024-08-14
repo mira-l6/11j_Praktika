@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
     // Handling image upload
     //250 кб
-    if($_FILES['image']['size'] > 250000)
+    if($_FILES['image']['size'] <= 250000)
     {
         $image = $_FILES['image']['name'];
         $target_dir = "img/";
