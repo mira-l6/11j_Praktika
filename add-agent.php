@@ -52,21 +52,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
                     if ($con->query($sql2) === TRUE) 
                     {
-                        header("Location: add-agent-proba.php?Успешно добавихте брокер");
+                        header("Location: add-agent.html?Успешно добавихте брокер");
                     }
                     else
                     {
-                        header("Location: add-agent-proba.php?Неуспешно променихте imgid");
+                        header("Location: add-agent.html?Неуспешно променихте imgid");
                     }
                 }
                 else
                 {
-                    header("Location: add-agent-proba.php?error=Неуспешно добавихте снимка");
+                    header("Location: add-agent.html?error=Неуспешно добавихте снимка");
                 }
             }
             else
             {
-                header("Location: add-agent-proba.php?error=Неуспешно добавихте login");
+                header("Location: add-agent.html?error=Неуспешно добавихте login");
             }
         } 
         else 
