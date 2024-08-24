@@ -342,8 +342,9 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
                 <?php
                     $sqlimg = "SELECT `realtorimg_Url` FROM `realtor_images` WHERE `realtorimg_RealtorID`='". $realtorid . "'";
                     $resultimg = mysqli_query($con, $sqlimg);
+                    $rowimg = mysqli_fetch_assoc($resultimg);
 
-                    echo '<img src="./' . $resultimg . '" alt="">';
+                    echo '<img src="./' . $rowimg['realtorimg_Url'] . '" alt="">';
                 ?>
                 
             </div>
