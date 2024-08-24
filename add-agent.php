@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
     else
     {
-        header("Location: add-agent-proba.php?error=Изображението е твърде голямо");
+        header("Location: add-agent.html?error=Изображението е твърде голямо");
     }
     
 
