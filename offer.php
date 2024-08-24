@@ -34,16 +34,15 @@ $city = $rowgetproperty[$propertyprefix . '_City'];
 $region = $rowgetproperty[$propertyprefix . '_Region'];
 $propertytype = $rowgetproperty[$propertyprefix . '_Type'];
 $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
-//ako e biznes
-$businesstype = $rowgetproperty['business_PropertyType'];
 
-    $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid";
-    /*$resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
+
+    $sqlgetrealtor = "SELECT * FROM `realtor` WHERE `realtor_ID`='$realtorid'";
+    $resultgetrealtor = mysqli_query($con, $sqlgetrealtor);
     $rowgetrealtor = mysqli_fetch_assoc($resultgetrealtor);
     $realtorname = $rowgetrealtor['realtor_Name'];
     $realtorlastname = $rowgetrealtor['realtor_LastName'];
     $realtornumber = $rowgetrealtor['realtor_PhoneNumber'];
-    $realtoremail = $rowgetrealtor['realtor_Email'];*/
+    $realtoremail = $rowgetrealtor['realtor_Email'];
 
 ?>
 <!DOCTYPE html>
@@ -54,6 +53,7 @@ $businesstype = $rowgetproperty['business_PropertyType'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/offer.css">
@@ -298,13 +298,49 @@ $businesstype = $rowgetproperty['business_PropertyType'];
         <div class="col-6 offer-subinfo d-flex flex-column justify-content-center">
             <h4 class="p-2">Обща информация:</h4>
                 <div class="p-2">
-                    <p>Строителство: <?php echo $constructiontype . ', ' . $constructionyear ?></p>
-                    <p>Етаж: <?php echo $floorflat . ' от ' . $floorbuilding ?></p>
-                    <p>Квадратура: <?php echo $quadrature ?></p>
+                    <?php
+                        if($province)
+                        {
+                            echo '<p>Местоположение: '.$province . ', ' . $region.'</p>';
+                        }
+                        if($constructiontype)
+                        {
+                            echo '<p>Строителство: '.$constructiontype . ', ' . $constructionyear.'</p>';
+                        }
+                        if($floorflat && $floorbuilding)
+                        {
+                            echo '<p>Етаж: ' . $floorflat . ' от ' . $floorbuilding . '</p>';
+                        }
+                        else if(!$floorflat && $floorbuilding)
+                        {
+                            echo '<p>Етажи: ' . $floorbuilding . '</p>';
+                        }
+                        if($quadrature)
+                        {
+                            echo '<p>Квадратура: ' . $quadrature . '</p>';
+                        }
+                        if($quadrature)
+                        {
+                            echo '<p>Двор: ' . $quadrature . '</p>';
+                        }
+
+                        switch ($offertable)
+                        {
+                            case "business_property":
+                                $businesstype = $rowgetproperty['business_PropertyType'];
+                                echo '<p>Тип имот: ' . $businesstype . '</p>';
+                                break;
+                            case "garage":
+                                break;
+                        }
+                    ?>
+
                 </div>
         </div>
         <div class="col-6 offer-agent d-flex align-items-center">
             <div class="offer-agent-image">
+                <?php
+                ?>
                 <img src="" alt="">
             </div>
             <div class="ps-5">
