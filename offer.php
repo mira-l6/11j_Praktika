@@ -340,8 +340,12 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         <div class="col-6 offer-agent d-flex align-items-center">
             <div class="offer-agent-image">
                 <?php
+                    $sqlimg = "SELECT `realtorimg_Url` FROM `realtor_images` WHERE `realtorimg_RealtorID`='". $realtorid . "'";
+                    $resultimg = mysqli_query($con, $sqlimg);
+
+                    echo '<img src="' . $resultimg . '" alt="">';
                 ?>
-                <img src="" alt="">
+                
             </div>
             <div class="ps-5">
                 <h5><?php echo $realtorname ?></h5>
