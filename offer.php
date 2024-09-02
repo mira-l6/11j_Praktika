@@ -319,22 +319,120 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
                         {
                             echo '<p>Квадратура: ' . $quadrature . '</p>';
                         }
-                        if($quadrature)
-                        {
-                            echo '<p>Двор: ' . $quadrature . '</p>';
-                        }
+                        //features?
+                        //for prvt people, furnished, gas, tpp
 
                         switch ($offertable)
                         {
                             case "business_property":
-                                $businesstype = $rowgetproperty['business_PropertyType'];
+                                $businesstype = $rowgetproperty['business_Type'];
                                 echo '<p>Тип имот: ' . $businesstype . '</p>';
                                 break;
                             case "garage":
                                 break;
+                            case "hotel":
+                                break;
+                            case "house":
+                                $houseyard = $rowgetproperty['house_Yard'];
+                                echo '<p>Двор: ' . $houseyard . '</p>';
+                                break;
+                            case "house_floor":
+                                break;
+                            case "industrial_premise":
+                                break;
+                            case "land":
+                                $methodofuse = $rowgetproperty['land_MethodOfUse'];
+                                echo '<p>Предназначение: ' . $methodofuse . '</p>';
+                                $landcategory = $rowgetproperty['land_Category'];
+                                echo '<p>Категория: ' . $landcategory . '</p>';
+                                $rent = $rowgetproperty['land_RentContract'];
+                                $rentcontractdate = $rowgetproperty['land_RentContractDate'];
+                                if($rent === 1)
+                                {
+                                    echo '<p>Рента: ДА</p>';
+                                    if($rentcontractdate)
+                                    {
+                                        echo '<p>Рента: ' . $rentcontractdate . '</p>';
+                                    }
+                                }
+                                else if($rent === 0)
+                                {
+                                    echo '<p>Рента: ' . $houseyard . '</p>';
+                                }
+                        
+                                break;
+                            case "maisonette":
+                                break;
+                            case "office":
+                                break;
+                            case "plot":
+                                $regulation = $rowgetproperty['plot_Regulation'];
+                                if($regulation)
+                                {
+                                    echo '<p>Регулация: ДА</p>';
+                                }
+                                $water = $rowgetproperty['plot_Water'];
+                                if($water)
+                                {
+                                    echo '<p>Вода: ДА</p>';
+                                }
+                                $electricity = $rowgetproperty['plot_Electricity'];
+                                if($electricity)
+                                {
+                                    echo '<p>Електричество: ДА</p>';
+                                }
+                                
+                                break;
+                            case "restaurant":
+                                break;
+                            case "room1":
+                                break;
+                            case "room2":
+                                break;
+                            case "room3":
+                                break;
+                            case "room4":
+                                break;
+                            case "roomn":
+                                $rooms = $rowgetproperty['roomn_Rooms'];
+                                echo '<p>Брой стаи: ' . $rooms . '</p>';
+                                break;
+                            case "shop":
+                                break;
+                            case "storage":
+                                break;
+                            case "studio":
+                                break;
+                            case "villa":
+                                $villayard = $rowgetproperty['villa_Yard'];
+                                echo '<p>Двор: ' . $villayard . '</p>';
+                                break;
                         }
+                        echo '<p class="features">Особености: <span id="features" class="subinfo-input">' . $features . '</span></p>';
                     ?>
+                </div>
 
+                <div class="long-info">
+                    <ul class="checkboxes-list d-flex flex-row">
+                        <?php
+                            if($gas)
+                            {
+                                echo '<li class="gas"><span id="gas" class="subinfo-input">Газ</span></li>';
+                            }
+                            if($tpp)
+                            {
+                                echo '<li class="tpp"><span id="tpp" class="subinfo-input">ТЕЦ</span></li>';
+                            }
+                            if($forprivatepeople)
+                            {
+                                echo '<li class="for-private-people"><span id="for-private-people" class="subinfo-input">За частни лица</span></li>';
+                            }
+                            if($furnished)
+                            {
+                                echo '<li class="furnished"><span id="furnished" class="subinfo-input">Обзаведен</span></li>';
+                            }
+                        ?>
+                    </ul>
                 </div>
         </div>
         <div class="col-6 offer-agent d-flex align-items-center">
