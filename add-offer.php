@@ -353,8 +353,153 @@
 
             </div>
             <div class="form-group">
+                <select name="property-type" id="property-type" autocomplete="off">
+                    <option value="" disabled selected>Тип (дейност)</option>
+                    <option value="Продава">Продава</option>
+                    <option value="Отдава">Отдава</option>
+                </select>            
+            </div>
+            <div class="line-break">
+                            <div></div>
+                        </div>
+            <div class="form-group">
                 <input name="offername" id="offername" for="offername" type="text" class="offer-input"
                             placeholder="Заглавие на обявата" />
+            </div>
+            <div class="form-group">
+            <div class="add-offer-location-info">
+                    <div class="filter-box">
+                        <div class="filter-option"><label for="property-type">Тип имот</label>
+                            <!--падащо меню-->
+                            <select name="property-type" id="property-type" autocomplete="off">
+                                <option value="" disabled selected>Тип (дейност)</option>
+                                <option value="Продава">Продава</option>
+                                <option value="Купува">Купува</option>
+                                <option value="Отдава">Отдава</option>
+                                <option value="Наема">Наема</option>
+                            </select>
+                        </div>
+                        <div class="line-break">
+                            <div></div>
+                        </div>
+                        <div class="filter-option"><label for="business-type">Вид</label>
+                            <!--падащо меню-->
+                            <select name="business-type" id="business-type" autocomplete="off">
+                                <option value="" disabled selected>Вид (бизнес)</option>
+                                <option value="Автомивка">Автомивка</option>
+                                <option value="Автосервиз">Автосервиз</option>
+                                <option value="Аквапарк">Аквапарк</option>
+                                <option value="Аптека">Аптека</option>
+                                <option value="Банков офис">Банков офис</option>
+                                <option value="Бензиностанция/Газстанция">Бензиностанция/Газстанция</option>
+                                <option value="Вилно селище">Вилно селище</option>
+                                <option value="Гараж">Гараж</option>
+                                <option value="Детски център">Детски център</option>
+                                <option value="Дом за възрастни хора">Дом за възрастни хора</option>
+                                <option value="Клиника">Клиника</option>
+                                <option value="Лекарски кабинет">Лекарски кабинет</option>
+                                <option value="Паркинг">Паркинг</option>
+                                <option value="Паркомясто">Паркомясто</option>
+                                <option value="Самостоятелна сграда">Самостоятелна сграда</option>
+                                <option value="Соларен парк">Соларен парк</option>
+                                <option value="СПА/Соларно студио">СПА/Соларно студио</option>
+                                <option value="Стоматологичен кабинет">Стоматологичен кабинет</option>
+                                <option value="Търговски комплекс">Търговски комплекс</option>
+                                <option value="Фабрика/Завод">Фабрика/Завод</option>
+                                <option value="Ферма">Ферма</option>
+                                <option value="Фитнес зала">Фитнес зала</option>
+                                <option value="Фотографско студио">Фотографско студио</option>
+                                <option value="Фризьорски/Козметичен салон">Фризьорски/Козметичен салон</option>
+                            </select>
+                        </div>
+                        <div class="line-break">
+                            <div></div>
+                        </div>
+                        <div class="filter-option"><label for="country">Държава</label>
+                            <select name="country" id="country" autocomplete="off">
+                                <option value="" disabled selected>Държава</option>
+                                <option value="България">България</option>
+                                <option value="Гърция">Гърция</option>
+                                <option value="Друго">Друго</option>
+                            </select>
+                        </div>
+                        <div class="line-break">
+                            <div></div>
+                        </div>
+                        <div class="filter-option"><label for="populated-place-add">Населено място</label>
+                            <select id="populated-place-add" name="populated-place-add" autocomplete="off">
+                                <option value="" disabled selected>Населено място</option>
+
+                                <!--t - grad town; p - oblast province-->
+
+                                <option value="Извън България">Извън България</option>
+                                <option value="tblagoevgrad">град Благоевград</option>
+                                <option value="pblagoevgrad">област Благоевград</option>
+                                <option value="tburgas">град Бургас</option>
+                                <option value="pburgas">област Бургас</option>
+                                <option value="tvarna">град Варна</option>
+                                <option value="pvarna">област Варна</option>
+                                <option value="tvt">град Велико Търново</option>
+                                <option value="pvt">област Велико Търново</option>
+                                <option value="tvidin">град Видин</option>
+                                <option value="pvidin">област Видин</option>
+                                <option value="tvraca">град Враца</option>
+                                <option value="pvraca">област Враца</option>
+                                <option value="tgabrovo">град Габрово</option>
+                                <option value="pgabrovo">област Габрово</option>
+                                <option value="tdobrich">град Добрич</option>
+                                <option value="pdobrich">област Добрич</option>
+                                <option value="tkardjali">град Кърджали</option>
+                                <option value="pkardjali">област Кърджали</option>
+                                <option value="tkustendil">град Кюстендил</option>
+                                <option value="pkustendil">област Кюстендил</option>
+                                <option value="tlovech">град Ловеч</option>
+                                <option value="plovech">област Ловеч</option>
+                                <option value="tmontana">град Монтана</option>
+                                <option value="pmontana">област Монтана</option>
+                                <option value="tpazardjik">град Пазарджик</option>
+                                <option value="ppazardjik">област Пазарджик</option>
+                                <option value="tpernik">град Перник</option>
+                                <option value="ppernik">област Перник</option>
+                                <option value="tpleven">град Плевен</option>
+                                <option value="ppleven">област Плевен</option>
+                                <option value="tplovdiv">град Пловдив</option>
+                                <option value="pplovdiv">област Пловдив</option>
+                                <option value="trazgrad">град Разград</option>
+                                <option value="prazgrad">област Разград</option>
+                                <option value="truse">град Русе</option>
+                                <option value="pruse">област Русе</option>
+                                <option value="tsilistra">град Силистра</option>
+                                <option value="psilistra">област Силистра</option>
+                                <option value="tsliven">град Сливен</option>
+                                <option value="psliven">област Сливен</option>
+                                <option value="tsmolyan">град Смолян</option>
+                                <option value="psmolyan">област Смолян</option>
+                                <option value="tsofia">град София</option>
+                                <option value="psofia">област София</option>
+                                <option value="tsz">град Стара Загора</option>
+                                <option value="psz">област Стара Загора</option>
+                                <option value="ttargovishte">град Търговище</option>
+                                <option value="ptargovishte">област Търговище</option>
+                                <option value="thaskovo">град Хасково</option>
+                                <option value="phaskovo">област Хасково</option>
+                                <option value="tshumen">град Шумен</option>
+                                <option value="pshumen">област Шумен</option>
+                                <option value="tyambol">град Ямбол</option>
+                                <option value="pyambol">област Ямбол</option>
+                            </select>
+                        </div>
+                        <div class="line-break">
+                            <div></div>
+                        </div>
+
+                        <div class="filter-option"><label for="town-area-add">Район</label>
+                            <select name="town-area-add" id="town-area-add" autocomplete="off">
+                                <option value="all">Район</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <input name="price" id="price" for="price" type="number" class="offer-input" placeholder="Цена(лв)" />
@@ -363,7 +508,102 @@
                 <input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input"
                             placeholder="Квадратура(кв. метри)" />
             </div>
-            
+
+            <?php
+                switch ($_SESSION[''])
+                {
+                    case "business_property":
+                        echo '<div class="form-group">';
+                        echo '<input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input"
+                            placeholder="Етаж" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input"
+                            placeholder="Етажи общо в сградата" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructionyear" id="constructionyear" for="constructionyear" type="number"
+                            class="offer-input" placeholder="Строителство(годинa)" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructiontype" id="constructiontype" for="constructiontype" type="text"
+                            class="offer-input" placeholder="Строителство(тип)" />';
+                        echo '</div>';
+
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas"
+                                value="on" />';
+                            echo '<label for="gas">Газ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp"
+                                value="on" />';
+                            echo '<label for="tpp">ТЕЦ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished"
+                                value="on" />';
+                            echo '<label for="furnished">Обзаведен</label>';
+                        echo '</span>';
+                        break;
+                    case "garage":
+                        break;
+                    case "hotel":
+                        break;
+                    case "house":
+                        
+                        break;
+                    case "house_floor":
+                        break;
+                    case "industrial_premise":
+                        break;
+                    case "land":
+                        
+                        break;
+                    case "maisonette":
+                        break;
+                    case "office":
+                        break;
+                    case "plot":
+                        
+                        break;
+                    case "restaurant":
+                        break;
+                    case "room1":
+                        break;
+                    case "room2":
+                        break;
+                    case "room3":
+                        break;
+                    case "room4":
+                        break;
+                    case "roomn":
+                        
+                        break;
+                    case "shop":
+                        break;
+                    case "storage":
+                        break;
+                    case "studio":
+                        break;
+                    case "villa":
+                        
+                        break;
+                }
+            ?>
+
+            <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="forprivatepeople"
+                                value="on" /><label for="forprivatepeople">Само за частни лица</label></span>
+
+            <textarea name="description-text" id="description-text" for="description" cols="30" rows="10"
+                placeholder="Добавете описание" autocomplete="off"></textarea>
+                        
+            <textarea name="features" id="features" for="features" cols="30" rows="10"
+                placeholder="Добавете особености" autocomplete="off"></textarea>
+
             <div class="buttons">
                 <button type="button" onclick="resetForm()">Отмени</button>
                 <button type="submit">Добави</button>
