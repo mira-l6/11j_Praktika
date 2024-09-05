@@ -352,16 +352,7 @@
                 <br>
 
             </div>
-            <div class="form-group">
-                <select name="property-type" id="property-type" autocomplete="off">
-                    <option value="" disabled selected>Тип (дейност)</option>
-                    <option value="Продава">Продава</option>
-                    <option value="Отдава">Отдава</option>
-                </select>            
-            </div>
-            <div class="line-break">
-                            <div></div>
-                        </div>
+
             <div class="form-group">
                 <input name="offername" id="offername" for="offername" type="text" class="offer-input"
                             placeholder="Заглавие на обявата" />
@@ -374,9 +365,7 @@
                             <select name="property-type" id="property-type" autocomplete="off">
                                 <option value="" disabled selected>Тип (дейност)</option>
                                 <option value="Продава">Продава</option>
-                                <option value="Купува">Купува</option>
                                 <option value="Отдава">Отдава</option>
-                                <option value="Наема">Наема</option>
                             </select>
                         </div>
                         <div class="line-break">
@@ -492,11 +481,16 @@
                         <div class="line-break">
                             <div></div>
                         </div>
-
+                        <!--
                         <div class="filter-option"><label for="town-area-add">Район</label>
                             <select name="town-area-add" id="town-area-add" autocomplete="off">
                                 <option value="all">Район</option>
                             </select>
+                        </div>
+    -->
+                        <div class="form-group">
+                            <input name="town-area-add" id="town-area-add" for="town-area-add" type="text" class="offer-input"
+                            placeholder="Район" />
                         </div>
                     </div>
                 </div>
@@ -514,12 +508,12 @@
                 {
                     case "business_property":
                         echo '<div class="form-group">';
-                        echo '<input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input"
+                        echo '<input name="floorflat" id="floorflat" for="floorflat" type="number" class="offer-input"
                             placeholder="Етаж" />';
                         echo '</div>';
 
                         echo '<div class="form-group">';
-                        echo '<input name="quadrature" id="quadrature" for="quadrature" type="number" class="offer-input"
+                        echo '<input name="floorbuilding" id="floorbuilding" for="floorbuilding" type="number" class="offer-input"
                             placeholder="Етажи общо в сградата" />';
                         echo '</div>';
 
@@ -535,17 +529,17 @@
 
 
                         echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas"
-                                value="on" />';
+                                value="1" />';
                             echo '<label for="gas">Газ</label>';
                         echo '</span>';
 
                         echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp"
-                                value="on" />';
+                                value="1" />';
                             echo '<label for="tpp">ТЕЦ</label>';
                         echo '</span>';
 
                         echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished"
-                                value="on" />';
+                                value="1" />';
                             echo '<label for="furnished">Обзаведен</label>';
                         echo '</span>';
                         break;
@@ -596,7 +590,7 @@
             ?>
 
             <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="forprivatepeople"
-                                value="on" /><label for="forprivatepeople">Само за частни лица</label></span>
+                                value="1" /><label for="forprivatepeople">Само за частни лица</label></span>
 
             <textarea name="description-text" id="description-text" for="description" cols="30" rows="10"
                 placeholder="Добавете описание" autocomplete="off"></textarea>
