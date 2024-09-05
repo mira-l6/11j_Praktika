@@ -371,36 +371,7 @@
                         <div class="line-break">
                             <div></div>
                         </div>
-                        <div class="filter-option"><label for="business-type">Вид</label>
-                            <!--падащо меню-->
-                            <select name="business-type" id="business-type" autocomplete="off">
-                                <option value="" disabled selected>Вид (бизнес)</option>
-                                <option value="Автомивка">Автомивка</option>
-                                <option value="Автосервиз">Автосервиз</option>
-                                <option value="Аквапарк">Аквапарк</option>
-                                <option value="Аптека">Аптека</option>
-                                <option value="Банков офис">Банков офис</option>
-                                <option value="Бензиностанция/Газстанция">Бензиностанция/Газстанция</option>
-                                <option value="Вилно селище">Вилно селище</option>
-                                <option value="Гараж">Гараж</option>
-                                <option value="Детски център">Детски център</option>
-                                <option value="Дом за възрастни хора">Дом за възрастни хора</option>
-                                <option value="Клиника">Клиника</option>
-                                <option value="Лекарски кабинет">Лекарски кабинет</option>
-                                <option value="Паркинг">Паркинг</option>
-                                <option value="Паркомясто">Паркомясто</option>
-                                <option value="Самостоятелна сграда">Самостоятелна сграда</option>
-                                <option value="Соларен парк">Соларен парк</option>
-                                <option value="СПА/Соларно студио">СПА/Соларно студио</option>
-                                <option value="Стоматологичен кабинет">Стоматологичен кабинет</option>
-                                <option value="Търговски комплекс">Търговски комплекс</option>
-                                <option value="Фабрика/Завод">Фабрика/Завод</option>
-                                <option value="Ферма">Ферма</option>
-                                <option value="Фитнес зала">Фитнес зала</option>
-                                <option value="Фотографско студио">Фотографско студио</option>
-                                <option value="Фризьорски/Козметичен салон">Фризьорски/Козметичен салон</option>
-                            </select>
-                        </div>
+                        
                         <div class="line-break">
                             <div></div>
                         </div>
@@ -507,6 +478,36 @@
                 switch ($_SESSION[''])
                 {
                     case "business_property":
+                        echo '<div class="filter-option"><label for="business-type">Вид</label>';
+                        echo '    <!--падащо меню-->';
+                        echo '    <select name="business-type" id="business-type" autocomplete="off">';
+                        echo '        <option value="" disabled selected>Вид (бизнес)</option>';
+                        echo '        <option value="Автомивка">Автомивка</option>';
+                        echo '        <option value="Автосервиз">Автосервиз</option>';
+                        echo '        <option value="Аквапарк">Аквапарк</option>';
+                        echo '        <option value="Аптека">Аптека</option>';
+                        echo '        <option value="Банков офис">Банков офис</option>';
+                        echo '        <option value="Бензиностанция/Газстанция">Бензиностанция/Газстанция</option>';
+                        echo '        <option value="Вилно селище">Вилно селище</option>';
+                        echo '        <option value="Гараж">Гараж</option>';
+                        echo '        <option value="Детски център">Детски център</option>';
+                        echo '        <option value="Дом за възрастни хора">Дом за възрастни хора</option>';
+                        echo '        <option value="Клиника">Клиника</option>';
+                        echo '        <option value="Лекарски кабинет">Лекарски кабинет</option>';
+                        echo '        <option value="Паркинг">Паркинг</option>';
+                        echo '        <option value="Паркомясто">Паркомясто</option>';
+                        echo '        <option value="Самостоятелна сграда">Самостоятелна сграда</option>';
+                        echo '        <option value="Соларен парк">Соларен парк</option>';
+                        echo '        <option value="СПА/Соларно студио">СПА/Соларно студио</option>';
+                        echo '        <option value="Стоматологичен кабинет">Стоматологичен кабинет</option>';
+                        echo '        <option value="Търговски комплекс">Търговски комплекс</option>';
+                        echo '         <option value="Фабрика/Завод">Фабрика/Завод</option>';
+                        echo '        <option value="Ферма">Ферма</option>';
+                        echo '        <option value="Фитнес зала">Фитнес зала</option>';
+                        echo '        <option value="Фотографско студио">Фотографско студио</option>';
+                        echo '        <option value="Фризьорски/Козметичен салон">Фризьорски/Козметичен салон</option>';
+                        echo '    </select>';
+                        echo '</div>';
                         echo '<div class="form-group">';
                         echo '<input name="floorflat" id="floorflat" for="floorflat" type="number" class="offer-input"
                             placeholder="Етаж" />';
@@ -544,13 +545,140 @@
                         echo '</span>';
                         break;
                     case "garage":
+                        echo '<div class="form-group">';
+                        echo '<input name="floorflat" id="floorflat" for="floorflat" type="number" class="offer-input"
+                            placeholder="Етаж" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="floorbuilding" id="floorbuilding" for="floorbuilding" type="number" class="offer-input"
+                            placeholder="Етажи общо в сградата" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructionyear" id="constructionyear" for="constructionyear" type="number"
+                            class="offer-input" placeholder="Строителство(годинa)" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructiontype" id="constructiontype" for="constructiontype" type="text"
+                            class="offer-input" placeholder="Строителство(тип)" />';
+                        echo '</div>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished"
+                                value="1" />';
+                            echo '<label for="furnished">Обзаведен</label>';
+                        echo '</span>';
                         break;
                     case "hotel":
+                        echo '<div class="form-group">';
+                        echo '<input name="floorbuilding" id="floorbuilding" for="floorbuilding" type="number" class="offer-input"
+                            placeholder="Етажи общо в сградата" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructionyear" id="constructionyear" for="constructionyear" type="number"
+                            class="offer-input" placeholder="Строителство(годинa)" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructiontype" id="constructiontype" for="constructiontype" type="text"
+                            class="offer-input" placeholder="Строителство(тип)" />';
+                        echo '</div>';
+
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas"
+                                value="1" />';
+                            echo '<label for="gas">Газ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp"
+                                value="1" />';
+                            echo '<label for="tpp">ТЕЦ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished"
+                                value="1" />';
+                            echo '<label for="furnished">Обзаведен</label>';
+                        echo '</span>';
                         break;
                     case "house":
-                        
+                        echo '<div class="form-group">';
+                        echo '<input name="floorbuilding" id="floorbuilding" for="floorbuilding" type="number" class="offer-input"
+                            placeholder="Етажи общо в сградата" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructionyear" id="constructionyear" for="constructionyear" type="number"
+                            class="offer-input" placeholder="Строителство(годинa)" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructiontype" id="constructiontype" for="constructiontype" type="text"
+                            class="offer-input" placeholder="Строителство(тип)" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructiontype" id="constructiontype" for="constructiontype" type="text"
+                            class="offer-input" placeholder="Строителство(тип)" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="yard" id="yard" for="yard" type="number"
+                            class="offer-input" placeholder="Двор" />';
+                        echo '</div>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas"
+                                value="1" />';
+                            echo '<label for="gas">Газ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp"
+                                value="1" />';
+                            echo '<label for="tpp">ТЕЦ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished"
+                                value="1" />';
+                            echo '<label for="furnished">Обзаведен</label>';
+                        echo '</span>';
                         break;
                     case "house_floor":
+                        echo '<div class="form-group">';
+                        echo '<input name="floorflat" id="floorflat" for="floorflat" type="number" class="offer-input"
+                            placeholder="Етаж" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="floorbuilding" id="floorbuilding" for="floorbuilding" type="number" class="offer-input"
+                            placeholder="Етажи общо в сградата" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructionyear" id="constructionyear" for="constructionyear" type="number"
+                            class="offer-input" placeholder="Строителство(годинa)" />';
+                        echo '</div>';
+
+                        echo '<div class="form-group">';
+                        echo '<input name="constructiontype" id="constructiontype" for="constructiontype" type="text"
+                            class="offer-input" placeholder="Строителство(тип)" />';
+                        echo '</div>';
+
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="gas"
+                                value="1" />';
+                            echo '<label for="gas">Газ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="tpp"
+                                value="1" />';
+                            echo '<label for="tpp">ТЕЦ</label>';
+                        echo '</span>';
+
+                        echo '<span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="furnished"
+                                value="1" />';
+                            echo '<label for="furnished">Обзаведен</label>';
+                        echo '</span>';
                         break;
                     case "industrial_premise":
                         break;
