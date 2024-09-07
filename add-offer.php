@@ -2,8 +2,7 @@
 <?php
     session_start();
     
-    //$nameofproperty = $_SESSION['nameofproperty'];
-    $nameofproperty = "проба";
+    $nameofproperty = $_SESSION['nameofproperty'];
 
     switch ($nameofproperty)
     {
