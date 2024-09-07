@@ -1,6 +1,7 @@
 <!--Това е простият код без дизайн с всичко в една форма. Първоначалният код с дизайна е в адд-агент-проба.пхп-->
 <?php
     session_start();
+    
     $nameofproperty = $_SESSION['nameofproperty'];
     switch ($nameofproperty)
     {

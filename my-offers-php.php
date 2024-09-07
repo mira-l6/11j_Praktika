@@ -7,10 +7,10 @@
         $_SESSION['nameofproperty'] = $offerchoice;
 
         header("Location: add-offer.php");
-        exit();
+        
     }
     else
     {
         header("Location: my-offers.php");
-        exit();
+        
     }
