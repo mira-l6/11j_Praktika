@@ -7,6 +7,9 @@
 
     switch ($nameofproperty)
     {
+        case "проба":
+            $title = "proba";
+            break;
         case "business":
             $title = 'бизнес имот';
             break;
