@@ -1,9 +1,10 @@
 <!--Това е простият код без дизайн с всичко в една форма. Първоначалният код с дизайна е в адд-агент-проба.пхп-->
 <?php
     session_start();
-    include 'my-offers-php.php';
+    
     //$nameofproperty = $_SESSION['nameofproperty'];
-    $nameofproperty = $offerchoice;
+    $nameofproperty = "проба";
+
     switch ($nameofproperty)
     {
         case "business":
