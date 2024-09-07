@@ -327,7 +327,7 @@
                                 <div class="line-break">
                                     <div></div>
                                 </div>
-                                <div class="filter-option two-option-filter"><label for="quadrature">Квадратура</label>
+                                <div class="filter-option two-option-filter"><label for="max-quadrature">Квадратура</label>
                                     <div class="d-flex justify-content-center align-items-center">
                                         <input type="number" id="min-quadrature" name="property-filter" placeholder="От...">
                                         <input type="number" id="max-quadrature" name="property-filter" placeholder="До...">
