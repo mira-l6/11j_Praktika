@@ -187,7 +187,7 @@
 
         <div class="all-offers-title d-flex flex-row">
             <h2>Моите оферти</h2>
-            <form id="offerForm" method="POST" action="my-offers-php">
+            <form id="offerForm" method="POST" action="my-offers-php.php">
             <select class="all-offers-dropdown" id="offer-choice" onchange="submit">
                 <option value="initial">+Добави оферта</option>
                 <option value="all">Всички</option>
