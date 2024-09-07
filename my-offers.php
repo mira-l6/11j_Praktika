@@ -188,7 +188,7 @@
         <div class="all-offers-title d-flex flex-row">
             <h2>Моите оферти</h2>
             <form id="offerForm" method="POST" action="my-offers-php.php">
-            <select class="all-offers-dropdown" id="offer-choice" onchange="submit">
+            <select class="all-offers-dropdown" id="offer-choice" onchange="redirect()">
                 <option value="initial">+Добави оферта</option>
                 <option value="all">Всички</option>
                 <option value="room1">Едностаен</option>
@@ -349,12 +349,12 @@
 
     <script src="/js/filter.js"></script>
     <!--<script src="/js/offerRedirect.js"></script>-->
-    <!--
+
     <script>
         function redirect() {
             document.getElementById("offerForm").submit();
         }
-    </script>-->
+    </script>
 </body>
 
 </html>
