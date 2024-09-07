@@ -357,7 +357,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
                                 }
                                 else if($rent === 0)
                                 {
-                                    echo '<p>Рента: ' . $houseyard . '</p>';
+                                    echo '<p>Рента: НЕ</p>';
                                 }
                         
                                 break;
