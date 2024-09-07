@@ -3,7 +3,7 @@
     $nameofproperty = $_SESSION['nameofproperty'];
     switch ($nameofproperty)
     {
-        case "business_property":
+        case "business":
             $title = 'бизнес имот';
             break;
         case "garage":
@@ -14,10 +14,10 @@
         case "house":
             $title = 'къща';
             break;
-        case "house_floor":
+        case "housefloor":
             $title = 'етаж от къща';
             break;
-        case "industrial_premise":
+        case "industrial":
             $title = 'индустриално помещение';
             break;
         case "land":

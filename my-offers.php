@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    $selectedValue = $_POST['offer-choice'];
+?>
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -181,6 +187,7 @@
 
         <div class="all-offers-title d-flex flex-row">
             <h2>Моите оферти</h2>
+            <form id="offerForm" method="POST" action="">
             <select class="all-offers-dropdown" id="offer-choice" onchange="redirect();">
                 <option value="initial">+Добави оферта</option>
                 <option value="all">Всички</option>
@@ -205,6 +212,7 @@
                 <option value="garage">Гараж</option>
                 <option value="land">Земеделска земя</option>
             </select>
+        </form>
         </div>
 
                 <!-- filter start -->

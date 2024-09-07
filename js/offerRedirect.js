@@ -2,6 +2,8 @@ let offerChoice = document.getElementById('offer-choice');
 // let pageTitle = document.getElementById('page-title').innerText;
 
 function redirect() {
+    document.getElementById("offerForm").submit();
+    /*
     switch (offerChoice.value) {
         case "room1":
         case "room2":
@@ -14,27 +16,27 @@ function redirect() {
         case "restaurant":
         case "storage":
         case "housefloor":
-            window.location = "../add-offer-universal.html";
+            window.location = "../add-offer.php";
             break;
         case "roomn":
-            window.location = "../add-offer-roomn.html";
+            window.location = "../add-offer.php";
             break;
         case "hotel":
-            window.location = "../add-offer-hotel.html";
+            window.location = "../add-offer.php";
             break;
         case "business":
-            window.location = "../add-offer-business.html";
+            window.location = "../add-offer.php";
             break;
         case "house":
         case "villa":
-            window.location = "../add-offer-villa-house.html";
+            window.location = "../add-offer.php";
             break;
         case "plot":
-            window.location = "../add-offer-plot.html";
+            window.location = "../add-offer.php";
             break;
         case "land":
-            window.location = "../add-offer-land.html";
+            window.location = "../add-offer.php";
             break;
         // garage, industrial
-    }
+    }*/
 }
