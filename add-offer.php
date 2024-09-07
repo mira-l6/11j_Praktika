@@ -1,7 +1,7 @@
 <!--Това е простият код без дизайн с всичко в една форма. Първоначалният код с дизайна е в адд-агент-проба.пхп-->
 <?php
     session_start();
-    
+
     $nameofproperty = $_SESSION['nameofproperty'];
     switch ($nameofproperty)
     {
@@ -343,7 +343,7 @@
         
         <form action="add-agent.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="image">Изберете снимки:</label>
+                <label for="images">Изберете снимки:</label>
                 <div class="image-preview" id="imagePreview"></div>
                 <label for="images" class="custom-file-upload">
                     Качи файлове
