@@ -348,7 +348,12 @@
     </div>
 
     <script src="/js/filter.js"></script>
-    <script src="/js/offerRedirect.js"></script>
+    <!--<script src="/js/offerRedirect.js"></script>-->
+    <script>
+        function redirect() {
+            document.getElementById("offerForm").submit();
+        }
+    </script>
 </body>
 
 </html>
