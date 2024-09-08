@@ -1216,7 +1216,7 @@
             <span class="d-flex d-row"><input type="checkbox" class="offer-checkbox" id="forprivatepeople"
                                 value="1" /><label for="forprivatepeople">Само за частни лица</label></span>
 
-            <textarea name="description-text" id="description-text" for="description" cols="30" rows="10"
+            <textarea name="description-text" id="description-text" for="description-text" cols="30" rows="10"
                 placeholder="Добавете описание" autocomplete="off"></textarea>
                         
             <textarea name="features" id="features" for="features" cols="30" rows="10"

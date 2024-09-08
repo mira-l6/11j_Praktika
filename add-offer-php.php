@@ -5,7 +5,202 @@ session_start();
 include "db_connection.php";
 
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+    $nameofproperty = $_SESSION['nameofproperty'];
 
+    $offername = $_POST['offername'];
+    $offerprice = $_POST['price'];
+    $offerrealtorid = 1;
+    $offerquadrature = $_POST['quadrature'];
+    $offerdescription = $_POST['description-text'];
+    $offerfeatures = $_POST['features'];
+    $offerforprivatepeople = $_POST['forprivatepeople'];
+    $offercountry = $_POST['country'];
+    $offerprovince = $_POST['populated-place-add'];
+    $offerregion = $_POST['town-area-add'];
+    $offerpropertytype = $_POST['property-type'];
+
+    switch ($nameofproperty)
+    {
+        case "проба":
+            $title = "proba";
+            break;
+        case "business":
+            $offerbusinesstype = $_POST['business-type'];
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "garage":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "hotel":
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "house":
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offeryard = $_POST['yard'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "housefloor":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "industrial":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "land":
+            $offermethodofuse = $_POST['methodofuse'];
+            $offercategory = $_POST['category'];
+            $offerrentcontract = $_POST['rentcontract'];
+            $offerrentcontractdate = $_POST['rentcontractdate'];
+            break;
+        case "maisonette":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "office":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "plot":
+            $offerregulation = $_POST['regulation'];
+            $offerwater = $_POST['water'];
+            $offerelectricity = $_POST['electricity'];
+            break;
+        case "restaurant":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "room1":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "room2":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "room3":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "room4":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "roomn":
+            $offerrooms = $_POST['rooms'];
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "shop":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "storage":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "studio":
+            $offerfloorflat = $_POST['floorflat'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+        case "villa":
+            $offeryard = $_POST['yard'];
+            $offerfloorbuilding = $_POST['floorbuilding'];
+            $offerconstructionyear = $_POST['constructionyear'];
+            $offerconstructiontype = $_POST['constructiontype'];
+            $offergas = $_POST['gas'];
+            $offertpp = $_POST['tpp'];
+            $offerfurnished = $_POST['furnished'];
+            break;
+    }
+}
+/*
 // Handling form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
