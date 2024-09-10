@@ -14,6 +14,11 @@
     $adminexperience = $rowgetadmin['realtor_Experience'];
     $adminemail = $rowgetadmin['realtor_Email'];
     $admindescription = $rowgetadmin['realtor_Description'];
+
+    $adminsqlrealtorimg = "SELECT * FROM `realtor_images` WHERE `realtorimg_RealtorID`='$realtorid'";
+    $adminresultrealtorimg = mysqli_query($con, $sqlrealtorimg);
+    $adminrowrealtorimg = mysqli_fetch_assoc($resultrealtorimg);
+    $adminimgurl = $rowrealtorimg['realtorimg_Url'];
 ?>
 <!DOCTYPE html>
 <html lang="bg">
@@ -195,7 +200,9 @@
             <div class="main-contacts-space">
                 <div class="d-flex justify-content-center">
                     <div class="main-card d-flex flex-row">
-                       <div class="main-card-image"><img src="/img/JohnDoe.jpg" alt=""></div>
+                       <div class="main-card-image">
+                            <?php echo '<img src="/' . $adminimgurl . '" alt="">'; ?>
+                        </div>
                        <div class="main-card-info">
                         <h4><?php echo $adminname.' '.$adminlastname ?></h4>
                         <div class="main-card-subinfo">
