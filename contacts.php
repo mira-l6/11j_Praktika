@@ -15,9 +15,9 @@
     $adminemail = $rowgetadmin['realtor_Email'];
     $admindescription = $rowgetadmin['realtor_Description'];
 
-    $adminsqlrealtorimg = "SELECT * FROM `realtor_images` WHERE `realtorimg_RealtorID`='1'";
-    $adminresultrealtorimg = mysqli_query($con, $sqlrealtorimg);
-    $adminrowrealtorimg = mysqli_fetch_assoc($resultrealtorimg);
+    $adminsqlrealtorimg = "SELECT * FROM `realtor_images` WHERE `realtorimg_ID`='3'";
+    $adminresultrealtorimg = mysqli_query($con, $adminsqlrealtorimg);
+    $adminrowrealtorimg = mysqli_fetch_assoc($adminresultrealtorimg);
     $adminimgurl = $rowrealtorimg['realtorimg_Url'];
 ?>
 <!DOCTYPE html>
