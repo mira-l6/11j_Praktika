@@ -12,6 +12,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Форум</title>
+
+    <style>
+        .advantages-box-container .advantages-box {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #e4e4e4;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin: 20px auto;}
+    </style>
 </head>
 
 <body>
