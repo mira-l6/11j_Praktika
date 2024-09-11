@@ -25,7 +25,20 @@
         border: 1px solid #ccc;
         width: 200px;
         margin: 20px auto;
-        box-shadow: darkgray;}
+        
+        }
+        .advantages-box:hover {
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: darkgray;
+        border-radius: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 200px;
+        margin: 20px auto;
+        }
 
         
     </style>
