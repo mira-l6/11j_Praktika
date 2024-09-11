@@ -196,7 +196,7 @@
                 С обширен опит и експертиза в сферата на посредническите консултации, ние Ви предоставяме персонализирано внимание и качествено обслужване.
             </p>
 
-            <div style="display: flex; justify-content: space-around; text-align: left; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-around; text-align: left; margin-bottom: 20px;" class="advantages-box-container">
                 <div class="advantages-box">
                     <i class="material-icons">people</i>
                     <hr>

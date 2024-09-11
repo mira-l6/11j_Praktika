@@ -43,7 +43,7 @@
     border-top: 7px solid rgb(231, 229, 229); 
 }
 
-.advantages-box {
+.advantages-box-container .advantages-box {
     display: flex;
     flex-direction: column;
     align-items: center;
