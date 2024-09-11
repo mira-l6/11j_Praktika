@@ -14,7 +14,7 @@
     <title>Форум</title>
 
     <style>
-        /*.advantages-box-container .advantages-box {
+        .advantages-box-container .advantages-box {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -24,108 +24,10 @@
         padding: 20px;
         border: 1px solid #ccc;
         width: 200px;
-        margin: 20px auto;}*/
+        margin: 20px auto;
+        box-shadow: darkgray;}
 
-        .finance-consulting-box{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.5)), url("../img/scenery.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-
-}
-.finance-consulting-title{
-    text-align: center;
-    color: white;
-    font-size: 2.5em;
-}
-.finance-consulting-subtitle{
-    font-size: 1.5em;
-}
-.finance-consulting-description{
-    text-align: justify;
-    background-color: var(--color-primary);
-    font-size: 1.2em;
-}
-.finance-consulting-description p{
-    padding: 2em;
-}
-.finance-consulting-description p:first-child{
-    border-bottom: 7px solid rgb(231, 229, 229); 
-}
-.contact-button{
-    border: none;
-    padding: 1em;
-    border-radius: 10px;
-}
-.contact-button:hover{
-    background-color: rgb(186, 186, 186); 
-}
-
-.legal-consulting-description{
-    border-bottom: none !important;
-}
-.consulting-description-list{
-    padding: 3em;
-    list-style-type: circle;
-    border-bottom: 7px solid rgb(231, 229, 229); 
-    border-top: 7px solid rgb(231, 229, 229); 
-}
-
-.advantages-box-container .advantages-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #e4e4e4;
-    border-radius: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    width: 200px;
-    margin: 20px auto;
-}
-
-.material-icons
-{
-    color: black;
-}
-
-.advantages-box i {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.advantages-box hr {
-    width: 50px;
-    border: 1px solid #333;
-    margin: 10px 0;
-}
-
-.advantages-box p {
-    margin: 0;
-    color: #666;
-}
-
-.advantages-box i
-{
-    color: #ffffff;
-}
-
-.text-column {
-    flex: 1;
-    padding: 10px;
-}
-
-.image-column {
-    flex: 1;
-    padding: 10px;
-}
-
-.image-column img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+        
     </style>
 </head>
 
