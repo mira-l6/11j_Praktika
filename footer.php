@@ -28,6 +28,7 @@
         <div>
             <h3>Контакти</h3>
             <p style="margin: 0;">ул. "Г. М. Димитров" 25</p>
+            <p style="margin: 0;">ул. "Иван Вазов" 17</p>
             <p style="margin: 0;">Пловдив, България</p>
             <p style="margin: 0;">Имейл: <a href="mailto:info@example.com" style="color: white; text-decoration: none;">info@example.com</a></p>
             <p style="margin: 0;">Телефон: +123 456 7890</p>

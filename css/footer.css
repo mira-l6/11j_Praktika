@@ -15,9 +15,9 @@ footer ul li {
     margin-bottom: 5px;
 }
 
-footer a {
+a:hover {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 footer a:hover {
