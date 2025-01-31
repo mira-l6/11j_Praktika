@@ -68,7 +68,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <button class="btn btn-lg btn-pill blc"><a href="about.html" class="nav-link">За
+                            <button class="btn btn-lg btn-pill blc"><a href="about.php" class="nav-link">За
                                     нас</a>
                             </button>
                         </li>
@@ -154,7 +154,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill blc w-100 text-start removed"><a href="about.html"
+                        <button class="btn btn-lg btn-pill blc w-100 text-start removed"><a href="about.php"
                                 class="nav-link ps-3">За
                                 нас</a></button>
                     </li>
