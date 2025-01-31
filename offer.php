@@ -235,9 +235,16 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
     <!--kraj na popup-->
 
 
+    <?php
+        //podgotvqne na vsichki snimki
+        $imgtable = $offertable.'_images';
+        $imgid = $propertyprefix.'_ImageID';
+        $sqlgetofferpics = "SELECT * FROM `$imgtable` WHERE `$imgid`='$offer_id'";
+    ?>
+
     <div class="container-fluid offer-images">
         <div class="first big-image">
-            <img src="img/9ec19d18-107e-41f9-bddf-4fc03411b2b5.webp" alt="">
+            <img src="img/aqualand.jpg" alt="">
         </div>
         <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
         <div class="small-image small-image-2"><img src="img/aqualand1.jpg" alt=""></div>
