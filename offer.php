@@ -252,7 +252,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
 
     <div class="container-fluid offer-images">
         <div class="first big-image">
-            <img src="<?php $offerpicurls[0] ?>" alt="">
+            <?php echo "<img src=\"".$offerpicurls[0]."\" alt=\"\">"?>
         </div>
         <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
         <div class="small-image small-image-2"><img src="img/aqualand1.jpg" alt=""></div>
