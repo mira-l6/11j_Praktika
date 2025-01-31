@@ -255,10 +255,10 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
             <?php echo "<img src=\"".$offerpicurls[0]."\" alt=\"\">"
             //echo "<script>console.log('PHP Variable:', " . json_encode($sqlgetofferpics) . ");</script>";?>
         </div>
-        <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
-        <div class="small-image small-image-2"><img src="img/aqualand1.jpg" alt=""></div>
-        <div class="small-image small-image-3"><img src="img/aqualand3.jpg" alt=""></div>
-        <div class="small-image small-image-4"><img src="img/scenery.jpg" alt=""></div>
+        <div class="small-image small-image-1"><img src="<?php $offerpicurls[1]?>" alt=""></div>
+        <div class="small-image small-image-1"><img src="<?php $offerpicurls[2]?>" alt=""></div>
+        <div class="small-image small-image-1"><img src="<?php $offerpicurls[3]?>" alt=""></div>
+        <div class="small-image small-image-1"><img src="<?php $offerpicurls[4]?>" alt=""></div>
         <div class="second big-image">
             <img src="img/office.png" alt="">
         </div>
