@@ -256,7 +256,7 @@
     </div>
 
 
-
+    <?php include "footer.php" ?>
     <!-- <footer class="beige-background">
             <h2>Footer</h2>
         </footer> -->
