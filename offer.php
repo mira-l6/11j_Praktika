@@ -239,7 +239,8 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         //podgotvqne na vsichki snimki
         $imgtable = $offertable.'_images';
         $imgid = $propertyprefix.'_ImageID';
-        $sqlgetofferpics = "SELECT * FROM `$imgtable` WHERE `$imgid`='$offer_id'";
+        $imgcolumn = $propertyprefix.'_Image_Url';
+        $sqlgetofferpics = "SELECT `$imgcolumn` * FROM `$imgtable` WHERE `$imgid`='$offer_id'";
         $resultgetofferpics = mysqli_query($con, $sqlgetofferpics);
         $rowgetofferpics = mysqli_fetch_assoc($resultgetofferpics);
     ?>
