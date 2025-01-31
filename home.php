@@ -374,7 +374,8 @@
 
                     $picofferid = $offerprefix."_OfferID";
                     $pictable = $offertable . "_images";
-                    $sqlgetpics = "SELECT * FROM `".$pictable."` WHERE `".$picofferid."`='$propertyid'";
+                    $piccol = $offerprefix."_Image_Url";
+                    $sqlgetpics = "SELECT `$piccol` FROM `".$pictable."` WHERE `".$picofferid."`='$propertyid'";
                     $resultgetpics = mysqli_query($con, $sqlgetpics);
                     $picscount = mysqli_num_rows($resultgetpics);
 
@@ -387,16 +388,18 @@
                     //slideshow carousel
                     echo '<div class="carousel-inner">';
                     $pics = array();
-                    while ($rowgetpic = mysqli_fetch_assoc($resultgetpics)) 
+                    while ($rowgetpics = mysqli_fetch_assoc($resultgetpics)) 
                     {
-                        $pics[] = $rowgetpic;
+                        $pics[] = $rowgetpics;
                     }
+                    //masiv s urltata
+                    $picurls = array_column($pics, $piccol);
                     //cikul za snimkite
                     for($j = 0; $j < $picscount; $j++)
                     {
-                        $pic = $pics[$j];
+                        //$pic = $pics[$j];
                         //$imgurlsess = $offertable.'_Image_Url';
-                        $picurl = $pic['business_Image_Url'];
+                        $picurl = $picurls[$j];
                         $_SESSION['picurl'] = $picurl;
                         // Active class само за първия елемент на carousel
                         $activeclass = ($j === 0) ? 'active' : '';
