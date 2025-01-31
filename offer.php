@@ -242,12 +242,16 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         $imgcolumn = $propertyprefix.'_Image_Url';
         $sqlgetofferpics = "SELECT `$imgcolumn` FROM `$imgtable` WHERE `$imgid`='$offer_id'";
         $resultgetofferpics = mysqli_query($con, $sqlgetofferpics);
-        $rowgetofferpics = mysqli_fetch_assoc($resultgetofferpics);
+        $offerpics = array();
+        while($rowgetofferpics = mysqli_fetch_assoc($resultgetofferpics))
+        {
+            $offerpics[] = $rowgetofferpics;
+        }
     ?>
 
     <div class="container-fluid offer-images">
         <div class="first big-image">
-            <img src="img/aqualand.jpg" alt="">
+            <img src="<?php $offerpics[0] ?>" alt="">
         </div>
         <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
         <div class="small-image small-image-2"><img src="img/aqualand1.jpg" alt=""></div>
