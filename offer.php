@@ -241,6 +241,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         $imgid = $propertyprefix.'_ImageID';
         $sqlgetofferpics = "SELECT * FROM `$imgtable` WHERE `$imgid`='$offer_id'";
         $resultgetofferpics = mysqli_query($con, $sqlgetofferpics);
+        $rowgetofferpics = mysqli_fetch_assoc($resultgetofferpics);
     ?>
 
     <div class="container-fluid offer-images">
