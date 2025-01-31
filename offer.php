@@ -256,10 +256,9 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
             //echo "<script>console.log('PHP Variable:', " . json_encode($sqlgetofferpics) . ");</script>";?>
         </div>
         <?php echo "<div class=\"small-image small-image-1\"><img src=\"".$offerpicurls[1]."\" alt=\"\"></div>"?>
-        <div class="small-image small-image-1"><img src="<?php $offerpicurls[1]?>" alt=""></div>
-        <div class="small-image small-image-1"><img src="<?php $offerpicurls[2]?>" alt=""></div>
-        <div class="small-image small-image-1"><img src="<?php $offerpicurls[3]?>" alt=""></div>
-        <div class="small-image small-image-1"><img src="<?php $offerpicurls[4]?>" alt=""></div>
+        <?php echo "<div class=\"small-image small-image-1\"><img src=\"".$offerpicurls[2]."\" alt=\"\"></div>"?>
+        <?php echo "<div class=\"small-image small-image-1\"><img src=\"".$offerpicurls[3]."\" alt=\"\"></div>"?>
+        <?php echo "<div class=\"small-image small-image-1\"><img src=\"".$offerpicurls[4]."\" alt=\"\"></div>"?>
         <div class="second big-image">
             <img src="img/office.png" alt="">
         </div>
