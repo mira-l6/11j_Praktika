@@ -291,12 +291,23 @@
                             </div>
                         </div>
                     </div>
-
+                    
+                   
+                    <div class="filter-search-button">
+                        <button type="submit" class="p-3"><i class="material-icons">sort</i>Филтрирай</button>
+                    </div>
                 </form>
 
-                <div class="filter-search-button">
-                    <button class="p-3"><i class="material-icons">sort</i>Филтрирай</button>
-                </div>
+                
+
+                <?php
+
+                    $sqlgetfiltered = "SELECT * FROM `".$offertable."` WHERE `".$propertyid."`='$rowgetnewofferid'";
+                ?>
+
+
+
+
 
                 <?php
                     for($i = 0; $i < $offerscount; $i++)
