@@ -247,11 +247,12 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         {
             $offerpics[] = $rowgetofferpics;
         }
+        $offerpicurls = array_column($offerpics, $imgcolumn);
     ?>
 
     <div class="container-fluid offer-images">
         <div class="first big-image">
-            <img src="<?php $offerpics[0] ?>" alt="">
+            <img src="<?php $offerpicurls[0] ?>" alt="">
         </div>
         <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
         <div class="small-image small-image-2"><img src="img/aqualand1.jpg" alt=""></div>
