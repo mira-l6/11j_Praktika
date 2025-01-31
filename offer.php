@@ -239,10 +239,10 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         <div class="first big-image">
             <img src="img/9ec19d18-107e-41f9-bddf-4fc03411b2b5.webp" alt="">
         </div>
-        <div class="small-image small-image-1"><img src="/img/download (5).jpg" alt=""></div>
-        <div class="small-image small-image-2"><img src="img/download (2).jpg" alt=""></div>
-        <div class="small-image small-image-3"><img src="img/download (4).jpg" alt=""></div>
-        <div class="small-image small-image-4"><img src="img/download (6).jpg" alt=""></div>
+        <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
+        <div class="small-image small-image-2"><img src="img/aqualand1.jpg" alt=""></div>
+        <div class="small-image small-image-3"><img src="img/aqualand3.jpg" alt=""></div>
+        <div class="small-image small-image-4"><img src="img/aqualand4.jpg" alt=""></div>
         <div class="second big-image">
             <img src="img/1677856812_en-idei-club-p-inside-the-house-dizain-1.jpg" alt="">
         </div>
@@ -462,10 +462,11 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
     </div>
     <div class="offer-contact p-4">
         <h4>Оставете запитване:</h4>
+        
+        <div>
         <form action="" method="post" class="offer-contact-form">
             <textarea name="" id="" class="w-100 rounded-2 form-control"></textarea>
         </form>
-        <div>
             <form action="" class="row">
                 <div class="col-6 offer-form-area">
                     <label for="">Имейл: </label>
@@ -474,6 +475,9 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
                 <div class="col-6 offer-form-area">
                     <label for="">Телефон: </label>
                     <input type="text" class="form-control">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-lg submit">Изпрати</button>
                 </div>
             </form>
         </div>
