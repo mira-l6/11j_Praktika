@@ -238,7 +238,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
     <?php
         //podgotvqne na vsichki snimki
         $imgtable = $offertable.'_images';
-        $imgid = $propertyprefix.'_ImageID';
+        $imgid = $propertyprefix.'_OfferID';
         $imgcolumn = $propertyprefix.'_Image_Url';
         $sqlgetofferpics = "SELECT `$imgcolumn` FROM `$imgtable` WHERE `$imgid`='$offer_id'";
         $resultgetofferpics = mysqli_query($con, $sqlgetofferpics);
@@ -251,7 +251,6 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
 
     <div class="container-fluid offer-images">
         <div class="first big-image">
-            <p><?php echo $offerpics[0] ?></p>
             <img src="<?php $offerpics[0] ?>" alt="">
         </div>
         <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
