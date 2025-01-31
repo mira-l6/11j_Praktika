@@ -255,6 +255,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
             <?php echo "<img src=\"".$offerpicurls[0]."\" alt=\"\">"
             //echo "<script>console.log('PHP Variable:', " . json_encode($sqlgetofferpics) . ");</script>";?>
         </div>
+        <?php echo "<div class=\"small-image small-image-1\"><img src=\"".$offerpicurls[1]."\" alt=\"\"></div>"?>
         <div class="small-image small-image-1"><img src="<?php $offerpicurls[1]?>" alt=""></div>
         <div class="small-image small-image-1"><img src="<?php $offerpicurls[2]?>" alt=""></div>
         <div class="small-image small-image-1"><img src="<?php $offerpicurls[3]?>" alt=""></div>
