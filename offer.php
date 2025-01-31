@@ -253,7 +253,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
     <div class="container-fluid offer-images">
         <div class="first big-image">
             <?php //echo "<img src=\"".$offerpicurls[0]."\" alt=\"\">"
-            echo "<script>console.log('PHP Variable:', " . json_encode($offerpics) . ");</script>";?>
+            echo "<script>console.log('PHP Variable:', " . json_encode($sqlgetofferpics) . ");</script>";?>
         </div>
         <div class="small-image small-image-1"><img src="/img/aqualand.jpg" alt=""></div>
         <div class="small-image small-image-2"><img src="img/aqualand1.jpg" alt=""></div>
