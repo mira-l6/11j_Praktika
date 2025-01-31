@@ -409,6 +409,7 @@
                         echo '</div>';
                     }
                     echo '</div>';
+
                     //left and right control items
 
 
