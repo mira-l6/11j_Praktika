@@ -346,6 +346,16 @@
 
     </div>
 
+    <?php
+        $realtorid = $_SESSION["login_RealtorID"];
+        //kolko da produljava sesiqta ?
+
+        $sqlgetnewoffer = "SELECT * FROM `offer` WHERE `offer_agentID`='$realtorid' ORDER BY `offer_TimeOfUpload` DESC";
+
+    ?>
+
+
+
     <script src="/js/filter.js"></script>
     <!--<script src="/js/offerRedirect.js"></script>-->
 

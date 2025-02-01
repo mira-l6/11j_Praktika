@@ -233,7 +233,7 @@
                         <div class="profile-buttons d-flex pt-4 pb-4">
                             <div class="d-flex flex-row">
                                 <div class="notice-button">
-                                    <a href="my-offers.html"
+                                    <a href="my-offers.php"
                                         ><button class="d-flex justify-content-center align-items-center">Моите обяви<i
                                             class="material-icons">arrow_forward</i></button></a>
                                 </div>
