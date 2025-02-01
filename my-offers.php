@@ -350,8 +350,10 @@
         $realtorid = $_SESSION["login_RealtorID"];
         //kolko da produljava sesiqta ?
 
-        $sqlgetnewoffer = "SELECT * FROM `offer` WHERE `offer_agentID`='$realtorid' ORDER BY `offer_TimeOfUpload` DESC";
-
+        $sqlgetmyoffer = "SELECT * FROM `offer` WHERE `offer_agentID`='$realtorid' ORDER BY `offer_TimeOfUpload` DESC";
+        $resultgetmyoffer = mysqli_query($con, $sqlgetmyoffer);
+        $myofferscount = mysqli_num_rows($resultgetmyoffer);
+        $myoffers = array();
     ?>
 
 
