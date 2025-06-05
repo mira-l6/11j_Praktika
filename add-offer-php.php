@@ -7,12 +7,8 @@ include "db_connection.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    if (isset($_GET['offer_type']))
-    {
-        $offerType = htmlspecialchars($_GET['offer_type']);
-    }
-    //$nameofproperty = $_SESSION['nameofproperty'];
-    $nameofproperty = $offerType;
+    $nameofproperty = $_SESSION['nameofproperty'];
+    //$nameofproperty = $offerType;
 
     $offername = $_POST['offername'];
     $offerprice = $_POST['price'];

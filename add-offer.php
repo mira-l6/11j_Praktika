@@ -483,6 +483,7 @@
 
             <?php
             $offerType = htmlspecialchars($_GET['offer_type']);
+            $_SESSION['nameofproperty'] = $offerType;
                 switch ($offerType)
                 {
                     case "business":
