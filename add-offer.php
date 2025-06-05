@@ -481,9 +481,10 @@
             </div>
 
             <?php
-                switch ($_SESSION[''])
+            $offerType = htmlspecialchars($_GET['offer_type']);
+                switch ($offerType)
                 {
-                    case "business_property":
+                    case "business":
                         echo '<div class="filter-option"><label for="business-type">Вид</label>';
                         echo '    <!--падащо меню-->';
                         echo '    <select name="business-type" id="business-type" autocomplete="off">';
