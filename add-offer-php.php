@@ -7,7 +7,12 @@ include "db_connection.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    $nameofproperty = $_SESSION['nameofproperty'];
+    if (isset($_GET['offer_type']))
+    {
+        $offerType = htmlspecialchars($_GET['offer_type']);
+    }
+    //$nameofproperty = $_SESSION['nameofproperty'];
+    $nameofproperty = $offerType;
 
     $offername = $_POST['offername'];
     $offerprice = $_POST['price'];
@@ -37,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfurnished = $_POST['furnished'];
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
-            VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
+            VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype', '$offerbusinesstype')";
             $resultsql = mysqli_query($con, $sql);
 
             break;
@@ -120,6 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
             break;
         case "maisonette":
+            $offerrooms = $_POST['rooms'];
             $offerfloorflat = $_POST['floorflat'];
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
@@ -128,9 +134,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offertpp = $_POST['tpp'];
             $offerfurnished = $_POST['furnished'];
 
-            //dotuk sum
-            $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
-            VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
+            $sql = "INSERT INTO `maisonette`(`maisonette_Price`, `maisonette_RealtorID`, `maisonette_Quadrature`, `maisonette_FloorFlat`, `maisonette_FloorBuilding`, `maisonette_Gas`, `maisonette_Tpp`, 'maisonette_ConstructionYear`, `maisonette_ConstructionType`, `maisonette_Description`, `maisonette_Features`, `maisonette_ForPrivatePeople`, `maisonette_Furnished`, `maisonette_Country`, `maisonette_Province`, `maisonette_City`, `maisonette_Region`, `maisonette_Type`, `maisonette_Rooms`)
+            VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype', '$offerrooms')";
             $resultsql = mysqli_query($con, $sql);
 
             break;
@@ -143,6 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offertpp = $_POST['tpp'];
             $offerfurnished = $_POST['furnished'];
 
+            //dotuk sum
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
             $resultsql = mysqli_query($con, $sql);

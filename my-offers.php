@@ -373,8 +373,8 @@
             $rowgetmyofferid = $myoffer['offer_PropertyID'];
 
             $sqlgetofferobj = "SELECT * FROM `".$myoffertable."` WHERE `".$propertyid."`='$rowgetmyofferid'";
-            $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
-            $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
+            $resultgetofferobj = mysqli_query(mysql: $con, query: $sqlgetofferobj);
+            $rowgetofferobj = mysqli_fetch_assoc(result: $resultgetofferobj);
 
             $price = $myofferprefix.'_Price';
                     $name = $myofferprefix.'_City';

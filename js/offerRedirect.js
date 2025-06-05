@@ -2,7 +2,11 @@ let offerChoice = document.getElementById('offer-choice');
 // let pageTitle = document.getElementById('page-title').innerText;
 
 function redirect() {
-    document.getElementById("offerForm").submit();
+    var selectElement = document.getElementById('offer-choice');
+    var selectedValue = selectElement.value;
+    if (selectedValue !== 'initial' && selectedValue !== 'all') {
+        window.location.href = 'add-offer.php?offer_type=' + encodeURIComponent(selectedValue);
+    }
     /*
     switch (offerChoice.value) {
         case "room1":
