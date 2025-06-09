@@ -6,11 +6,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
-echo "<pre>Debug Session Data: "; 
+/*echo "<pre>Debug Session Data: "; 
 print_r($_SESSION); 
-echo "</pre>";
-
+echo "</pre>";*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -22,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $offerquadrature = $_POST['quadrature'];
     $offerdescription = $_POST['description-text'];
     $offerfeatures = $_POST['features'];
-    $offerforprivatepeople = $_POST['forprivatepeople'];
+    $offerforprivatepeople = isset($_POST['forprivatepeople']) ? 1 : 0;
     $offercountry = $_POST['country'];
     $offerprovince = $_POST['populated-place-add'];
     $offerregion = $_POST['town-area-add'];
