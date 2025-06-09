@@ -9,7 +9,6 @@ include "db_connection.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
     $nameofproperty = $_SESSION['nameofproperty'];
-    //$nameofproperty = $offerType;
 
     $offername = $_POST['offername'];
     $offerprice = $_POST['price'];
@@ -25,12 +24,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $offerprefix = $nameofproperty;
 
     //изображения
-    if($_FILES['image']['size'] <= 250000)
+    if(isset($_FILES['image'])) 
     {
-        $image = $_FILES['image']['name'];
         $target_dir = "img/";
-        $target_file = $target_dir . basename($image);
-        move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+    
+        //обработка на всяко изображение
+        foreach($_FILES['image']['name'] as $key => $name) 
+        {
+            if($_FILES['image']['size'][$key] <= 250000) 
+            {
+                $target_file = $target_dir . basename($name);
+                if(move_uploaded_file($_FILES['image']['tmp_name'][$key], $target_file)) 
+                {
+                    //echo "File ". $name . " uploaded successfully!<br>";
+                } 
+                else 
+                {
+                    echo "Error uploading ". $name . "<br>";
+                }
+            } 
+            else 
+            {
+                echo "File ". $name . " is too large (max 250KB)<br>";
+            }
+        }
     }
     else
     {
@@ -336,6 +353,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $sqloffer = "INSERT INTO `offer` (`offer_Table`, `offer_PropertyID`, `offer_Prefix`, `offer_agentID`)
             VALUES ('$nameofproperty', '$property_id', '$offerprefix', '$realtorid')";
         $resultoffer = mysqli_query($con, $sqloffer);
+
         if($resultoffer)
         {
             $offer_id = mysqli_insert_id(mysql: $con);
@@ -344,15 +362,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $row2 = $offerprefix."_Image_Name";
             $row3 = $offerprefix."_OfferID";
 
-
-            $sqlimages = "INSERT INTO `$imgtable` (`$row1`, `$row2`, `$row3`)
-                VALUES ('$image', '$target_file', '$offer_id')";
-            $resultimages = mysqli_query($con, $sqlimages);
-            if($resultimages)
+            foreach($_FILES['image']['name'] as $key => $name) 
             {
-                header("Location: add-offer.php?Успешно добавихте оферта и изображение");
-            }
-        }
+                if($_FILES['image']['size'][$key] <= 250000) 
+                {
+                    $image_name = basename($name);
+                    $target_file = $target_dir . $image_name;
+
+                    $sqlimages = "INSERT INTO `$imgtable` (`$row1`, `$row2`, `$row3`)
+                             VALUES ('$target_file', '$image_name', '$offer_id')";
+                    $resultimages = mysqli_query($con, $sqlimages);
+
+                    if($resultimages)
+                    {
+                        header("Location: add-offer.php?Успешно добавихте оферта и изображение");
+                    }
+                }
+                else 
+                {
+                    echo "File " . $name . " is too large (max 250KB)<br>";
+                }
+            } 
+        } 
+            /*$sqlimages = "INSERT INTO `$imgtable` (`$row1`, `$row2`, `$row3`)
+                VALUES ('$image', '$target_file', '$offer_id')";
+            $resultimages = mysqli_query($con, $sqlimages);*/
+        
         else
         {
 

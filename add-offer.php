@@ -353,7 +353,7 @@
                 <label for="images" class="custom-file-upload">
                     Качи файлове
                 </label>
-                <input type="file" id="images" name="images[]" multiple>
+                <input type="file" id="images" name="image[]" multiple>
                 <br><br>
                 <ul id="fileList"></ul>
                 <br>
