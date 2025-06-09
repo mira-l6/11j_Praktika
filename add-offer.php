@@ -3,6 +3,7 @@
     session_start();
     
     $nameofproperty = htmlspecialchars($_GET['offer_type']);
+    $_SESSION['nameofproperty'] = $nameofproperty;
 
     switch ($nameofproperty)
     {
@@ -481,9 +482,7 @@
             </div>
 
             <?php
-            $offerType = htmlspecialchars($_GET['offer_type']);
-            $_SESSION['nameofproperty'] = $offerType;
-                switch ($offerType)
+                switch ($nameofproperty)
                 {
                     case "business":
                         echo '<div class="filter-option"><label for="business-type">Вид</label>';
