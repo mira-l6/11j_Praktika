@@ -1,12 +1,9 @@
 <?php
-//Втори код работещ за една форма
 
 session_start();
 include "db_connection.php";
 
-header("Location: add-оffer.php?Това работи");
-$con->close();
-/*if ($_SERVER["REQUEST_METHOD"] == "POST") 
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
     $nameofproperty = $_SESSION['nameofproperty'];
     //$nameofproperty = $offerType;
@@ -22,7 +19,22 @@ $con->close();
     $offerprovince = $_POST['populated-place-add'];
     $offerregion = $_POST['town-area-add'];
     $offerpropertytype = $_POST['property-type'];
+    $offerprefix = $nameofproperty;
 
+    //изображения
+    if($_FILES['image']['size'] <= 250000)
+    {
+        $image = $_FILES['image']['name'];
+        $target_dir = "img/";
+        $target_file = $target_dir . basename($image);
+        move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+    }
+    else
+    {
+        header("Location: add-agent.html?error=Изображението е твърде голямо");
+    }
+
+    //заявки за добавяне
     switch ($nameofproperty)
     {
         case "проба":
@@ -38,10 +50,12 @@ $con->close();
             $offertpp = $_POST['tpp'];
             $offerfurnished = $_POST['furnished'];
 
+            $nameofproperty = "business_property";
+            $offerprefix = "business";
+
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype', '$offerbusinesstype')";
             $resultsql = mysqli_query($con, $sql);
-
             break;
         case "garage":
             $offerfloorflat = $_POST['floorflat'];
@@ -91,6 +105,9 @@ $con->close();
             $offertpp = $_POST['tpp'];
             $offerfurnished = $_POST['furnished'];
 
+            $nameofproperty = "house_floor";
+            $offerprefix = "house_Floor";
+
             $sql = "INSERT INTO `house_floor`(`housefloor_Price`, `housefloor_RealtorID`, `houseFloor_Quadrature`, `housefloor_FloorFlat`, `housefloor_FloorBuilding`, `housefloor_Gas`, `housefloor_Tpp`, `housefloor_ConstructionYear`, `housefloor_ConstructionType`, `housefloor_Description`, `housefloor_Features`, `housefloor_ForPrivatePeople`, `housefloor_Furnished`, `housefloor_Country`, `housefloor_Province`, `housefloor_City`, `housefloor_Region`, `housefloor_Type`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype')";
             $resultsql = mysqli_query($con, $sql);
@@ -104,6 +121,9 @@ $con->close();
             $offergas = $_POST['gas'];
             $offertpp = $_POST['tpp'];
             $offerfurnished = $_POST['furnished'];
+
+            $nameofproperty = "industrial_premise";
+            $offerprefix = "industrial_Premise";
 
             $sql = "INSERT INTO `industrial_premise`(`industrial_Price`, `industrial_RealtorID`, `industrial_Quadrature`, `industrial_FloorFlat`, `industrial_FloorBuilding`, `industrial_Gas`, `industrial_Tpp`, `industrial_ConstructionYear`, `industrial_ConstructionType`, `industrial_Description`, `industrial_Features`, `industrial_ForPrivatePeople`, `industrial_Furnished`, `industrial_Country`, `industrial_Province`, `industrial_City`, `industrial_Region`, `industrial_Type`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype')";
@@ -302,6 +322,43 @@ $con->close();
             $resultsql = mysqli_query($con, $sql);
 
             break;
+    }
+
+    $result = mysqli_query($con, $sql);
+    if($result)
+    {
+        $property_id = mysqli_insert_id(mysql: $con);
+        $realtorid = $_SESSION['login_RealtorID'];
+
+        $sqloffer = "INSERT INTO `offer` (`offer_Table`, `offer_PropertyID`, `offer_Prefix`, `offer_agentID`)
+            VALUES ('$nameofproperty', '$property_id', '$offerprefix', '$realtorid')";
+        $resultoffer = mysqli_query($con, $sqloffer);
+        if($resultoffer)
+        {
+            $offer_id = mysqli_insert_id(mysql: $con);
+            $imgtable = $nameofproperty."_images";
+            $row1 = $offerprefix."_Image_Url";
+            $row2 = $offerprefix."_Image_Name";
+            $row3 = $offerprefix."_OfferID";
+
+
+            $sqlimages = "INSERT INTO `$imgtable` (`$row1`, `$row2`, `$row3`)
+                VALUES ('$image', '$target_file', '$offer_id')";
+            $resultimages = mysqli_query($con, $sqlimages);
+            if($resultimages)
+            {
+                header("Location: add-offer.php?Успешно добавихте оферта и изображение");
+            }
+        }
+        else
+        {
+
+        }
+        $con->close();
+    }
+    else
+    {
+
     }
 }
 /*
