@@ -1,13 +1,14 @@
 <?php
-echo "<pre>Debug Session Data: "; 
-print_r($_SESSION); 
-echo "</pre>";
+
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
+echo "<pre>Debug Session Data: "; 
+print_r($_SESSION); 
+echo "</pre>";
 include "db_connection.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
