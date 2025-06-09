@@ -344,8 +344,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             break;
     }
 
-    $result = mysqli_query($con, $sql);
-    if($result)
+    if($resultsql)
     {
         $property_id = mysqli_insert_id(mysql: $con);
         $realtorid = $_SESSION['login_RealtorID'];
