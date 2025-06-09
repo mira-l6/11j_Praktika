@@ -58,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     else
     {
         header("Location: add-agent.html?error=Изображението е твърде голямо");
+        exit();
     }
 
     //заявки за добавяне
