@@ -1,9 +1,8 @@
-<!--Това е простият код без дизайн с всичко в една форма. Първоначалният код с дизайна е в адд-агент-проба.пхп-->
 <?php
     session_start();
+    $_SESSION['nameofproperty'] = htmlspecialchars($_GET['offer_type']);
+    $nameofproperty = $_SESSION['nameofproperty'];
     
-    $nameofproperty = htmlspecialchars($_GET['offer_type']);
-    $_SESSION['nameofproperty'] = $nameofproperty;
 
 
     switch ($nameofproperty)

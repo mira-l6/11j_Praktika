@@ -1,15 +1,16 @@
 <?php
-
+session_start();
+include "db_connection.php";
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-session_start();
+
 echo "<pre>Debug Session Data: "; 
 print_r($_SESSION); 
 echo "</pre>";
-include "db_connection.php";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -391,15 +392,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             /*$sqlimages = "INSERT INTO `$imgtable` (`$row1`, `$row2`, `$row3`)
                 VALUES ('$image', '$target_file', '$offer_id')";
             $resultimages = mysqli_query($con, $sqlimages);*/
-        
         else
         {
 
         }
         $con->close();
+        exit();
     }
     else
     {
-
+        exit();
     }
 }
