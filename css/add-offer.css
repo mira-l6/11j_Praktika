@@ -1,13 +1,13 @@
 body
 {
-    background-color: #e8d191;
+    
 }
 a{
     color: black !important;
 }
 .add-offer-image-container
 {
-    
+    background-color: #e8d191;
 }
 .add-offer-box{
     width: 100%;

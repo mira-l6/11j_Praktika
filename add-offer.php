@@ -340,7 +340,7 @@
 
 
 
-
+<div class="add-container">
     <div class="container">
         <?php
             echo '<h1>Добави ' . $title . '</h1>';
@@ -386,7 +386,7 @@
                             <select name="country" id="country" autocomplete="off">
                                 <option value="" disabled selected>Държава</option>
                                 <option value="България">България</option>
-                                <option value="Гърция">Гърция</ >
+                                <option value="Гърция">Гърция</d >
                                 <option value="Друго">Друго</option>
                             </select>
                         </div>
@@ -1232,6 +1232,7 @@
             </div>
         </form>
     </div>
+</div>
     <script>
         function previewImage(event) {
             const imagePreview = document.getElementById('imagePreview');
