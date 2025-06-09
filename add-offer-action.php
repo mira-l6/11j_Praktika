@@ -71,9 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $nameofproperty = "business_property";
             $offerprefix = "business";
@@ -98,9 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `hotel`(`hotel_Price`, `hotel_RealtorID`, `hotel_Quadrature`, `hotel_FloorBuilding`, `hotel_Gas`, `hotel_Tpp`, `hotel_ConstructionYear`, `hotel_ConstructionType`, `hotel_Description`, `hotel_Features`, `hotel_ForPrivatePeople`, `hotel_Furnished`, `hotel_Country`, `hotel_Province`, `hotel_City`, `hotel_Region`, `hotel_Type`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype')";
@@ -112,9 +112,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
             $offeryard = $_POST['yard'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `house`(`house_Price`, `house_RealtorID`, `house_Quadrature`, `house_FloorBuilding`, `house_Gas`, `house_Tpp`, `house_ConstructionYear`, `house_ConstructionType`, `house_Description`, `house_Features`, `house_ForPrivatePeople`, `house_Furnished`, `house_Yard`, `house_Country`, `house_Province`, `house_City`, `house_Region`, `house_Type`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offeryard', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype')";
@@ -126,9 +126,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $nameofproperty = "house_floor";
             $offerprefix = "house_Floor";
@@ -143,9 +143,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $nameofproperty = "industrial_premise";
             $offerprefix = "industrial_Premise";
@@ -172,9 +172,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `maisonette`(`maisonette_Price`, `maisonette_RealtorID`, `maisonette_Quadrature`, `maisonette_FloorFlat`, `maisonette_FloorBuilding`, `maisonette_Gas`, `maisonette_Tpp`, 'maisonette_ConstructionYear`, `maisonette_ConstructionType`, `maisonette_Description`, `maisonette_Features`, `maisonette_ForPrivatePeople`, `maisonette_Furnished`, `maisonette_Country`, `maisonette_Province`, `maisonette_City`, `maisonette_Region`, `maisonette_Type`, `maisonette_Rooms`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerpropertytype', '$offerrooms')";
@@ -186,9 +186,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             //dotuk sum
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
@@ -211,9 +211,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -225,9 +225,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -239,9 +239,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -253,9 +253,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -267,9 +267,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -282,9 +282,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -296,9 +296,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -310,9 +310,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -324,9 +324,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
@@ -338,9 +338,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             $offerfloorbuilding = $_POST['floorbuilding'];
             $offerconstructionyear = $_POST['constructionyear'];
             $offerconstructiontype = $_POST['constructiontype'];
-            $offergas = $_POST['gas'];
-            $offertpp = $_POST['tpp'];
-            $offerfurnished = $_POST['furnished'];
+            $offergas = isset($_POST['gas']) ? 1 : 0;
+            $offertpp = isset($_POST['tpp']) ? 1 : 0;
+            $offerfurnished = isset($_POST['furnished']) ? 1 : 0;
 
             $sql = "INSERT INTO `business_property`(`business_Price`, `business_RealtorID`, `business_Quadrature`, `business_FloorFlat`, `business_FloorBuilding`, `business_Gas`, `business_Tpp`, `business_ConstructionYear`, `business_ConstructionType`, `business_Description`, `business_Features`, `business_ForPrivatePeople`, `business_Furnished`, `business_Country`, `business_Province`, `business_City`, `business_Region`, `business_Type`, `business_PropertyType`)
             VALUES ('$offerprice', '$offerrealtorid', '$offerquadrature', '$offerfloorflat', '$offerfloorbuilding', '$offergas', '$offertpp', '$offerconstructionyear', '$offerconstructiontype', '$offerdescription', '$offerfeatures', '$offerforprivatepeople', '$offerfurnished', '$offercountry', '$offerprovince', '$offername', '$offerregion', '$offerbusinesstype', '$offerpropertytype')";
