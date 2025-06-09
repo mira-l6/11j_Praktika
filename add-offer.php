@@ -2,7 +2,7 @@
 <?php
     session_start();
     
-    $nameofproperty = $_SESSION['nameofproperty'];
+    $nameofproperty = htmlspecialchars($_GET['offer_type']);
 
     switch ($nameofproperty)
     {
@@ -342,7 +342,6 @@
 
     <div class="container">
         <?php
-        
             echo '<h1>Добави ' . $title . '</h1>';
         ?>
         
