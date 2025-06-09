@@ -5,6 +5,7 @@
     $nameofproperty = htmlspecialchars($_GET['offer_type']);
     $_SESSION['nameofproperty'] = $nameofproperty;
 
+
     switch ($nameofproperty)
     {
         case "проба":
@@ -482,6 +483,7 @@
             </div>
 
             <?php
+                $_SESSION['nameofproperty'] = $nameofproperty;
                 switch ($nameofproperty)
                 {
                     case "business":
