@@ -1,5 +1,6 @@
 body{
     overflow-x: hidden;
+    background-color: #e8d191;
 }
 
 .add-agents-box{
@@ -7,7 +8,7 @@ body{
 }
 .add-container
 {
-    background-color: #e8d191;
+    
 }
 .add-agent-title{
     border-bottom: 3px solid var(--color-primary);
