@@ -5,7 +5,10 @@ body{
 .add-agents-box{
     width: 100%;
 }
-
+.add-container
+{
+    background-color: #e8d191;
+}
 .add-agent-title{
     border-bottom: 3px solid var(--color-primary);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6),

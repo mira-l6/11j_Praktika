@@ -341,7 +341,7 @@
 
 
 
-    <div class="container">
+    <div class="add-container">
         <?php
             echo '<h1>Добави ' . $title . '</h1>';
         ?>
