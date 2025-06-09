@@ -346,7 +346,7 @@
             echo '<h1>Добави ' . $title . '</h1>';
         ?>
         
-        <form action="add-offer-php.php" method="POST" enctype="multipart/form-data">
+        <form action="add-agent.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="images">Изберете снимки:</label>
                 <div class="image-preview" id="imagePreview"></div>

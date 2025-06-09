@@ -5,6 +5,7 @@ session_start();
 include "db_connection.php";
 
 header("Location: add-оffer.php?Това работи");
+$con->close();
 /*if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
     $nameofproperty = $_SESSION['nameofproperty'];
