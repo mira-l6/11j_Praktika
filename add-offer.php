@@ -386,7 +386,7 @@
                             <select name="country" id="country" autocomplete="off">
                                 <option value="" disabled selected>Държава</option>
                                 <option value="България">България</option>
-                                <option value="Гърция">Гърция</option>
+                                <option value="Гърция">Гърция</ >
                                 <option value="Друго">Друго</option>
                             </select>
                         </div>
