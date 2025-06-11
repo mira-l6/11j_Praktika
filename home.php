@@ -59,7 +59,7 @@
                                 <li class="nav-item p-1"><a class="dropdown-item nav-link" href="for-rent.html">Отдаване
                                         на наем</a></li>
                                 <li class="nav-item p-1"><a class="dropdown-item nav-link"
-                                        href="finance-consulting.html">Финансова консултация</a></li>
+                                        href="finance-consulting.php">Финансова консултация</a></li>
                                 <li class="nav-item p-1"><a class="dropdown-item nav-link"
                                         href="legal-consulting.html">Юридическа консултация</a></li>
                             </ul>
@@ -135,7 +135,7 @@
                             </li>
                             <li class="nav-item w-100">
                                 <button class="btn w-100">
-                                    <a class="nav-link text-start ps-4" href="finance-consulting.html">Финансова консултация</a>
+                                    <a class="nav-link text-start ps-4" href="finance-consulting.php">Финансова консултация</a>
                                 </button>
                             </li>
                             <li class="nav-item w-100">
