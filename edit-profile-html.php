@@ -218,13 +218,13 @@
                                     <div class="col-6">
                                         <p class="input-1"><span class="input-title">Име:</span><input
                                                 value="<?php echo $_SESSION['name'] ?>"
-                                                class="edit-profile-input"></input>
+                                                class="edit-profile-input" id="name" name="name"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p class="input-2"><span class="input-title">Фамилия:</span><input
                                                 value="<?php echo $_SESSION['lastname'] ?>"
-                                                class="edit-profile-input"></input>
+                                                class="edit-profile-input" id="surname" name="surname"></input>
                                         </p>
                                     </div>
                                 </div>
@@ -233,13 +233,13 @@
                                     <div class="col-6">
                                         <p class="input-3"><span class="input-title">Потребител:</span> <input
                                                 value="<?php echo $_SESSION['login_Username'] ?>"
-                                                class="edit-profile-input"></input>
+                                                class="edit-profile-input" id="username" name="username"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p class="input-4"><span class="input-title">Имейл: </span><input
                                                 value="<?php echo $_SESSION['email'] ?>"
-                                                class="edit-profile-input"></input>
+                                                class="edit-profile-input" id="email" name="email"></input>
                                         </p>
                                     </div>
                                 </div>
@@ -248,13 +248,13 @@
                                     <div class="col-6">
                                         <p class="input-5"><span class="input-title">Телефон:</span><input
                                                 value="<?php echo $_SESSION['phone'] ?>"
-                                                class="edit-profile-input"></input>
+                                                class="edit-profile-input" id="phone" name="phone"></input>
                                         </p>
                                     </div>
                                     <div class="col-6">
                                         <p class="input-6"><span class="input-title">Длъжност:</span><input
                                                 value="<?php echo $_SESSION['experience'] ?>"
-                                                class="edit-profile-input"></input>
+                                                class="edit-profile-input" id="experience" name="experience"></input>
                                         </p>
                                     </div>
                                 </div>
