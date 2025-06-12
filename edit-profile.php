@@ -88,6 +88,11 @@
     }
     else
     {
+        if(isset($_POST['name']))
+        {
+            header("Location: edit-profile-html.php?error=imeto e непопълненo!");
+        exit();
+        }
         header("Location: edit-profile-html.php?error=Има непопълнени данни!");
         exit();
     }
