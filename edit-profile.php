@@ -2,6 +2,10 @@
     session_start();
     include "db_connection.php";
 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     //vsichki poleta isset
     //snimkata da se dobavq s otdelna forma chrez upload.php
     if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['experience']))
