@@ -23,32 +23,32 @@
 
         if(empty($name))
         {
-            header("Location: add-agent.html?error=Името е задължително!");
+            header("Location: edit-profile-html.php?error=Името е задължително!");
             exit();
         }
         else if(empty($surname))
         {
-            header("Location: add-agent.html?error=Фамилията е задължителна!");
+            header("Location: edit-profile-html.php?error=Фамилията е задължителна!");
             exit();
         }
         else if(empty($username))
         {
-            header("Location: add-agent.html?error=Потребителското име е задължително!");
+            header("Location: edit-profile-html.php?error=Потребителското име е задължително!");
             exit();
         }
         else if(empty($email))
         {
-            header("Location: add-agent.html?error=Имейлът е задължителен!");
+            header("Location: edit-profile-html.php?error=Имейлът е задължителен!");
             exit();
         }
         else if(empty($phone))
         {
-            header("Location: add-agent.html?error=Телефонният номер е задължителен!");
+            header("Location: edit-profile-html.php?error=Телефонният номер е задължителен!");
             exit();
         }
         else if(empty($experience))
         {
-            header("Location: add-agent.html?error=Длъжността е задължителна!");
+            header("Location: edit-profile-html.php?error=Длъжността е задължителна!");
             exit();
         }
         else
@@ -60,7 +60,7 @@
             $resultsqlcheck = mysqli_query($con, $sqlcheck);
             if($resultsqlcheck)
             {
-                header("Location: add-agent.html?error=Потребителското име е заето!");
+                header("Location: edit-profile-html.php?error=Потребителското име е заето!");
                 exit();
             }
 
@@ -82,9 +82,14 @@
                             WHERE `login_RealtorID` = '$realtor_id'";
             $resultlogin = mysqli_query($con, $sqllogin);
 
-            header("Location: add-agent.html?error=Данните са обновени!");
+            header("Location: edit-profile-html.php?error=Данните са обновени!");
             exit();
         }
+    }
+    else
+    {
+        header("Location: edit-profile-html.php?error=Има непопълнени данни!");
+        exit();
     }
     
     function validate($data)
