@@ -1,12 +1,7 @@
 <?php
-    //?
-    //tazi str se izpulnqva pri zapazvane na promenite ot butona Zapazi
     session_start();
-
-
     include "db_connection.php";
 
-    
     //vsichki poleta isset
     //snimkata da se dobavq s otdelna forma chrez upload.php
     if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['experience']))
@@ -62,12 +57,36 @@
         {
             //zaqvka za promqna na zapis
             //snimkata se dobavq v otdelna forma i shte se obrabotva s upload formata; url i name mogat da sa null
+
+            $sqlcheck = "SELECT `login_RealtorID` FROM `login` WHERE `login_Username` = '$username'";
+            $resultsqlcheck = mysqli_query($con, $sqlcheck);
+            if($resultsqlcheck)
+            {
+                header("Location: add-agent.html?error=Потребителското име е заето!");
+                exit();
+            }
+
+            $realtor_id = $_SESSION['login_RealtorID'];
             $sql = "UPDATE `realtor`
                         SET
-                        .......
-                        WHERE id..."; 
+                        `realtor_Name` = '$name',
+                        `realtor_LastName` = '$surname',
+                        `realtor_PhoneNumber` = '$phone',
+                        `realtor_Experience` = '$experience',
+                        `realtor_Email` = '$email'
+                        WHERE `realtor_ID` = '$realtor_id'"; 
                         //kak da se pazi id na vlezliqt broker; potr ime da ne se promenq?
             $result = mysqli_query($con, $sql);
+
+            $sqllogin = "UPDATE `login`
+                            SET
+                            `login_Username` = '$username',
+                            `login_Pass` = '$password'
+                            WHERE `login_RealtorID` = '$realtor_id'";
+            $resultlogin = mysqli_query($con, $sqllogin);
+
+            header("Location: add-agent.html?error=Данните са обновени!");
+            exit();
         }
     }
     

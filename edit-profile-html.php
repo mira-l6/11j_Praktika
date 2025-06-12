@@ -212,7 +212,7 @@
                     </div>
                     <div class="details-space d-flex flex-column justify-content-around">
                         <div class="profile-subtitle p-4 d-grid">
-                            <form action="">
+                            <form action="edit-profile.php">
                                 <div class="row">
                                     <div class="col-6">
                                         <p class="input-1"><span class="input-title">Име:</span><input
