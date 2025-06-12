@@ -195,10 +195,11 @@
                 <div class="grid-item profile-info">
                     <div class="profile-title d-flex flex-row">
                         <p class="p-1">Редактиране на профил</p>
-                        <div class="profile-title-buttons">
+                        <!--<div class="profile-title-buttons">
                             <button>Отмени</button>
+                            лесната процедура, махам това: <button id="popupShow" onclick="popupShow()">Запази</button>
                             <button id="popupShow" onclick="popupShow()">Запази</button>
-                        </div>
+                        </div>-->
                         <div id="popup"
                             class="button-popup d-flex justify-content-center align-items-center flex-column">
                             <h5>Сигурни ли сте, че искате да приемете промените?</h5>
@@ -265,7 +266,8 @@
                                                 style="background-color: white;"></input></p>
                                     </div>
                                     <div class="change-password-area col-6">
-                                        <button class="btn"><a href="reset-pass.html">Смяна на парола</a></button>
+                                        <!--<button class="btn"><a href="reset-pass.html">Смяна на парола</a></button>-->
+                                        <button type="submit">Добавяне</button>
                                     </div>
                                 </div>
                             </form>

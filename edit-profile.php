@@ -4,13 +4,12 @@
 
     //vsichki poleta isset
     //snimkata da se dobavq s otdelna forma chrez upload.php
-    if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['experience']))
+    if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['experience']))
     {
         //vsichki poleta
         $name = validate($_POST['name']);
         $surname = validate($_POST['surname']);
         $username = validate($_POST['username']);
-        $password = validate($_POST['password']);
         $email = validate($_POST['email']);
         $phone = validate($_POST['phone']);
         $experience = validate($_POST['experience']);
@@ -31,11 +30,6 @@
         else if(empty($username))
         {
             header("Location: add-agent.html?error=Потребителското име е задължително!");
-            exit();
-        }
-        else if(empty($password))
-        {
-            header("Location: add-agent.html?error=Паролата е задължителна!");
             exit();
         }
         else if(empty($email))
@@ -80,8 +74,7 @@
 
             $sqllogin = "UPDATE `login`
                             SET
-                            `login_Username` = '$username',
-                            `login_Pass` = '$password'
+                            `login_Username` = '$username'
                             WHERE `login_RealtorID` = '$realtor_id'";
             $resultlogin = mysqli_query($con, $sqllogin);
 
