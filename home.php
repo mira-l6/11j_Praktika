@@ -382,56 +382,7 @@
                     echo '<div class="offer">';
                     echo '<div class="offer-images">';
 
-                    // Carousel container
-                    echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="carousel">';
-
-                    // Indicators (add if needed)
-                    echo '<div class="carousel-indicators">';
-                    for ($i = 0; $i < $picscount; $i++) {
-                        $active = ($i === 0) ? 'active' : '';
-                        echo '<button type="button" data-bs-target="#offer-carousel-'.$offer['offer_ID'].'" data-bs-slide-to="'.$i.'" class="'.$active.'"></button>';
-                    }
-                    echo '</div>';
-
-                    // Slideshow carousel
-                    echo '<div class="carousel-inner">';
-
-                    $pics = array();
-                    while ($rowgetpics = mysqli_fetch_assoc($resultgetpics)) {
-                        $pics[] = $rowgetpics;
-                    }
-
-                    // Get image URLs
-                    $picurls = array_column($pics, $piccol);
-
-                    // Loop through images
-                    foreach ($picurls as $j => $picurl) {
-    // Validate URL first
-    if (empty($picurl)) {
-        continue; // Skip empty URLs
-    }
-    
-    $activeclass = ($j === 0) ? 'active' : '';
-    
-    echo '<div class="carousel-item '.$activeclass.'">';
-    echo '<img src="'.htmlspecialchars($picurl).'" class="d-block w-100" alt="Slide '.($j+1).'">';
-    echo '</div>';
-}
-
-echo '</div>'; // Close carousel-inner
-
-// Navigation controls
-echo '<button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel-'.$offer['offer_ID'].'" data-bs-slide="prev">';
-echo '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
-echo '<span class="visually-hidden">Previous</span>';
-echo '</button>';
-echo '<button class="carousel-control-next" type="button" data-bs-target="#offer-carousel-'.$offer['offer_ID'].'" data-bs-slide="next">';
-echo '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
-echo '<span class="visually-hidden">Next</span>';
-echo '</button>';
-
-echo '</div>'; // Close carousel
-/*
+                    
                     //carousel
                     echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
                     //indicators
@@ -466,7 +417,7 @@ echo '</div>'; // Close carousel
 
                     echo '</div>';
                     echo '</div>';
-                    //end of carousel*/
+                    //end of carousel
 
                     echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
                     echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
