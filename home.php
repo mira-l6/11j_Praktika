@@ -407,13 +407,12 @@
                         $activeclass = ($j === 0) ? 'active' : '';
 
                         echo '<div class="carousel-item '.$activeclass.'">';
-                        echo '<img src="'. htmlspecialchars($picurl).'" alt="Image '.($j+1).'" class="d-block w-100">';
+                        echo '<img src="'.htmlspecialchars($picurl).'" alt="Image '.($j+1).'" class="d-block w-100">';
                         echo '</div>';
                     }
                     echo '</div>';
 
                     //left and right control items
-
 
                     echo '</div>';
                     echo '</div>';
