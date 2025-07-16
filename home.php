@@ -434,95 +434,97 @@
                 }*/
 
                 $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
-$resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
-$offerscount = mysqli_num_rows($resultgetnewoffer);
-$offers = [];
+                $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
+                $offerscount = mysqli_num_rows($resultgetnewoffer);
+                $offers = [];
 
-while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) {
-    $offers[] = $rowgetnewoffer;
-}
+                while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) 
+                {
+                    $offers[] = $rowgetnewoffer;
+                }
 
-for ($i = 0; $i < $offerscount; $i++) {
-    $offer = $offers[$i];
-    
-    $offertable = $offer['offer_Table'];
-    $offerprefix = $offer['offer_Prefix'];
-    $propertyid = $offerprefix . "_ID";
-    $rowgetnewofferid = $offer['offer_PropertyID'];
+                for ($i = 0; $i < $offerscount; $i++) 
+                {
+                    $offer = $offers[$i];
+                    
+                    $offertable = $offer['offer_Table'];
+                    $offerprefix = $offer['offer_Prefix'];
+                    $propertyid = $offerprefix . "_ID";
+                    $rowgetnewofferid = $offer['offer_PropertyID'];
 
-    // Get offer object
-    $sqlgetofferobj = "SELECT * FROM `$offertable` WHERE `$propertyid` = '$rowgetnewofferid'";
-    $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
-    $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
+                    // Get offer object
+                    $sqlgetofferobj = "SELECT * FROM `$offertable` WHERE `$propertyid` = '$rowgetnewofferid'";
+                    $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
+                    $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
 
-    $price = $offerprefix . '_Price';
-    $name = $offerprefix . '_City';
-    $province = $offerprefix . '_Province';
-    $region = $offerprefix . '_Region';
-    
-    $offerprice = $rowgetofferobj[$price] ?? 'N/A';
-    $offername = $rowgetofferobj[$name] ?? 'N/A';
-    $offerprovince = $rowgetofferobj[$province] ?? '';
-    $offerregion = $rowgetofferobj[$region] ?? '';
+                    $price = $offerprefix . '_Price';
+                    $name = $offerprefix . '_City';
+                    $province = $offerprefix . '_Province';
+                    $region = $offerprefix . '_Region';
+                    
+                    $offerprice = $rowgetofferobj[$price] ?? 'N/A';
+                    $offername = $rowgetofferobj[$name] ?? 'N/A';
+                    $offerprovince = $rowgetofferobj[$province] ?? '';
+                    $offerregion = $rowgetofferobj[$region] ?? '';
 
-    // Get images
-    $picofferid = $offerprefix . "_OfferID";
-    $pictable = $offertable . "_images";
-    $piccol = $offerprefix . "_Image_Url";
-    
-    // FIXED: use value of property ID, not column name
-    $sqlgetpics = "SELECT `$piccol` FROM `$pictable` WHERE `$picofferid` = '$rowgetnewofferid'";
-    $resultgetpics = mysqli_query($con, $sqlgetpics);
-    $pics = [];
-    while ($rowgetpics = mysqli_fetch_assoc($resultgetpics)) {
-        $pics[] = $rowgetpics[$piccol];
-    }
+                    // Get images
+                    $picofferid = $offerprefix . "_OfferID";
+                    $pictable = $offertable . "_images";
+                    $piccol = $offerprefix . "_Image_Url";
+                    
+                    // FIXED: use value of property ID, not column name
+                    $sqlgetpics = "SELECT `$piccol` FROM `$pictable` WHERE `$picofferid` = '$rowgetnewofferid'";
+                    $resultgetpics = mysqli_query($con, $sqlgetpics);
+                    $pics = [];
+                    while ($rowgetpics = mysqli_fetch_assoc($resultgetpics)) {
+                        $pics[] = $rowgetpics[$piccol];
+                    }
 
-    // Start rendering HTML
-    $carouselId = 'offer-carousel-' . $offer['offer_ID'];
-    echo '<div class="offer">';
-    echo '<div class="offer-images">';
-    echo '<div id="' . $carouselId . '" class="carousel slide" data-bs-ride="carousel">';
-    
-    // Carousel items
-    echo '<div class="carousel-inner">';
-    foreach ($pics as $index => $picurl) {
-        $active = $index === 0 ? 'active' : '';
-        echo '<div class="carousel-item ' . $active . '">';
-        echo '<img src="' . htmlspecialchars($picurl) . '" alt="Image ' . ($index + 1) . '" class="d-block w-100">';
-        echo '</div>';
-    }
-    echo '</div>';
+                    // Start rendering HTML
+                    $carouselId = 'offer-carousel-' . $offer['offer_ID'];
+                    echo '<div class="offer">';
+                    echo '<div class="offer-images">';
+                    echo '<div id="' . $carouselId . '" class="carousel slide" data-bs-ride="carousel">';
+                    
+                    // Carousel items
+                    echo '<div class="carousel-inner">';
+                    foreach ($pics as $index => $picurl) {
+                        $active = $index === 0 ? 'active' : '';
+                        echo '<div class="carousel-item ' . $active . '">';
+                        echo '<img src="' . htmlspecialchars($picurl) . '" alt="Image ' . ($index + 1) . '" class="d-block w-100">';
+                        echo '</div>';
+                    }
+                    echo '</div>';
 
-    // Left and right controls with corrected target
-    if (count($pics) > 1) {
-        echo '<button class="carousel-control-prev" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="prev">';
-        echo '<span class="carousel-control-prev-icon"></span>';
-        echo '</button>';
-        echo '<button class="carousel-control-next" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="next">';
-        echo '<span class="carousel-control-next-icon"></span>';
-        echo '</button>';
-    }
+                    // Left and right controls with corrected target
+                    if (count($pics) > 1) {
+                        echo '<button class="carousel-control-prev" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="prev">';
+                        echo '<span class="carousel-control-prev-icon"></span>';
+                        echo '</button>';
+                        echo '<button class="carousel-control-next" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="next">';
+                        echo '<span class="carousel-control-next-icon"></span>';
+                        echo '</button>';
+                    }
 
-    echo '</div>'; // end of carousel
-    echo '</div>'; // end of offer-images
+                    echo '</div>'; // end of carousel
+                    echo '</div>'; // end of offer-images
 
-    // Offer info and link
-    echo '<div class="offer-info" onclick="window.location = \'offer.php?id=' . htmlspecialchars($offer['offer_ID']) . '&table=' . htmlspecialchars($offertable) . '&prefix=' . htmlspecialchars($offerprefix) . '\'">';
-    echo '<h6>Цена: <span>' . $offerprice . '</span> EUR</h6>';
-    echo '<p><span>' . $offername . '</span></p>';
-    echo '<h6>' . $offerprovince . '</h6>';
-    echo '<h6>' . $offerregion . '</h6>';
-    echo '</div>';
-    echo '</div>'; // end of .offer
-}
+                    // Offer info and link
+                    echo '<div class="offer-info" onclick="window.location = \'offer.php?id=' . htmlspecialchars($offer['offer_ID']) . '&table=' . htmlspecialchars($offertable) . '&prefix=' . htmlspecialchars($offerprefix) . '\'">';
+                    echo '<h6>Цена: <span>' . $offerprice . '</span> EUR</h6>';
+                    echo '<p><span>' . $offername . '</span></p>';
+                    echo '<h6>' . $offerprovince . '</h6>';
+                    echo '<h6>' . $offerregion . '</h6>';
+                    echo '</div>';
+                    echo '</div>'; // end of .offer
+                }
             ?>
 
-            <div class="offer">
+            <!--<div class="offer">
     <div class="offer-images">
-        <!-- Carousel -->
+        
         <div id="offer-carousel" class="carousel slide" data-bs-ride="carousel">
-            <!-- The slideshow/carousel -->
+            
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">
@@ -532,7 +534,7 @@ for ($i = 0; $i < $offerscount; $i++) {
                 </div>
             </div>
 
-            <!-- Left and right controls/icons -->
+            
             <button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
@@ -541,7 +543,7 @@ for ($i = 0; $i < $offerscount; $i++) {
             </button>
         </div>
     </div>
-    <!-- End of carousel -->
+   
 
     <div class="offer-info" onclick="window.location = 'offer.php'">
         <h6>Цена: <span>10 999</span> EUR</h6>
@@ -549,55 +551,10 @@ for ($i = 0; $i < $offerscount; $i++) {
         <h6>град Пловдив</h6>
         <h6>квартал Кичука</h6>
     </div>
-</div>
+</div>-->
 
 
-            <div class="offer">
-                <div class="offer-images">
-
-                    <!-- Carousel -->
-                    <div id="offer-carousel" class="carousel slide" data-bs-ride="false">
-
-                        <!-- Indicators/dots -->
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="3"></button>
-                        </div>
-
-                        <!-- The slideshow/carousel -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="img/Начало 2.png" alt="Office" class="d-block w-100">
-                            </div>
-                        </div>
-
-                        <!-- Left and right controls/icons -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                </div>
-                <!--End of carousel-->
-
-                <div class="offer-info" onclick="window.location = 'offer.php'">
-                    <h6>Цена: <span>10 000</span> EUR</h6>
-                    <p>Продава <span>3-стаен апартамент</span></p>
-                    <h6>град Пловдив</h6>
-                    <h6>квартал Кичука</h6>
-                </div>
-            </div>
-        </div>
+        
 
         <!-- <button class="test-button" id="add-button"> Бутон.
         </button>
