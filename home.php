@@ -429,51 +429,39 @@
             ?>
 
             <div class="offer" onclick="window.location = 'offer.php'">
-                
-                <div class="offer-images">
-
-                    <!-- Carousel -->
-                    <div id="offer-carousel" class="carousel slide" data-bs-ride="false">
-
-                        <!-- Indicators/dots -->
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="3"></button>
-                        </div>
-
-                        <!-- The slideshow/carousel -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="img/Начало 2.png" alt="Office" class="d-block w-100">
-                            </div>
-                        </div>
-
-                        <!-- Left and right controls/icons -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
+    <div class="offer-images">
+        <!-- Carousel -->
+        <div id="offer-carousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">
                 </div>
-                <!--End of carousel-->
-
-                <div class="offer-info">
-                    <h6>Цена: <span>10 000</span> EUR</h6>
-                    <p>Продава <span>3-стаен апартамент</span></p>
-                    <h6>град Пловдив</h6>
-                    <h6>квартал Кичука</h6>
+                <div class="carousel-item">
+                    <img src="img/Начало 2.png" alt="Office" class="d-block w-100">
                 </div>
             </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#offer-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    <!-- End of carousel -->
+
+    <div class="offer-info">
+        <h6>Цена: <span>10 999</span> EUR</h6>
+        <p>Продава <span>3-стаен апартамент</span></p>
+        <h6>град Пловдив</h6>
+        <h6>квартал Кичука</h6>
+    </div>
+</div>
+
+
             <div class="offer">
                 <div class="offer-images">
 
@@ -519,97 +507,6 @@
                     <h6>квартал Кичука</h6>
                 </div>
             </div>
-            <div class="offer">
-                <div class="offer-images">
-
-                    <!-- Carousel -->
-                    <div id="offer-carousel" class="carousel slide" data-bs-ride="false">
-
-                        <!-- Indicators/dots -->
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="3"></button>
-                        </div>
-
-                        <!-- The slideshow/carousel -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="img/Начало 2.png" alt="Office" class="d-block w-100">
-                            </div>
-                        </div>
-
-                        <!-- Left and right controls/icons -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                </div>
-                <!--End of carousel-->
-
-                <div class="offer-info">
-                    <h6>Цена: <span>10 000</span> EUR</h6>
-                    <p>Продава <span>3-стаен апартамент</span></p>
-                    <h6>град Пловдив</h6>
-                    <h6>квартал Кичука</h6>
-                </div>
-            </div>
-            <div class="offer">
-                <div class="offer-images">
-
-                    <!-- Carousel -->
-                    <div id="offer-carousel" class="carousel slide" data-bs-ride="false">
-
-                        <!-- Indicators/dots -->
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#offer-carousel" data-bs-slide-to="3"></button>
-                        </div>
-
-                        <!-- The slideshow/carousel -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="img/scenery.jpg" alt="Los Angeles" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item active">
-                                <img src="img/Начало 2.png" alt="Office" class="d-block w-100">
-                            </div>
-                        </div>
-
-                        <!-- Left and right controls/icons -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#offer-carousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                </div>
-                <!--End of carousel-->
-
-                <div class="offer-info">
-                    <h6>Цена: <span>10 000</span> EUR</h6>
-                    <p>Продава <span>3-стаен апартамент</span></p>
-                    <h6>град Пловдив</h6>
-                    <h6>квартал Кичука</h6>
-                </div>
-            </div>
-            
         </div>
 
         <!-- <button class="test-button" id="add-button"> Бутон.
