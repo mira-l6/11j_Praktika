@@ -428,7 +428,7 @@
                 }
             ?>
 
-            <div class="offer" onclick="window.location = 'offer.php'">
+            <div class="offer">
     <div class="offer-images">
         <!-- Carousel -->
         <div id="offer-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -453,7 +453,7 @@
     </div>
     <!-- End of carousel -->
 
-    <div class="offer-info">
+    <div class="offer-info" onclick="window.location = 'offer.php'">
         <h6>Цена: <span>10 999</span> EUR</h6>
         <p>Продава <span>3-стаен апартамент</span></p>
         <h6>град Пловдив</h6>
