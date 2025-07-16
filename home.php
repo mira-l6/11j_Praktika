@@ -330,6 +330,7 @@
         <!--vseki carousel trqbva da ima otdelno_id-->
         <div class="d-grid offer-display-box">
             <?php
+            /*originalen kod
                 $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
                 
                 $resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
@@ -413,6 +414,11 @@
                     echo '</div>';
 
                     //left and right control items
+                    echo '<button class="carousel-control-prev" type="button" data-bs-target="#offer-carousel" data-bs-slide="prev">';
+                    echo '<span class="carousel-control-prev-icon"></span>';
+                    echo '</button>';
+                    echo '<button class="carousel-control-next" type="button" data-bs-target="#offer-carousel" data-bs-slide="next">';
+                    echo '<span class="carousel-control-next-icon"></span>';
 
                     echo '</div>';
                     echo '</div>';
@@ -425,7 +431,91 @@
                     echo '<h6>'.$offerregion.'</h6>';
                     echo '</div>';
                     echo '</div>';
-                }
+                }*/
+
+                $sqlgetnewoffer = "SELECT * FROM `offer` ORDER BY `offer_TimeOfUpload` DESC LIMIT 100";
+$resultgetnewoffer = mysqli_query($con, $sqlgetnewoffer);
+$offerscount = mysqli_num_rows($resultgetnewoffer);
+$offers = [];
+
+while ($rowgetnewoffer = mysqli_fetch_assoc($resultgetnewoffer)) {
+    $offers[] = $rowgetnewoffer;
+}
+
+for ($i = 0; $i < $offerscount; $i++) {
+    $offer = $offers[$i];
+    
+    $offertable = $offer['offer_Table'];
+    $offerprefix = $offer['offer_Prefix'];
+    $propertyid = $offerprefix . "_ID";
+    $rowgetnewofferid = $offer['offer_PropertyID'];
+
+    // Get offer object
+    $sqlgetofferobj = "SELECT * FROM `$offertable` WHERE `$propertyid` = '$rowgetnewofferid'";
+    $resultgetofferobj = mysqli_query($con, $sqlgetofferobj);
+    $rowgetofferobj = mysqli_fetch_assoc($resultgetofferobj);
+
+    $price = $offerprefix . '_Price';
+    $name = $offerprefix . '_City';
+    $province = $offerprefix . '_Province';
+    $region = $offerprefix . '_Region';
+    
+    $offerprice = $rowgetofferobj[$price] ?? 'N/A';
+    $offername = $rowgetofferobj[$name] ?? 'N/A';
+    $offerprovince = $rowgetofferobj[$province] ?? '';
+    $offerregion = $rowgetofferobj[$region] ?? '';
+
+    // Get images
+    $picofferid = $offerprefix . "_OfferID";
+    $pictable = $offertable . "_images";
+    $piccol = $offerprefix . "_Image_Url";
+    
+    // FIXED: use value of property ID, not column name
+    $sqlgetpics = "SELECT `$piccol` FROM `$pictable` WHERE `$picofferid` = '$rowgetnewofferid'";
+    $resultgetpics = mysqli_query($con, $sqlgetpics);
+    $pics = [];
+    while ($rowgetpics = mysqli_fetch_assoc($resultgetpics)) {
+        $pics[] = $rowgetpics[$piccol];
+    }
+
+    // Start rendering HTML
+    $carouselId = 'offer-carousel-' . $offer['offer_ID'];
+    echo '<div class="offer">';
+    echo '<div class="offer-images">';
+    echo '<div id="' . $carouselId . '" class="carousel slide" data-bs-ride="carousel">';
+    
+    // Carousel items
+    echo '<div class="carousel-inner">';
+    foreach ($pics as $index => $picurl) {
+        $active = $index === 0 ? 'active' : '';
+        echo '<div class="carousel-item ' . $active . '">';
+        echo '<img src="' . htmlspecialchars($picurl) . '" alt="Image ' . ($index + 1) . '" class="d-block w-100">';
+        echo '</div>';
+    }
+    echo '</div>';
+
+    // Left and right controls with corrected target
+    if (count($pics) > 1) {
+        echo '<button class="carousel-control-prev" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="prev">';
+        echo '<span class="carousel-control-prev-icon"></span>';
+        echo '</button>';
+        echo '<button class="carousel-control-next" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="next">';
+        echo '<span class="carousel-control-next-icon"></span>';
+        echo '</button>';
+    }
+
+    echo '</div>'; // end of carousel
+    echo '</div>'; // end of offer-images
+
+    // Offer info and link
+    echo '<div class="offer-info" onclick="window.location = \'offer.php?id=' . htmlspecialchars($offer['offer_ID']) . '&table=' . htmlspecialchars($offertable) . '&prefix=' . htmlspecialchars($offerprefix) . '\'">';
+    echo '<h6>Цена: <span>' . $offerprice . '</span> EUR</h6>';
+    echo '<p><span>' . $offername . '</span></p>';
+    echo '<h6>' . $offerprovince . '</h6>';
+    echo '<h6>' . $offerregion . '</h6>';
+    echo '</div>';
+    echo '</div>'; // end of .offer
+}
             ?>
 
             <div class="offer">
