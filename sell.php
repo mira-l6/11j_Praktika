@@ -67,7 +67,7 @@
                 </ul>
                 <form class="d-flex">
                     <div class="collapse navbar-collapse">
-                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="search.html"
+                        <button class="btn btn-lg btn-pill btn-marked blc search-button"><a href="buy.php"
                                 class="nav-link"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
                         <a class="btn btn-lg btn-pill blc ms-1" href="login.html">
                             <div class="profile-icon d-flex justify-content-center align-items-center"><span
@@ -147,7 +147,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <button class="btn btn-lg btn-pill btn-marked blc w-100 text-start"><a href="search.html"
+                        <button class="btn btn-lg btn-pill btn-marked blc w-100 text-start"><a href="buy.php"
                                 class="nav-link ps-3"><span class="fa fa-solid fa-search pe-2"></span>Търсене</a></button>
                     </li>
 
