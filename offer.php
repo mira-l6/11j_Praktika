@@ -278,7 +278,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         <div class="carousel-inner">
             <?php foreach ($offerpics as $index => $picurl): ?>
                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                    <img src="<?= htmlspecialchars($picurl) ?>" class="d-block w-100" alt="Offer Image <?= $index + 1 ?>">
+                    <img src="<?= htmlspecialchars($picurl) ?>" class="d-block w-100 carousel-img" alt="Offer Image <?= $index + 1 ?>">
                 </div>
             <?php endforeach; ?>
         </div>
@@ -295,7 +295,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
             </button>
         <?php endif; ?>
     </div>
-    
+
     <!--<div class="container-fluid offer-images">
         <div class="first big-image">-->
             <?php //echo "<img src=\"".$offerpicurls[0]."\" alt=\"\">"
