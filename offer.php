@@ -522,6 +522,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         <p><?php echo $description ?>
         </p>
     </div>
+    <!--
     <div class="offer-contact p-4">
         <h4>Оставете запитване:</h4>
         
@@ -543,7 +544,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
                 </div>
             </form>
         </div>
-    </div>
+    </div>-->
 </body>
 
 </html>
