@@ -357,7 +357,7 @@
                         $piccol = $prefix . "_Image_Url";
                         
                         //
-                        $sqlgetpics = "SELECT `$piccol` FROM `$pictable` WHERE `$picofferid` = '$rowgetnewofferid'";
+                        $sqlgetpics = "SELECT `$piccol` FROM `$pictable` WHERE `$picofferid` = '$id'";
                         $resultgetpics = mysqli_query($con, $sqlgetpics);
                         $pics = [];
                         while ($rowgetpics = mysqli_fetch_assoc($resultgetpics)) {
