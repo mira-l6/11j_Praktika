@@ -31,7 +31,7 @@
 
                     <div class="collapse navbar-collapse">
                         <li class="nav-item ">
-                            <button class="btn btn-lg btn-pill blc"><a href="home.html"
+                            <button class="btn btn-lg btn-pill blc"><a href="home.php"
                                     class="nav-link">Начало</a></button>
 
                         </li>

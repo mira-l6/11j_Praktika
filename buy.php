@@ -268,16 +268,16 @@
                         </div>
                         <div class="line-break"><div></div></div>
                         <div class="filter-option"><label for="town-area">Район</label>
-                            <select id="town-area" name="property-filter">
+                            <select id="town-area" name="town-area">
                                 <option>Район</option>
                             </select>
                         </div>
                         <div class="line-break"><div></div></div>
                         <div class="filter-option two-option-filter"><label for="max-price">Цена (евро)</label>
                             <div class="d-flex justify-content-center align-items-center">
-                                <input type="number" id="min-price" name="property-filter" placeholder="От..."
+                                <input type="number" id="min-price" name="min-price" placeholder="От..."
                                 class="min-price">
-                                <input type="number" id="max-price" name="property-filter" placeholder="До..."
+                                <input type="number" id="max-price" name="max-price" placeholder="До..."
                                 class="max-price">
                             </div>
                         </div>
@@ -286,8 +286,8 @@
                         </div>
                         <div class="filter-option two-option-filter"><label for="quadrature">Квадратура</label>
                             <div class="d-flex justify-content-center align-items-center">
-                                <input type="number" id="min-quadrature" name="property-filter" placeholder="От...">
-                                <input type="number" id="max-quadrature" name="property-filter" placeholder="До...">
+                                <input type="number" id="min-quadrature" name="min-quadrature" placeholder="От...">
+                                <input type="number" id="max-quadrature" name="max-quadrature" placeholder="До...">
                             </div>
                         </div>
                     </div>
@@ -302,7 +302,7 @@
 
                 <?php
 
-                    $sqlgetfiltered = "SELECT * FROM `".$offertable."` WHERE `".$propertyid."`='$rowgetnewofferid'";
+                    /*$sqlgetfiltered = "SELECT * FROM `".$offertable."` WHERE `".$propertyid."`='$rowgetnewofferid'";*/
                 ?>
 
 
@@ -310,6 +310,19 @@
 
 
                 <?php
+
+                    foreach ($offers as $offer) 
+                    {
+                        $prefix = $offer['offer_prefix'];
+                        $table = $offer['offer_table'];
+                        $id = $offer[$prefix . '_ID'];
+                        $price = $offer[$prefix . '_Price'];
+                        $city = $offer[$prefix . '_City'];
+                        $province = $offer[$prefix . '_Province'];
+                        $region = $offer[$prefix . '_Region'];
+
+                    /*
+                    orig kod
                     for($i = 0; $i < $offerscount; $i++)
                     {
                         $offer = $offers[$i];
@@ -336,20 +349,58 @@
                         $offerprice = $rowgetofferobj[$price];
                         $offername = $rowgetofferobj[$name];
                         $offerprovince = $rowgetofferobj[$province];
-                        $offerregion = $rowgetofferobj[$region];
-    
+                        $offerregion = $rowgetofferobj[$region];*/
+
+                        //img
+                        $picofferid = $prefix . "_OfferID";
+                        $pictable = $table . "_images";
+                        $piccol = $prefix . "_Image_Url";
+                        
+                        //
+                        $sqlgetpics = "SELECT `$piccol` FROM `$pictable` WHERE `$picofferid` = '$rowgetnewofferid'";
+                        $resultgetpics = mysqli_query($con, $sqlgetpics);
+                        $pics = [];
+                        while ($rowgetpics = mysqli_fetch_assoc($resultgetpics)) {
+                            $pics[] = $rowgetpics[$piccol];
+                        }
+                        //html
+                        $carouselId = 'offer-carousel-' . $id;
                         echo '<div class="offer">';
                         echo '<div class="offer-images">';
-                        echo '<div id="offer-carousel-'.$offer['offer_ID'].'" class="carousel slide" data-bs-ride="false">';
+                        echo '<div id="' . $carouselId . '" class="carousel slide" data-bs-ride="carousel">';
+                    
+                        // Carousel items
+                        echo '<div class="carousel-inner">';
+                        foreach ($pics as $index => $picurl) 
+                        {
+                            $active = $index === 0 ? 'active' : '';
+                            echo '<div class="carousel-item ' . $active . '">';
+                            echo '<img src="' . htmlspecialchars($picurl) . '" alt="Image ' . ($index + 1) . '" class="d-block w-100">';
+                            echo '</div>';
+                        }
                         echo '</div>';
-                        echo '</div>';
-                        echo '<div class="offer-info" onclick="window.location = \'offer.php?id='.htmlspecialchars($offer['offer_ID']).'&table=' . htmlspecialchars($offertable) .'&prefix=' . htmlspecialchars($offerprefix) .'\'">';
-                        echo '<h6>Цена: <span>'.$offerprice.'</span> EUR</h6>';
-                        echo '<p><span>'.$offername.'</span></p>';
-                        echo '<h6>'.$offerprovince.'</h6>';
-                        echo '<h6>'.$offerregion.'</h6>';
-                        echo '</div>';
-                        echo '</div>';
+
+                    // Left and right controls with corrected target
+                    if (count($pics) > 1) {
+                        echo '<button class="carousel-control-prev" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="prev">';
+                        echo '<span class="carousel-control-prev-icon"></span>';
+                        echo '</button>';
+                        echo '<button class="carousel-control-next" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="next">';
+                        echo '<span class="carousel-control-next-icon"></span>';
+                        echo '</button>';
+                    }
+
+                    echo '</div>'; // end of carousel
+                    echo '</div>'; // end of offer-images
+
+                    // Offer info and link
+                    echo '<div class="offer-info" onclick="window.location = \'offer.php?id=' . htmlspecialchars($id) . '&table=' . htmlspecialchars($table) . '&prefix=' . htmlspecialchars($prefix) . '\'">';
+                    echo '<h6>Цена: <span>' . $price . '</span> EUR</h6>';
+                    echo '<p><span>' . $city . '</span></p>';
+                    echo '<h6>' . $province . '</h6>';
+                    echo '<h6>' . $region . '</h6>';
+                    echo '</div>';
+                    echo '</div>'; // end of .offer
                     }
                 ?>
             </div>
