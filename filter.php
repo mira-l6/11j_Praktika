@@ -129,6 +129,8 @@
 
     $_SESSION['offers'] = $offers;
 
+    header("Location: buy.php");
+
 
     /*
     orig kod
