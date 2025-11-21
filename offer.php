@@ -322,7 +322,7 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
 
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
-            <div class="carousel-item">
+            <div class="carousel-item active">
                 <img src="img/contacts_background.png" alt="Los Angeles" class="carousel-image d-block w-100">
             </div>
             <div class="carousel-item">
