@@ -302,43 +302,6 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
 
 
 
-
-
-<!--bqh ggo napisala predi ama ne mi se proverqva-->
-<div id="offerDetailCarousel" class="carousel slide" data-bs-ride="carousel">
-        
-        <!-- Indicators (dots/lines) -->
-        <div class="carousel-indicators">
-            <?php foreach ($offerpics as $index => $picurl): ?>
-                <button type="button" data-bs-target="#offerDetailCarousel" data-bs-slide-to="<?= $index ?>"
-                    class="<?= $index === 0 ? 'active' : '' ?>" aria-current="<?= $index === 0 ? 'true' : 'false' ?>" aria-label="Slide <?= $index + 1 ?>"></button>
-            <?php endforeach; ?>
-        </div>
-
-        <!-- Carousel inner (slides) -->
-        <div class="carousel-inner">
-            <?php foreach ($offerpics as $index => $picurl): ?>
-                <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                    <img src="<?= htmlspecialchars($picurl) ?>" class="d-block w-100 carousel-img" alt="Offer Image <?= $index + 1 ?>">
-                </div>
-            <?php endforeach; ?>
-        </div>
-
-        <!-- Controls -->
-        <?php if (count($offerpics) > 1): ?>
-            <button class="carousel-control-prev" type="button" data-bs-target="#offerDetailCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#offerDetailCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        <?php endif; ?>
-    </div>
-    <!--bqh ggo napisala predi ama ne mi se proverqva-->
-
-
     <!--<div class="container-fluid offer-images">
         <div class="first big-image">-->
             <?php //echo "<img src=\"".$offerpicurls[0]."\" alt=\"\">"
@@ -368,9 +331,14 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
             <div class="carousel-item active">
                 <img src="img/contacts_background.png" alt="Los Angeles" class="carousel-image d-block w-100">
             </div>
-            <div class="carousel-item">
+            <?php
+                echo '<div class="carousel-item">';
+                echo '<img src="img/'. $offerpics[1][$picurl] .'" alt="Los Angeles" class="carousel-image d-block w-100">';
+                echo '</div>';
+            ?>
+            <!--<div class="carousel-item">
                 <img src="img/scenery.jpg" alt="Chicago" class="carousel-image d-block w-100">
-            </div>
+            </div>-->
             <div class="carousel-item">
                 <img src="img/Начало 2.png" alt="New York" class="carousel-image d-block w-100">
             </div>
