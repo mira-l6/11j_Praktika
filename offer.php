@@ -238,16 +238,52 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
     <?php
         //podgotvqne na vsichki snimki
         $imgtable = $offertable . '_images';
-    $imgid = $propertyprefix . '_OfferID';
-    $imgcolumn = $propertyprefix . '_Image_Url';
+        $imgid = $propertyprefix . '_OfferID';
+        $imgcolumn = $propertyprefix . '_Image_Url';
 
-    $sqlgetofferpics = "SELECT `$imgcolumn` FROM `$imgtable` WHERE `$imgid` = '$offerid'";
-    $resultgetofferpics = mysqli_query($con, $sqlgetofferpics);
+        $sqlgetofferpics = "SELECT `$imgcolumn` FROM `$imgtable` WHERE `$imgid` = '$offerid'";
+        $resultgetofferpics = mysqli_query($con, $sqlgetofferpics);
 
-    $offerpics = [];
-    while ($rowgetofferpics = mysqli_fetch_assoc($resultgetofferpics)) {
-        $offerpics[] = $rowgetofferpics[$imgcolumn];
-    }
+        $offerpics = [];
+        while ($rowgetofferpics = mysqli_fetch_assoc($resultgetofferpics)) 
+        {
+            $offerpics[] = $rowgetofferpics[$imgcolumn];
+        }
+
+
+
+        //carousel
+        $carouselId = 'offer-carousel-' . $offerid;
+        echo '<div class="offer">';
+        echo '<div class="offer-images">';
+        echo '<div id="' . $carouselId . '" class="carousel slide" data-bs-ride="carousel">';
+
+        // Carousel items
+        echo '<div class="carousel-inner">';
+        foreach ($offerpics as $index => $picurl) 
+        {
+            $active = $index === 0 ? 'active' : '';
+            echo '<div class="carousel-item ' . $active . '">';
+            echo '<img src="' . htmlspecialchars($picurl) . '" alt="Image ' . ($index + 1) . '" class="d-block w-100">';
+            echo '</div>';
+        }
+        echo '</div>';
+
+        // Left and right controls with corrected target
+        if (count($offerpics) > 1) 
+        {
+            echo '<button class="carousel-control-prev" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="prev">';
+                    echo '<span class="carousel-control-prev-icon"></span>';
+                    echo '</button>';
+                    echo '<button class="carousel-control-next" type="button" data-bs-target="#' . $carouselId . '" data-bs-slide="next">';
+                    echo '<span class="carousel-control-next-icon"></span>';
+                    echo '</button>';
+        }
+        echo '</div>'; // end of carousel
+        echo '</div>'; // end of offer-images
+
+
+
 
         /*
         orig kod
@@ -264,6 +300,11 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
         $offerpicurls = array_column($offerpics, $imgcolumn);*/
     ?>
 
+
+
+
+
+<!--bqh ggo napisala predi ama ne mi se proverqva-->
 <div id="offerDetailCarousel" class="carousel slide" data-bs-ride="carousel">
         
         <!-- Indicators (dots/lines) -->
@@ -295,6 +336,8 @@ $uploadtime = $rowgetproperty[$propertyprefix . '_UploadTime'];
             </button>
         <?php endif; ?>
     </div>
+    <!--bqh ggo napisala predi ama ne mi se proverqva-->
+
 
     <!--<div class="container-fluid offer-images">
         <div class="first big-image">-->
